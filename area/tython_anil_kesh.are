@@ -1,0 +1,289 @@
+#FUSSAREA
+#AREADATA
+Version      1
+Name         Anil Kesh~
+Author       SWR FUSS~
+Ranges       45 100 45 100
+Economy      0 0
+ResetMsg     Instruments hum back to life in the laboratories of Anil Kesh.~
+ResetFreq    10
+Flags        ~
+#ENDAREADATA
+
+#MOBILE
+Vnum       40201
+Keywords   quan-jang quan jang master temple~
+Short      Quan-Jang~
+Long       Quan-Jang studies a bank of humming instruments, utterly absorbed.
+~
+Desc       Quan-Jang is a Je'daii Master of quiet, formidable intellect,
+more comfortable among his instruments and star charts than in idle
+conversation. He is said to understand the Force as well as anyone
+alive - and to have looked further into its darker uses than most
+would consider wise.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     male~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 100 -35 -55 0 60000
+Stats2     42 22 4200
+Stats3     1 8 8
+Stats4     70 175 1 55 55
+Attribs    16 19 19 15 17 13 13 18
+Saves      -35 -35 -35 -35 -35
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40202
+Keywords   alchemist researcher~
+Short      an Anil Kesh alchemist~
+Long       An alchemist carefully measures a reagent into a shallow dish.
+~
+Desc       Precise and unhurried, this alchemist moves between workbenches
+with the practiced care of someone who has learned - sometimes the
+hard way - exactly why caution matters here.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     female~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 68 -9 -19 0 15000
+Stats2     25 15 2000
+Stats3     1 6 6
+Stats4     64 140 1 30 30
+Attribs    13 16 16 12 14 10 10 13
+Saves      -9 -9 -9 -9 -9
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40203
+Keywords   initiate student~
+Short      an Anil Kesh initiate~
+Long       An initiate pores over a datapad, muttering equations under their breath.
+~
+Desc       This initiate seems perpetually behind on their reading, though
+never for lack of trying. Anil Kesh's lessons are dense, and its
+Masters are not known for repeating themselves.
+~
+Race       Human~
+Position   sitting~
+DefPos     sitting~
+Gender     male~
+Actflags   npc~
+Affected   ~
+Stats1     0 8 0 0 0 25
+Stats2     2 4 25
+Stats3     1 2 2
+Stats4     56 100 1 2 2
+Attribs    10 12 12 9 10 8 8 8
+Saves      0 0 0 0 0
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#OBJECT
+Vnum       40201
+Keywords   reagent vial~
+Type       trash~
+Short      a sealed reagent vial~
+Long       A sealed reagent vial sits here, its contents an unsettling color.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 2 0 0 0
+#ENDOBJECT
+
+#OBJECT
+Vnum       40202
+Keywords   star chart~
+Type       trash~
+Short      a star chart~
+Long       A star chart lies unrolled here, dense with annotations.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 3 0 0 0
+#ENDOBJECT
+
+#ROOM
+Vnum     40201
+Name     Gate of Anil Kesh~
+Sector   inside~
+Flags    indoors~
+Desc     A narrow bridge of worked stone carries you across the edge of
+the Chasm to Anil Kesh's gate. Wind moans up from the depths below,
+carrying a chill no sunlight seems to reach. The Temple itself rises
+ahead, more angular and precise in its architecture than anything
+you've seen elsewhere on Tython.
+~
+#EXIT
+Direction north~
+ToRoom    40202
+#ENDEXIT
+#EXIT
+Direction down~
+ToRoom    40208
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40931
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40202
+Name     Hall of Instruments~
+Sector   inside~
+Flags    indoors~
+Desc     Brass and glass instruments of every size fill this long hall,
+humming, ticking, and occasionally emitting small puffs of colored
+vapor. None of it looks decorative. Everything here is in constant,
+careful use.
+~
+#EXIT
+Direction south~
+ToRoom    40201
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40203
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40204
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40205
+#ENDEXIT
+
+Reset M 0 40202 1 40202
+#ENDROOM
+
+#ROOM
+Vnum     40203
+Name     Quan-Jang's Study~
+Sector   inside~
+Flags    indoors~
+Desc     Star charts cover every wall of this cluttered, book-lined study,
+overlapping in a dense weave of ink and annotation. A single chair
+sits before a broad worktable, worn smooth at the edges from long
+use. Whatever Quan-Jang is working on here, it clearly consumes most
+of his waking hours.
+~
+#EXIT
+Direction south~
+ToRoom    40202
+#ENDEXIT
+
+Reset M 0 40201 1 40203
+Reset O 0 40202 3 40203
+#ENDROOM
+
+#ROOM
+Vnum     40204
+Name     Alchemy Laboratory~
+Sector   inside~
+Flags    indoors~
+Desc     Rows of workbenches fill this room, each cluttered with vials,
+burners, and carefully labeled reagents. A faint, not entirely
+pleasant chemical smell hangs in the air, and a chalkboard along one
+wall is covered in half-erased notation.
+~
+#EXIT
+Direction west~
+ToRoom    40202
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40206
+#ENDEXIT
+
+Reset O 0 40201 5 40204
+#ENDROOM
+
+#ROOM
+Vnum     40205
+Name     Archive Annex~
+Sector   inside~
+Flags    indoors~
+Desc     Shelves rise floor to ceiling here, packed with bound records
+and older, stranger media that predate paper entirely. This annex
+holds Anil Kesh's own findings - overflow from Kaleth's larger
+archive, kept close at hand for easy reference.
+~
+#EXIT
+Direction east~
+ToRoom    40202
+#ENDEXIT
+
+Reset M 0 40203 1 40205
+#ENDROOM
+
+#ROOM
+Vnum     40206
+Name     Testing Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     Scorch marks and worse stains mark the walls of this reinforced
+chamber, set apart from the rest of the laboratory for obvious
+reasons. Whatever gets tested here, it isn't always predictable.
+~
+#EXIT
+Direction south~
+ToRoom    40204
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40207
+Name     Observation Deck~
+Sector   inside~
+Flags    indoors~
+Desc     Wide windows, ground and polished by hand, look out over the
+Chasm and the stars beyond. Several instruments here point outward
+rather than in - Anil Kesh's scholars study the sky as readily as they
+study the Force.
+~
+#EXIT
+Direction down~
+ToRoom    40208
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40208
+Name     Chasm-Edge Walk~
+Sector   inside~
+Flags    indoors~
+Desc     A narrow, railed walkway clings to the inside of the Chasm's
+upper wall, Anil Kesh's foundations rising overhead. The drop below
+is lost in shadow long before it ends. Few linger here longer than
+they have to.
+~
+#EXIT
+Direction up~
+ToRoom    40201
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40207
+#ENDEXIT
+#ENDROOM
+
+#ENDAREA

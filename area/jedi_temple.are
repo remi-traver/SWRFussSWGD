@@ -1,0 +1,3025 @@
+#FUSSAREA
+#AREADATA
+Version      1
+Name         The Jedi Temple of Ossus~
+Author       SWR FUSS~
+Ranges       1 107 1 107
+Economy      0 0
+ResetMsg     The Temple hums with the living Force as Jedi Masters complete their meditations.~
+ResetFreq    6
+Flags        ~
+#ENDAREADATA
+
+#MOBILE
+Vnum       16000
+Keywords   master yoda grand jedi~
+Short      Grand Master Yoda~
+Long       Grand Master Yoda moves slowly through the corridor, deep in thought.
+~
+Desc       Ancient beyond reckoning, Grand Master Yoda carries nine hundred years of
+wisdom in his small green frame. His large eyes miss nothing and his
+presence in the Force is immense, like a great calm at the centre of
+a storm. He regards you with gentle but penetrating attention.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     male~
+Actflags   npc sentinel practice~
+Affected   detect_invis detect_hidden sanctuary truesight~
+Stats1     5000 107 0 99 100 0
+Stats2     1 1 5000
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    18 25 25 25 18 25 0 100
+Saves      -30 -30 -30 -30 -30
+Speaks     common~
+Speaking   common~
+Immune     sleep charm~
+#ENDMOBILE
+
+#MOBILE
+Vnum       16001
+Keywords   master obi-wan kenobi jedi~
+Short      Master Obi-Wan Kenobi~
+Long       Master Obi-Wan Kenobi stands here, his expression calm and measured.
+~
+Desc       One of the most celebrated Jedi Masters of his generation, Obi-Wan
+Kenobi carries himself with a quiet confidence born of long experience.
+His robes are travel-worn and his eyes carry the weight of great loss
+balanced by unshakeable faith in the Force. He is always willing to
+offer guidance to those who seek it sincerely.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     male~
+Actflags   npc sentinel practice~
+Affected   detect_invis detect_hidden sanctuary truesight~
+Stats1     3000 105 0 97 100 0
+Stats2     1 1 3000
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    18 20 22 22 18 20 0 95
+Saves      -25 -25 -25 -25 -25
+Speaks     common~
+Speaking   common~
+Immune     sleep charm~
+#ENDMOBILE
+
+#MOBILE
+Vnum       16002
+Keywords   master mace windu jedi~
+Short      Master Mace Windu~
+Long       Master Mace Windu stands here, arms folded, watching with sharp eyes.
+~
+Desc       Master of the rare Vaapad form of lightsaber combat, Mace Windu
+radiates a barely contained intensity. His shaved head and stern
+expression project absolute authority, yet his counsel is always
+precise and considered. He studies you with the directness of one
+accustomed to seeing through deception.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     male~
+Actflags   npc sentinel practice~
+Affected   detect_invis detect_hidden sanctuary truesight~
+Stats1     3000 105 0 97 100 0
+Stats2     1 1 3000
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    20 20 20 22 18 18 0 95
+Saves      -25 -25 -25 -25 -25
+Speaks     common~
+Speaking   common~
+Immune     sleep charm~
+#ENDMOBILE
+
+#MOBILE
+Vnum       16003
+Keywords   master qui-gon jinn jedi~
+Short      Master Qui-Gon Jinn~
+Long       Master Qui-Gon Jinn meditates quietly here, at peace with the living Force.
+~
+Desc       Unconventional even by Jedi standards, Qui-Gon Jinn follows the
+living Force with a devotion that sometimes puts him at odds with
+the Council. His long hair and calm bearing give him the appearance
+of a wandering philosopher rather than one of the most capable
+swordsmen in the Order. He opens his eyes and greets you warmly.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     male~
+Actflags   npc sentinel practice~
+Affected   detect_invis detect_hidden sanctuary truesight~
+Stats1     2500 103 0 95 100 0
+Stats2     1 1 2500
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    18 18 22 20 18 22 0 90
+Saves      -22 -22 -22 -22 -22
+Speaks     common~
+Speaking   common~
+Immune     sleep charm~
+#ENDMOBILE
+
+#MOBILE
+Vnum       16004
+Keywords   master ahsoka tano jedi~
+Short      Ahsoka Tano~
+Long       Ahsoka Tano moves with effortless precision, her white lightsabers at her belt.
+~
+Desc       No longer formally a Jedi, Ahsoka Tano carries the weight of that
+distinction with quiet dignity. Her twin white lightsabers and her
+Togruta markings are immediately recognisable to anyone versed in
+recent history. She moves with the fluid economy of an extraordinarily
+skilled fighter and meets your gaze with direct, honest eyes.
+~
+Race       Twi'lek~
+Position   aggressive~
+DefPos     aggressive~
+Gender     female~
+Actflags   npc sentinel practice~
+Affected   detect_invis detect_hidden truesight~
+Stats1     2000 100 0 95 100 0
+Stats2     1 1 2000
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    18 22 20 20 18 20 0 90
+Saves      -20 -20 -20 -20 -20
+Speaks     common~
+Speaking   common~
+Immune     sleep charm~
+#ENDMOBILE
+
+#MOBILE
+Vnum       16005
+Keywords   knight jedi temple~
+Short      a Jedi Knight~
+Long       A Jedi Knight patrols the corridor, alert and composed.
+~
+Desc       A Jedi Knight in the prime of their training, this warrior of the
+Force moves with practised awareness. Their brown robes are
+immaculate and a lightsaber hangs at their belt. They acknowledge
+your presence with a brief nod of greeting.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     neuter~
+Actflags   npc sentinel~
+Affected   detect_invis detect_hidden~
+Stats1     500 80 0 85 90 0
+Stats2     25 25 500
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    16 16 18 18 16 16 0 80
+Saves      -15 -15 -15 -15 -15
+Speaks     common~
+Speaking   common~
+#ENDMOBILE
+
+#MOBILE
+Vnum       16006
+Keywords   padawan student jedi learner~
+Short      a Jedi Padawan~
+Long       A Jedi Padawan practices stances with focused concentration.
+~
+Desc       Young and eager, this Padawan learner is still finding their path
+in the Force. Their braid marks them as an apprentice still under
+a master's tutelage. They look up at your arrival with a mixture
+of curiosity and studied Jedi composure.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     neuter~
+Actflags   npc sentinel~
+Affected   detect_invis~
+Stats1     200 50 0 60 70 0
+Stats2     10 10 200
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    14 14 14 14 14 14 0 50
+Saves      -8 -8 -8 -8 -8
+Speaks     common~
+Speaking   common~
+#ENDMOBILE
+
+#MOBILE
+Vnum       16007
+Keywords   seeker remote training droid~
+Short      a training remote~
+Long       A training remote hovers here, its sensors tracking movement.
+~
+Desc       A spherical training remote floats at head height, its surface
+studded with sensor nodes and blaster emitters set to low-intensity
+training stings. It tracks every movement in the room with its
+central photoreceptor. The device is programmed to challenge and
+teach simultaneously.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     neuter~
+Actflags   npc sentinel droid aggressive~
+Affected   detect_invis detect_hidden~
+Stats1     100 30 0 95 95 0
+Stats2     5 5 100
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    10 25 10 10 10 10 0 0
+Saves      -5 -5 -5 -5 -5
+Speaks     common~
+Speaking   common~
+#ENDMOBILE
+
+#MOBILE
+Vnum       16008
+Keywords   archivist jedi librarian master~
+Short      Jedi Archivist Jocasta Nu~
+Long       Jedi Archivist Jocasta Nu moves carefully between the archive shelves.
+~
+Desc       Chief Librarian of the Jedi Archives, Jocasta Nu carries herself with
+the quiet authority of one who controls access to the most extensive
+collection of knowledge in the galaxy. Her silver hair is impeccably
+arranged and her robes are those of a senior Master. She peers at
+you over her spectacles with the particular look of a librarian
+assessing whether you will be trouble.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     female~
+Actflags   npc sentinel practice~
+Affected   detect_invis detect_hidden truesight~
+Stats1     1000 100 0 90 95 0
+Stats2     1 1 1000
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    14 25 25 18 14 18 0 85
+Saves      -18 -18 -18 -18 -18
+Speaks     common~
+Speaking   common~
+Immune     sleep charm~
+#ENDMOBILE
+
+#MOBILE
+Vnum       16009
+Keywords   master plo koon jedi kel dor~
+Short      Master Plo Koon~
+Long       Master Plo Koon stands here, his masked face unreadable but his presence warm.
+~
+Desc       A Kel Dor Jedi Master of exceptional ability, Plo Koon is known
+throughout the Order for combining formidable combat skill with a
+genuine warmth that is unusual among the senior Council members.
+His distinctive anti-ox mask and goggles cover a face that
+nevertheless manages to project kindness. He is particularly
+devoted to the Padawans and Younglings of the Temple and they
+respond to him with open affection. He greets you with a slight
+incline of his head and an air of patient attention.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     male~
+Actflags   npc sentinel practice~
+Affected   detect_invis detect_hidden sanctuary truesight~
+Stats1     3500 106 0 97 100 0
+Stats2     1 1 3500
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    20 20 22 22 18 20 0 95
+Saves      -26 -26 -26 -26 -26
+Speaks     common~
+Speaking   common~
+Immune     sleep charm~
+#ENDMOBILE
+
+#OBJECT
+Vnum       16000
+Keywords   jedi holocron blue~
+Type       armor~
+Short      a blue Jedi holocron~
+Long       A blue Jedi holocron rests here, pulsing with warm light.~
+Flags      magic glow~
+WFlags     take hold~
+Values     0 10 0 0 0 0
+Stats      8 10000 1000 0 0
+Affect         -1 -1 5 4 0
+Affect         -1 -1 5 3 0
+#EXDESC
+ExDescKey  holocron jedi blue~
+ExDesc     A pyramidal Jedi holocron, its surface warm to the touch and softly
+glowing blue. When held, faint voices can be heard — ancient Jedi
+Masters imparting fragments of wisdom and technique. The knowledge
+within is immense and patient, available to those who approach it
+with sincerity.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       16001
+Keywords   lightsaber jedi blue blade~
+Type       weapon~
+Short      a Jedi lightsaber~
+Long       A Jedi lightsaber lies here, its casing polished and engraved.~
+Flags      magic glow~
+WFlags     take wield~
+Values     5 30 60 3 0 5000
+Stats      8 15000 1500 0 0
+Affect         -1 -1 12 13 0
+Affect         -1 -1 12 14 0
+#EXDESC
+ExDescKey  lightsaber jedi blade~
+ExDesc     A Jedi lightsaber with a blade of pure blue light. The hilt is
+engraved with Jedi script reading "Peace through understanding,
+strength through serenity." It hums with a clarity that feels
+entirely unlike the corrupted weapons of the Sith.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       16002
+Keywords   jedi robes brown tan~
+Type       armor~
+Short      Jedi Temple robes~
+Long       A set of Jedi Temple robes lies neatly folded here.~
+Flags      magic~
+WFlags     take body~
+Values     40 40 0 0 0 0
+Stats      8 8000 800 0 0
+Affect         -1 -1 -18 12 0
+Affect         -1 -1 3 4 0
+#EXDESC
+ExDescKey  robes jedi temple brown~
+ExDesc     The simple tan and brown robes of a Jedi Temple initiate. Woven
+from durable natural fibres and reinforced with subtle Force-imbued
+threading, they offer surprising protection while maintaining the
+Jedi philosophy of simplicity and non-attachment to material things.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       16003
+Keywords   jedi belt utility~
+Type       armor~
+Short      a Jedi utility belt~
+Long       A Jedi utility belt lies here, its pouches still stocked.~
+Flags      magic~
+WFlags     take waist~
+Values     15 15 0 0 0 0
+Stats      8 5000 500 0 0
+Affect         -1 -1 3 1 0
+Affect         -1 -1 3 5 0
+#EXDESC
+ExDescKey  belt jedi utility~
+ExDesc     The standard-issue Jedi utility belt, its various pouches
+containing medpacs, a comlink, spare power cells, and other
+essentials. The belt itself is reinforced and carries a subtle
+Force-imbued blessing that seems to make its wearer more resilient.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       16004
+Keywords   jedi tome ancient manuscript~
+Type       armor~
+Short      an ancient Jedi manuscript~
+Long       An ancient Jedi manuscript lies open here on a reading stand.~
+Flags      magic~
+WFlags     take hold~
+Values     10 10 0 0 0 0
+Stats      8 12000 1200 0 0
+Affect         -1 -1 6 3 0
+Affect         -1 -1 4 4 0
+#EXDESC
+ExDescKey  manuscript tome jedi ancient~
+ExDesc     An illuminated manuscript from the earliest days of the Jedi Order,
+its pages covered in the flowing script of the ancient Je'daii. The
+text covers the nature of the Force in a depth that is humbling.
+Reading it expands something in the mind that is difficult to name
+but impossible to ignore.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       16005
+Keywords   training remote sphere hovering~
+Type       armor~
+Short      a deactivated training remote~
+Long       A deactivated training remote lies here, its eye dark.~
+Flags      ~
+WFlags     take hold~
+Values     5 5 0 0 0 0
+Stats      4 2000 200 0 0
+Affect         -1 -1 4 13 0
+#EXDESC
+ExDescKey  remote training sphere~
+ExDesc     A spherical training remote in its deactivated state. Its surface
+is covered in small scorch marks from thousands of training sessions.
+The central photoreceptor is dark but seems somehow still watchful.
+Carrying it is said to sharpen Force-reflexes even when inactive.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       16006
+Keywords   kyber crystal ilum blue~
+Type       armor~
+Short      a raw Ilum kyber crystal~
+Long       A raw kyber crystal from the caves of Ilum glows with a faint blue light here.~
+Flags      magic glow~
+WFlags     take hold~
+Values     10 10 0 0 0 0
+Stats      8 9000 900 0 0
+Affect         -1 -1 6 3 0
+Affect         -1 -1 4 4 0
+#EXDESC
+ExDescKey  crystal kyber ilum blue~
+ExDesc     A raw kyber crystal harvested from the caverns of Ilum during the
+traditional Jedi pilgrimage. The crystal is cold to the touch and
+hums with a resonance audible only to Force-sensitives. It pulses
+in response to strong emotions, brightening with calm and dimming
+with agitation. It is the heart of a lightsaber waiting to be built,
+and carrying it creates a sense of quiet attentiveness.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       16007
+Keywords   sash jedi ceremonial master~
+Short      a Jedi Master's ceremonial sash~
+Long       A Jedi Master's ceremonial sash lies draped here across a display stand.~
+Type       armor~
+Flags      magic~
+WFlags     take about~
+Values     20 20 0 0 0 0
+Stats      8 11000 1100 0 0
+Affect         -1 -1 3 4 0
+Affect         -1 -1 5 13 0
+Affect         -1 -1 3 14 0
+#EXDESC
+ExDescKey  sash jedi ceremonial master~
+ExDesc     The ceremonial sash worn by Jedi Masters at formal occasions and
+Council sessions. This one is woven from a rare fabric that holds
+Force impressions — the accumulated calm of many years of meditation
+by its previous owner is still present in the weave. Wearing it
+imparts a subtle steadiness of mind and purpose.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       16008
+Keywords   focus lens lightsaber adegan~
+Short      an Adegan focusing lens~
+Long       A precision Adegan focusing lens for a lightsaber rests here in a cushioned case.~
+Type       armor~
+Flags      magic glow~
+WFlags     take hold~
+Values     8 8 0 0 0 0
+Stats      7 7000 700 0 0
+Affect         -1 -1 5 13 0
+Affect         -1 -1 5 14 0
+#EXDESC
+ExDescKey  lens adegan lightsaber focus~
+ExDesc     A precision-ground Adegan crystal focusing lens used in advanced
+lightsaber construction. The quality of the lens determines the
+tightness and stability of the blade. This one is of exceptional
+quality, ground by a master craftsman over months of careful work.
+Even outside a lightsaber hilt it focuses ambient Force energy in
+a way that sharpens the concentration of anyone carrying it.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       16009
+Keywords   pendant force vergence jedi~
+Short      a Force vergence pendant~
+Long       A small pendant containing a chip of vergence-touched stone hangs here.~
+Type       armor~
+Flags      magic glow~
+WFlags     take neck~
+Values     6 6 0 0 0 0
+Stats      8 13000 1300 0 0
+Affect         -1 -1 6 4 0
+Affect         -1 -1 6 3 0
+Affect         -1 -1 4 5 0
+#EXDESC
+ExDescKey  pendant force vergence jedi~
+ExDesc     A pendant containing a small chip of stone taken from the floor of
+a Force vergence — a location where the living Force converges with
+unusual intensity. The stone retains a fraction of that convergence.
+Wearing it enhances perception and clarity significantly and
+creates a persistent sense of being slightly more awake than usual.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       16010
+Keywords   jedi staff parablade training~
+Short      a Jedi training parablade staff~
+Long       A Jedi training parablade staff leans against the wall here.~
+Type       weapon~
+Flags      magic~
+WFlags     take wield~
+Values     6 20 45 6 0 3000
+Stats      6 7000 700 0 0
+Affect         -1 -1 6 13 0
+Affect         -1 -1 4 14 0
+#EXDESC
+ExDescKey  staff parablade jedi training~
+ExDesc     A training weapon used by Jedi who study the Niman or Jar'Kai forms —
+a staff with low-intensity parablade emitters at each end producing
+short blades that sting without injuring. Used for training it
+builds ambidextrous technique and spatial awareness simultaneously.
+Many Jedi who never use a staff in the field swear by staff training
+for the skills it develops.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       16011
+Keywords   boots jedi temple worn~
+Short      well-worn Jedi Temple boots~
+Long       A pair of well-worn Jedi Temple boots sits here.~
+Type       armor~
+Flags      magic~
+WFlags     take feet~
+Values     25 25 0 0 0 0
+Stats      6 4000 400 0 0
+Affect         -1 -1 3 2 0
+Affect         -1 -1 2 9 0
+#EXDESC
+ExDescKey  boots jedi temple worn~
+ExDesc     The standard issue boots of the Jedi Order, worn to the comfortable
+softness that comes from years of use across a hundred different
+terrains. Force-imbued threading in the soles provides subtle
+stability and lightness of step. These particular boots have
+walked the corridors of the Temple for years and carry the
+accumulated ease of a practitioner fully at home in their body.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       16012
+Keywords   cloak jedi grey traveling~
+Short      a Jedi traveling cloak~
+Long       A grey Jedi traveling cloak hangs here on a hook.~
+Type       armor~
+Flags      magic~
+WFlags     take about~
+Values     30 30 0 0 0 0
+Stats      7 8000 800 0 0
+Affect         -1 -1 -12 12 0
+Affect         -1 -1 3 5 0
+Affect         -1 -1 2 4 0
+#EXDESC
+ExDescKey  cloak jedi grey traveling~
+ExDesc     The outer cloak worn by Jedi in the field — grey-brown, hooded,
+and woven from a material that provides warmth in cold and
+breathability in heat. The cut obscures the lightsaber at the
+belt without impeding access to it. Generations of Jedi have
+disappeared into crowds in this cloak, which is more or less
+the point. The hood smells faintly of Tatooine sand and
+Coruscant rain in equal measure.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       16013
+Keywords   bracers jedi wrist focus~
+Short      Jedi focus bracers~
+Long       A pair of Jedi focus bracers rests here on a training bench.~
+Type       armor~
+Flags      magic~
+WFlags     take wrist~
+Values     18 18 0 0 0 0
+Stats      7 6500 650 0 0
+Affect         -1 -1 3 13 0
+Affect         -1 -1 3 14 0
+Affect         -1 -1 2 1 0
+#EXDESC
+ExDescKey  bracers jedi wrist focus~
+ExDesc     Bracers worn during combat training to channel Force energy through
+the forearms and improve precision of movement. The wrist joints
+are reinforced with a flexible composite that supports without
+restricting. Wearing them during training accelerates the development
+of the fine motor control that advanced lightsaber technique requires.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#ROOM
+Vnum     16000
+Name     The Temple Entrance Plaza~
+Sector   field~
+Flags    ~
+Desc     The grand entrance plaza of the Jedi Temple stretches before you,
+its pale stone warm in the light. Five spires rise overhead, the
+tallest reaching into the sky at the centre. Jedi of all ranks move
+purposefully across the plaza — Knights returning from missions,
+Padawans in pairs deep in conversation, Masters in quiet reflection.
+The atmosphere is one of disciplined serenity. The main temple doors
+lie to the north and the approach path leads south.
+~
+#EXIT
+Direction north~
+ToRoom    16001
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    16002
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    16003
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    16004
+#ENDEXIT
+
+Reset M 0 16005 2 16000
+Reset M 0 16006 2 16000
+#ENDROOM
+
+#ROOM
+Vnum     16001
+Name     The Great Hall~
+Sector   inside~
+Flags    indoors~
+Desc     The Great Hall of the Jedi Temple soars overhead in vaulted stone and
+pale crystal light. Banners bearing the symbol of the Jedi Order line
+the walls from floor to ceiling. At the far end a great mosaic depicts
+the founding of the Order in the days of the Republic's earliest
+years. Jedi move through this space with unhurried purpose. Corridors
+lead east and west and stairs ascend to the north. The entrance plaza
+lies to the south.
+~
+#EXIT
+Direction south~
+ToRoom    16000
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16005
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    16006
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    16007
+#ENDEXIT
+
+Reset M 0 16005 2 16001
+Reset M 0 16006 1 16001
+#ENDROOM
+
+#ROOM
+Vnum     16002
+Name     The Outer Approach~
+Sector   field~
+Flags    ~
+Desc     A broad processional avenue leads toward the Temple from the south.
+Tall trees line the path, their canopies meeting overhead to form a
+natural arcade. The path is worn smooth by millennia of feet. Students
+and Masters alike walk this route each day and the sense of continuity
+is palpable. The Temple entrance plaza lies to the north.
+~
+#EXIT
+Direction north~
+ToRoom    16000
+#ENDEXIT
+
+Reset M 0 16006 2 16002
+#ENDROOM
+
+#ROOM
+Vnum     16003
+Name     The Eastern Garden~
+Sector   field~
+Flags    ~
+Desc     A formal garden occupies the eastern grounds of the Temple complex.
+Reflecting pools mirror the spires above and flowering plants native
+to a dozen worlds grow in carefully tended beds. Jedi come here to
+meditate between duties. The sound of water and the scent of unfamiliar
+blossoms create a space that seems deliberately set apart from the
+rest of the galaxy. The entrance plaza is to the west.
+~
+#EXIT
+Direction west~
+ToRoom    16000
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16008
+#ENDEXIT
+
+Reset M 0 16006 2 16003
+#ENDROOM
+
+#ROOM
+Vnum     16004
+Name     The Western Garden~
+Sector   field~
+Flags    ~
+Desc     The western gardens are older and less formal than those to the east,
+their paths winding between ancient trees whose trunks are wider than
+a speeder. Stone benches are placed at intervals and many bear
+inscriptions — names of Jedi lost in service to the Order over the
+centuries. The weight of that history makes the garden a place of
+quiet reverence. The plaza lies to the east.
+~
+#EXIT
+Direction east~
+ToRoom    16000
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16009
+#ENDEXIT
+
+Reset M 0 16006 1 16004
+#ENDROOM
+
+#ROOM
+Vnum     16005
+Name     The Hall of Knighthood~
+Sector   inside~
+Flags    indoors~
+Desc     The Hall of Knighthood is where Padawans undergo the Trials and emerge
+as Knights. The room is circular with a domed ceiling through which
+light filters in shifting patterns. The floor is bare stone worn
+smooth by generations of ceremony. Portraits of celebrated Knights
+line the curved walls — Ki-Adi-Mundi, Aayla Secura, Depa Billaba,
+Kanan Jarrus, and many others. The Great Hall lies to the south and
+a corridor leads north.
+~
+#EXIT
+Direction south~
+ToRoom    16001
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16010
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    16011
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    16012
+#ENDEXIT
+
+Reset M 0 16005 2 16005
+Reset M 0 16001 1 16005
+#ENDROOM
+
+#ROOM
+Vnum     16006
+Name     The Eastern Corridor~
+Sector   inside~
+Flags    indoors~
+Desc     A long corridor lined with alcoves, each containing a sculpture or
+artefact from a significant moment in Jedi history. Informational
+plaques in multiple languages accompany each piece. The corridor
+connects the Great Hall to the eastern wings of the Temple. Students
+often walk slowly here, reading and absorbing the history around them.
+~
+#EXIT
+Direction west~
+ToRoom    16001
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16013
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    16014
+#ENDEXIT
+
+Reset M 0 16006 2 16006
+#ENDROOM
+
+#ROOM
+Vnum     16007
+Name     The Western Corridor~
+Sector   inside~
+Flags    indoors~
+Desc     The western corridor of the Great Hall leads toward the Temple's
+administrative and residential wings. Notice boards mounted at
+intervals carry mission briefings, meditation schedules, and
+announcements from the Council. The corridor is busy with Jedi
+moving between assignments.
+~
+#EXIT
+Direction east~
+ToRoom    16001
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16015
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    16016
+#ENDEXIT
+
+Reset M 0 16006 1 16007
+Reset M 0 16005 1 16007
+#ENDROOM
+
+#ROOM
+Vnum     16008
+Name     The Eastern Meditation Terrace~
+Sector   field~
+Flags    ~
+Desc     An open terrace on the eastern side of the Temple grounds, elevated
+slightly above the garden below. Stone railings enclose the space
+and potted plants from Ilum, Dagobah, and Felucia grow in large urns.
+Several Jedi sit in deep meditation here. The Force feels particularly
+accessible in this place, as though the years of practice have worn
+grooves in the fabric of reality itself. The garden is below to the south.
+~
+#EXIT
+Direction south~
+ToRoom    16003
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16017
+#ENDEXIT
+
+Reset M 0 16006 1 16008
+#ENDROOM
+
+#ROOM
+Vnum     16009
+Name     The Memorial Garden~
+Sector   field~
+Flags    ~
+Desc     The memorial garden is the most solemn space in the Temple grounds.
+A central monument lists the names of Jedi who gave their lives in
+service to the Order and to the Republic. The names number in the
+thousands, accumulated over centuries. Fresh flowers are placed here
+daily by members of the Order. The western garden leads south and
+a path continues north.
+~
+#EXIT
+Direction south~
+ToRoom    16004
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16018
+#ENDEXIT
+
+Reset M 0 16006 1 16009
+#ENDROOM
+
+#ROOM
+Vnum     16010
+Name     The Approaches to the High Council Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     A formal antechamber before the High Council Chamber, its walls lined
+with the names of every Grand Master who has served the Order. The
+floor is inlaid with the symbol of the Jedi Order in white and gold
+stone. Seating for those awaiting audience with the Council lines the
+walls. The atmosphere here is one of controlled gravity. The Hall of
+Knighthood lies to the south and the Council Chamber door is to the north.
+~
+#EXIT
+Direction south~
+ToRoom    16005
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16019
+#ENDEXIT
+
+Reset M 0 16005 1 16010
+#ENDROOM
+
+#ROOM
+Vnum     16011
+Name     The Hall of Records~
+Sector   inside~
+Flags    indoors~
+Desc     The Hall of Records maintains the official chronicle of the Jedi Order —
+every mission, every promotion, every loss recorded in meticulous detail.
+Archive terminals line one wall and physical records in sealed containers
+fill the other. A Jedi archivist manages the retrieval of records for
+those with proper authorisation.
+~
+#EXIT
+Direction west~
+ToRoom    16005
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16020
+#ENDEXIT
+
+Reset M 0 16008 1 16011
+Reset O 0 16004 1 16011
+#ENDROOM
+
+#ROOM
+Vnum     16012
+Name     The Padawan Study Hall~
+Sector   inside~
+Flags    indoors~
+Desc     A large open study hall where Padawans complete their academic work
+between training sessions. Long tables are covered in datapads and
+physical texts, and the sound of quiet study fills the room. Tutors
+circulate, available to answer questions. The walls display rotating
+educational projections covering history, science, philosophy, and
+the nature of the Force.
+~
+#EXIT
+Direction east~
+ToRoom    16005
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16021
+#ENDEXIT
+
+Reset M 0 16006 3 16012
+#ENDROOM
+
+#ROOM
+Vnum     16013
+Name     The Jedi Archives — Main Hall~
+Sector   inside~
+Flags    indoors~
+Desc     The Jedi Archives are among the most awe-inspiring spaces in the
+galaxy. The main hall extends further than seems architecturally
+possible, its shelves rising to heights that require grav-lifts to
+reach. Millions of holocrons, datachips, manuscripts, and artefacts
+are catalogued and stored here in perfect order. Blue-white light
+filters through tall narrow windows and the air carries the particular
+smell of very old knowledge.
+
+Jedi Archivist Jocasta Nu moves quietly between the shelves, and the
+hush of the Archives feels like a living thing — the accumulated
+silence of a million years of careful preservation. The eastern
+corridor connects to the south and deeper sections lie ahead.
+~
+#EXIT
+Direction south~
+ToRoom    16006
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16022
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    16023
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    16024
+#ENDEXIT
+
+Reset M 0 16008 1 16013
+Reset O 0 16000 1 16013
+Reset O 0 16004 1 16013
+#ENDROOM
+
+#ROOM
+Vnum     16014
+Name     The Map Room~
+Sector   inside~
+Flags    indoors~
+Desc     A circular room whose walls and ceiling display a continuously updated
+holographic map of the known galaxy. Planet systems are marked with
+blue light and hyperspace lanes trace silver threads between them.
+Mission markers indicate where Jedi are currently deployed. The room
+is used for mission briefings and strategic planning. It gives the
+impression of the galaxy as a single comprehensible system, which
+is both reassuring and humbling.
+~
+#EXIT
+Direction west~
+ToRoom    16006
+#ENDEXIT
+
+Reset M 0 16005 1 16014
+#ENDROOM
+
+#ROOM
+Vnum     16015
+Name     The Mission Assignment Office~
+Sector   inside~
+Flags    indoors~
+Desc     The practical heart of the Temple's administrative operation, the
+Mission Assignment Office processes requests for Jedi assistance
+from across the Republic. Organised chaos prevails — datapads
+everywhere, communications incoming continuously, and a small staff
+of dedicated Masters and Knights managing the flow. The western
+corridor connects to the south.
+~
+#EXIT
+Direction south~
+ToRoom    16007
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16025
+#ENDEXIT
+
+Reset M 0 16005 1 16015
+#ENDROOM
+
+#ROOM
+Vnum     16016
+Name     The Healers' Waiting Area~
+Sector   inside~
+Flags    indoors~
+Desc     The antechamber to the Jedi Healing Ward, this comfortable waiting
+area is designed to put the unwell at ease. Soft lighting, warm
+colours, and the gentle sound of water from a small indoor fountain
+create a restorative atmosphere. Several Padawans with training
+injuries wait quietly. The western corridor is to the east and the
+healing ward is to the north.
+~
+#EXIT
+Direction east~
+ToRoom    16007
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16026
+#ENDEXIT
+
+Reset M 0 16006 1 16016
+#ENDROOM
+
+#ROOM
+Vnum     16017
+Name     The High Meditation Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     The highest meditation chamber in the Temple, accessible from the
+eastern terrace. A domed ceiling of transparisteel gives an unobstructed
+view of the sky above. The room is entirely bare except for circular
+meditation mats arranged on the floor in a pattern that maximises
+the space between practitioners. The Force feels exceptionally clear
+here, as though the altitude and the silence thin whatever separates
+the practitioner from the living Force.
+~
+#EXIT
+Direction south~
+ToRoom    16008
+#ENDEXIT
+
+Reset M 0 16001 1 16017
+#ENDROOM
+
+#ROOM
+Vnum     16018
+Name     The Garden of a Thousand Lights~
+Sector   field~
+Flags    ~
+Desc     Beyond the memorial garden lies this extraordinary space — a garden
+planted over centuries with bioluminescent flora from across the galaxy.
+At night the effect is spectacular, the plants glowing in blues, greens,
+and soft golds. Even in daylight the garden has an otherworldly quality.
+Master Qui-Gon Jinn has been known to sit here for hours in commune with
+the living Force.
+~
+#EXIT
+Direction south~
+ToRoom    16009
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16027
+#ENDEXIT
+
+Reset M 0 16003 1 16018
+Reset M 0 16006 1 16018
+#ENDROOM
+
+#ROOM
+Vnum     16019
+Name     The High Council Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     The High Council Chamber occupies the pinnacle of the Temple's tallest
+spire. Twelve seats are arranged in a circle, each one the seat of a
+Master of the High Council. The floor is transparent and the view
+extends across the entire city below. The ceiling is similarly open
+to the sky above.
+
+The chair of Grand Master Yoda sits slightly elevated from the rest.
+The chamber carries the weight of a thousand years of decisions made
+here — good decisions and flawed ones alike. The antechamber lies below.
+~
+#EXIT
+Direction south~
+ToRoom    16010
+#ENDEXIT
+
+Reset M 0 16000 1 16019
+Reset M 0 16002 1 16019
+Reset M 0 16001 1 16019
+#ENDROOM
+
+#ROOM
+Vnum     16020
+Name     The Restricted Archives~
+Sector   inside~
+Flags    indoors~
+Desc     A section of the Archives accessible only to Masters and those with
+specific Council authorisation. The restricted collection contains
+records of Sith artefacts, dark side techniques catalogued for
+research purposes, sensitive mission records, and knowledge deemed
+too dangerous for general access. Jocasta Nu guards the entrance
+with impeccable seriousness.
+~
+#EXIT
+Direction south~
+ToRoom    16011
+#ENDEXIT
+
+Reset M 0 16008 1 16020
+Reset O 0 16000 1 16020
+Reset O 0 16004 1 16020
+#ENDROOM
+
+#ROOM
+Vnum     16021
+Name     The Youngling Training Area~
+Sector   inside~
+Flags    indoors~
+Desc     The training area for the youngest Temple students — the Younglings who
+have not yet been selected as Padawans. Small mats and scaled-down
+training equipment fill the space. The walls are decorated with simple
+illustrations of famous Jedi and explanations of the Code. The sound
+of children learning to meditate, concentrate, and take their first
+tentative steps with the Force fills the room with an energy that is
+both energetic and surprisingly moving.
+~
+#EXIT
+Direction south~
+ToRoom    16012
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16028
+#ENDEXIT
+
+Reset M 0 16006 3 16021
+#ENDROOM
+
+#ROOM
+Vnum     16022
+Name     The Holocron Vault~
+Sector   inside~
+Flags    indoors~
+Desc     A vault within the Archives dedicated entirely to the storage of
+Jedi holocrons — thousands of them, each containing the recorded
+knowledge and personality of a Jedi Master. Pyramid-shaped and cube-
+shaped, glowing blue or gold, they fill shelf after shelf in precise
+arrangement. The combined presence of so many preserved Force-sensitive
+minds gives the room a particular quality — like standing in the
+presence of an immense, patient, multivocal intelligence.
+~
+#EXIT
+Direction south~
+ToRoom    16013
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16029
+#ENDEXIT
+
+Reset M 0 16008 1 16022
+Reset O 0 16000 1 16022
+#ENDROOM
+
+#ROOM
+Vnum     16023
+Name     The Historical Wing~
+Sector   inside~
+Flags    indoors~
+Desc     The historical wing of the Archives covers the first ten thousand years
+of the Jedi Order. Records of the Hundred Year Darkness, the Great
+Hyperspace War, the Mandalorian Wars, and the New Sith Wars are all
+here in extraordinary detail. The oldest documents are sealed in
+preservation containers and available only through high-resolution
+holographic reproductions.
+~
+#EXIT
+Direction west~
+ToRoom    16013
+#ENDEXIT
+
+Reset O 0 16004 1 16023
+#ENDROOM
+
+#ROOM
+Vnum     16024
+Name     The Science and Navigation Wing~
+Sector   inside~
+Flags    indoors~
+Desc     The scientific and navigational collection covers astronomy,
+xenobiology, medicine, physics, and every navigational chart the
+Order has ever compiled. It is here that Jedi researchers have
+made some of their most significant contributions to galactic
+knowledge. The terminals in this wing are among the most advanced
+in the Temple and are in constant use.
+~
+#EXIT
+Direction east~
+ToRoom    16013
+#ENDEXIT
+
+Reset M 0 16008 1 16024
+#ENDROOM
+
+#ROOM
+Vnum     16025
+Name     The Dispatch Centre~
+Sector   inside~
+Flags    indoors~
+Desc     The operational hub of the Temple's mission operations, the Dispatch
+Centre runs on a constant stream of incoming intelligence, mission
+updates, and communication from Jedi in the field. Holographic
+displays cover every wall and the room is never quiet. Jedi Knights
+and Masters rotate through on duty shifts, ensuring the Order's
+response capacity never sleeps.
+~
+#EXIT
+Direction south~
+ToRoom    16015
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16030
+#ENDEXIT
+
+Reset M 0 16005 2 16025
+#ENDROOM
+
+#ROOM
+Vnum     16026
+Name     The Healing Ward~
+Sector   inside~
+Flags    indoors~
+Desc     The Jedi Healing Ward combines medical technology with Force-assisted
+recovery techniques. Private treatment areas line the walls and a
+central space is available for more intensive care. Jedi Healers
+move between patients with calm efficiency. The atmosphere is one
+of disciplined compassion. Several Jedi Masters have noted that
+recovery here is remarkably swift — a combination of skill and the
+healing properties of the Force.
+~
+#EXIT
+Direction south~
+ToRoom    16016
+#ENDEXIT
+
+Reset M 0 16005 1 16026
+#ENDROOM
+
+#ROOM
+Vnum     16027
+Name     The Contemplation Path~
+Sector   field~
+Flags    ~
+Desc     A winding path through the northern gardens used specifically for
+walking meditation. Unlike seated meditation, the walking form
+encourages integration of awareness with movement. Master Yoda
+and Master Qui-Gon Jinn have both been known to walk this path
+daily. Smooth stones are set at intervals and the path curves through
+stands of carefully cultivated trees from Kashyyyk and Felucia.
+The garden of lights lies south and the path continues north.
+~
+#EXIT
+Direction south~
+ToRoom    16018
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16031
+#ENDEXIT
+
+Reset M 0 16006 1 16027
+#ENDROOM
+
+#ROOM
+Vnum     16028
+Name     The Youngling Dormitory~
+Sector   inside~
+Flags    indoors~
+Desc     Simple, clean, and warmly lit, the Youngling dormitory houses the
+Temple's youngest students in small but comfortable quarters. Each
+young Force-sensitive has a bunk, a personal storage unit, and a
+small window. The walls are decorated with the students' own artwork
+alongside educational displays. The sound of sleeping children and
+the occasional murmur of a nightmare — quickly soothed by a watching
+Jedi — fills the night hours.
+~
+#EXIT
+Direction south~
+ToRoom    16021
+#ENDEXIT
+
+Reset M 0 16006 2 16028
+#ENDROOM
+
+#ROOM
+Vnum     16029
+Name     The Master's Reading Room~
+Sector   inside~
+Flags    indoors~
+Desc     A quiet room within the Archives reserved for senior Masters engaged
+in deep research. Individual study alcoves line the walls, each with
+full archive access. The Jedi Code is inscribed in large text above
+the entrance: There is no emotion, there is peace. There is no
+ignorance, there is knowledge. There is no passion, there is serenity.
+There is no chaos, there is harmony. There is no death, there is
+the Force. Master Obi-Wan Kenobi can sometimes be found here.
+~
+#EXIT
+Direction south~
+ToRoom    16022
+#ENDEXIT
+
+Reset M 0 16001 1 16029
+Reset O 0 16004 1 16029
+Reset O 0 16000 1 16029
+Reset O 0 16009 1 16029
+#ENDROOM
+
+#ROOM
+Vnum     16030
+Name     The Strategic Operations Room~
+Sector   inside~
+Flags    indoors~
+Desc     A secure room within the Dispatch Centre used for sensitive mission
+planning. Access is restricted to Masters and Knights with relevant
+clearance. Holographic displays show real-time intelligence from
+across the Republic. Master Mace Windu chairs the regular briefings
+held in this room with the brisk efficiency he brings to all things.
+~
+#EXIT
+Direction south~
+ToRoom    16025
+#ENDEXIT
+
+Reset M 0 16002 1 16030
+Reset M 0 16005 1 16030
+#ENDROOM
+
+#ROOM
+Vnum     16031
+Name     The Northern Grounds~
+Sector   field~
+Flags    ~
+Desc     The northern grounds of the Temple complex are the most open area
+within the walls — a broad expanse of carefully maintained grass
+used for outdoor training, group meditation, and ceremonial gatherings.
+The five spires of the Temple frame the view to the south. To the
+north the outer wall of the complex is visible. Paths lead toward
+the training facilities.
+~
+#EXIT
+Direction south~
+ToRoom    16027
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16032
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    16033
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    16034
+#ENDEXIT
+
+Reset M 0 16006 2 16031
+Reset M 0 16005 1 16031
+#ENDROOM
+
+#ROOM
+Vnum     16032
+Name     The Approach to the Training Halls~
+Sector   inside~
+Flags    indoors~
+Desc     A broad corridor leading from the northern grounds into the Temple's
+training complex. The walls here are covered in diagrams of lightsaber
+forms — Shii-Cho, Makashi, Soresu, Ataru, Shien, Niman, and Juyo
+illustrated in precise detail with annotations in multiple languages.
+Students study these as they walk, and it is not unusual to see a
+Padawan pause mid-stride to examine a particular stance. The northern
+grounds lie south and the training halls are ahead.
+~
+#EXIT
+Direction south~
+ToRoom    16031
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16035
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    16036
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    16037
+#ENDEXIT
+
+Reset M 0 16006 2 16032
+#ENDROOM
+
+#ROOM
+Vnum     16033
+Name     The Armoury~
+Sector   inside~
+Flags    indoors~
+Desc     The Temple armoury maintains the Order's inventory of training
+equipment, ceremonial items, and mission gear. Racks of training
+lightsabers — low-powered versions for sparring — line one wall.
+Equipment for stealth, climbing, survival, and other mission needs
+fills the rest of the space. An armourer Jedi Knight manages the
+inventory with characteristic precision.
+~
+#EXIT
+Direction west~
+ToRoom    16031
+#ENDEXIT
+
+Reset M 0 16005 1 16033
+Reset O 0 16001 1 16033
+Reset O 0 16010 1 16033
+#ENDROOM
+
+#ROOM
+Vnum     16034
+Name     The Equipment Store~
+Sector   inside~
+Flags    indoors~
+Desc     The equipment store supplies ongoing needs of Temple residents —
+robes, boots, belts, medpacs, comlinks, and the various practical
+items required for daily life in the Order. Everything is organised
+with Jedi thoroughness. The store also carries components for
+lightsaber construction, a constant area of interest for Padawans
+approaching the trials.
+~
+#EXIT
+Direction east~
+ToRoom    16031
+#ENDEXIT
+
+Reset O 0 16002 1 16034
+Reset O 0 16003 1 16034
+Reset O 0 16011 1 16034
+Reset O 0 16012 1 16034
+Reset O 0 16013 1 16034
+#ENDROOM
+
+#ROOM
+Vnum     16035
+Name     The Primary Training Hall~
+Sector   inside~
+Flags    indoors~
+Desc     The primary training hall is a large open space with high ceilings
+that allow for aerial combat training. The floor is a specialised
+material that reduces impact from falls without being so soft as
+to remove the lesson. Training equipment is stored along the walls
+and the space can be configured in multiple ways.
+
+Training remotes hover at various heights throughout the room,
+their sensors tracking all movement, ready to engage any student
+who activates them. Master Ahsoka Tano oversees training sessions
+here with the hands-on engagement of someone who learned to fight
+young and values practical experience above theory.
+~
+#EXIT
+Direction south~
+ToRoom    16032
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16038
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    16039
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    16040
+#ENDEXIT
+
+Reset M 0 16004 1 16035
+Reset M 0 16007 5 16035
+Reset O 0 16005 1 16035
+#ENDROOM
+
+#ROOM
+Vnum     16036
+Name     The Theory Classroom~
+Sector   inside~
+Flags    indoors~
+Desc     A classroom used for the academic side of Jedi training — Force theory,
+the history of the Order, ethics, law, diplomacy, and the study of
+species and cultures encountered in the field. Rows of desks face a
+teaching station equipped with holographic projection. The walls
+display rotating quotations from Jedi Masters across history,
+including Obi-Wan Kenobi, Luminara Unduli, and Plo Koon.
+~
+#EXIT
+Direction west~
+ToRoom    16032
+#ENDEXIT
+
+Reset M 0 16006 3 16036
+#ENDROOM
+
+#ROOM
+Vnum     16037
+Name     The Meditation Instruction Room~
+Sector   inside~
+Flags    indoors~
+Desc     A dedicated room for the teaching and practice of Jedi meditation
+techniques. The lighting can be adjusted from full illumination to
+near-complete darkness. Sound dampening built into the walls creates
+a silence deeper than most rooms can achieve. Meditation mats are
+arranged in a circle and a central raised platform allows an
+instructor to guide sessions. Master Yoda teaches here on occasion,
+and the sessions are attended by students at every level.
+~
+#EXIT
+Direction east~
+ToRoom    16032
+#ENDEXIT
+
+Reset M 0 16000 1 16037
+Reset M 0 16006 2 16037
+#ENDROOM
+
+#ROOM
+Vnum     16038
+Name     The Advanced Combat Hall~
+Sector   inside~
+Flags    indoors~
+Desc     The advanced combat hall is reserved for Knights and Masters engaged
+in serious sparring. The room is significantly larger than the
+primary hall and equipped with more sophisticated training remotes
+capable of coordinated attacks. The walls are scarred from years of
+lightsaber practice and the floor shows the marks of countless bouts.
+
+Master Mace Windu has been known to run sessions here in the
+Vaapad form, though he is careful to find suitable partners — the
+form is dangerous in untrained hands.
+~
+#EXIT
+Direction south~
+ToRoom    16035
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16041
+#ENDEXIT
+
+Reset M 0 16005 3 16038
+Reset M 0 16007 3 16038
+#ENDROOM
+
+#ROOM
+Vnum     16039
+Name     The Force Training Room~
+Sector   inside~
+Flags    indoors~
+Desc     A specialised room for training Force abilities — telekinesis,
+Force sense, Force push and pull, mind techniques, and the subtler
+applications of the living Force. Suspended objects at various
+heights serve as targets and props. Sensors measure the strength
+and precision of Force applications and provide real-time feedback.
+
+Master Plo Koon has added several training modules to this
+room based on his own extensive experience with telekinetic
+combat applications developed over decades of active service.
+~
+#EXIT
+Direction west~
+ToRoom    16035
+#ENDEXIT
+
+Reset M 0 16009 1 16039
+Reset M 0 16006 2 16039
+#ENDROOM
+
+#ROOM
+Vnum     16040
+Name     The Lightsaber Construction Workshop~
+Sector   inside~
+Flags    indoors~
+Desc     Every Jedi must construct their own lightsaber — it is a rite of
+passage requiring patience, Force attunement, and technical skill.
+This workshop provides the tools and environment for that process.
+Workbenches with precision tools, a selection of components, and
+a temperature-controlled kyber crystal storage unit fill the room.
+
+The walls display detailed schematics for a dozen lightsaber
+configurations alongside notes from Masters who have overseen
+thousands of constructions. Among the most annotated is a set
+of notes in a familiar hand — Obi-Wan Kenobi's, covering
+every common mistake a Padawan can make.
+~
+#EXIT
+Direction east~
+ToRoom    16035
+#ENDEXIT
+
+Reset M 0 16001 1 16040
+Reset O 0 16001 1 16040
+Reset O 0 16006 1 16040
+Reset O 0 16008 1 16040
+Reset O 0 16013 1 16040
+#ENDROOM
+
+#ROOM
+Vnum     16041
+Name     The Obstacle Course~
+Sector   inside~
+Flags    indoors~
+Desc     An elaborate obstacle course used for agility, balance, and focus
+training. Moving platforms, suspended beams, vertical climbing walls,
+and Force-navigation puzzles make up a constantly reconfigurable
+challenge. Students time their runs and the records are posted on
+a board near the entrance.
+
+Ahsoka Tano holds several course records and will cheerfully tell
+anyone who asks. No one has come close to breaking them.
+~
+#EXIT
+Direction south~
+ToRoom    16038
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16042
+#ENDEXIT
+
+Reset M 0 16006 2 16041
+#ENDROOM
+
+#ROOM
+Vnum     16042
+Name     The Outdoor Training Grounds~
+Sector   field~
+Flags    ~
+Desc     Open-air training grounds at the northern end of the Temple complex.
+Used for exercises that benefit from natural conditions — variable
+light, wind, uneven terrain. Several courses are set up here at any
+given time, including a distance-running track that circles the entire
+compound. Morning training sessions here are a Temple tradition going
+back centuries, and sunrise over the city from this position is
+genuinely spectacular.
+~
+#EXIT
+Direction south~
+ToRoom    16041
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    16043
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    16044
+#ENDEXIT
+
+Reset M 0 16006 3 16042
+Reset M 0 16005 1 16042
+#ENDROOM
+
+#ROOM
+Vnum     16043
+Name     The Eastern Residential Wing — Entrance~
+Sector   inside~
+Flags    indoors~
+Desc     The entrance to the eastern residential wing where Jedi Knights
+and visiting Masters are quartered. The corridor is quieter than
+the training areas, maintained at a lower level of activity to
+allow for rest and personal study. Each resident has private
+quarters with a workspace, meditation space, and basic amenities.
+The outdoor grounds lie to the west.
+~
+#EXIT
+Direction west~
+ToRoom    16042
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16045
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    16046
+#ENDEXIT
+
+Reset M 0 16005 2 16043
+#ENDROOM
+
+#ROOM
+Vnum     16044
+Name     The Western Residential Wing — Entrance~
+Sector   inside~
+Flags    indoors~
+Desc     The entrance to the western residential wing, which houses Padawans
+and their Masters in paired quarters designed to facilitate the
+Master-Padawan relationship. The layout puts each apprentice
+adjacent to their teacher, a practical recognition that the
+Jedi apprenticeship never really ends at the training hall door.
+The outdoor grounds lie to the east.
+~
+#EXIT
+Direction east~
+ToRoom    16042
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16047
+#ENDEXIT
+
+Reset M 0 16006 2 16044
+#ENDROOM
+
+#ROOM
+Vnum     16045
+Name     Obi-Wan Kenobi's Quarters~
+Sector   inside~
+Flags    indoors~
+Desc     The personal quarters of Master Obi-Wan Kenobi are characteristically
+understated — a meditation mat, a modest desk covered in mission
+reports and historical texts, a simple bunk, and a rack for his
+robes. A small collection of items on a shelf tells a quiet story:
+a hologram of Qui-Gon Jinn, a worn copy of the Jedi Code, and a
+datapad with a half-written letter to a former Padawan. The room
+is orderly, inhabited, and unmistakably his.
+~
+#EXIT
+Direction south~
+ToRoom    16043
+#ENDEXIT
+
+Reset M 0 16001 1 16045
+Reset O 0 16004 1 16045
+#ENDROOM
+
+#ROOM
+Vnum     16046
+Name     The Knight's Common Room~
+Sector   inside~
+Flags    indoors~
+Desc     A common room shared by the Knights quartered in the eastern wing.
+Comfortable seating, a kitchen unit, and a recreational terminal
+make it a place where Jedi genuinely relax — or as close to it as
+their training permits. Mission stories are exchanged here, strategies
+debated, and the occasional game of dejarik played with a competitiveness
+that would surprise those who imagine Jedi as uniformly serene.
+~
+#EXIT
+Direction west~
+ToRoom    16043
+#ENDEXIT
+
+Reset M 0 16005 2 16046
+#ENDROOM
+
+#ROOM
+Vnum     16047
+Name     The Padawan Common Room~
+Sector   inside~
+Flags    indoors~
+Desc     The Padawan common room is livelier than its Knight equivalent. Young
+Jedi in various stages of training gather here between sessions to
+compare notes, help each other study, debate the finer points of
+the Force, and occasionally just be young people in a galaxy that
+asks a great deal of them. The walls are covered in a mix of
+training schedules, philosophical quotations, and student artwork.
+~
+#EXIT
+Direction south~
+ToRoom    16044
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16048
+#ENDEXIT
+
+Reset M 0 16006 3 16047
+#ENDROOM
+
+#ROOM
+Vnum     16048
+Name     Master Yoda's Chambers~
+Sector   inside~
+Flags    indoors~
+Desc     Grand Master Yoda's personal chambers are strikingly simple for one
+of the most powerful beings in the galaxy. A sleeping space scaled
+to his small frame, a meditation area, and a modest collection of
+objects accumulated over nine centuries. A small pot of warming
+broth sits perpetually on a heating element. Several gimer sticks
+lean against one wall.
+
+The most striking feature is a collection of small handwritten notes
+pinned around the doorframe — observations, reminders, questions
+without answers. Nine hundred years of wondering, reduced to scraps
+of paper. The chambers radiate a profound and unassuming peace.
+~
+#EXIT
+Direction south~
+ToRoom    16047
+#ENDEXIT
+
+Reset M 0 16000 1 16048
+Reset O 0 16000 1 16048
+Reset O 0 16009 1 16048
+Reset O 0 16007 1 16048
+#ENDROOM
+
+#ROOM
+Vnum     16049
+Name     The Temple Refectory~
+Sector   inside~
+Flags    indoors~
+Desc     The Temple refectory serves three meals daily to the entire Temple
+population. Long communal tables fill the space and the kitchen
+staff — both Jedi and civilian — maintain a standard that is
+nourishing if not extravagant. Jedi tradition holds that meals
+should be taken in company and conversation, and the refectory
+at mealtimes is one of the more genuinely social spaces in
+the Temple. It connects to the residential wings and the main corridors.
+~
+#EXIT
+Direction north~
+ToRoom    16044
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    16043
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    16042
+#ENDEXIT
+
+Reset M 0 16006 2 16049
+Reset M 0 16005 1 16049
+#ENDROOM
+
+#ROOM
+Vnum     16050
+Name     The Lower Archive Vaults~
+Sector   inside~
+Flags    indoors~
+Desc     Below the main Archive level, accessible by lift, the lower vaults
+contain the most ancient and most sensitive items in the Jedi
+collection. The temperature and humidity are precisely controlled.
+Some of the items here predate the Republic itself. Others were
+seized from Sith collections over centuries and are kept here
+under study. The presence of so much accumulated history creates
+a weight in the Force that is almost tangible.
+~
+#EXIT
+Direction up~
+ToRoom    16013
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16051
+#ENDEXIT
+
+Reset M 0 16008 1 16050
+Reset O 0 16000 1 16050
+Reset O 0 16004 1 16050
+#ENDROOM
+
+#ROOM
+Vnum     16051
+Name     The Artefact Repository~
+Sector   inside~
+Flags    indoors~
+Desc     The artefact repository stores physical objects of historical or
+Force significance — ancient weapons, ceremonial items, recovered
+Sith relics under containment, and personal effects of notable
+Jedi preserved for historical record. Each item is catalogued and
+contained according to its specific properties. Some containers
+have additional Force-imbued seals placed by senior Masters.
+~
+#EXIT
+Direction south~
+ToRoom    16050
+#ENDEXIT
+
+Reset M 0 16008 1 16051
+Reset O 0 16004 1 16051
+#ENDROOM
+
+#ROOM
+Vnum     16052
+Name     The Spire Observation Deck~
+Sector   inside~
+Flags    indoors~
+Desc     The observation deck of the Temple's central spire, at the very
+summit. The view from here encompasses the entire city stretching
+to every horizon, with the Republic's infrastructure spread below
+like a living map. At night the city lights make the view extraordinary.
+
+Jedi Masters come here for perspective — both literally and
+figuratively. The isolation of the height and the view of so much
+that the Order serves and protects makes it a powerful place for
+clarity of purpose.
+~
+#EXIT
+Direction down~
+ToRoom    16019
+#ENDEXIT
+
+Reset M 0 16002 1 16052
+#ENDROOM
+
+#ROOM
+Vnum     16053
+Name     The Jedi Code Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     A small dedicated chamber near the Hall of Knighthood where the Jedi
+Code is inscribed in full in a hundred languages on every surface.
+Initiates are brought here early in their training and Knights
+return before taking the Trials. The room is available to all
+at all hours and is rarely empty. The Code in Aurebesh script
+dominates the ceiling — large enough to read while lying on
+the meditation mat below.
+~
+#EXIT
+Direction north~
+ToRoom    16005
+#ENDEXIT
+
+Reset M 0 16006 1 16053
+#ENDROOM
+
+#ROOM
+Vnum     16054
+Name     The Communications Centre~
+Sector   inside~
+Flags    indoors~
+Desc     The Temple's communications hub handles all incoming and outgoing
+contact with Jedi in the field, Republic officials, and planetary
+governments. Encrypted channels to every significant location in
+the Republic run through this centre. The operator Jedi maintain
+focus and composure regardless of the nature of the communications
+passing through their stations.
+~
+#EXIT
+Direction west~
+ToRoom    16025
+#ENDEXIT
+
+Reset M 0 16005 2 16054
+#ENDROOM
+
+#ROOM
+Vnum     16055
+Name     The Quartermaster's Office~
+Sector   inside~
+Flags    indoors~
+Desc     The practical logistics of Temple life are managed from this office —
+supply requisitions, equipment maintenance schedules, construction
+and repair requests, and the thousand administrative details that
+keep a large complex functioning. The Jedi Knight who manages this
+office has a gift for organisation that they apply with the same
+quiet professionalism as any other aspect of their service.
+~
+#EXIT
+Direction east~
+ToRoom    16015
+#ENDEXIT
+
+Reset M 0 16005 1 16055
+#ENDROOM
+
+#ROOM
+Vnum     16056
+Name     The Temple Council Anteroom~
+Sector   inside~
+Flags    indoors~
+Desc     A formal waiting area outside the High Council Chamber proper, used
+when the Council meets in closed session. The room is furnished
+with dignified simplicity and the weight of decisions pending review
+by the twelve Masters can be felt in the quiet. Those waiting here
+learn patience in an environment specifically designed to encourage it.
+~
+#EXIT
+Direction north~
+ToRoom    16019
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    16010
+#ENDEXIT
+
+Reset M 0 16005 1 16056
+#ENDROOM
+
+#ROOM
+Vnum     16057
+Name     The Diplomatic Reception Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     When Republic officials, planetary delegations, or other formal visitors
+attend the Temple, they are received in this chamber. The room is
+notably more formal than the rest of the Temple — elegant furnishings,
+careful lighting, and a layout designed to impress without intimidating.
+The Order's diplomatic work is as important as its peacekeeping and
+this space reflects that fact.
+~
+#EXIT
+Direction west~
+ToRoom    16001
+#ENDEXIT
+
+Reset M 0 16001 1 16057
+Reset M 0 16005 1 16057
+#ENDROOM
+
+#ROOM
+Vnum     16058
+Name     The Temple Library Reading Room~
+Sector   inside~
+Flags    indoors~
+Desc     A reading room adjacent to the main Archives, less imposing than the
+great hall of the Archives but with full access to the collection
+via terminals. Individual reading alcoves provide privacy. The room
+is used by both Jedi and approved outside researchers. The quiet here
+has been described by multiple visitors as the most peaceful they
+have ever experienced.
+~
+#EXIT
+Direction east~
+ToRoom    16013
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    16024
+#ENDEXIT
+
+Reset M 0 16006 1 16058
+Reset M 0 16008 1 16058
+Reset O 0 16004 1 16058
+#ENDROOM
+
+#ROOM
+Vnum     16059
+Name     The Illuminated Corridor~
+Sector   inside~
+Flags    indoors~
+Desc     A long corridor running the length of the Archives' eastern face,
+its walls made of translucent stone that glows with a soft blue light
+absorbed from the kyber crystal deposits in the Temple's foundations.
+The effect is beautiful and has a subtle calming property confirmed
+by multiple studies. It connects the Archive wings to the training
+approach.
+~
+#EXIT
+Direction north~
+ToRoom    16013
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    16006
+#ENDEXIT
+
+Reset M 0 16006 1 16059
+#ENDROOM
+
+#ROOM
+Vnum     16060
+Name     The Initiate Assessment Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     Where new Force-sensitives are assessed upon arriving at the Temple.
+The primary instrument is a blood sample analysis for midi-chlorian
+count, supplemented by practical observation exercises. The room is
+deliberately non-threatening in design — comfortable and warm, with
+a gentle light and toys for the youngest arrivals. The experience
+of being assessed here is the first step for most Jedi.
+~
+#EXIT
+Direction west~
+ToRoom    16021
+#ENDEXIT
+
+Reset M 0 16001 1 16060
+#ENDROOM
+
+#ROOM
+Vnum     16061
+Name     The Lightsaber Forms Study~
+Sector   inside~
+Flags    indoors~
+Desc     A dedicated study room for the theoretical and holographic study of
+lightsaber combat forms. Life-size holographic recordings of Masters
+demonstrating each form can be called up and studied from any angle
+at any speed. The seven classical forms — Shii-Cho, Makashi, Soresu,
+Ataru, Shien, Niman, and Juyo — and their variants are all catalogued.
+Annotations from Master Cin Drallig, the Temple's chief swordsmanship
+instructor, accompany each recording.
+~
+#EXIT
+Direction south~
+ToRoom    16035
+#ENDEXIT
+
+Reset M 0 16006 2 16061
+#ENDROOM
+
+#ROOM
+Vnum     16062
+Name     The Sparring Ring~
+Sector   inside~
+Flags    indoors~
+Desc     A circular sparring ring with clear sightlines from all angles, used
+for supervised combat training. The ring is bounded by a low energy
+barrier that stops combatants from accidentally leaving the space but
+does not interfere with the fight itself. Benches for observation
+ring the outside. Scheduled sparring sessions run most of the day
+and informal matches are permitted in off-hours.
+~
+#EXIT
+Direction north~
+ToRoom    16038
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    16035
+#ENDEXIT
+
+Reset M 0 16005 2 16062
+Reset M 0 16007 2 16062
+#ENDROOM
+
+#ROOM
+Vnum     16063
+Name     The Balance Training Room~
+Sector   inside~
+Flags    indoors~
+Desc     A room dedicated to the physical balance training that underpins
+lightsaber technique. Narrow beams at various heights, balance boards,
+and suspended platforms are arranged throughout. Training remotes
+set to low-intensity operation add a layer of challenge for advanced
+students. Master Yoda insists that physical balance and mental balance
+are the same thing approached from different directions.
+~
+#EXIT
+Direction east~
+ToRoom    16038
+#ENDEXIT
+
+Reset M 0 16007 3 16063
+Reset M 0 16006 2 16063
+#ENDROOM
+
+#ROOM
+Vnum     16064
+Name     The Wisdom Corridor~
+Sector   inside~
+Flags    indoors~
+Desc     A corridor connecting the Hall of Knighthood to the residential wings,
+its walls lined with handwritten texts from Jedi Masters across
+history. Unlike the formal inscriptions elsewhere in the Temple,
+these are reproductions of informal writings — journal entries,
+letters, notes to students, observations made in the field. The
+humanity and variety of Jedi experience expressed here makes this
+one of the most visited spaces in the Temple.
+~
+#EXIT
+Direction north~
+ToRoom    16047
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    16005
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    16043
+#ENDEXIT
+
+Reset M 0 16006 1 16064
+#ENDROOM
+
+#ROOM
+Vnum     16065
+Name     The Jedi Temple Hangar~
+Sector   inside~
+Flags    indoors~
+Desc     The Temple hangar maintains a modest fleet of transport vessels for
+Jedi use. Several Jedi Starfighters — the compact single-seat fighters
+used for rapid deployment — rest in maintenance bays alongside a
+larger transport shuttle. Astromech droids move between the ships,
+running diagnostics and carrying out routine maintenance. The bay
+connects to the northern grounds.
+~
+#EXIT
+Direction south~
+ToRoom    16031
+#ENDEXIT
+
+Reset M 0 16005 1 16065
+#ENDROOM
+
+#ROOM
+Vnum     16066
+Name     The Kyber Crystal Storage~
+Sector   inside~
+Flags    indoors~
+Desc     Adjacent to the lightsaber construction workshop, a temperature and
+pressure-controlled storage space for kyber crystals. The crystals
+are the heart of every lightsaber and obtaining one through the
+traditional pilgrimage to Ilum is a Padawan rite of passage. The
+storage here holds reserve crystals, study specimens, and crystals
+recovered from destroyed lightsabers for examination.
+
+The crystals hum faintly in their storage cells and the combined
+effect is a sound at the very edge of hearing that practitioners
+describe as comforting.
+~
+#EXIT
+Direction west~
+ToRoom    16040
+#ENDEXIT
+
+Reset O 0 16001 1 16066
+Reset O 0 16006 1 16066
+Reset O 0 16008 1 16066
+#ENDROOM
+
+#ROOM
+Vnum     16067
+Name     The Temple Archives — Cataloguing Room~
+Sector   inside~
+Flags    indoors~
+Desc     The working space where new acquisitions to the Archives are
+processed — catalogued, described, dated, and assigned to their
+appropriate location. The work is painstaking and requires both
+scholarly knowledge and Force sensitivity to properly assess
+certain items. Jocasta Nu maintains that this room is the most
+important in the Archives, since an uncatalogued item is a lost
+item regardless of its significance.
+~
+#EXIT
+Direction west~
+ToRoom    16013
+#ENDEXIT
+
+Reset M 0 16008 1 16067
+#ENDROOM
+
+#ROOM
+Vnum     16068
+Name     The Temple Inner Courtyard~
+Sector   field~
+Flags    ~
+Desc     An enclosed courtyard at the heart of the Temple complex, accessible
+from several interior corridors. A single massive tree grows here,
+its trunk wider than three people can encircle, its age unknown.
+Jedi lore holds that the tree was already ancient when the Temple
+was built around it, and that it is sensitive to the Force in ways
+that science has confirmed but not explained. Sitting beneath it
+is said to be profoundly clarifying.
+~
+#EXIT
+Direction north~
+ToRoom    16001
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    16005
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    16013
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    16035
+#ENDEXIT
+
+Reset M 0 16000 1 16068
+Reset M 0 16006 2 16068
+#ENDROOM
+
+#ROOM
+Vnum     16069
+Name     The Chamber of Becoming~
+Sector   inside~
+Flags    indoors~
+Desc     A small private chamber used for the final stage of the Jedi Trials —
+the Trial of the Spirit. Here a Jedi faces a deeply personal vision
+constructed by the Force itself, confronting fears, attachments, and
+the shadow of the dark side within. Masters do not enter with the
+student. What happens here is intensely private.
+
+The room is otherwise unremarkable in its appointments, which seems
+fitting. The most significant experiences rarely require elaborate
+staging.
+~
+#EXIT
+Direction west~
+ToRoom    16010
+#ENDEXIT
+
+Reset M 0 16000 1 16069
+#ENDROOM
+
+#ROOM
+Vnum     16070
+Name     The Temple Bell Tower~
+Sector   inside~
+Flags    indoors~
+Desc     A narrow tower containing the Temple bell, rung to mark significant
+moments in Temple life — dawn meditation, meals, ceremonies, and
+the rare occasions when an emergency requires all Temple residents
+to gather. The bell is cast from an alloy that includes kyber
+crystal fragments, giving its tone a quality that can be felt
+as much as heard by Force-sensitives. From the tower's small
+windows the city spreads in every direction.
+~
+#EXIT
+Direction down~
+ToRoom    16001
+#ENDEXIT
+
+#ENDROOM
+
+#ROOM
+Vnum     16071
+Name     The Masters' Contemplation Hall~
+Sector   inside~
+Flags    indoors~
+Desc     A hall reserved for Jedi Masters in need of extended private
+contemplation. Unlike the meditation rooms available to all members
+of the Order, this space is maintained in absolute silence by
+sound-dampening technology and additional Force-imbued insulation
+applied by senior Masters over generations. Nothing of the outside
+world penetrates here. Masters come to this room when decisions
+of great weight must be made.
+~
+#EXIT
+Direction east~
+ToRoom    16010
+#ENDEXIT
+
+Reset M 0 16003 1 16071
+Reset M 0 16000 1 16071
+#ENDROOM
+
+#ROOM
+Vnum     16072
+Name     The Temple Basement — Utility Corridors~
+Sector   inside~
+Flags    indoors~
+Desc     The utilitarian underbelly of the Temple — power conduits, water
+systems, climate control units, and the various mechanical systems
+that keep a building of this scale functional. Maintenance droids
+move through these corridors constantly. The contrast with the
+Temple above is total — here everything is functional and
+unloved, which gives the basement an oddly honest quality.
+~
+#EXIT
+Direction up~
+ToRoom    16068
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    16073
+#ENDEXIT
+
+#ENDROOM
+
+#ROOM
+Vnum     16073
+Name     The Deep Foundation Chamber~
+Sector   inside~
+Flags    indoors dark~
+Desc     The deepest accessible point beneath the Temple, where the original
+foundations meet the bedrock of the planet. The kyber crystals
+embedded in the foundations are largest here, their glow the only
+illumination — a shifting blue that gives the chamber an underwater
+quality. The hum of their combined resonance is constant and low.
+
+Very few Jedi come here and those who do report that the Force
+feels different at this depth — more present, less directed.
+As though the crystal-laced bedrock acts as an amplifier for the
+living Force in a way that the architects of the Temple understood
+and deliberately incorporated.
+~
+#EXIT
+Direction south~
+ToRoom    16072
+#ENDEXIT
+
+Reset M 0 16000 1 16073
+#ENDROOM
+
+#ROOM
+Vnum     16074
+Name     The Temple Outpost~
+Sector   field~
+Flags    ~
+Desc     A small outpost at the Temple's outer perimeter, maintained by
+rotating duty Jedi Knights. The outpost monitors the approach to
+the Temple and provides a first point of contact for visitors.
+It is also simply a pleasant place to stand watch — the view of
+the Temple entrance plaza from here, framed by the processional
+avenue trees, is one that many Jedi remember long after leaving.
+~
+#EXIT
+Direction north~
+ToRoom    16000
+#ENDEXIT
+
+Reset M 0 16005 2 16074
+#ENDROOM
+
+#ROOM
+Vnum     16075
+Name     The Night Watch Post~
+Sector   inside~
+Flags    indoors~
+Desc     A watch post active during the night cycle, when the Temple is
+quieter but never entirely still. The Jedi on night watch monitor
+the Temple's security systems, handle any communications that come
+in during off-hours, and maintain the presence of the Order even
+in the deep hours. The night watch is considered a meditative
+assignment — long stretches of quiet attention punctuated by
+moments of decisive action.
+~
+#EXIT
+Direction south~
+ToRoom    16074
+#ENDEXIT
+
+Reset M 0 16005 1 16075
+#ENDROOM
+
+#ROOM
+Vnum     16076
+Name     The Jedi Temple Archives — Species Reference Wing~
+Sector   inside~
+Flags    indoors~
+Desc     A wing of the Archives dedicated to xenobiology and species
+documentation — one of the most extensively used sections by Jedi
+preparing for missions to unfamiliar worlds. Tens of thousands of
+species are documented here with information on biology, culture,
+language, history, and Force sensitivity rates. The collection
+is updated continuously as Jedi return from the field.
+~
+#EXIT
+Direction south~
+ToRoom    16023
+#ENDEXIT
+
+Reset M 0 16008 1 16076
+#ENDROOM
+
+#ROOM
+Vnum     16077
+Name     The Diplomatic Records Wing~
+Sector   inside~
+Flags    indoors~
+Desc     Treaties, diplomatic correspondence, records of negotiations mediated
+by the Jedi, and the history of the Order's relationship with the
+Republic and its predecessors fill this wing of the Archives. It
+is the wing that senior Padawans preparing for missions involving
+political mediation study most intensively. Master Obi-Wan Kenobi
+is said to have nearly lived here as a Padawan.
+~
+#EXIT
+Direction north~
+ToRoom    16024
+#ENDEXIT
+
+Reset O 0 16004 1 16077
+#ENDROOM
+
+#ROOM
+Vnum     16078
+Name     The Force Nexus Meditation Space~
+Sector   inside~
+Flags    indoors~
+Desc     A meditation space built directly over the strongest convergence of
+kyber crystal deposits in the Temple's foundations. The Force presence
+here is powerful enough to affect even non-sensitives, who report
+feeling unusually calm and clear after spending time in the room.
+For Force-sensitives the experience is considerably more intense.
+Several of the Order's most significant insights have come to Masters
+meditating in this room.
+~
+#EXIT
+Direction up~
+ToRoom    16068
+#ENDEXIT
+
+Reset M 0 16000 1 16078
+Reset M 0 16009 1 16078
+#ENDROOM
+
+#ROOM
+Vnum     16079
+Name     The Jedi Temple — Roof Garden~
+Sector   field~
+Flags    ~
+Desc     The roof of the Temple's lower sections has been cultivated into a
+garden accessible from several interior stairways. The elevation
+provides a remarkable view in all directions and the garden itself
+is maintained with the careful attention the Order brings to all
+things. Jedi come here for a combination of the view, the fresh
+air, and the slight remove from the activity below. Master Ahsoka
+Tano has been known to train here at dawn.
+~
+#EXIT
+Direction down~
+ToRoom    16001
+#ENDEXIT
+
+Reset M 0 16004 1 16079
+Reset M 0 16006 1 16079
+#ENDROOM
+
+#ROOM
+Vnum     16080
+Name     The Jedi Council Secondary Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     A secondary Council meeting space used for smaller deliberations that
+do not require the full High Council. Four or five Masters can meet
+here for specific discussions without convening the full Council
+in its chamber at the spire's summit. The room is furnished simply
+and the lack of formality relative to the High Council Chamber is
+intentional — some discussions benefit from it.
+~
+#EXIT
+Direction east~
+ToRoom    16010
+#ENDEXIT
+
+Reset M 0 16002 1 16080
+Reset M 0 16001 1 16080
+#ENDROOM
+
+#ROOM
+Vnum     16081
+Name     The Temple Infirmary Annex~
+Sector   inside~
+Flags    indoors~
+Desc     An annex to the main Healing Ward for overflow capacity and for
+cases requiring extended recovery. The rooms here are more private
+than the main ward and are used for Jedi recovering from serious
+injuries or from the particular exhaustion that follows deep Force
+work. The quiet is significant and carefully maintained.
+~
+#EXIT
+Direction east~
+ToRoom    16026
+#ENDEXIT
+
+Reset M 0 16005 1 16081
+#ENDROOM
+
+#ROOM
+Vnum     16082
+Name     The Temple Archives — Restricted Reading Alcove~
+Sector   inside~
+Flags    indoors~
+Desc     A restricted reading alcove within the Archives where sensitive
+documents can be reviewed under supervised conditions. The alcove
+is shielded against recording devices and the contents of documents
+reviewed here cannot be copied or transmitted. Access requires
+authorisation from a Council Master or from Jocasta Nu herself,
+who grants it with the particular reluctance of someone who knows
+exactly how dangerous knowledge can be.
+~
+#EXIT
+Direction west~
+ToRoom    16020
+#ENDEXIT
+
+Reset M 0 16008 1 16082
+#ENDROOM
+
+#ROOM
+Vnum     16083
+Name     The Temple Commissary~
+Sector   inside~
+Flags    indoors~
+Desc     The Temple commissary supplies consumables, replacement equipment,
+and general supplies to Temple residents. It is not a shop in any
+commercial sense — items are requisitioned, not purchased — but
+the function is similar. The commissary Jedi manages inventory
+with meticulous care and has been known to remember exactly what
+every Temple resident needs before they arrive to ask for it.
+~
+#EXIT
+Direction west~
+ToRoom    16049
+#ENDEXIT
+
+Reset O 0 16002 1 16083
+Reset O 0 16003 1 16083
+Reset O 0 16012 1 16083
+#ENDROOM
+
+#ROOM
+Vnum     16084
+Name     The Temple Gardens — Fountain Court~
+Sector   field~
+Flags    ~
+Desc     A courtyard within the formal eastern gardens, built around a
+central fountain whose water cascades through a series of tiered
+stone basins before collecting in a reflecting pool. The sound
+of the water is the only sound in this part of the gardens.
+Jedi who seek clarity often find themselves here without quite
+remembering the decision to come.
+~
+#EXIT
+Direction west~
+ToRoom    16003
+#ENDEXIT
+
+Reset M 0 16006 1 16084
+#ENDROOM
+
+#ROOM
+Vnum     16085
+Name     The Temple Gardens — Ancient Tree Grove~
+Sector   field~
+Flags    ~
+Desc     A grove of ancient trees within the western gardens, their trunks
+marked by centuries. These particular trees were transplanted from
+Endor generations ago and carry a faint Force sensitivity that makes
+the grove feel inhabited in a way that is difficult to articulate.
+Small glowing creatures sometimes emerge from the bark at dusk.
+Master Qui-Gon Jinn considers this the finest spot in the Temple.
+~
+#EXIT
+Direction east~
+ToRoom    16004
+#ENDEXIT
+
+Reset M 0 16003 1 16085
+#ENDROOM
+
+#ROOM
+Vnum     16086
+Name     The Padawan Examination Room~
+Sector   inside~
+Flags    indoors~
+Desc     Where Padawans undergo formal assessments of their academic and
+practical progress. The room contains both a written examination
+terminal and a practical demonstration space. The assessments
+are rigorous but fair — the Jedi believe that knowing one's
+actual level of competence is more valuable than the comfort of
+overestimating it.
+~
+#EXIT
+Direction south~
+ToRoom    16012
+#ENDEXIT
+
+Reset M 0 16001 1 16086
+#ENDROOM
+
+#ROOM
+Vnum     16087
+Name     The Force History Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     A chamber dedicated to the history of the Force itself — what is
+known of its origins, the various traditions that have sought to
+understand it, the balance between its aspects, and the ongoing
+scholarly debate about its nature. The room contains some of the
+most ancient documents in the Archive collection. Reading them
+produces more questions than answers, which the Jedi consider
+entirely appropriate.
+~
+#EXIT
+Direction east~
+ToRoom    16022
+#ENDEXIT
+
+Reset O 0 16004 1 16087
+Reset O 0 16000 1 16087
+#ENDROOM
+
+#ROOM
+Vnum     16088
+Name     The Training Hall Observation Balcony~
+Sector   inside~
+Flags    indoors~
+Desc     A balcony above the primary training hall where Masters and senior
+Knights can observe training sessions without participating. It is
+also used by students to watch advanced training and by Masters
+to watch students who do not know they are being observed — which
+reveals considerably more about a Padawan's development than any
+formal assessment.
+~
+#EXIT
+Direction down~
+ToRoom    16035
+#ENDEXIT
+
+Reset M 0 16001 1 16088
+#ENDROOM
+
+#ROOM
+Vnum     16089
+Name     The Meditation Cave~
+Sector   inside~
+Flags    indoors dark~
+Desc     A natural cave beneath the Temple gardens, accessible through a
+concealed entrance in the western garden. Unlike the designed
+meditation spaces above, this cave is unchanged from its natural
+state. It is cold, dark, and utterly without comfort. Masters
+send students here specifically because of that — some experiences
+with the Force require the removal of all distraction, including
+the distraction of pleasantness.
+
+Master Yoda has meditated here more times than he can count,
+which at nine hundred years is saying something.
+~
+#EXIT
+Direction up~
+ToRoom    16004
+#ENDEXIT
+
+Reset M 0 16000 1 16089
+#ENDROOM
+
+#ROOM
+Vnum     16090
+Name     The Temple Archives — Prophecy Collection~
+Sector   inside~
+Flags    indoors~
+Desc     A specific section of the Archives devoted to Jedi prophecy — a
+subject treated with a mixture of scholarly interest and philosophical
+caution within the Order. The most famous prophecy, concerning the
+Chosen One who will bring balance to the Force, is documented here
+in seventeen different translations and accompanied by centuries of
+interpretive commentary. The commentary is notably inconclusive.
+~
+#EXIT
+Direction south~
+ToRoom    16029
+#ENDEXIT
+
+Reset M 0 16008 1 16090
+Reset O 0 16004 1 16090
+#ENDROOM
+
+#ROOM
+Vnum     16091
+Name     The Temple — The Thousand Steps~
+Sector   inside~
+Flags    indoors~
+Desc     The great ceremonial staircase descending from the Temple's main
+entrance level to the plaza below — one thousand steps of pale
+stone worn by the passage of countless generations. Walking the
+Thousand Steps is itself considered a meditative practice by
+many Jedi. The view from the top is of the processional avenue
+stretching south toward the city. The view from the bottom is
+of the Temple rising into the sky.
+~
+#EXIT
+Direction north~
+ToRoom    16000
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    16002
+#ENDEXIT
+
+Reset M 0 16006 2 16091
+#ENDROOM
+
+#ROOM
+Vnum     16092
+Name     The Temple Archives — Force Cartography Wing~
+Sector   inside~
+Flags    indoors~
+Desc     Maps of Force nexuses, vergences, and sensitive locations across the
+galaxy fill this wing of the Archives. The collection includes charts
+of Dagobah, Ilum, Mortis (theoretical), the Cave of Evil on Dagobah,
+the World Between Worlds entrance on Lothal, and dozens of other
+significant Force locations. The cartography is maintained by a small
+team and updated as new locations are identified.
+~
+#EXIT
+Direction east~
+ToRoom    16024
+#ENDEXIT
+
+Reset O 0 16004 1 16092
+#ENDROOM
+
+#ROOM
+Vnum     16093
+Name     The Jedi Temple — The Sunken Courtyard~
+Sector   field~
+Flags    ~
+Desc     A sunken courtyard accessible by steps from the main level, its floor
+two metres below the surrounding paths. The sunken design creates
+a natural windbreak and a sense of enclosure that makes it feel
+more private than any interior room. A small flowering tree at
+the centre is the only plant in an otherwise stone space. Jedi
+use this courtyard for private conversations and difficult discussions
+that benefit from a degree of separation from the Temple's activity.
+~
+#EXIT
+Direction up~
+ToRoom    16068
+#ENDEXIT
+
+Reset M 0 16001 1 16093
+Reset M 0 16006 1 16093
+#ENDROOM
+
+#ROOM
+Vnum     16094
+Name     The Temple Archives — Navigation and Astronomy Wing~
+Sector   inside~
+Flags    indoors~
+Desc     The most technically specialised section of the Archives, housing
+star charts, hyperspace route maps, gravitational surveys, and
+astronomical data accumulated by the Order over millennia. The
+data here has contributed significantly to Republic navigation.
+The Jedi's unique ability to detect Force-sensitive navigation
+hazards — maelstroms, mass shadows with unusual properties —
+has made their astronomical collection particularly valuable.
+~
+#EXIT
+Direction west~
+ToRoom    16024
+#ENDEXIT
+
+Reset O 0 16004 1 16094
+#ENDROOM
+
+#ROOM
+Vnum     16095
+Name     The Temple — The Way of Peace~
+Sector   inside~
+Flags    indoors~
+Desc     A corridor connecting the residential wings to the training complex,
+its walls inlaid with a continuous relief depicting peaceful scenes —
+gardens, conversations, children learning, healers working. It is
+a deliberate counterpoint to the combat training it leads toward,
+a reminder of what the training is in service of. Most Jedi walk
+this corridor without consciously reading the imagery. Most
+have absorbed it anyway.
+~
+#EXIT
+Direction north~
+ToRoom    16035
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    16044
+#ENDEXIT
+
+Reset M 0 16006 1 16095
+#ENDROOM
+
+#ROOM
+Vnum     16096
+Name     The Temple — The Hall of Service~
+Sector   inside~
+Flags    indoors~
+Desc     A hall dedicated to the memory of Jedi who distinguished themselves
+through service — not in combat, which has its own memorials, but
+in healing, diplomacy, teaching, and the quiet work that never makes
+the history records but without which the galaxy would be measurably
+worse. The names and brief accounts here represent thousands of
+lives spent in acts whose significance was invisible at the time
+and only apparent in retrospect.
+~
+#EXIT
+Direction west~
+ToRoom    16001
+#ENDEXIT
+
+Reset M 0 16006 1 16096
+#ENDROOM
+
+#ROOM
+Vnum     16097
+Name     The Temple — The Threshold~
+Sector   inside~
+Flags    indoors~
+Desc     The innermost threshold of the Temple — a simple doorway with no
+particular architectural distinction, standing between the active
+spaces of the Order and the deepest meditation areas. Tradition
+holds that one pauses here to set aside whatever one is carrying
+before proceeding, and to acknowledge what one is returning to.
+The tradition is observed more often than not.
+~
+#EXIT
+Direction north~
+ToRoom    16068
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    16001
+#ENDEXIT
+
+#ENDROOM
+
+#ROOM
+Vnum     16098
+Name     The Temple — The Room of a Thousand Candles~
+Sector   inside~
+Flags    indoors~
+Desc     A circular room lit entirely by candles — one thousand of them, in
+holders of varying heights arranged in concentric circles. The candles
+are the first thing Younglings learn to light using the Force and
+the last thing Knights extinguish before beginning the Trials. Keeping
+all one thousand lit simultaneously is said to be achievable only by
+those who have genuinely mastered inner stillness. The room is never
+dark and never cold.
+~
+#EXIT
+Direction east~
+ToRoom    16069
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    16071
+#ENDEXIT
+
+Reset M 0 16000 1 16098
+Reset M 0 16006 2 16098
+#ENDROOM
+
+#ROOM
+Vnum     16099
+Name     The Temple — The Final Arch~
+Sector   inside~
+Flags    indoors~
+Desc     The last room before the Temple's deepest meditation level — a vaulted
+arch of ancient stone through which every Jedi who has ever served
+has passed. The stone is worn smooth at shoulder height on both sides,
+where generations of hands have touched it in passing. The arch leads
+nowhere else remarkable. It is the journey through it that matters.
+Beyond lies the Force Nexus meditation space beneath the Temple.
+The inner courtyard is accessible to the north.
+~
+#EXIT
+Direction north~
+ToRoom    16068
+#ENDEXIT
+#EXIT
+Direction down~
+ToRoom    16078
+#ENDEXIT
+
+Reset M 0 16000 1 16099
+#ENDROOM
+
+#ENDAREA

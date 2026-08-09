@@ -1,0 +1,10 @@
+
+Force awakening system allows players chance to touch the force, but not everyone is a lightsaber wielding player.  Likely move other spells above the 25 level threshold as well.  
+
+[  494] Remi: command that forces a player to clone.  it transfers them to the clone facility, gives them enough credits for cloning, than transfers them back to the original vnum they came from.
+[  494] Remi: Why are blasters too heavy for a Jawa to hold?
+[10228] Kilbac: the score menu shows lck and frc, which both should only show as ??? (???).
+[10228] Remi: ambassador force levels dont work.  it gives a force roll rather than set amount of levels as it should.
+[  100] Remi: Bombard as a piloting skill.  while in space above a planet, if typed, it will drop bombs on the planet and lower the planet's support.  It's an anti diplomat skill used to lower support of a rival planet.
+[  100] Remi: sustain spell does not work
+[  100] Remi: shadow_walk skill for bounty hunters not implemented

@@ -1,0 +1,145 @@
+#FUSSAREA
+#AREADATA
+Version      1
+Name         Frigate - the Vigilant Stand~
+Author       Sonnet~
+Ranges       40 103 0 100
+Economy      0 0
+ResetFreq    15
+#ENDAREADATA
+
+#ROOM
+Vnum     802
+Name     Airlock - the Vigilant Stand~
+Sector   city~
+Flags    indoors~
+Desc     The frigate's boarding airlock, wide enough for a squad to pass
+through in full kit. A status panel beside the inner hatch reads out
+hull and shield integrity at a glance.
+~
+#EXIT
+Direction north~
+ToRoom    803
+#ENDEXIT
+
+#ENDROOM
+
+#ROOM
+Vnum     803
+Name     Main Corridor - the Vigilant Stand~
+Sector   city~
+Flags    indoors~
+Desc     A long spinal corridor runs the length of the frigate, connecting
+the bridge, engineering, gunnery, and the turret access shafts. Deck
+plating rattles faintly with the hum of the reactor below.
+~
+#EXIT
+Direction south~
+ToRoom    802
+#ENDEXIT
+
+#EXIT
+Direction north~
+ToRoom    804
+#ENDEXIT
+
+#EXIT
+Direction east~
+ToRoom    805
+#ENDEXIT
+
+#EXIT
+Direction west~
+ToRoom    806
+#ENDEXIT
+
+#EXIT
+Direction up~
+ToRoom    807
+#ENDEXIT
+
+#EXIT
+Direction down~
+ToRoom    808
+#ENDEXIT
+
+#ENDROOM
+
+#ROOM
+Vnum     804
+Name     Bridge - the Vigilant Stand~
+Sector   city~
+Flags    indoors~
+Desc     The frigate's bridge is a tight command deck, pilot and navigator
+stations flanking the forward viewport. Every readout a captain could
+want is within arm's reach.
+~
+#EXIT
+Direction south~
+ToRoom    803
+#ENDEXIT
+
+#ENDROOM
+
+#ROOM
+Vnum     805
+Name     Turret One - the Vigilant Stand~
+Sector   city~
+Flags    indoors~
+Desc     A cramped gunnery blister on the frigate's dorsal hull, laser
+cannon controls mounted in front of a scarred targeting scope.
+~
+#EXIT
+Direction west~
+ToRoom    803
+#ENDEXIT
+
+#ENDROOM
+
+#ROOM
+Vnum     806
+Name     Turret Two - the Vigilant Stand~
+Sector   city~
+Flags    indoors~
+Desc     The frigate's second gunnery blister, mounted ventrally to cover
+the arcs the dorsal turret can't reach.
+~
+#EXIT
+Direction east~
+ToRoom    803
+#ENDEXIT
+
+#ENDROOM
+
+#ROOM
+Vnum     807
+Name     Gunnery Station - the Vigilant Stand~
+Sector   city~
+Flags    indoors~
+Desc     Banks of launcher controls line this narrow station, feeding the
+frigate's missile, torpedo, and rocket tubes as well as its autocannon
+mounts.
+~
+#EXIT
+Direction down~
+ToRoom    803
+#ENDEXIT
+
+#ENDROOM
+
+#ROOM
+Vnum     808
+Name     Engine Room - the Vigilant Stand~
+Sector   city~
+Flags    indoors~
+Desc     The frigate's reactor core dominates this room, ringed by
+access catwalks and a repair console for the drive and weapon systems.
+~
+#EXIT
+Direction up~
+ToRoom    803
+#ENDEXIT
+
+#ENDROOM
+
+#ENDAREA

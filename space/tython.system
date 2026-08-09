@@ -1,0 +1,52 @@
+#SPACE
+Name         Tython System~
+Filename     tython.system~
+Planet1      Tython~
+Planet2      Ashla~
+Planet3      Bogan~
+Star1        Tythos~
+Star2        ~
+Location1a      Qigong Kesh Landing Pad~
+Location1b      Mahara Kesh Surface Platform~
+Location1c      Bodhi Landing Pad~
+Location2a      ~
+Location2b      ~
+Location2c      ~
+Location3a      ~
+Location3b      ~
+Location3c      ~
+Doc1a          40401
+Doc2a          0
+Doc3a          0
+Doc1b          40701
+Doc2b          0
+Doc3b          0
+Doc1c          40601
+Doc2c          0
+Doc3c          0
+P1x          -8080
+P1y          5000
+P1z          -8000
+P2x          -4000
+P2y          8000
+P2z          -10000
+P3x          -8000
+P3y          10000
+P3z          8000
+S1x          0
+S1y          0
+S1z          0
+S2x          0
+S2y          0
+S2z          0
+Gravitys1     200
+Gravitys2     200
+Gravityp1     150
+Gravityp2     150
+Gravityp3     150
+Xpos          -7005
+Ypos          -4010
+End
+
+#END
+

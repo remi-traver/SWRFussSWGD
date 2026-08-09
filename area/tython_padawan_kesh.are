@@ -1,0 +1,299 @@
+#FUSSAREA
+#AREADATA
+Version      1
+Name         Padawan Kesh~
+Author       SWR FUSS~
+Ranges       5 95 5 95
+Economy      0 0
+ResetMsg     A gentle chime echoes through Padawan Kesh as another lesson begins.~
+ResetFreq    10
+Flags        ~
+#ENDAREADATA
+
+#MOBILE
+Vnum       40001
+Keywords   ruhr master temple jedaii~
+Short      Master Ruhr~
+Long       Master Ruhr sits in quiet contemplation, watching over his students.
+~
+Desc       An elderly man with a calm, weathered face, Master Ruhr carries
+himself with the unhurried patience of someone who has spent a
+lifetime teaching the youngest members of the Order. His eyes miss
+nothing.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     male~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 95 -30 -50 0 50000
+Stats2     40 20 4000
+Stats3     1 8 8
+Stats4     70 180 1 50 50
+Attribs    18 18 18 18 18 18 15 15
+Saves      -30 -30 -30 -30 -30
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40002
+Keywords   jedaii instructor~
+Short      a Je'daii instructor~
+Long       A Je'daii instructor watches the training yard with a critical eye.
+~
+Desc       Dressed in the plain, practical robes of the Order, this
+instructor moves between the sparring initiates with an economy of
+motion that speaks of long mastery. Little escapes their notice.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     female~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 70 -10 -20 0 15000
+Stats2     25 15 2000
+Stats3     1 6 6
+Stats4     65 150 1 35 35
+Attribs    16 16 16 16 16 16 10 10
+Saves      -10 -10 -10 -10 -10
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40003
+Keywords   jedaii initiate youngling~
+Short      a Je'daii initiate~
+Long       A young Je'daii initiate hurries past, robes still too large for them.
+~
+Desc       Barely old enough to have left their family behind, this
+initiate is still learning to find their footing at the Academy -
+both in the Force, and otherwise.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     male~
+Actflags   npc~
+Affected   ~
+Stats1     0 5 0 0 0 20
+Stats2     1 4 20
+Stats3     1 2 2
+Stats4     55 100 1 2 2
+Attribs    10 10 10 10 10 10 8 5
+Saves      0 0 0 0 0
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#OBJECT
+Vnum       40001
+Keywords   practice sword wooden~
+Type       weapon~
+Short      a wooden practice sword~
+Long       A wooden practice sword lies here, its edges worn smooth from use.~
+Flags      ~
+WFlags     take wield~
+Values     12 3 6 2 0 5
+Stats      1 5 0 0 0
+#ENDOBJECT
+
+#OBJECT
+Vnum       40002
+Keywords   initiate robe~
+Type       armor~
+Short      an initiate's robe~
+Long       An initiate's robe is folded here.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 5 0 0 0
+Affect     -1 -1 3 1 0
+#ENDOBJECT
+
+#ROOM
+Vnum     40001
+Name     Gate of Padawan Kesh~
+Sector   inside~
+Flags    indoors~
+Desc     Encased in pale stone brick and topped with golden spires, the
+gate of Padawan Kesh rises before you, marking the boundary between the
+wider world of Tython and the Je'daii Academy within. Initiates in
+plain robes pass beneath the arch in twos and threes, murmuring to one
+another. The path leads north into the outer courtyard.
+~
+#EXIT
+Direction north~
+ToRoom    40002
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40916
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40002
+Name     Outer Courtyard~
+Sector   inside~
+Flags    indoors~
+Desc     Smooth flagstones, swept clean each morning, form a wide
+courtyard at the heart of the Academy. Initiates cluster in small
+groups here between lessons, some meditating, others sparring with
+practice weapons under the watchful eyes of their instructors. Paths
+lead off in several directions.
+~
+#EXIT
+Direction south~
+ToRoom    40001
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40003
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40005
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40006
+#ENDEXIT
+
+Reset M 0 40002 1 40002
+#ENDROOM
+
+#ROOM
+Vnum     40003
+Name     Training Yard~
+Sector   inside~
+Flags    indoors~
+Desc     Sand covers the ground here, raked into careful patterns
+between sparring sessions. Wooden practice weapons hang from racks
+along one wall, and a low wooden platform marks the center of the
+yard where instructors demonstrate technique. The clack of wood on
+wood rings out from a dozen pairs of sparring initiates.
+~
+#EXIT
+Direction south~
+ToRoom    40002
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40004
+#ENDEXIT
+
+Reset O 0 40001 5 40003
+Reset M 0 40003 1 40003
+#ENDROOM
+
+#ROOM
+Vnum     40004
+Name     Meditation Hall~
+Sector   inside~
+Flags    indoors~
+Desc     A hushed stillness fills this circular chamber. Rows of
+worn cushions ring a shallow pool of clear water at the center of the
+floor, its surface undisturbed by even the faintest breath of wind.
+Initiates sit cross-legged around its edge, eyes closed, reaching for
+the first threads of their connection to the Force.
+~
+#EXIT
+Direction south~
+ToRoom    40003
+#ENDEXIT
+#EXIT
+Direction up~
+ToRoom    40008
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40005
+Name     Lecture Hall~
+Sector   inside~
+Flags    indoors~
+Desc     Tiered stone benches curve around a raised dais at the
+front of this hall, where an instructor paces as they speak. Faded
+murals along the walls depict scenes from the Order's early history -
+the arrival of the Tho Yor, the founding of the nine Temples, the
+first Je'daii Masters. Initiates take careful notes on datapads worn
+smooth with age.
+~
+#EXIT
+Direction west~
+ToRoom    40002
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40006
+Name     Initiate Dormitory~
+Sector   inside~
+Flags    indoors~
+Desc     Rows of simple sleeping mats line this long, narrow room,
+each with a small chest of belongings set neatly at its foot. Little
+personal decoration is permitted here - the Order teaches that
+attachment to possessions is its own kind of imbalance - but a few
+initiates have tucked small mementos of home beneath their mats all
+the same.
+~
+#EXIT
+Direction east~
+ToRoom    40002
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40007
+#ENDEXIT
+
+Reset O 0 40002 3 40006
+Reset M 0 40003 1 40006
+#ENDROOM
+
+#ROOM
+Vnum     40007
+Name     Refectory~
+Sector   inside~
+Flags    indoors~
+Desc     Long wooden tables fill this open hall, worn smooth by
+generations of initiates' elbows. The smell of simple, plain food
+drifts from a kitchen alcove at the far end. Meals here are eaten in
+near silence, one of the Academy's many small lessons in discipline.
+~
+#EXIT
+Direction north~
+ToRoom    40006
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40008
+Name     Master Ruhr's Study~
+Sector   inside~
+Flags    indoors~
+Desc     Shelves of ancient texts and star charts line the walls of
+this quiet study, tucked away from the noise of the Academy proper. A
+low writing desk sits before a narrow window overlooking the training
+yard, allowing the Temple Master to watch over his students even
+while lost in his own work. The air here carries a settled, patient
+calm.
+~
+#EXIT
+Direction down~
+ToRoom    40004
+#ENDEXIT
+
+Reset M 0 40001 1 40008
+#ENDROOM
+
+#ENDAREA

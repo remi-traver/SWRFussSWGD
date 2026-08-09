@@ -1,0 +1,291 @@
+#FUSSAREA
+#AREADATA
+Version      1
+Name         Vur Tepe~
+Author       SWR FUSS~
+Ranges       40 95 40 95
+Economy      0 0
+ResetMsg     Hammers ring against steel as the forge-fires of Vur Tepe roar back to life.~
+ResetFreq    10
+Flags        ~
+#ENDAREADATA
+
+#MOBILE
+Vnum       40101
+Keywords   tem madog master temple forge~
+Short      Tem Madog~
+Long       Tem Madog stands over an anvil, hammer in hand.
+~
+Desc       Broad-shouldered and scarred by decades of forge-work, Tem Madog is
+the Master of Vur Tepe. He speaks little, preferring to let the ring of
+his hammer say what needs saying. Initiates who earn his respect earn
+it one blade at a time.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     male~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 90 -25 -45 0 45000
+Stats2     38 18 3800
+Stats3     1 8 8
+Stats4     72 200 1 48 48
+Attribs    18 17 15 14 18 12 12 12
+Saves      -25 -25 -25 -25 -25
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40102
+Keywords   forge smith instructor~
+Short      a forge-smith instructor~
+Long       A forge-smith instructor tends the coals, watching the apprentices work.
+~
+Desc       Soot-streaked and patient, this instructor has spent more years
+at Vur Tepe's forges than most initiates have been alive. They correct
+grip and stance with a word, never a shout.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     female~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 65 -8 -18 0 14000
+Stats2     24 14 1900
+Stats3     1 6 6
+Stats4     64 145 1 32 32
+Attribs    15 14 13 13 16 10 10 10
+Saves      -8 -8 -8 -8 -8
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40103
+Keywords   apprentice smith~
+Short      an apprentice smith~
+Long       An apprentice smith hammers away at a length of glowing steel.
+~
+Desc       Sweat-soaked and singed at the sleeves, this apprentice is still
+learning the rhythm of the forge - when to strike, when to fold the
+metal, when to let the fire do the rest of the work.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     male~
+Actflags   npc~
+Affected   ~
+Stats1     0 8 0 0 0 25
+Stats2     2 4 25
+Stats3     1 2 2
+Stats4     58 105 1 3 3
+Attribs    11 10 9 10 11 8 8 5
+Saves      0 0 0 0 0
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#OBJECT
+Vnum       40101
+Keywords   unfinished blade steel~
+Type       trash~
+Short      an unfinished blade~
+Long       An unfinished blade lies here, its steel dull and unshaped.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 5 0 0 0
+#ENDOBJECT
+
+#OBJECT
+Vnum       40102
+Keywords   hilt crystal unset~
+Type       trash~
+Short      an unset hilt crystal~
+Long       A small, unset crystal sits here, waiting to be bound to a hilt.~
+Flags      glow~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 2 0 0 0
+#ENDOBJECT
+
+#ROOM
+Vnum     40101
+Name     Gate of Vur Tepe~
+Sector   inside~
+Flags    indoors~
+Desc     Heat rolls out from Vur Tepe's gate long before you reach it, the
+air itself shimmering above the stone threshold. Smoke curls from
+chimneys set into the mountainside beyond, and the distant ring of
+hammer on steel never quite stops. A path leads north into the forge
+hall proper.
+~
+#EXIT
+Direction north~
+ToRoom    40102
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40926
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40102
+Name     Forge Hall~
+Sector   inside~
+Flags    indoors~
+Desc     Rows of anvils fill this vast, smoke-blackened hall, each tended by
+an apprentice hard at work. Chains suspend half-finished blades over
+banked coals, and the heat is a physical, pressing thing. This is the
+beating heart of Vur Tepe.
+~
+#EXIT
+Direction south~
+ToRoom    40101
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40103
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40105
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40106
+#ENDEXIT
+
+Reset M 0 40103 2 40102
+Reset O 0 40101 5 40102
+#ENDROOM
+
+#ROOM
+Vnum     40103
+Name     The Quenching Pool~
+Sector   inside~
+Flags    indoors~
+Desc     A long stone trough runs the length of this narrow chamber,
+filled with dark, still water. A newly-forged blade plunged here
+hisses and steams, the shock of the quench deciding as much of its
+final temper as the hammer-work ever did. The air smells faintly of
+hot iron.
+~
+#EXIT
+Direction south~
+ToRoom    40102
+#ENDEXIT
+#EXIT
+Direction up~
+ToRoom    40104
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40104
+Name     Tem Madog's Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     Spare and unornamented, this chamber sits above the forge hall,
+close enough that the ring of hammers below never fully fades. A
+single completed blade hangs above a modest cot - Tem Madog's first,
+kept as a reminder of how far a novice's hands still have to travel.
+~
+#EXIT
+Direction down~
+ToRoom    40103
+#ENDEXIT
+
+Reset M 0 40101 1 40104
+#ENDROOM
+
+#ROOM
+Vnum     40105
+Name     Crystal Vault~
+Sector   inside~
+Flags    indoors~
+Desc     Small alcoves line the walls of this cool, quiet room, each
+holding a handful of raw, uncut crystals set aside for hilts still to
+be made. Unlike the forge hall's heat and noise, this room is kept
+deliberately still - the crystals, it's said, respond better to a
+calm hand.
+~
+#EXIT
+Direction west~
+ToRoom    40102
+#ENDEXIT
+
+Reset O 0 40102 5 40105
+#ENDROOM
+
+#ROOM
+Vnum     40106
+Name     Apprentice Workshop~
+Sector   inside~
+Flags    indoors~
+Desc     Smaller and quieter than the main forge hall, this workshop is
+where apprentices practice the basics before they're trusted near the
+real anvils - filing, fitting, and the long, patient work of learning
+where a blade's balance actually lives.
+~
+#EXIT
+Direction east~
+ToRoom    40102
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40107
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40108
+#ENDEXIT
+
+Reset M 0 40103 1 40106
+#ENDROOM
+
+#ROOM
+Vnum     40107
+Name     Experimental Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     Set apart from the rest of Vur Tepe, this chamber holds a scatter
+of half-finished projects unlike anything else in the forge - hilts
+built for something other than a plain blade, and diagrams that speak
+of channeling a crystal's focus into a blade of pure light rather than
+folded steel. The work here is young, and far from finished.
+~
+#EXIT
+Direction south~
+ToRoom    40106
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40108
+Name     Materials Store~
+Sector   inside~
+Flags    indoors~
+Desc     Stacked ingots of raw steel and rarer ore fill this cramped
+storeroom, sorted with more care than the clutter first suggests. An
+apprentice's first lesson at Vur Tepe is learning where everything
+here actually belongs.
+~
+#EXIT
+Direction north~
+ToRoom    40106
+#ENDEXIT
+#ENDROOM
+
+#ENDAREA

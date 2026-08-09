@@ -1,0 +1,4 @@
+Start Server
+Move into the /area directory
+Excute the command: "../src/swreality"
+The server defaults to port 4000. You should now be able to access the server by going to localhost port 4000 or, if you're using VirtualBox and a router with your local network, you will need to set up port forwarding for whatever IP address is assigned to your virtual machine through your routers interface.. whatever that may be.

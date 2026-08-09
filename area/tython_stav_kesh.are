@@ -1,0 +1,286 @@
+#FUSSAREA
+#AREADATA
+Version      1
+Name         Stav Kesh~
+Author       SWR FUSS~
+Ranges       45 95 45 95
+Economy      0 0
+ResetMsg     The clash of practice weapons rings out across Stav Kesh once more.~
+ResetFreq    10
+Flags        ~
+#ENDAREADATA
+
+#MOBILE
+Vnum       40501
+Keywords   lha-mi lha mi master temple~
+Short      Lha-Mi~
+Long       Lha-Mi moves through a training form, unhurried and precise.
+~
+Desc       Lha-Mi, Master of Stav Kesh, has never been seen to move a
+single wasted motion. Initiates say watching her train is more
+instructive than a month of lectures - assuming you can keep up long
+enough to watch closely.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     female~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 92 -30 -50 0 46000
+Stats2     40 20 4200
+Stats3     1 8 8
+Stats4     68 155 1 52 52
+Attribs    19 20 14 18 17 12 12 12
+Saves      -30 -30 -30 -30 -30
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40502
+Keywords   weapons instructor~
+Short      a Stav Kesh weapons instructor~
+Long       A weapons instructor runs an initiate through a drill, correcting their stance.
+~
+Desc       Patient but exacting, this instructor has trained more initiates
+than they can easily count, and can spot a bad grip from clear across
+the training hall.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     male~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 66 -9 -19 0 14500
+Stats2     26 15 2100
+Stats3     1 6 6
+Stats4     66 150 1 34 34
+Attribs    16 17 12 15 15 10 10 10
+Saves      -9 -9 -9 -9 -9
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40503
+Keywords   initiate sparring partner~
+Short      a Stav Kesh initiate~
+Long       An initiate squares off against a training dummy, breathing hard.
+~
+Desc       This initiate's form is still rough around the edges, but
+there's real determination behind every strike. Stav Kesh rewards
+persistence as much as raw talent.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     male~
+Actflags   npc~
+Affected   ~
+Stats1     0 8 0 0 0 25
+Stats2     3 4 28
+Stats3     1 2 2
+Stats4     58 110 1 4 4
+Attribs    12 12 9 12 11 8 8 6
+Saves      0 0 0 0 0
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#OBJECT
+Vnum       40501
+Keywords   training staff wooden~
+Type       weapon~
+Short      a wooden training staff~
+Long       A wooden training staff leans against the wall here.~
+Flags      ~
+WFlags     take wield~
+Values     12 4 7 8 0 5
+Stats      1 5 0 0 0
+#ENDOBJECT
+
+#OBJECT
+Vnum       40502
+Keywords   fur cloak cold weather~
+Type       armor~
+Short      a heavy fur cloak~
+Long       A heavy fur cloak has been left draped over a peg here.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 8 0 0 0
+Affect     -1 -1 5 1 0
+#ENDOBJECT
+
+#ROOM
+Vnum     40501
+Name     Stav Kesh Landing Pad~
+Sector   mountain~
+Flags    can_land~
+Desc     Wind-driven snow scours this narrow landing pad, carved into a
+shelf of rock high in the Ice Giant Range. The air is thin and
+bitterly cold, and the only shelter in sight is a switchback path
+leading further up the mountainside.
+~
+#EXIT
+Direction north~
+ToRoom    40502
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40921
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40502
+Name     Icy Mountain Path~
+Sector   mountain~
+Flags    ~
+Desc     A narrow path clings to the mountainside here, ice-slicked in
+places and swept almost bare of snow in others where the wind cuts
+hardest. Stav Kesh's walls are visible ahead, blending almost
+seamlessly into the grey stone around them.
+~
+#EXIT
+Direction south~
+ToRoom    40501
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40503
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40503
+Name     Gate of Stav Kesh~
+Sector   inside~
+Flags    indoors~
+Desc     Thick stone walls and a low, heavy door mark Stav Kesh's gate,
+built to hold against the mountain's weather as much as anything
+else. The warmth beyond the threshold is immediate and welcome.
+~
+#EXIT
+Direction south~
+ToRoom    40502
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40504
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40504
+Name     Grand Training Hall~
+Sector   inside~
+Flags    indoors~
+Desc     A vast, high-ceilinged hall dominates the heart of Stav Kesh,
+its floor worn smooth by generations of bare feet and practice
+weapons alike. Initiates drill in loose formation, moving through
+forms passed down since the Temple's founding.
+~
+#EXIT
+Direction south~
+ToRoom    40503
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40507
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40505
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40506
+#ENDEXIT
+
+Reset M 0 40503 2 40504
+Reset O 0 40501 5 40504
+#ENDROOM
+
+#ROOM
+Vnum     40505
+Name     Weapons Hall~
+Sector   inside~
+Flags    indoors~
+Desc     Racks of training weapons line every wall of this hall - staves,
+blunted blades, and a scattering of stranger implements few initiates
+recognize on sight. Every weapon here has a form built around it, and
+Stav Kesh expects its students to learn several.
+~
+#EXIT
+Direction west~
+ToRoom    40504
+#ENDEXIT
+
+Reset M 0 40502 1 40505
+#ENDROOM
+
+#ROOM
+Vnum     40506
+Name     Unarmed Combat Yard~
+Sector   inside~
+Flags    indoors~
+Desc     Padded mats cover the floor of this open yard, scuffed and
+worn from constant use. Here, initiates learn that the body itself is
+a weapon long before they're trusted with anything sharper.
+~
+#EXIT
+Direction east~
+ToRoom    40504
+#ENDEXIT
+#EXIT
+Direction up~
+ToRoom    40508
+#ENDEXIT
+
+Reset O 0 40502 3 40506
+#ENDROOM
+
+#ROOM
+Vnum     40507
+Name     Lha-Mi's Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     Spare and disciplined, this chamber holds little beyond a
+sleeping mat and a single rack of weapons, each one kept in
+immaculate condition. Lha-Mi's quarters reflect her training as
+plainly as her movements do.
+~
+#EXIT
+Direction south~
+ToRoom    40504
+#ENDEXIT
+
+Reset M 0 40501 1 40507
+#ENDROOM
+
+#ROOM
+Vnum     40508
+Name     High Peak Overlook~
+Sector   mountain~
+Flags    ~
+Desc     A narrow platform juts out from the mountainside here, high
+enough that the training hall below is lost in cloud on all but the
+clearest days. Initiates come here to test their focus against the
+wind and the drop alike.
+~
+#EXIT
+Direction down~
+ToRoom    40506
+#ENDEXIT
+#ENDROOM
+
+#ENDAREA

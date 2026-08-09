@@ -1,0 +1,286 @@
+#FUSSAREA
+#AREADATA
+Version      1
+Name         Bodhi~
+Author       SWR FUSS~
+Ranges       40 90 40 90
+Economy      0 0
+ResetMsg     Music and color return to Bodhi as the Temple wakes for the day.~
+ResetFreq    10
+Flags        ~
+#ENDAREADATA
+
+#MOBILE
+Vnum       40601
+Keywords   jake fenn master temple~
+Short      Jake Fenn~
+Long       Jake Fenn stands before a half-finished mural, brush in hand.
+~
+Desc       Jake Fenn, Master of Bodhi, treats every art form as another
+language for the same underlying truths the rest of the Order reaches
+for through meditation and the blade. He is as likely to answer a
+question with a song as with words.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     male~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 88 -24 -44 0 44000
+Stats2     34 18 3600
+Stats3     1 7 7
+Stats4     68 160 1 40 40
+Attribs    13 14 16 14 13 20 14 15
+Saves      -24 -24 -24 -24 -24
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40602
+Keywords   arts instructor~
+Short      a Bodhi instructor~
+Long       An instructor demonstrates a brushstroke, then steps back to let the student try.
+~
+Desc       This instructor rarely corrects an initiate directly, preferring
+to demonstrate the same technique three or four different ways until
+one of them clicks.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     female~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 60 -7 -17 0 12500
+Stats2     20 13 1700
+Stats3     1 5 5
+Stats4     63 130 1 24 24
+Attribs    10 12 14 12 11 16 12 12
+Saves      -7 -7 -7 -7 -7
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40603
+Keywords   young artist initiate~
+Short      a young artist~
+Long       A young artist frowns at a canvas, unsatisfied with the color.
+~
+Desc       This initiate has scraped the same section of canvas clean
+three times already this morning. Bodhi teaches patience as readily
+as it teaches technique.
+~
+Race       Human~
+Position   sitting~
+DefPos     sitting~
+Gender     female~
+Actflags   npc~
+Affected   ~
+Stats1     0 6 0 0 0 18
+Stats2     2 3 20
+Stats3     1 2 2
+Stats4     54 90 1 2 2
+Attribs    8 9 10 9 9 12 8 8
+Saves      0 0 0 0 0
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#OBJECT
+Vnum       40601
+Keywords   paintbrush canvas~
+Type       trash~
+Short      a paintbrush and canvas~
+Long       A paintbrush rests beside a half-finished canvas here.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 2 0 0 0
+#ENDOBJECT
+
+#OBJECT
+Vnum       40602
+Keywords   stringed instrument~
+Type       trash~
+Short      a stringed instrument~
+Long       A simple stringed instrument leans against the wall here.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 3 0 0 0
+#ENDOBJECT
+
+#ROOM
+Vnum     40601
+Name     Bodhi Landing Pad~
+Sector   field~
+Flags    can_land~
+Desc     Salt air and the distant sound of surf greet you here, on a
+modest landing pad set into open grassland above Masara's southern
+coast. Bodhi's low, colorful rooftops are visible in the near
+distance, unlike the stark stonework of the Temples elsewhere on
+Tython.
+~
+#EXIT
+Direction north~
+ToRoom    40602
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40941
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40602
+Name     Coastal Path~
+Sector   field~
+Flags    ~
+Desc     A well-worn path winds through tall grass here, the sea visible
+and audible somewhere beyond the rise to the east. Bodhi's students
+are known to wander this path for inspiration as much as exercise.
+~
+#EXIT
+Direction south~
+ToRoom    40601
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40603
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40603
+Name     Gate of Bodhi~
+Sector   inside~
+Flags    indoors~
+Desc     Unlike the imposing gates elsewhere on Tython, Bodhi's entrance
+is open and unguarded, framed by climbing vines and hand-painted
+tilework. Visitors are welcomed here more freely than at any other
+Temple.
+~
+#EXIT
+Direction south~
+ToRoom    40602
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40604
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40604
+Name     Gallery Hall~
+Sector   inside~
+Flags    indoors~
+Desc     Paintings, sculpture, and stranger works entirely fill this
+bright, high-windowed hall, arranged with little apparent order
+beyond what caught a curator's eye. Some pieces are centuries old;
+others still smell faintly of fresh paint.
+~
+#EXIT
+Direction south~
+ToRoom    40603
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40607
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40605
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40606
+#ENDEXIT
+
+Reset M 0 40602 1 40604
+Reset O 0 40601 3 40604
+#ENDROOM
+
+#ROOM
+Vnum     40605
+Name     Music Room~
+Sector   inside~
+Flags    indoors~
+Desc     Instruments of every shape fill this warm, wood-paneled room,
+some clearly ancient, others newly made. A half-remembered melody
+seems to hang in the air even when no one is playing.
+~
+#EXIT
+Direction west~
+ToRoom    40604
+#ENDEXIT
+
+Reset O 0 40602 3 40605
+#ENDROOM
+
+#ROOM
+Vnum     40606
+Name     Sculpture Garden~
+Sector   field~
+Flags    ~
+Desc     An open-air courtyard holds a scattering of sculptures here,
+weathered by salt air and years alike. Some are recognizable figures;
+others resist any single interpretation, which seems to be entirely
+the point.
+~
+#EXIT
+Direction east~
+ToRoom    40604
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40608
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40607
+Name     Jake Fenn's Studio~
+Sector   inside~
+Flags    indoors~
+Desc     Half-finished works cover every surface of this cluttered
+studio, in mediums ranging from paint to something that might be
+sound made solid. Jake Fenn rarely finishes anything quickly, and
+never apologizes for it.
+~
+#EXIT
+Direction south~
+ToRoom    40604
+#ENDEXIT
+
+Reset M 0 40601 1 40607
+#ENDROOM
+
+#ROOM
+Vnum     40608
+Name     Amphitheater~
+Sector   field~
+Flags    ~
+Desc     Tiered stone seating curves around a modest performance space
+here, open to the sky and the sound of the nearby sea. Bodhi's
+students perform here often, for audiences as small as a single
+passing instructor.
+~
+#EXIT
+Direction north~
+ToRoom    40606
+#ENDEXIT
+
+Reset M 0 40603 1 40608
+#ENDROOM
+
+#ENDAREA

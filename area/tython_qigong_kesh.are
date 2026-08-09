@@ -1,0 +1,281 @@
+#FUSSAREA
+#AREADATA
+Version      1
+Name         Qigong Kesh~
+Author       SWR FUSS~
+Ranges       45 95 45 95
+Economy      0 0
+ResetMsg     A low chime marks the change of watch at Qigong Kesh.~
+ResetFreq    10
+Flags        ~
+#ENDAREADATA
+
+#MOBILE
+Vnum       40401
+Keywords   miarta sek master temple~
+Short      Miarta Sek~
+Long       Miarta Sek sits motionless, eyes closed, at the center of the chamber.
+~
+Desc       Miarta Sek, Master of Qigong Kesh, is so still in meditation
+that visitors sometimes mistake her for a statue - until she speaks,
+usually answering a question they haven't asked yet.
+~
+Race       Human~
+Position   sitting~
+DefPos     sitting~
+Gender     female~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 93 -27 -47 0 47000
+Stats2     35 20 4000
+Stats3     1 8 8
+Stats4     65 130 1 42 42
+Attribs    12 15 15 11 14 12 12 20
+Saves      -27 -27 -27 -27 -27
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40402
+Keywords   sense instructor~
+Short      a Qigong Kesh instructor~
+Long       An instructor guides an initiate through a sensory exercise, eyes closed.
+~
+Desc       This instructor teaches with their eyes shut more often than
+open, insisting the lesson matters more when you can't simply watch
+and copy the answer.
+~
+Race       Human~
+Position   sitting~
+DefPos     sitting~
+Gender     male~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 64 -8 -18 0 13500
+Stats2     23 14 1900
+Stats3     1 6 6
+Stats4     63 138 1 29 29
+Attribs    11 13 13 10 13 10 10 16
+Saves      -8 -8 -8 -8 -8
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40403
+Keywords   initiate student~
+Short      a Qigong Kesh initiate~
+Long       An initiate sits with eyes closed, brow furrowed in concentration.
+~
+Desc       This initiate has been sitting in the same position for what
+looks like hours. Whether they're making progress or simply
+uncomfortable is hard to say from the outside.
+~
+Race       Human~
+Position   sitting~
+DefPos     sitting~
+Gender     female~
+Actflags   npc~
+Affected   ~
+Stats1     0 7 0 0 0 20
+Stats2     2 4 22
+Stats3     1 2 2
+Stats4     54 90 1 2 2
+Attribs    9 10 10 8 9 8 8 12
+Saves      0 0 0 0 0
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#OBJECT
+Vnum       40401
+Keywords   sand cushion woven~
+Type       furniture~
+Short      a woven sand-cushion~
+Long       A woven sand-cushion sits here, worn smooth from long use.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 3 0 0 0
+#ENDOBJECT
+
+#OBJECT
+Vnum       40402
+Keywords   blindfold~
+Type       trash~
+Short      a plain blindfold~
+Long       A plain cloth blindfold has been left here, folded neatly.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 1 0 0 0
+#ENDOBJECT
+
+#ROOM
+Vnum     40401
+Name     Qigong Kesh Landing Pad~
+Sector   desert~
+Flags    can_land~
+Desc     A wide, wind-scoured pad marks the only real landing site
+anywhere near Qigong Kesh, its surface pitted from decades of engine
+wash and blowing sand. No permanent structure stands here - just the
+pad itself, and the long walk into the Silent Desert beyond.
+~
+#EXIT
+Direction north~
+ToRoom    40402
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40936
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40402
+Name     The Silent Desert~
+Sector   desert~
+Flags    ~
+Desc     Pale dunes stretch in every direction, utterly still beneath a
+sky too bright to look at directly. Even the wind seems muted here,
+as though the desert itself is holding its breath. Qigong Kesh's
+walls are just visible ahead, shimmering faintly in the heat.
+~
+#EXIT
+Direction south~
+ToRoom    40401
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40403
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40403
+Name     Gate of Qigong Kesh~
+Sector   inside~
+Flags    indoors~
+Desc     Qigong Kesh's gate is low and unadorned, built more for shelter
+from the desert than for grandeur. A faint hum of concentrated
+stillness seems to radiate from the Temple beyond, even from here.
+~
+#EXIT
+Direction south~
+ToRoom    40402
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40404
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40404
+Name     Central Meditation Hall~
+Sector   inside~
+Flags    indoors~
+Desc     A wide, circular hall forms the heart of Qigong Kesh, its floor
+covered in woven sand-cushions arranged in careful concentric rings.
+Initiates sit scattered throughout, most with eyes closed, reaching
+for senses beyond the ordinary five.
+~
+#EXIT
+Direction south~
+ToRoom    40403
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40405
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40406
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40408
+#ENDEXIT
+
+Reset M 0 40403 2 40404
+Reset O 0 40401 5 40404
+#ENDROOM
+
+#ROOM
+Vnum     40405
+Name     Meditation Chamber - Alpha~
+Sector   inside~
+Flags    indoors~
+Desc     A small, private chamber, kept deliberately bare of anything
+that might draw the eye or the mind. Initiates come here alone, when
+the Central Hall's shared stillness isn't quiet enough.
+~
+#EXIT
+Direction south~
+ToRoom    40404
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40406
+Name     Meditation Chamber - Beta~
+Sector   inside~
+Flags    indoors~
+Desc     Identical in every visible respect to its twin chamber elsewhere
+in the Temple, this room's only distinction is its use - reserved for
+initiates working under an instructor's direct supervision.
+~
+#EXIT
+Direction west~
+ToRoom    40404
+#ENDEXIT
+#EXIT
+Direction up~
+ToRoom    40407
+#ENDEXIT
+
+Reset M 0 40402 1 40406
+#ENDROOM
+
+#ROOM
+Vnum     40407
+Name     Miarta Sek's Sanctum~
+Sector   inside~
+Flags    indoors~
+Desc     The stillest room in a Temple built entirely around stillness,
+Miarta Sek's sanctum holds nothing but a single cushion and bare
+walls. She receives visitors here rarely, and never for long.
+~
+#EXIT
+Direction down~
+ToRoom    40406
+#ENDEXIT
+
+Reset M 0 40401 1 40407
+#ENDROOM
+
+#ROOM
+Vnum     40408
+Name     Sensory Deprivation Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     Utterly dark and near-silent, this chamber strips away sight and
+sound alike, leaving only the Force to navigate by. Few initiates last
+their first hour here without reaching for a wall that isn't there.
+~
+#EXIT
+Direction east~
+ToRoom    40404
+#ENDEXIT
+
+Reset O 0 40402 3 40408
+#ENDROOM
+
+#ENDAREA

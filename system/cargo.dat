@@ -1,0 +1,26 @@
+#CARGO
+Name      durasteel ore~
+Value     50
+End
+
+#CARGO
+Name      foodstuffs~
+Value     15
+End
+
+#CARGO
+Name      medical supplies~
+Value     100
+End
+
+#CARGO
+Name      spice~
+Value     250
+End
+
+#CARGO
+Name      machine parts~
+Value     75
+End
+
+#END

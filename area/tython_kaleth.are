@@ -1,0 +1,288 @@
+#FUSSAREA
+#AREADATA
+Version      1
+Name         Kaleth~
+Author       SWR FUSS~
+Ranges       40 90 40 90
+Economy      0 0
+ResetMsg     Dust settles as another scholar disturbs the silence of Kaleth's archives.~
+ResetFreq    10
+Flags        ~
+#ENDAREADATA
+
+#MOBILE
+Vnum       40301
+Keywords   kora ryo master temple~
+Short      Kora Ryo~
+Long       Kora Ryo sits at a broad table, surrounded by open records.
+~
+Desc       Kora Ryo, Master of Kaleth, carries the weight of the Order's
+entire remembered history with a scholar's quiet patience. If it
+happened on Tython and someone thought to write it down, Kora Ryo has
+likely read it - and remembers what it left out.
+~
+Race       Human~
+Position   sitting~
+DefPos     sitting~
+Gender     female~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 92 -28 -48 0 48000
+Stats2     36 20 4000
+Stats3     1 8 8
+Stats4     66 150 1 45 45
+Attribs    14 16 20 12 15 14 12 14
+Saves      -28 -28 -28 -28 -28
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40302
+Keywords   archivist loremaster~
+Short      an archivist~
+Long       An archivist carefully catalogs a stack of aging records.
+~
+Desc       Quiet and exacting, this archivist treats every record in
+Kaleth's collection as though it were the last copy in existence -
+because, in more cases than anyone likes to admit, it is.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     male~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 62 -8 -18 0 13000
+Stats2     22 14 1800
+Stats3     1 6 6
+Stats4     62 135 1 28 28
+Attribs    12 14 17 11 13 10 10 11
+Saves      -8 -8 -8 -8 -8
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40303
+Keywords   scribe initiate~
+Short      a Kaleth scribe~
+Long       A scribe bends over a fresh page, copying an older record by hand.
+~
+Desc       Copying by hand is slow, exacting work, and this scribe's
+concentration doesn't waver even when spoken to directly - a habit
+Kaleth's Masters actively encourage.
+~
+Race       Human~
+Position   sitting~
+DefPos     sitting~
+Gender     female~
+Actflags   npc~
+Affected   ~
+Stats1     0 7 0 0 0 20
+Stats2     2 4 22
+Stats3     1 2 2
+Stats4     55 95 1 2 2
+Attribs    9 11 14 9 10 8 8 8
+Saves      0 0 0 0 0
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#OBJECT
+Vnum       40301
+Keywords   ancient tome record~
+Type       trash~
+Short      an ancient tome~
+Long       An ancient tome lies here, its cover cracked with age.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 4 0 0 0
+#ENDOBJECT
+
+#OBJECT
+Vnum       40302
+Keywords   record cylinder data~
+Type       trash~
+Short      a data-record cylinder~
+Long       A slim data-record cylinder rests here, its markings worn faint.~
+Flags      glow~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 1 0 0 0
+#ENDOBJECT
+
+#ROOM
+Vnum     40301
+Name     Gate of Kaleth~
+Sector   inside~
+Flags    indoors~
+Desc     Kaleth's gate is unassuming beside the grander entrances of the
+other Temples - a plain stone arch, worn smooth by generations of
+scholars passing beneath it. A hush seems to begin here, well before
+the archive proper.
+~
+#EXIT
+Direction north~
+ToRoom    40302
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40912
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40302
+Name     The Great Archive~
+Sector   inside~
+Flags    indoors~
+Desc     Shelves rise far overhead in this vast, dim hall, packed with
+records in more forms than you can easily name - bound volumes, data-
+cylinders, and older media that predates them both. Every sound here
+seems to be swallowed before it can echo.
+~
+#EXIT
+Direction south~
+ToRoom    40301
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40303
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40304
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40305
+#ENDEXIT
+
+Reset M 0 40302 1 40302
+Reset O 0 40301 5 40302
+#ENDROOM
+
+#ROOM
+Vnum     40303
+Name     Kora Ryo's Study~
+Sector   inside~
+Flags    indoors~
+Desc     Records cover every surface of this cluttered study, stacked in
+an order that makes sense to exactly one person. Kora Ryo works here
+most days, cross-referencing accounts that rarely agree with each
+other as cleanly as the Order's official history suggests they should.
+~
+#EXIT
+Direction south~
+ToRoom    40302
+#ENDEXIT
+
+Reset M 0 40301 1 40303
+#ENDROOM
+
+#ROOM
+Vnum     40304
+Name     Reading Hall~
+Sector   inside~
+Flags    indoors~
+Desc     Long tables fill this quiet, well-lit hall, each spaced far
+enough from its neighbors to discourage conversation. Initiates and
+visiting scholars alike come here to read - and, more often than not,
+to fall asleep over an open tome by midafternoon.
+~
+#EXIT
+Direction west~
+ToRoom    40302
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40306
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40305
+Name     Scriptorium~
+Sector   inside~
+Flags    indoors~
+Desc     Rows of writing desks fill this room, each fitted with the
+simple tools of transcription - ink, stylus, and a steady hand. Kaleth
+maintains its collection the old way, copy by careful copy, rather
+than trust everything to less permanent media.
+~
+#EXIT
+Direction east~
+ToRoom    40302
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40308
+#ENDEXIT
+
+Reset M 0 40303 1 40305
+#ENDROOM
+
+#ROOM
+Vnum     40306
+Name     Hall of History~
+Sector   inside~
+Flags    indoors~
+Desc     Murals line both walls of this long hall, tracing the Je'daii
+Order from the first Tho Yor's arrival through the founding of the
+nine Temples and beyond. The furthest murals are noticeably less
+finished than the rest - Kaleth's scholars are still deciding how
+recent history ought to be told.
+~
+#EXIT
+Direction south~
+ToRoom    40304
+#ENDEXIT
+#EXIT
+Direction up~
+ToRoom    40307
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40307
+Name     Restricted Archive~
+Sector   inside~
+Flags    indoors~
+Desc     Fewer records fill this smaller, locked-feeling room, but the
+ones that do are older and stranger than anything in the Great
+Archive below. Access here is not forbidden, exactly - simply
+discouraged, and closely watched.
+~
+#EXIT
+Direction down~
+ToRoom    40306
+#ENDEXIT
+
+Reset O 0 40302 3 40307
+#ENDROOM
+
+#ROOM
+Vnum     40308
+Name     Cartography Room~
+Sector   inside~
+Flags    indoors~
+Desc     Maps cover every wall and much of the floor space here, ranging
+from precise modern surveys to older, stranger charts whose accuracy
+no one has fully verified. A few mark locations that don't appear to
+exist on any current map of Tython at all.
+~
+#EXIT
+Direction north~
+ToRoom    40305
+#ENDEXIT
+#ENDROOM
+
+#ENDAREA

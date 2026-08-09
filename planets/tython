@@ -1,0 +1,20 @@
+#PLANET
+Name         Tython~
+Filename     tython~
+BaseValue    750000
+Flags        0
+PopSupport   40.000000
+Starsystem   Tython System~
+Area         tython_padawan_kesh.are~
+Area         tython_vur_tepe.are~
+Area         tython_anil_kesh.are~
+Area         tython_kaleth.are~
+Area         tython_qigong_kesh.are~
+Area         tython_stav_kesh.are~
+Area         tython_bodhi.are~
+Area         tython_mahara_kesh.are~
+Area         tython_akar_kesh.are~
+Area         tython_wilds.are~
+End
+
+#END

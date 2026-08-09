@@ -1,0 +1,287 @@
+#FUSSAREA
+#AREADATA
+Version      1
+Name         Akar Kesh~
+Author       SWR FUSS~
+Ranges       50 102 50 102
+Economy      0 0
+ResetMsg     A stillness settles over Akar Kesh as the eight rivers continue their endless course below.~
+ResetFreq    10
+Flags        ~
+#ENDAREADATA
+
+#MOBILE
+Vnum       40801
+Keywords   ketu master temple~
+Short      Ketu~
+Long       Ketu stands motionless at the chamber's center, eyes fixed on nothing in particular.
+~
+Desc       Ketu, Master of Akar Kesh and foremost among the Je'daii Council,
+carries an unshakable calm that seems to radiate outward from the
+Temple itself. Neither Ashla nor Bogan holds sway here - only the
+balance between them, which Ketu has spent a lifetime learning to
+hold steady.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     male~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 102 -40 -60 0 75000
+Stats2     46 24 4800
+Stats3     1 9 9
+Stats4     70 190 1 58 58
+Attribs    17 18 18 16 18 16 15 20
+Saves      -40 -40 -40 -40 -40
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40802
+Keywords   council member ranger~
+Short      a Je'daii Council member~
+Long       A Council member studies a report, weighing its implications carefully.
+~
+Desc       This Council member has earned the rank of Ranger through long
+service to the Order, and carries themselves with the settled
+confidence of someone who has stood before the full Council many times
+before.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     female~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 70 -12 -22 0 16000
+Stats2     28 16 2200
+Stats3     1 6 6
+Stats4     65 145 1 36 36
+Attribs    14 15 15 13 15 14 12 15
+Saves      -12 -12 -12 -12 -12
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40803
+Keywords   young initiate~
+Short      a Je'daii initiate~
+Long       An initiate stands quietly near the chamber wall, clearly out of their depth.
+~
+Desc       Summoned to Akar Kesh for reasons well above their current
+understanding, this initiate is doing an admirable job of looking
+composed despite it.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     male~
+Actflags   npc~
+Affected   ~
+Stats1     0 9 0 0 0 30
+Stats2     3 4 30
+Stats3     1 2 2
+Stats4     58 105 1 4 4
+Attribs    11 11 11 10 12 10 9 14
+Saves      0 0 0 0 0
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#OBJECT
+Vnum       40801
+Keywords   medallion balance ashla bogan~
+Type       trash~
+Short      a balance medallion~
+Long       A small medallion lies here, one face bright, the other dark.~
+Flags      glow~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 1 0 0 0
+#ENDOBJECT
+
+#OBJECT
+Vnum       40802
+Keywords   river water vial~
+Type       trash~
+Short      a vial of river water~
+Long       A small sealed vial holds water drawn from one of the eight rivers.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 1 0 0 0
+#ENDOBJECT
+
+#ROOM
+Vnum     40801
+Name     Gate of Akar Kesh~
+Sector   mountain~
+Flags    indoors~
+Desc     Eight great rivers converge somewhere far below, their combined
+roar audible even here at the monolith's base. Akar Kesh's gate is
+carved directly into the stone, ancient beyond easy reckoning, and a
+single stairway spirals upward into the dark.
+~
+#EXIT
+Direction up~
+ToRoom    40802
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40945
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40802
+Name     The Great Stair~
+Sector   mountain~
+Flags    indoors~
+Desc     The stair winds upward for what feels like far longer than the
+monolith's height should allow, worn smooth by countless feet across
+countless years. Faint carvings mark the walls at intervals, too worn
+now to read clearly.
+~
+#EXIT
+Direction down~
+ToRoom    40801
+#ENDEXIT
+#EXIT
+Direction up~
+ToRoom    40803
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40803
+Name     Council Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     A wide, circular chamber crowns the stair, ringed with seats
+enough for the full Je'daii Council. Light falls here from an opening
+high overhead, the only illumination in a room otherwise built for
+quiet deliberation.
+~
+#EXIT
+Direction down~
+ToRoom    40802
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40804
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40805
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40806
+#ENDEXIT
+#EXIT
+Direction up~
+ToRoom    40807
+#ENDEXIT
+
+Reset M 0 40802 1 40803
+Reset M 0 40803 1 40803
+#ENDROOM
+
+#ROOM
+Vnum     40804
+Name     Hall of the Eight Rivers~
+Sector   inside~
+Flags    indoors~
+Desc     A long, quiet hall here holds eight small basins, each fed by a
+thin channel of water said to be drawn from one of the great rivers
+below. Initiates are taught to sit before each in turn, though few can
+say exactly what the exercise is meant to teach.
+~
+#EXIT
+Direction south~
+ToRoom    40803
+#ENDEXIT
+
+Reset O 0 40802 8 40804
+#ENDROOM
+
+#ROOM
+Vnum     40805
+Name     Shrine of Ashla~
+Sector   inside~
+Flags    indoors~
+Desc     Warm light fills this small shrine, gathered somehow from no
+visible source. The air feels lighter here, easier to breathe, though
+whether that's a physical property of the room or simply the mind's
+own reaction is a question Akar Kesh leaves deliberately unanswered.
+~
+#EXIT
+Direction west~
+ToRoom    40803
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40806
+Name     Shrine of Bogan~
+Sector   inside~
+Flags    indoors~
+Desc     Shadow gathers naturally in this shrine, matching the Shrine of
+Ashla's warmth with an equal and opposite weight. Akar Kesh teaches
+that neither shrine is meant to be feared - only understood, and held
+in balance with the other.
+~
+#EXIT
+Direction east~
+ToRoom    40803
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40807
+Name     Ketu's Sanctum~
+Sector   inside~
+Flags    indoors~
+Desc     Bare stone and a single low seat furnish this small sanctum,
+set apart from the Council Chamber below. Ketu spends long hours here
+alone, in a stillness few initiates are ever invited to share.
+~
+#EXIT
+Direction down~
+ToRoom    40803
+#ENDEXIT
+#EXIT
+Direction up~
+ToRoom    40808
+#ENDEXIT
+
+Reset M 0 40801 1 40807
+#ENDROOM
+
+#ROOM
+Vnum     40808
+Name     The Tho Yor Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     The largest of the nine Tho Yor rests here, ancient beyond
+memory, its hull dark and silent after millennia of dormancy. This is
+the oldest structure on all of Tython - older, some say, than the
+Order itself - and the reverent hush of the chambers below feels, if
+anything, understated this close to it.
+~
+#EXIT
+Direction down~
+ToRoom    40807
+#ENDEXIT
+#ENDROOM
+
+#ENDAREA

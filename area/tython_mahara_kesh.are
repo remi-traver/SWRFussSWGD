@@ -1,0 +1,313 @@
+#FUSSAREA
+#AREADATA
+Version      1
+Name         Mahara Kesh~
+Author       SWR FUSS~
+Ranges       45 90 45 90
+Economy      0 0
+ResetMsg     Bioluminescent light pulses gently through the halls of Mahara Kesh.~
+ResetFreq    10
+Flags        ~
+#ENDAREADATA
+
+#MOBILE
+Vnum       40701
+Keywords   naro master temple~
+Short      Naro~
+Long       Naro checks a patient's bandages with quiet, careful hands.
+~
+Desc       Naro, joint Master of Mahara Kesh, has the unhurried manner of
+someone who has never once been surprised by an injury. Alongside
+Calleh, he has led the Temple's healers for longer than most
+initiates have been alive.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     male~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 87 -23 -43 0 43000
+Stats2     32 17 3400
+Stats3     1 6 6
+Stats4     66 145 1 36 36
+Attribs    13 15 17 13 16 14 12 15
+Saves      -23 -23 -23 -23 -23
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40702
+Keywords   calleh master temple~
+Short      Calleh~
+Long       Calleh moves between beds in the recovery ward, checking on each patient in turn.
+~
+Desc       Calleh, joint Master of Mahara Kesh alongside Naro, is known
+for a bedside manner as gentle as her diagnoses are blunt. Initiates
+learn quickly that she will always tell them exactly how badly they
+have hurt themselves this time.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     female~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 87 -23 -43 0 43000
+Stats2     32 17 3400
+Stats3     1 6 6
+Stats4     64 135 1 34 34
+Attribs    12 14 18 12 16 15 12 15
+Saves      -23 -23 -23 -23 -23
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40703
+Keywords   healer instructor~
+Short      a Mahara Kesh healer~
+Long       A healer grinds a paste of herbs and coral extract with practiced ease.
+~
+Desc       This healer's hands never seem to stop moving, whether
+grinding reagents, checking a pulse, or steadying a nervous initiate's
+grip on a scalpel.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     female~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 58 -7 -17 0 12000
+Stats2     19 12 1600
+Stats3     1 5 5
+Stats4     62 128 1 20 20
+Attribs    10 12 15 11 14 12 10 12
+Saves      -7 -7 -7 -7 -7
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40704
+Keywords   patient initiate~
+Short      a recovering initiate~
+Long       An initiate rests here, a poultice of sea-herbs bound over one arm.
+~
+Desc       This initiate's training injury looks worse than it apparently
+is, judging by how little sympathy the healers here seem willing to
+offer. Mahara Kesh believes recovery is its own lesson.
+~
+Race       Human~
+Position   resting~
+DefPos     resting~
+Gender     male~
+Actflags   npc~
+Affected   ~
+Stats1     0 6 0 0 0 18
+Stats2     2 3 20
+Stats3     1 2 2
+Stats4     56 100 1 2 2
+Attribs    9 9 12 9 13 8 8 8
+Saves      0 0 0 0 0
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#OBJECT
+Vnum       40701
+Keywords   sea herbs poultice~
+Type       trash~
+Short      a bundle of sea-herbs~
+Long       A bundle of sea-herbs sits here, bound and ready for use.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 1 0 0 0
+#ENDOBJECT
+
+#OBJECT
+Vnum       40702
+Keywords   coral salve medicine~
+Type       trash~
+Short      a jar of coral-extract salve~
+Long       A small jar of coral-extract salve rests here, faintly luminous.~
+Flags      glow~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 2 0 0 0
+#ENDOBJECT
+
+#ROOM
+Vnum     40701
+Name     Mahara Kesh Surface Platform~
+Sector   water swim~
+Flags    can_land~
+Desc     A broad, gently rocking platform floats here, anchored far
+below in the depths of Tython's deep ocean. Waves lap steadily at its
+edges, and a wide shaft descends from its center down into the dark
+water beneath.
+~
+#EXIT
+Direction down~
+ToRoom    40702
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40949
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40702
+Name     Descent Shaft~
+Sector   underwater~
+Flags    ~
+Desc     A long, pressure-sealed shaft carries you down through cold,
+increasingly dark water, faint bioluminescent markers guiding the way
+toward Mahara Kesh below. The surface light fades quickly overhead.
+~
+#EXIT
+Direction up~
+ToRoom    40701
+#ENDEXIT
+#EXIT
+Direction down~
+ToRoom    40703
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40703
+Name     Gate of Mahara Kesh~
+Sector   underwater~
+Flags    ~
+Desc     Mahara Kesh's gate opens directly onto the ocean floor, its
+entrance ringed with softly glowing coral cultivated by generations of
+healers. The pressure here is held back by walls grown as much as
+built.
+~
+#EXIT
+Direction up~
+ToRoom    40702
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40704
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40704
+Name     Great Healing Hall~
+Sector   underwater~
+Flags    ~
+Desc     Soft bioluminescent light pulses gently along the walls of this
+wide, curved hall, timed - initiates are told - to match a resting
+heartbeat. Healers move calmly between patients here, unhurried even
+in urgency.
+~
+#EXIT
+Direction south~
+ToRoom    40703
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    40707
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40705
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40706
+#ENDEXIT
+
+Reset M 0 40703 1 40704
+Reset O 0 40701 4 40704
+#ENDROOM
+
+#ROOM
+Vnum     40705
+Name     Herbal Ward~
+Sector   underwater~
+Flags    ~
+Desc     Racks of sea-herbs and reagents fill this ward, sorted by
+property rather than species. A faint, not unpleasant medicinal smell
+hangs in the water-filtered air.
+~
+#EXIT
+Direction west~
+ToRoom    40704
+#ENDEXIT
+
+Reset O 0 40702 4 40705
+#ENDROOM
+
+#ROOM
+Vnum     40706
+Name     Recovery Ward~
+Sector   underwater~
+Flags    ~
+Desc     Rows of simple beds fill this quiet ward, most occupied by
+initiates nursing training injuries rather than anything more serious.
+The bioluminescent lighting here is dimmed further, encouraging rest.
+~
+#EXIT
+Direction east~
+ToRoom    40704
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40708
+#ENDEXIT
+
+Reset M 0 40704 2 40706
+#ENDROOM
+
+#ROOM
+Vnum     40707
+Name     Naro and Calleh's Chamber~
+Sector   underwater~
+Flags    ~
+Desc     A modest shared chamber, kept simple by two people who spend
+most of their waking hours elsewhere in the Temple regardless. A
+single shared desk holds notes in two very different handwritings.
+~
+#EXIT
+Direction south~
+ToRoom    40704
+#ENDEXIT
+
+Reset M 0 40701 1 40707
+Reset M 0 40702 1 40707
+#ENDROOM
+
+#ROOM
+Vnum     40708
+Name     Coral Meditation Garden~
+Sector   underwater~
+Flags    ~
+Desc     Living coral grows in careful, cultivated patterns throughout
+this quiet garden, sheltering small luminous fish that drift between
+the branches. Healers and patients alike come here to simply sit and
+breathe.
+~
+#EXIT
+Direction north~
+ToRoom    40706
+#ENDEXIT
+#ENDROOM
+
+#ENDAREA

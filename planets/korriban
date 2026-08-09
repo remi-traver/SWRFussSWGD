@@ -1,0 +1,11 @@
+#PLANET
+Name         Korriban~
+Filename     korriban~
+BaseValue    500000
+Flags        0
+PopSupport   -50.000000
+Starsystem   Korriban System~
+Area         korriban.are~
+End
+
+#END

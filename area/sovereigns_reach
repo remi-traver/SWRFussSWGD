@@ -1,0 +1,164 @@
+#FUSSAREA
+#AREADATA
+Version      1
+Name         Supercapital - the Sovereign's Reach~
+Author       Sonnet~
+Ranges       80 103 0 100
+Economy      0 0
+ResetFreq    15
+#ENDAREADATA
+
+#ROOM
+Vnum     809
+Name     Airlock - the Sovereign's Reach~
+Sector   city~
+Flags    indoors~
+Desc     A cavernous boarding airlock, sized for freight loaders as much
+as crew. Blast doors thick enough to hold vacuum line every wall.
+~
+#EXIT
+Direction north~
+ToRoom    810
+#ENDEXIT
+
+#ENDROOM
+
+#ROOM
+Vnum     810
+Name     Main Corridor - the Sovereign's Reach~
+Sector   city~
+Flags    indoors~
+Desc     The primary spinal corridor of the ship stretches beyond sight
+in both directions, deck trams idling at intersections. Even at a
+walk, reaching the bridge from here takes a while.
+~
+#EXIT
+Direction south~
+ToRoom    809
+#ENDEXIT
+
+#EXIT
+Direction north~
+ToRoom    811
+#ENDEXIT
+
+#ENDROOM
+
+#ROOM
+Vnum     811
+Name     Command Corridor - the Sovereign's Reach~
+Sector   city~
+Flags    indoors~
+Desc     This shorter secondary corridor branches off toward the bridge,
+gunnery command, and both turret access lifts.
+~
+#EXIT
+Direction south~
+ToRoom    810
+#ENDEXIT
+
+#EXIT
+Direction north~
+ToRoom    812
+#ENDEXIT
+
+#EXIT
+Direction east~
+ToRoom    813
+#ENDEXIT
+
+#EXIT
+Direction west~
+ToRoom    814
+#ENDEXIT
+
+#EXIT
+Direction up~
+ToRoom    815
+#ENDEXIT
+
+#EXIT
+Direction down~
+ToRoom    816
+#ENDEXIT
+
+#ENDROOM
+
+#ROOM
+Vnum     812
+Name     Bridge - the Sovereign's Reach~
+Sector   city~
+Flags    indoors~
+Desc     The command bridge, a raised, glass-fronted deck overlooking
+rows of navigation and helm stations. Every system on the ship can be
+monitored from here.
+~
+#EXIT
+Direction south~
+ToRoom    811
+#ENDEXIT
+
+#ENDROOM
+
+#ROOM
+Vnum     813
+Name     Turret One - the Sovereign's Reach~
+Sector   city~
+Flags    indoors~
+Desc     A dorsal turret emplacement, its laser cannon mount large enough
+to require a small maintenance crew of its own.
+~
+#EXIT
+Direction west~
+ToRoom    811
+#ENDEXIT
+
+#ENDROOM
+
+#ROOM
+Vnum     814
+Name     Turret Two - the Sovereign's Reach~
+Sector   city~
+Flags    indoors~
+Desc     A ventral turret emplacement, mirroring the dorsal mount, its
+targeting scope wired into the ship's main sensor array.
+~
+#EXIT
+Direction east~
+ToRoom    811
+#ENDEXIT
+
+#ENDROOM
+
+#ROOM
+Vnum     815
+Name     Gunnery Command - the Sovereign's Reach~
+Sector   city~
+Flags    indoors~
+Desc     Rows of launcher control stations fill this room, coordinating
+the ship's missile, torpedo, and rocket batteries alongside its
+autocannon network.
+~
+#EXIT
+Direction down~
+ToRoom    811
+#ENDEXIT
+
+#ENDROOM
+
+#ROOM
+Vnum     816
+Name     Main Engineering - the Sovereign's Reach~
+Sector   city~
+Flags    indoors~
+Desc     The ship's twin reactor cores fill this hangar-sized engineering
+deck, a maze of coolant lines and catwalks stretching between them.
+~
+#EXIT
+Direction up~
+ToRoom    811
+#ENDEXIT
+
+#ENDROOM
+
+#ENDAREA

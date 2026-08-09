@@ -1,0 +1,176 @@
+Sun Jul 19 22:41:49 2026 :: Hotboot: Spawning new log file.
+Sun Jul 19 22:41:49 2026 :: Booting Database
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Sun Jul 19 22:41:49 2026 :: [*****] BOOT: ---------------------[ Boot Log ]--------------------
+Sun Jul 19 22:41:49 2026 :: Initializing libdl support...
+Sun Jul 19 22:41:49 2026 :: Loading commands...
+Sun Jul 19 22:41:49 2026 :: Loading spec_funs...
+Sun Jul 19 22:41:49 2026 :: Loading sysdata configuration...
+Sun Jul 19 22:41:49 2026 :: Loading socials
+Sun Jul 19 22:41:49 2026 :: Loading skill table
+Sun Jul 19 22:41:49 2026 :: Sorting skill table...
+Sun Jul 19 22:41:49 2026 :: Loading herb table
+Sun Jul 19 22:41:49 2026 :: Making wizlist
+Sun Jul 19 22:41:49 2026 :: Loading MSSP Data...
+Sun Jul 19 22:41:49 2026 :: Initializing random number generator
+Sun Jul 19 22:41:49 2026 :: Setting time and weather
+Sun Jul 19 22:41:49 2026 :: Loading DNS cache...
+Sun Jul 19 22:41:49 2026 :: Assigning gsn's
+Sun Jul 19 22:41:49 2026 :: Reading in area files...
+(help.are)
+limbo.are     : Rooms:     1 - 45    Objs:    61 - 99    Mobs:     1 - 99
+newacad.are   : Rooms: 10300 - 10430 Objs: 10300 - 10499 Mobs: 10340 - 10499
+coruscant_streets: Rooms:   300 - 499   Objs:   300 - 499   Mobs:   300 - 499
+space.are     : Rooms: 32000 - 32499 Objs: 32000 - 32499 Mobs: 32000 - 32499
+menari_spaceport: Rooms:   199 - 227   Objs:   200 - 231   Mobs:   200 - 227
+omni_complex  : Rooms:   100 - 112   Objs:   100 - 103   Mobs:     0 - 0
+adari         : Rooms: 29000 - 29057 Objs: 29000 - 29059 Mobs: 29000 - 29059
+gamorr        : Rooms: 28000 - 28199 Objs: 28000 - 28199 Mobs: 28000 - 28139
+adari01       : Rooms: 29060 - 29158 Objs: 29060 - 29065 Mobs: 29060 - 29158
+monument.plaza: Rooms: 26000 - 26099 Objs: 26000 - 26099 Mobs: 26000 - 26099
+tatooine      : Rooms: 31500 - 31999 Objs: 31500 - 31524 Mobs: 31500 - 31532
+darkhand      : Rooms:   600 - 699   Objs:   600 - 699   Mobs:   600 - 699
+honoghr       : Rooms:  1000 - 1047  Objs:  1000 - 1099  Mobs:  1000 - 1099
+cloning       : Rooms: 10000 - 10010 Objs: 10000 - 10009 Mobs: 10000 - 10009
+senate        : Rooms: 10100 - 10199 Objs: 10100 - 10199 Mobs: 10100 - 10199
+kashyyyk      : Rooms: 28600 - 28643 Objs: 28600 - 28605 Mobs: 28600 - 28608
+a.byss.city   : Rooms: 28200 - 28399 Objs: 28200 - 28399 Mobs: 28200 - 28218
+grand_towers  : Rooms:  5000 - 5099  Objs:  5000 - 5099  Mobs:  5000 - 5099
+land.vehicles : Rooms: 30000 - 30999 Objs: 30000 - 30999 Mobs: 30000 - 30999
+endor         : Rooms:  3000 - 3099  Objs:  3000 - 3008  Mobs:  3000 - 3005
+Sorosuub      : Rooms:  6000 - 6098  Objs:  6000 - 6099  Mobs:     0 - 0
+jedi_acad     : Rooms:  6099 - 6199  Objs:  6100 - 6199  Mobs:  6100 - 6199
+hunter.ships  : Rooms:  6400 - 6499  Objs:  6400 - 6402  Mobs:  6400 - 6400
+corus.pt2     : Rooms: 10200 - 10299 Objs: 10200 - 10299 Mobs: 10200 - 10299
+mc90          : Rooms:  6700 - 6799  Objs:  6700 - 6799  Mobs:  6700 - 6799
+hunters.guild : Rooms:  6600 - 6633  Objs:  6600 - 6611  Mobs:  6600 - 6604
+mall          : Rooms:  7300 - 7399  Objs:  7300 - 7316  Mobs:  7300 - 7316
+mon_cal.are   : Rooms: 21000 - 21499 Objs: 21000 - 21435 Mobs: 21000 - 21499
+quarren.are   : Rooms:  6800 - 7200  Objs:  6800 - 6899  Mobs:  6800 - 6838
+dagobah       : Rooms:  8200 - 8290  Objs:     0 - 0     Mobs:     0 - 0
+throne.city   : Rooms:   700 - 799   Objs:   700 - 799   Mobs:   700 - 799
+nal.hut       : Rooms: 21500 - 21515 Objs: 21500 - 21799 Mobs: 21500 - 21799
+monolith      : Rooms:  8900 - 8999  Objs:  8900 - 8999  Mobs:  8900 - 8999
+corus.jail    : Rooms:  9000 - 9049  Objs:  9000 - 9049  Mobs:  9000 - 9049
+byss.jail     : Rooms:  9050 - 9099  Objs:  9050 - 9099  Mobs:  9050 - 9099
+nar.shadda    : Rooms:   500 - 599   Objs:   500 - 541   Mobs:   500 - 573
+sith_ruins.are: Rooms: 15000 - 15099 Objs: 15000 - 15007 Mobs: 15000 - 15006
+jedi_temple.are: Rooms: 16000 - 16099 Objs: 16000 - 16013 Mobs: 16000 - 16009
+korriban.are  : Rooms: 33000 - 33099 Objs: 33000 - 33007 Mobs: 33000 - 33009
+tython_padawan_kesh.are: Rooms: 40001 - 40008 Objs: 40001 - 40002 Mobs: 40001 - 40003
+tython_vur_tepe.are: Rooms: 40101 - 40108 Objs: 40101 - 40102 Mobs: 40101 - 40103
+tython_anil_kesh.are: Rooms: 40201 - 40208 Objs: 40201 - 40202 Mobs: 40201 - 40203
+tython_kaleth.are: Rooms: 40301 - 40308 Objs: 40301 - 40302 Mobs: 40301 - 40303
+tython_qigong_kesh.are: Rooms: 40401 - 40408 Objs: 40401 - 40402 Mobs: 40401 - 40403
+tython_stav_kesh.are: Rooms: 40501 - 40508 Objs: 40501 - 40502 Mobs: 40501 - 40503
+tython_bodhi.are: Rooms: 40601 - 40608 Objs: 40601 - 40602 Mobs: 40601 - 40603
+tython_mahara_kesh.are: Rooms: 40701 - 40708 Objs: 40701 - 40702 Mobs: 40701 - 40704
+tython_akar_kesh.are: Rooms: 40801 - 40808 Objs: 40801 - 40802 Mobs: 40801 - 40803
+Sun Jul 19 22:41:49 2026 :: Fixing exits
+Sun Jul 19 22:41:49 2026 :: Initializing economy
+Sun Jul 19 22:41:49 2026 :: Loading buildlist
+Sun Jul 19 22:41:49 2026 :: ../gods/Admin
+Sun Jul 19 22:41:49 2026 :: ../gods/Remi
+Sun Jul 19 22:41:49 2026 :: Loading boards
+Sun Jul 19 22:41:49 2026 :: ../boards/student.board
+Sun Jul 19 22:41:49 2026 :: ../boards/imm_monitor
+Sun Jul 19 22:41:49 2026 :: ../boards/quest.board
+Sun Jul 19 22:41:49 2026 :: ../boards/galactic_net
+Sun Jul 19 22:41:49 2026 :: ../boards/mail_net
+Sun Jul 19 22:41:49 2026 :: ../boards/nr.board
+Sun Jul 19 22:41:49 2026 :: ../boards/imperial.board
+Sun Jul 19 22:41:49 2026 :: ../boards/idea
+Sun Jul 19 22:41:49 2026 :: ../boards/bidea.brd
+Sun Jul 19 22:41:49 2026 :: ../boards/ackbuild.brd
+Sun Jul 19 22:41:49 2026 :: ../boards/blueprint.brd
+Sun Jul 19 22:41:49 2026 :: ../boards/jedi.board
+Sun Jul 19 22:41:49 2026 :: Loading clans
+Sun Jul 19 22:41:49 2026 :: Loading clans...
+Sun Jul 19 22:41:49 2026 :: empire.clan
+Sun Jul 19 22:41:49 2026 :: Loading clan storage room
+Sun Jul 19 22:41:49 2026 :: republic.clan
+Sun Jul 19 22:41:49 2026 :: Loading clan storage room
+Sun Jul 19 22:41:49 2026 :: corperate.clan
+Sun Jul 19 22:41:49 2026 :: Loading clan storage room
+Sun Jul 19 22:41:49 2026 :: Zorgos.clan
+Sun Jul 19 22:41:49 2026 :: Loading clan storage room
+Sun Jul 19 22:41:49 2026 :: hunters.guild
+Sun Jul 19 22:41:49 2026 :: Loading clan storage room
+Sun Jul 19 22:41:49 2026 :: jedi.order
+Sun Jul 19 22:41:49 2026 :: Loading clan storage room
+Sun Jul 19 22:41:49 2026 :: blacksun
+Sun Jul 19 22:41:49 2026 :: Loading clan storage room
+Sun Jul 19 22:41:49 2026 :: the.emporers.hand
+Sun Jul 19 22:41:49 2026 :: Loading clan storage room
+Sun Jul 19 22:41:49 2026 :: Imperial.Navy
+Sun Jul 19 22:41:49 2026 :: Loading clan storage room
+Sun Jul 19 22:41:49 2026 :: rogue.squadron
+Sun Jul 19 22:41:49 2026 :: Loading clan storage room
+Sun Jul 19 22:41:49 2026 :: $
+Sun Jul 19 22:41:49 2026 ::  Done clans
+Sorting clans....
+Sun Jul 19 22:41:49 2026 ::  Done sorting
+Sun Jul 19 22:41:49 2026 ::  Done ranks and rosters
+Sun Jul 19 22:41:49 2026 :: Loading senate
+Sun Jul 19 22:41:49 2026 :: Loading bans
+Sun Jul 19 22:41:49 2026 :: Loading corpses
+Sun Jul 19 22:41:49 2026 :: Loading space
+Sun Jul 19 22:41:49 2026 :: Loading space...
+Sun Jul 19 22:41:49 2026 ::  Done starsystems 
+Sun Jul 19 22:41:49 2026 :: Loading ships
+Sun Jul 19 22:41:49 2026 :: Loading ships...
+Sun Jul 19 22:41:49 2026 ::  Done ships 
+Sun Jul 19 22:41:49 2026 :: Loading bounties
+Sun Jul 19 22:41:49 2026 :: Loading disintigrations...
+Sun Jul 19 22:41:49 2026 ::  Done bounties 
+Sun Jul 19 22:41:49 2026 :: Loading governments
+Sun Jul 19 22:41:49 2026 :: Loading planets...
+Sun Jul 19 22:41:49 2026 :: coruscant
+Sun Jul 19 22:41:49 2026 :: byss
+Sun Jul 19 22:41:49 2026 :: honoghr
+Sun Jul 19 22:41:49 2026 :: gamorr
+Sun Jul 19 22:41:49 2026 :: endor
+Sun Jul 19 22:41:49 2026 :: Kashyyyk
+Sun Jul 19 22:41:49 2026 :: moncal
+Sun Jul 19 22:41:49 2026 :: adari
+Sun Jul 19 22:41:49 2026 :: tatooine
+Sun Jul 19 22:41:49 2026 :: korriban
+Sun Jul 19 22:41:49 2026 :: tython
+Sun Jul 19 22:41:49 2026 :: $
+Sun Jul 19 22:41:49 2026 ::  Done planets 
+Sun Jul 19 22:41:49 2026 :: Loading world state...
+Sun Jul 19 22:41:49 2026 :: World state: loading mobs
+Sun Jul 19 22:41:49 2026 :: World state: loading objs
+Sun Jul 19 22:41:49 2026 :: World state: loading ships
+Sun Jul 19 22:41:49 2026 :: Resetting areas
+Sun Jul 19 22:41:49 2026 :: Initializing socket
+Sun Jul 19 22:41:49 2026 :: Star Wars Reality ready on port 4000.
+Sun Jul 19 22:41:49 2026 :: Initiating hotboot recovery.
+Sun Jul 19 22:41:49 2026 :: Loading player data for: Remi (9K)
+Sun Jul 19 22:41:49 2026 :: Hotboot recovery complete.
+Sun Jul 19 22:42:13 2026 :: Log Remi: shopset 227
+Sun Jul 19 22:43:24 2026 :: Log Remi: shopset 227 sell 120
+Sun Jul 19 22:43:56 2026 :: Log Remi: makeshop 227
+Sun Jul 19 22:43:59 2026 :: Log Remi: shopset 227 sell 120
+Sun Jul 19 22:44:04 2026 :: Log Remi: shopset 227 sell 1.20
+Sun Jul 19 22:44:20 2026 :: Log Remi: shopset 227 sell 20
+Sun Jul 19 22:44:26 2026 :: Log Remi: shopset 227 sell 120
+Sun Jul 19 22:44:33 2026 :: Log Remi: shopset 227 sell 100
+Sun Jul 19 22:44:52 2026 :: Log Remi: shopset 227 buy 30
+Sun Jul 19 22:46:36 2026 :: Log Remi: shopset 227 buy 120
+Sun Jul 19 22:46:42 2026 :: Log Remi: shopset 227 sell 90
+Sun Jul 19 22:50:16 2026 :: Log Remi: shopset 227 buy#
+Sun Jul 19 22:50:42 2026 :: Log Remi: shopset 227 buy# keeper
+Sun Jul 19 22:51:19 2026 :: Log Remi: shopset 227 keeper
+Sun Jul 19 22:54:44 2026 :: Log Remi: shopset 227
+Sun Jul 19 22:55:14 2026 :: Log Remi: shopset 227 buy1
+Sun Jul 19 22:55:28 2026 :: Log Remi: shopset 227 buy1 79
+Sun Jul 19 22:55:46 2026 :: Log Remi: shopset 227 buy1 80
+Sun Jul 19 22:56:40 2026 :: Log Remi: shopset 227 buy1 81
+Sun Jul 19 22:56:48 2026 :: Log Remi: shopset 227 buy1 82
+Sun Jul 19 22:56:52 2026 :: Log Remi: shopset 227 buy1 83
+Sun Jul 19 22:56:56 2026 :: Log Remi: shopset 227 buy1 84
+Sun Jul 19 22:57:02 2026 :: Log Remi: shopset 227 buy1 85
+Sun Jul 19 22:57:07 2026 :: Log Remi: shopset 227 buy1 86
+Sun Jul 19 23:04:45 2026 :: Log Remi: reboot mud now
+Sun Jul 19 23:04:45 2026 :: Normal termination of game.

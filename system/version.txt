@@ -1,0 +1,1828 @@
+swrfussSWGD v2.0
+Based on SWR/FUSS, extended with SWL and GD content.
+
+Changelog:
+  v2.0 - Project renamed from swrfussSWL to swrfussSWGD. Verbiage
+           change only, reflecting the project's emphasis on
+           SWGD-verbatim porting; no functional or file-format
+           changes accompany this entry.
+  v1.58 - Tython connectivity. The nine Tython Temple areas had no exits
+           between them and none leaving the set - nine sealed islands
+           reachable only by ship. With three landing slots available on
+           Planet1 that left six areas (Padawan Kesh, Vur Tepe, Anil
+           Kesh, Kaleth, Akar Kesh and Stav Kesh) unreachable to
+           mortals. Added a connecting wilderness area and linked all
+           nine Temples into it.
+          Starsystem/planet linkage fixes confirmed in place first.
+           planets/tython now carries "Starsystem   Tython System~" - it
+           had briefly read "tython.system~", which never matched
+           because starsystem_from_name (space.c) compares against the
+           system's Name field, not its filename, and failed silently
+           with planet->starsystem left NULL. tython.system is
+           registered in space.lst. Planet2/Planet3 are declared as
+           Ashla and Bogan with distinct P2/P3 coordinates; when they
+           shared Planet1's position the planet2 gravity block in
+           space.c applied Tython's well a second time at the same
+           point. Live landing slots are Doc1a 40401 Qigong, Doc1b 40701
+           Mahara and Doc1c 40601 Bodhi; Stav Kesh's slot was
+           deliberately cleared and it is now reached on foot.
+          New area "The Tython Wilds" (area/tython_wilds.are): 50 rooms
+           at vnums 40900-40949, 18 mobiles at 40900-40917, 10 objects
+           at 40900-40909. All three blocks verified free against every
+           area in area.lst; they sit immediately above Akar Kesh's
+           40801-40808. Ranges 5 95 5 95.
+          Layout is a central grassland hub (40900 Tythos Ridge
+           Crossroads, eight exits) wrapped in a 3x3 core cluster, with
+           nine spurs running out to gateway rooms, one per Temple:
+           40912 Broken Ringwall to Kaleth, 40916 Trialsgate Shelf to
+           Padawan Kesh, 40921 White Corridor to Stav Kesh, 40926
+           Forgemouth to Vur Tepe, 40931 Span Anchor to Anil Kesh, 40936
+           Windward Pan to Qigong Kesh, 40941 Masara Headland to Bodhi,
+           40945 Plateau Rim to Akar Kesh, 40949 Descent Pier to Mahara
+           Kesh. Terrain grades toward each destination - snow and
+           mountain west toward Stav Kesh, volcanic ash southwest toward
+           Vur Tepe, dunes southeast toward Qigong Kesh, salt-wind wood
+           east toward Bodhi, reedbeds and open lake far east toward
+           Mahara Kesh.
+          18 mobiles drawn from Tython's canonical fauna, graded so
+           difficulty rises with distance from the hub: screech lizard
+           (8), ak-wood forager (12), wandering pilgrim (15), guid (22),
+           gelfish (30), acid spider (35), blood spite (40), Je'daii
+           journeyman (40), hook hawk (45), uxibeast (50), manka cat
+           (55), Je'daii ranger (60), horranth (62), horranth
+           broodmother (70), silik lizard (75), flame tygah (85), Moon
+           Channel serpent (90), saarl (95). Everything level 50 and
+           above is sentinel so the gradient holds and high-level
+           predators cannot wander into the hub; only the three low-
+           level flavour mobs roam.
+          All wildlife carries "Race Human~". npc_race[] (const.c) has
+           no beast or creature entry - the table is sentient species
+           only - and this follows existing practice: tatooine's krayt
+           dragon and womp rats and jedi_acad's night beast all do the
+           same. Flavour races invented during the first pass ("beast",
+           "reptile", "insect", "bird") each produced a "Mob has invalid
+           race" bug at boot and were corrected.
+          10 objects, all trash type with WFlags take, as trophy and
+           flavour drops: screech lizard hide, ak wood, hook hawk talon,
+           acid spider venom sac, silik spine, ranger's rations, Je'daii
+           wayfinder stone, uxibeast horn, manka cat pelt, flame tygah
+           claw.
+          Nine Temple area files each gained one "south" exit from their
+           entry room back into the Wilds - tython_padawan_kesh.are
+           40001 to 40916, tython_vur_tepe.are 40101 to 40926,
+           tython_anil_kesh.are 40201 to 40931, tython_kaleth.are 40301
+           to 40912, tython_qigong_kesh.are 40401 to 40936,
+           tython_stav_kesh.are 40501 to 40921, tython_bodhi.are 40601
+           to 40941, tython_mahara_kesh.are 40701 to 40949,
+           tython_akar_kesh.are 40801 to 40945. South was chosen because
+           every entry room already used north, up or down to go inward,
+           leaving south free in all nine and the patch uniform. No
+           other content in those files was touched.
+          area/area.lst gained tython_wilds.are after
+           tython_akar_kesh.are, and planets/tython gained "Area
+           tython_wilds.are~".
+          Generation was assertion-gated before any file was written:
+           exactly 50 rooms, every direction valid, every in-area exit
+           reciprocal, every exit target existing, each of the nine
+           Temples linked from exactly one gateway, full connectivity
+           from the hub, and every reset referencing a mob or object
+           defined in the file. Post-build audit across all ten Tython
+           area files confirms 122/122 rooms reachable from each of the
+           three landing pads, with every Temple area at 8/8 coverage
+           and the Wilds at 50/50.
+          Noted but not changed: tython_anil_kesh.are rooms 40207/40208
+           are linked down one way and north the other rather than
+           down/up. Both directions exist so the pair is traversable; it
+           is only geometrically odd, and it predates this work.
+          Mobile Long fields in the new areas were terminating with the
+           ~ on the same line, so long_descr carried no trailing
+           newline. show_char_to_char_0 (act_info.c) appends none of its
+           own - it does strlcat(buf, victim->long_descr) then
+           send_to_char(buf, ch) - so the line break has to come from
+           inside the stored string. Without it the mob line ran
+           straight into whatever followed. Every original SWR area puts
+           the ~ on its own line; korriban.are already did too. Fixed 52
+           mobiles across 11 files: the nine tython Temple areas (28),
+           tython_wilds.are (18), and menari_spaceport (6, including the
+           five v1.29 module vendor droids, which had the same defect).
+           Object Long fields were deliberately left flat - they render
+           through show_list_to_char, which supplies its own newline,
+           and all 219 in the original areas are flat.
+          Extended the Long field fix to nar.shadda, which had the same
+           defect across 69 of its 70 mobiles - it is an original area
+           rather than new content, so it was flagged separately and
+           fixed on request. Mobile 500 ("a newly created Auctioner")
+           has no Long field at all and was left untouched rather than
+           given an invented one. A full sweep of every area in area.lst
+           now reports 678 mobile Long fields correctly terminated and
+           none flat.
+          Clean compile, clean boot confirmed.
+  v1.57 - do_score (player.c) was printing Subclass twice: once in the
+           new Class/Subclass line added in v1.54, and again on the
+           QP/QPA line further down (a pre-existing line from before that
+           change, never removed). Dropped the redundant "Subclass: %s"
+           off the QP/QPA line - it's now just "QP: ... QPA: ...".
+          Clean compile, clean boot confirmed.
+  v1.56 - Mental state immortal exemption. Investigated why an immortal
+           (Remi) was showing "barely conscious" on score despite full
+           HP - mental_state is a separate -100..100 stat, and theirs was
+           pinned at the floor. Compared against SWGD: the passive
+           per-tick recovery (update.c, tied to COND_FULL/COND_THIRST and
+           position) and the combat-pain degradation (fight.c, on heavy
+           hits or sub-25%-HP) both match SWGD's source exactly - this
+           wasn't a porting bug. What SWGD (and this codebase) already do
+           differently is exempt immortals from hunger/thirst-driven
+           mental_state loss (gain_condition returns early for
+           get_trust(ch) >= LEVEL_IMMORTAL) but NOT from combat-pain
+           loss. Per Mark's request, extended that same exemption to the
+           combat-pain triggers in damage() (fight.c): both
+           worsen_mental_state() calls ("That really did HURT!" /
+           "BLEEDING") are now skipped for IS_IMMORTAL(victim), matching
+           the hunger/thirst precedent. This only stops future
+           degradation - existing pinned mental_state (like Remi's -100)
+           needs a one-time reset via mset <char> mentalstate 0.
+          Clean compile, clean boot confirmed.
+  v1.55 - New spell: Chain Lightning, requested by Mark - not an SWGD
+           port, a new spell built on top of the existing Force Lightning
+           (spell_black_lightning, magic.c). Room-wide version of Force
+           Lightning: hits every legal target in the room once each,
+           including other players, instead of repeatedly channeling
+           into a single victim. Reuses Force Lightning's per-target
+           damage, lightsaber-reflect check, and poison-death save;
+           room-iteration eligibility (group/legality/visibility/safe-
+           room checks) mirrors do_hitall (skills.c), the existing room-
+           wide-attack pattern in this codebase, so it respects the same
+           PK safety rules as everything else.
+          New spell_chain_lightning (magic.c), gsn_chain_lightning (db.c/
+           mud.h), skills.dat entry: Guild 7 (Force), Target 0 (no victim
+           argument needed - hits the whole room), Minlevel 140 (highest
+           in the game; previous ceiling was 135), Mana 175 (5x Force
+           Lightning's 35, per Mark's spec).
+          is_legal_kill (skills.c) was file-local with no mud.h
+           declaration; added a declaration so magic.c could reuse the
+           same PK-legality check do_hitall already relies on, rather
+           than reimplementing it.
+          New "CHAIN LIGHTNING" help entry added alongside the existing
+           FORCE LIGHTNING entry.
+          Clean compile (no errors or warnings), clean boot confirmed.
+  v1.54 - Six-item batch from Mark/Remi: backstab busy-check, score
+           class/subclass, chargen help wording, lightsaber Force gate,
+           spar command, and the fighting style system. Ported from SWGD
+           as closely as possible per Mark's instruction; deviations are
+           called out below.
+          Backstab busy-check - ported SWGD's "You're a little busy right
+           now" restriction into do_backstab (skills.c): an attacker
+           already fighting someone else can no longer peel off to
+           backstab a fresh target. This codebase previously only ever
+           checked the victim's combat state, never the attacker's.
+           BACKSTAB help entry updated with a note on the restriction.
+          Score class/subclass - do_score (player.c) now prints a
+           "Class: ... Subclass: ..." line, matching the format SWGD uses
+           in do_researchtarget/do_gather_intelligence (Race/Class/
+           Subclass). Unlike SWGD's do_score, which only shows Subclass
+           conditionally, both fields are always shown here ("None" when
+           no subclass chosen yet), per Remi's request for "a spot for
+           subclasses". SCORE help entry updated to mention it.
+          Chargen help wording - typing "help classes" during class
+           selection already worked (nanny_get_new_class, comm.c, already
+           called do_help); the actual gap was that the prompt never told
+           players help was available. Both copies of the class-selection
+           banner now read "Please choose a main ability from the
+           following classes, or type help [class] to learn more:".
+          Lightsaber Force gate - skills.dat's "lightsabers" weapon skill
+           Minlevel raised from 2 to 25, so Force Awakening alone (which
+           can grant a sliver of Force to any class) no longer grants
+           practical lightsaber access - a real commitment to the Force
+           track is required. Added a note to the BOWCASTERS/LIGHTSABERS/
+           etc. weapon-proficiency help entry explaining why.
+          Spar command - ported do_spar (skills.c) and its supporting
+           PCFLAG_SPARRING flag (mud.h, labeled in build.c's pc_flags[]).
+           When both combatants in a fight have spar mode on, the loser
+           is knocked to 1hp and combat stops instead of dying - ported
+           into damage()'s existing immortal-vs-immortal safety net
+           (fight.c), using a newly-captured init_hit (victim's hit
+           total before this hit's damage, captured safely after the
+           null-ch/null-victim checks rather than before them like
+           SWGD's version does). SWGD's version of this feature also
+           awards/deducts honour (gain_honour/loose_honour); omitted here
+           since this codebase has no honour/reputation system (confirmed
+           missing in an earlier audit, not yet built) - faking it would
+           have been worse than leaving it out. New SPAR help entry
+           added. Registered in commands.dat, checked against every
+           existing s*-prefixed command for the abbreviation-collision
+           bug class documented in v1.50 - no collisions.
+          Fighting style system - ported wholesale from SWGD:
+           * STYLE_STANDARD/EVASIVE/DEFENSIVE/OFFENSIVE/AGRESSIVE defines
+             and five new CHAR_DATA fields (fstyle, evasive_skill,
+             defensive_skill, offensive_skill, agressive_skill), all
+             mud.h. Zero-initialized correctly via CREATE's calloc, no
+             separate init code needed; STYLE_STANDARD == 0 as the
+             natural default.
+           * do_style (player.c) - the on-demand command to pick a style
+             or view current style scores.
+           * learn_style() (skills.c) - passively grows whichever style
+             skill is active, capped by Combat ability (plus Martial
+             Artist/Combat-class bonuses). Hooked into violence_update()
+             (fight.c) right where the per-round multi_hit() call lands,
+             so it fires once per active fighter per combat round.
+           * GET_AC/GET_HITROLL/GET_DAMROLL (mud.h) extended with each
+             style's bonus/penalty terms, layered on top of every term
+             already in these macros rather than replacing any of them.
+           * Save/load persistence added to save.c (Fstyle, EvasiveSkl,
+             DefensiveSkl, OffensiveSkl, AgressiveSkl keys) so style
+             progress isn't lost on reload.
+           * Registered "style" in commands.dat; checked for prefix
+             collisions against every other st*-prefixed command - none.
+           * New STYLE/FIGHTSTYLE help entry added.
+           * Flagged divergence: SWGD's own GET_AC/GET_HITROLL/GET_DAMROLL
+             formulas use evasive_skill (not agressive_skill) for the
+             Agressive style's bonus/penalty in all three macros - almost
+             certainly an SWGD bug (agressive_skill is tracked and grown
+             by learn_style() but never actually read anywhere in SWGD's
+             own formulas), but ported verbatim per "as closely as
+             possible" rather than silently corrected. Worth a decision
+             next time balance work touches this.
+          Clean compile (no errors or warnings), clean boot confirmed
+           across every touched file.
+  v1.53 - Remi feedback batch (part 5): max stat display on score/mstat.
+          Remi asked for each attribute on score to show its theoretical
+           max next to the current value, e.g. "Str: 6 (XX)". Added
+           get_max_str/dex/con/int/wis/cha/lck/frc() (handler.c/mud.h) -
+           each factored straight out of the race-adjusted cap math
+           get_curr_*() already computes internally and discards (20 +
+           race bonus, capped at 25; 150 + race bonus, capped at 150 for
+           Force), so the displayed max can never drift out of sync with
+           the ceiling get_curr_* actually enforces.
+          do_score (player.c) and do_mstat (act_wiz.c) both updated to
+           print "current (max)" for all eight attributes.
+          Found and fixed a real, unrelated bug while touching this line:
+           do_score's Lck and Frc were hardcoded to literal "??" instead
+           of calling the existing get_curr_lck()/get_curr_frc() functions
+           - those functions were already implemented and already used
+           correctly by do_mstat, just never wired up in do_score. Now
+           shows real values for both.
+          do_oldscore (player.c) has the same stat line but is a separate,
+           less-used command Remi didn't ask about - left untouched for
+           now; flag if you want it brought in line too.
+          Clean compile (no new warnings), clean boot confirmed.
+  v1.52 - Remi feedback batch (part 4): Tailor subclass listing and
+           Commando rebalance.
+          subclass/subclasses listed Tailor under its own standalone
+           "Tailor Subclasses" category instead of grouping it with the
+           rest of the Engineering subclasses (Weaponsmith, Quick Worker).
+           Folded Tailor into Engineering Subclasses in both do_subclass
+           and do_subclasses, removing the standalone category - the two
+           listings still mirror each other after the change.
+          Commando rebalance - Remi noted Commando (Combat 100/Smuggling
+           50, v1.51) now overlaps heavily with Scoundrel (Combat 75/
+           Smuggling 75) and proposed spreading Commando's total point
+           budget across three abilities instead of two: Combat 50,
+           Smuggling 50, Bounty Hunting 50. This keeps the same 150-point
+           total Commando already had (100+50) - just distributed
+           differently, and matches Scoundrel's own total spend (75+75).
+           Confirmed with Mark before implementing since it drops
+           Commando's Combat cap from full (100) to half (50) for any
+           existing Commando characters. Implemented in max_level()
+           (update.c): Combat block's Commando case changed 100 -> 50, a
+           new Commando case added to the Bounty Hunting (Hunting) block
+           at 50, Smuggling block's existing Commando 50 case left as-is
+           and its comment updated to explain the full three-way spread.
+           help.are's Commando entry updated to match.
+          Clean compile, clean boot confirmed after all files.
+  v1.51 - Remi feedback batch (part 3): input line length cap, hybrid
+           class documentation, and Commando's missing secondary ability.
+          Idea/bug/typo/general input line length - typing a longer idea
+           (or any other line of input) hit "Line too long." well short of
+           what the game can actually hold. read_from_buffer() (comm.c)
+           was cutting every line off at a hardcoded 254 characters, even
+           though the real d->incomm/d->inbuf buffers are 1024 bytes
+           (MAX_INPUT_LENGTH/MAX_INBUF_SIZE, mud.h). Raised the cap to
+           MAX_INPUT_LENGTH - 20, leaving margin for the null terminator
+           and '!' repeat-command substitution. This is the single shared
+           line-read routine, so it fixes idea/bug/typo and every other
+           command that takes free-form text, not just idea.
+          Hybrid class level bonuses documented in help.are (CLASS/
+           CLASSES entry) - pulled the real numbers straight out of
+           max_level() (update.c) instead of the old vague "rides X, also
+           strong in Y" wording: Chemist (Engineering 75/Medical 75),
+           Scoundrel (Combat 75/Smuggling 75), Ambassador (Diplomacy 60
+           plus a guaranteed baseline Force stat), Scout (Combat 75/
+           Bounty Hunting 50), Snitch (Bounty Hunting 100/Smuggling 50),
+           Commando (Combat 100, see below). Also corrected Snitch's
+           description, which had it backwards - the code caps Snitch's
+           Bounty Hunting at 100 (full, same as a dedicated Bounty
+           Hunter) and Smuggling at only 50, the opposite of what the old
+           text implied.
+          Commando's missing secondary ability - found that Commando had
+           no secondary-ability bonus at all in this codebase, unlike
+           every other hybrid class. Checked SWGD's source: Commando is
+           supposed to get a flat +50 to Espionage, but this codebase has
+           no Espionage ability (excluded per Mark, unfinished even in
+           SWGD). Traced where SWGD's old Espionage-guild skills (disguise,
+           hijack, besiege) actually ended up in this codebase's
+           skills.dat - overwhelmingly Smuggling - so per Mark's direction,
+           Commando now gets the same +50 secondary-ability bonus applied
+           to Smuggling instead (max_level(), update.c), matching the
+           existing 50-point secondary tier already used by Scout and
+           Snitch above. help.are's Commando entry updated to match and
+           explain the substitution.
+          Clean compile, clean boot confirmed after all three files.
+  v1.50 - Remi feedback batch (part 2): command abbreviation collisions and
+           subclass listing corrections, plus subclass/subclasses mirroring.
+          Command abbreviation collisions - interpret() matches commands by
+           walking commands.dat's file order within a hash bucket (buckets
+           keyed by first letter, entries appended in file order) and takes
+           the FIRST prefix match regardless of level, so any short/
+           abbreviated command name must appear before every other command
+           in the file sharing the same starting letters or it gets
+           shadowed. score was shadowed by scrapattack (earlier in the
+           file, also starting "sc") - typing sc always resolved to
+           scrapattack. se (southeast) was shadowed by both setrank and
+           setforceroll (level-0 commands earlier in the file, both
+           starting "se") - typing se always resolved to setrank, so
+           southeast movement via the se abbreviation was broken for every
+           player. Fixed by reordering commands.dat: se now sits
+           immediately after south and before setrank/setforceroll; score
+           now sits immediately before scrapattack. Audited ne/nw/sw/u/d
+           against every other command sharing their prefix - no other
+           collisions found, those were already correctly ordered.
+           Documentation: extended the ordering-rule comment in
+           add_command() (act_wiz.c) to explicitly call out the diagonal
+           movement abbreviations (ne/nw/se/sw) and short commands like sc,
+           describing this exact bug class so it's caught before being
+           reintroduced; the pre-existing north/south/east/west/up/down
+           first-in-letter documentation was left as-is.
+          do_subclasses (plural) miscategorized Mercenary under Combat
+           Subclasses; per SWGD source and Remi's feedback it belongs under
+           General Subclasses alongside Force Sensitive/Jedi, Soldier,
+           Mechanic, and Certified Genius (those four were already correct
+           - only Mercenary was misplaced). Fixed.
+          subclass/subclasses mirroring - do_subclass's no-argument listing
+           used a different categorization than do_subclasses (Soldier
+           under Combat instead of General, Mechanic under Engineering
+           instead of General, a standalone "Force Subclasses" category
+           still including Force Sensitive/Jedi) and never listed Survivor,
+           Jury Rigger, Certified Genius, or Mercenary at all, even though
+           the selection logic for all four already existed further down
+           in the same function. Rebuilt do_subclass's listing to match
+           do_subclasses category-for-category: General now includes Jack
+           of All Trades, Mechanic, Soldier, Force Sensitive, Jedi,
+           Survivor, Certified Genius, and Mercenary; Force Subclasses is
+           now the advanced trio only (Prodigy, Sith Hunter, False Prophet);
+           Jury Rigger added to Bounty Hunting; a Tailor Subclasses category
+           added to match do_subclasses. Diplomacy Subclasses heading
+           renamed to Diplomatic Subclasses to match do_subclasses' wording
+           exactly. Both listings now show the same 24 subclasses under the
+           same category names, in the same order.
+          Clean compile, clean boot confirmed after both files.
+  v1.49 - Cleanup: updated the last two stale AFF_SCRYING/AFF_TRUCE
+           comments (act_info.c, swskills.c) to reflect that both are
+           now fully gone (v1.47/v1.48), rather than leaving them
+           describing a mid-state that no longer applies.
+           Also checked, at Mark's request, whether any area-file
+           object still grants this bit (APPLY_AFFECT, BV24) via an
+           Affect line - searched every area file in the game, both
+           for an exact bitvector match and for the bit set within a
+           combined/OR'd value. Zero hits anywhere. Nothing to clean
+           up on the content side, and no dormant "will surface as a
+           bug later" risk either - confirmed rather than assumed.
+  v1.48 - AFF_TRUCE and ch->truce_with fully removed (Mark asked
+           after v1.47 whether the two dormant leftovers were worth
+           cleaning up too). Verified before removing: truce_with was
+           never persisted to player files (no save.c key at all -
+           pure transient runtime state) and AFF_TRUCE was never wired
+           into any flag-name display table in const.c/tables.c - so
+           no on-disk compatibility concern and nothing to misalign.
+           mud.h: the AFF_TRUCE #define and the truce_with CHAR_DATA
+             field both removed outright.
+           db.c: the character-extraction cleanup block that freed
+             ch->truce_with removed along with it.
+           handler.c: one more live reference turned up that v1.47
+             missed - affect_bit_name() (the generic "list which
+             affect bits are set" display helper) had its own
+             "if (vector & AFF_TRUCE) ... truce" branch, which would
+             no longer compile once the #define was gone. Removed.
+           Two harmless historical comments remain, untouched
+             (act_info.c, swskills.c) - pure comment text describing
+             the original AFF_SCRYING -> AFF_TRUCE bit reclamation from
+             before force_stun even existed. No live symbol dependency
+             either way; purely cosmetic if ever updated.
+           Clean compile, clean boot confirmed after all three files.
+  v1.47 - force_stun fully removed, per Mark's request after the
+           timer-based redesign (v1.46) still didn't resolve it.
+           REMOVED:
+             magic.c: spell_force_stun() and force_stun_resume() -
+               both functions deleted entirely.
+             db.c: gsn_force_stun's definition and its ASSIGN_GSN call.
+             mud.h: the extern gsn_force_stun, DECLARE_SPELL_FUN, and
+               DECLARE_DO_FUN(force_stun_resume) declarations.
+             system/skills.dat: the force_stun skill entry.
+             fight.c: the leftover v1.40-v1.46 comments in the affect-
+               expiry loop and update_pos() that referenced this spell
+               (the code they were explaining is already gone as of
+               v1.46 - only stale commentary needed cleaning up here).
+             update.c: two now-dead AFF_TRUCE regen-modifier blocks (in
+               hit_gain and mana_gain) that had nothing left to ever
+               trigger them, since nothing sets AFF_TRUCE anymore.
+           KEPT, DELIBERATELY (both now fully dormant, harmless,
+           comments updated to say so plainly):
+             mud.h's AFF_TRUCE bitvector #define - removing a
+               bitvector define outright risked touching the
+               AFF_SCRYING-reclaim history noted elsewhere (act_info.c,
+               swskills.c both have disabled AFF_SCRYING code
+               specifically because this bit was reclaimed for
+               AFF_TRUCE) - out of scope for a clean spell removal.
+             ch->truce_with (CHAR_DATA field) - same reasoning, plus
+               pfile save/load already handles a null/unset value
+               fine, so leaving it declared costs nothing.
+           Verified: zero remaining references to force_stun anywhere
+           in src/ or system/*.dat, aside from the two comments noting
+           what the now-unused AFF_TRUCE/truce_with slots used to be
+           for. Clean compile, clean boot.
+  v1.46 - force_stun: full redesign around a one-shot timer, replacing
+           the affect-expiry-loop approach entirely.
+           WHY: Mark reported the stunned character could still move to
+           another room, and combat never resumed. Root cause: the
+           mechanism relied on update_pos() to force POS_STUNNED via an
+           AFF_TRUCE check - but update_pos() is only ever invoked
+           reactively, from specific combat-processing call sites
+           (damage(), the violence loop, a few others). force_stun's
+           entire purpose is to STOP combat, so once it fired, nothing
+           was left to call update_pos() again - position silently
+           stayed whatever it was before the stun (usually standing/
+           fighting), and movement's own Position-8 requirement never
+           saw anything to block. This was a structural mismatch, not
+           a small bug - relying on a combat-tick side effect for a
+           spell whose whole point is to halt combat.
+           NEW DESIGN: spell_force_stun now sets both characters'
+           position to POS_STUNNED directly at cast time (immediate,
+           unconditional - no dependency on any later tick), and
+           schedules exactly one add_timer(..., TIMER_DO_FUN, duration,
+           force_stun_resume, 0) call. Confirmed by reading
+           violence_update() directly before relying on it: its timer/
+           affect sweep runs every pulse for every character in
+           char_list, not just those currently fighting - so this
+           timer is guaranteed to fire on schedule regardless of
+           combat state, unlike update_pos().
+           force_stun_resume (new, magic.c): the single place that
+           looks up the partner (still using truce_with by name, same
+           as before), restores position on both sides (POS_FIGHTING
+           if still fighting something else, POS_STANDING otherwise),
+           and - only if both are still in the same room, alive, and
+           neither already re-engaged elsewhere - resumes the fight
+           and prints the resume messages.
+           This eliminates the whole class of problems the affect-loop
+           version kept hitting: no more duplicate/competing
+           implementations (there's exactly one timer, not two
+           independent affect expiries each trying to trigger the same
+           logic), no more affect_strip-mid-iteration crash risk (no
+           mechanical affect processing involved at all anymore), no
+           more ordering dependency between "affect cleared" and
+           "position restored" (both handled directly, together, in
+           one place).
+           The AFF_TRUCE affect itself is kept, but now purely
+           cosmetic - visible in the affects listing, and still prints
+           the skill's registered wearoff message for free via the
+           ordinary, untouched generic mechanism. It no longer drives
+           anything mechanical. update_pos()'s AFF_TRUCE check removed
+           accordingly (AFF_PARALYSIS's own check is untouched).
+  v1.45 - CRASH FIX: force_stun's resume code could take the whole
+           server down with a heap-use-after-free, if force_stun ever
+           self-targets (the still-open skills.dat Target-type issue -
+           see below). v1.44's resume block never guarded against
+           partner == ch: when self-targeted, affect_strip(partner,
+           gsn_force_stun) frees affects on ch's OWN list while
+           violence_update()'s outer loop is still mid-iteration over
+           that exact list - a real, confirmed crash (ASan heap-use-
+           after-free at fight.c, freed via affect_strip <- affect_
+           remove, read back moments later by the outer loop). Added
+           an explicit "partner != ch" guard before any of that runs.
+           Also makes sense on its own terms independent of the crash -
+           there's no reason to ever "resume combat" with yourself.
+  v1.44 - Fixed both problems Mark reported after testing force_stun's
+           resume behavior: the wearoff/resume message never appearing,
+           and characters staying stuck reporting "stunned" even after
+           combat visibly resumed.
+           ROOT CAUSE #1: there was a SECOND, pre-existing
+           implementation of this exact same "resume combat when the
+           truce ends" idea already sitting in fight.c's affect-expiry
+           loop (a paf->bitvector == AFF_TRUCE block using
+           get_char_world, unrelated to and unknown to me when v1.40
+           was written), positioned right after my own block. Since
+           mine ran first and cleared ch->truce_with unconditionally,
+           the older block's own condition (which also checked
+           ch->truce_with) was always false by the time it ran, so it
+           silently did nothing every time - meaning half the combat-
+           resume logic in the file was permanently dead code, quietly
+           conflicting with the other half. Removed the old block
+           entirely, keeping only the v1.40/v1.43 one with Mark's
+           requested wording.
+           ROOT CAUSE #2 (the stuck-stunned bug): update_pos() forces
+           POS_STUNNED for as long as AFF_TRUCE is present on a
+           character, independent of whether they're ->fighting -
+           "if (IS_AFFECTED(victim, AFF_PARALYSIS) ||
+           IS_AFFECTED(victim, AFF_TRUCE)) victim->position =
+           POS_STUNNED;". My resume code was calling set_fighting()
+           BEFORE the shared affect_remove(ch, paf) call later in the
+           same loop had actually cleared ch's own AFF_TRUCE bit, and
+           well before partner's own independent affect-expiry
+           processing (which may not even run in the same pass,
+           depending on where each character falls in the outer loop)
+           would clear theirs - so combat was resuming while both
+           characters were still technically flagged AFF_TRUCE, and
+           the next position recalculation forced them straight back
+           to "stunned".
+           Fixed by not waiting on that ordering at all: explicitly
+           strip the AFF_TRUCE bit from both characters right in the
+           resume block itself (REMOVE_BIT for ch, affect_strip(partner,
+           gsn_force_stun) for the other side, since partner's own copy
+           may not have been processed by the loop yet), then set
+           position = POS_FIGHTING directly on both rather than
+           trusting update_pos() to infer it - matching the existing
+           pattern already used elsewhere in this file where damage()
+           sets position alongside set_fighting() rather than relying
+           on update_pos() to compute it from current affects.
+  v1.43 - force_stun: TO_VICT/TO_NOTVICT cast messages simplified per
+           Mark's request - "$mself" (valid, established notation in
+           this codebase - $m resolves to him/her/it by gender, same
+           pattern already used in act_obj.c and misc.c - but not what
+           he wanted stylistically) replaced with "both combatants",
+           sidestepping pronoun resolution for a cleaner read. TO_CHAR
+           unchanged (already first-person "yourself", no pronoun
+           issue there).
+  v1.42 - force_stun's initial cast messages reworded per Mark's
+           request - "You reach out and force a truce between yourself
+           and $N" replaced with "You expend a tremendous amount of
+           force, ensnaring yourself in the process. You and $N fall
+           to the ground in a stunned state." (and matching TO_VICT/
+           TO_NOTVICT variants). Purely a wording change - v1.41's
+           Target-type fix already has this correctly naming the real
+           opponent rather than the caster.
+  v1.41 - Two force_stun fixes: reworded resume messages, and a real
+           self-targeting bug found in its skills.dat registration.
+           MESSAGE WORDING: the v1.40 combat-resume act() lines
+             ("The truce between you and $N ends - combat resumes!")
+             replaced with Mark's requested phrasing: "The calmness
+             from the force slowly fades away and you/$n and $N/you
+             quickly regain your/their senses" - adapted per act()
+             perspective (TO_CHAR/TO_VICT get "your", TO_NOTVICT gets
+             "their", matching who's actually being addressed).
+           REAL BUG FOUND: Mark reported the initial cast message
+             ("You reach out and force a truce between yourself and
+             Remi") echoing to Remi with Remi's own name in the
+             victim slot - i.e. the spell was self-targeting. Traced
+             to skills.dat: force_stun was registered with Target 2
+             (TAR_CHAR_DEFENSIVE), which - per locate_targets() in
+             magic.c - defaults *victim = ch (self) whenever no
+             explicit target name is given. force_stun is clearly
+             meant to be offensive (stops YOUR fight with an
+             opponent), which is Target 1 (TAR_CHAR_OFFENSIVE) -
+             correctly defaults to who_fighting(ch) with no argument,
+             i.e. whoever you're currently fighting. Changed
+             skills.dat's Target field 2 -> 1. The cast messages
+             themselves ($N) needed no changes - they'll now correctly
+             show the real opponent's name instead of the caster's own,
+             once the target actually resolves correctly.
+  v1.40 - force_stun: combat now resumes when the truce expires.
+           Correction from last entry: force_stun is Mark's own new
+           spell, not a SWGD port - the "does SWGD do this too" framing
+           from the chance() investigation doesn't apply here. This is
+           a deliberate design addition, not a bug fix.
+           fight.c's per-tick affect-expiry loop: when a force_stun
+           (AFF_TRUCE) affect expires, look up the other party via
+           ch->truce_with (get_char_room), and if they're still in the
+           same room and neither side is already fighting something
+           else, re-establish the fight on both sides (set_fighting
+           both ways) with a matching set of "truce ends, combat
+           resumes" messages.
+           Both combatants carry an identical truce affect with the
+           same duration, so both expire on the same tick - clearing
+           truce_with on BOTH parties as soon as either side's expiry
+           is processed (whichever the tick loop reaches first) is
+           what prevents the second side's own expiry from trying to
+           re-process the same resume a moment later.
+           If the other party isn't in the room anymore (left, or
+           otherwise unreachable), truce_with is still cleared cleanly
+           on both sides and nothing resumes - no dangling state, no
+           error.
+  v1.39 - Fixed chance() and chance_attrib() - a real, wide-reaching
+           bug found while investigating Mark's report that force_stun
+           and sleep always fail for Remi (a level-200-force immortal)
+           against a level 78 mob. Confirmed against SWGD's own
+           handler.c rather than guessed at.
+           ROOT CAUSE: chance(ch, percent) is the shared "does this
+             X-percent-chance thing succeed" helper used by every
+             saves_* function (para_petri, breath, poison_death, wands,
+             spell_staff) and anything else routing through it - but
+             our version never actually compared its roll against the
+             percent argument at all:
+               if( ( number_percent() - get_curr_lck(ch) + 13 - ms ) )
+                  return TRUE;
+             That's a non-zero check on an arithmetic difference, true
+             for virtually any roll - percent was passed in and simply
+             never read. Net effect: chance() returned TRUE almost
+             unconditionally regardless of what percent was, which
+             meant every saves_* check had the VICTIM resisting nearly
+             always (chance(victim, save) always "succeeding" as a
+             resist) - independent of caster level, force skill,
+             subclass bonuses, or the actual computed save percentage.
+             This is why force_stun and sleep both failed constantly
+             even with Remi's force level genuinely at 200 (verified
+             directly from Remi's pfile - not a skill-training issue,
+             not mob immunity, not the mob's -11 saves - all three
+             were red herrings chased down and ruled out before
+             finding this).
+           FIX: ported SWGD's actual chance() - the missing "<= percent"
+             comparison restored, plus SWGD's emotional_state factor
+             (which our version never had at all - looks like ours
+             diverged from an earlier revision before later losing the
+             comparison entirely). chance_attrib() had the identical
+             missing-comparison bug, plus was using its "attrib"
+             argument as a raw number added into the broken check
+             rather than as a selector for which stat matters - ported
+             SWGD's proper switch-on-attribute design (new
+             ATTRIBUTE_STR/INT/WIS/DEX/CON/CHA/LCK/FRC constants added
+             to mud.h, none existed before). No existing callers of
+             chance_attrib() anywhere in the codebase, so this was safe
+             to bring fully in line with SWGD with zero compatibility
+             risk.
+           SCOPE: chance()/chance_attrib() are called from roughly 15
+             sites across the codebase - every one of them was
+             affected by this, not just force_stun/sleep. Anything
+             using a saves_* function should now behave correctly for
+             the first time this session's testing has surfaced it.
+  v1.38 - Fixed a real design mistake from v1.32/v1.37: ships don't
+           need a unique physical "parking spot" room at all. A ship's
+           Shipyard field is just a room vnum - many ships can (and do)
+           share the same one, since players reach a docked ship via
+           do_board's ship_in_room() lookup and get teleported straight
+           to ship->entrance, not through a walkable room exit. There
+           was never a need to invent a custom drydock area per ship.
+           Deleted area/fleet_drydock entirely (file + area.lst entry)
+             - it was an unnecessary extra room, and worse, the exit I
+             added between it and each ship's airlock let players walk
+             directly between "outside" and "inside" the ship as an
+             ordinary room connection, which isn't how boarding a
+             docked ship is supposed to work here (that's what "looked
+             like a separate room on the ship").
+           Removed the now-broken down-exit from both ships' airlock
+             rooms (vigilant_stand room 802, sovereigns_reach room
+             809) - a ship's entrance room shouldn't have any exit
+             leading outside it; do_board/do_leaveship handle crossing
+             in and out directly.
+           space/vigilant_stand and space/sovereigns_reach: Shipyard
+             and Lastdoc repointed from the deleted drydock berths to
+             room 32000 (Coruscant Shipyard: Docking Platform Alpha,
+             in space.are) - the real, existing shared docking hub
+             every other ship in the game already uses, explicitly
+             described in its own room text as accommodating capital-
+             scale ships. Firstroom/Lastroom (the ship's own interior
+             zone, 802-808 / 809-816) are unchanged - that part of the
+             v1.37 zone split was correct and stays as-is.
+           Boot-verified clean: fleet_drydock no longer appears in the
+           area-load summary at all, both ships' zones still load with
+           their own disjoint vnum ranges, no bugs, no ship-loading
+           errors.
+  v1.37 - Split the frigate/supercapital work into three separate
+           zones, matching the Dark Hand convention (a full ship gets
+           its own dedicated area file and vnum block, registered in
+           area.lst like any other area) - Mark's request, since the
+           original v1.32 area/fleet_drydock lumped the drydock station
+           and both ships' interiors into one file/vnum block.
+           area/fleet_drydock (800-801, its own zone): now just the
+             station itself - two berth rooms, one per ship.
+           area/vigilant_stand (802-808, its own zone): the frigate's
+             full interior - airlock, corridor, bridge, both turrets,
+             gunnery, engineering - registered as a new area.lst entry.
+           area/sovereigns_reach (809-816, its own zone): the
+             supercapital's full interior, same shape, one more
+             corridor given its size - also a new area.lst entry.
+           Each ship's airlock exits down into its own drydock berth
+           room in the (now separate) fleet_drydock zone, and vice
+           versa - a normal cross-area exit, no different from any
+           other area boundary in the game.
+           space/vigilant_stand and space/sovereigns_reach (the SHIP
+           DATA files, not the area files - same base name, different
+           directory, no collision) updated to point at the new room
+           vnums: Shipyard/Lastdoc stayed pointed at the drydock berth,
+           Firstroom/Lastroom narrowed to the ship's own zone only
+           (excluding the drydock berth, which isn't part of the ship
+           itself), Cockpit/Coseat/Pilotseat/Navseat/Gunseat/Turret1/
+           Turret2/Engineroom/Entrance all repointed to their rooms'
+           new vnums in the ship's own file.
+           Boot-verified: three clean, disjoint zone entries in the
+           area-load summary (800-801 / 802-808 / 809-816), ships load
+           with no errors.
+  v1.36 - "board dock" ported - the missing link for v1.34/v1.35's
+           docking fix. Mark asked if the board/dock skill was ported;
+           it wasn't, and reviewing SWGD's own do_board turned up
+           something notable: our do_board was ported from an EARLIER
+           version of SWGD's own function, one SWGD itself had already
+           left commented-out and superseded ("New do_board with
+           docking support below - Parnic" / "New board...originally
+           modified by Soulbender" immediately after it). The newer
+           version adds a special "board dock" argument - without it,
+           two ships that reach SHIP_DOCK_3 (fully docked, per v1.34's
+           fix) had no way for anyone to actually walk between them.
+           do_board: "board dock" now works from your own ship's
+           entrance room while it's fully docked to another ship -
+           resolves the target via ship_from_entrance()->docked_ship
+           rather than a named ship_in_room() lookup, refuses politely
+           if docking is still mid-sequence (DOCK/DOCK_2) or not
+           docked at all, refuses if the ship is a simulator instance,
+           and waives the normal hatch-open requirement for a fully
+           docked crossing (sealed docking connection, not open
+           vacuum) - matching SWGD's own logic exactly.
+           help.are: added a BOARD entry (didn't exist) covering both
+           forms.
+  v1.35 - Closed the caveat flagged in v1.34: most other ship commands
+           weren't checking the ship-to-ship docking state at all.
+           Reviewed SWGD's own space.c directly rather than guessing at
+           scope - it has a consistent, repeated two-part guard block
+           ("Not while docking procedures are going on" for DOCK/DOCK_2,
+           "Detach from the docked ship first" for DOCK_3) on every
+           flight/navigation command, but NOT on combat commands like
+           fire - docked ships can still defend themselves, just can't
+           go anywhere. Matched that same split in our own codebase:
+             - do_land: had ZERO shipstate2 check - added both parts.
+               (Ties directly back to v1.32/v1.33's frigate/capital/
+               supercapital work - a ship physically clamped to
+               another ship obviously can't simultaneously fly off to
+               land somewhere.)
+             - do_calculate: had ZERO shipstate2 check - added both
+               parts, alongside its existing v1.29 simulator guard.
+             - do_accelerate: had ZERO shipstate2 check - added both
+               parts.
+             - do_docking (voluntary ship-to-ship docking): only
+               checked IS_DOCKED (fully-docked, DOCK_3) on both the
+               initiating ship and the target - neither side was
+               checked for being mid-sequence (DOCK/DOCK_2) already,
+               meaning a second dock attempt could stomp an in-progress
+               one. Added the missing mid-sequence check to both.
+           Already had full, correct coverage (verified, no changes
+           needed): do_cloak, do_overdrive, do_burn, do_plot (all
+           already carry the exact two-part guard), do_tractorbeam and
+           do_bomb (use an equivalent single "shipstate2 != SHIP_READY"
+           check, which is stricter and catches all three docking
+           states at once), do_detach (correctly self-guards via its
+           own IS_DOCKED requirement - can't detach from a not-yet-
+           complete dock, which is correct).
+  v1.34 - Fixed: ship-to-ship docking never actually completed.
+           Mark asked directly whether the tractor beam was broken and
+           not pulling ships into the docking bay - it was. Traced it
+           to a shared root cause: the main per-tick ship update loop
+           (which already handles the BUSY/BUSY_2/BUSY_3 and LAND/
+           LAND_2/LAUNCH/LAUNCH_2 multi-tick sequences) had NO handling
+           at all for SHIP_DOCK/SHIP_DOCK_2/SHIP_DOCK_3. Both
+           do_tractorbeam (forced capture) and do_dock (voluntary
+           ship-to-ship docking) set shipstate2 = SHIP_DOCK on success
+           and then nothing ever advanced it further, so IS_DOCKED()
+           (which specifically checks for SHIP_DOCK_3) could never
+           become true.
+           This silently broke four things at once, all now fixed by
+           the same change:
+             - do_tractorbeam: capture locked on but the target was
+               never actually pulled in
+             - do_dock: voluntary docking had the identical bug
+             - do_detach: unreachable, since it requires IS_DOCKED to
+               ever be true before it'll let you undock
+             - prepcost's docked-to-a-platform repair/resupply pricing
+               path (10x cost for space resupply): dead code, since
+               IS_DOCKED never fired
+           Added the missing SHIP_DOCK -> SHIP_DOCK_2 -> SHIP_DOCK_3
+           progression to the main tick loop, mirroring the existing
+           multi-tick pattern. Also audited: only 2 other places in
+           the file check shipstate2 as a busy/docked guard at all -
+           flagging that most other ship commands may not currently
+           treat a docked/captured ship as restrained, as a separate,
+           broader question rather than something fixed here.
+           NOTE ON SCOPE: player housing (buyhome/sellhome) was
+           reported as a candidate to port in the same session, but
+           turned out to already be fully implemented since v1.19
+           (misc.c: do_buyhome/do_sell_home) - a survey miss on my
+           part, not an actual gap. No housing changes in this version.
+  v1.33 - install_module / remove_module now work from the engine room.
+           Mark caught a real consequence of v1.32's "large ships can
+           never dock again" fix: do_install_module/do_remove_module
+           both looked up the target ship via ship_in_room(), which
+           only finds a ship sitting as an object in the room with you
+           - i.e. only works docked. Since frigates, capitals, and
+           supercapitals can never dock again once launched, that meant
+           module fitting on those three classes was only ever possible
+           once, before the very first launch - no way to refit
+           afterward.
+           Both commands now also check ship_from_engine() (an existing
+           helper, already used elsewhere for engine-room lookups) first
+           - if you're standing in a ship's own engine room, that ship
+           is used directly and the ship-name argument becomes optional
+           (there's nothing to disambiguate). The original docked
+           syntax - install_module <item> <ship name>, standing beside
+           the hull - still works exactly as before; this is additive.
+           Not restricted to the three big classes - any ship with an
+           engineroom set can be fitted this way now, which just
+           follows naturally from using the existing per-ship lookup
+           rather than adding a class check with no real benefit.
+           help.are: INSTALL_MODULE entry updated to describe both
+           paths and explain why the engine-room one matters for ships
+           that can't dock.
+           show_modules had the exact same docked-only restriction as
+           install_module/remove_module (ship_in_room() only) - fixed
+           the same way, with ship_from_engine() checked first so you
+           can review your own loadout while flying, not just docked.
+           help.are: SHOW_MODULE/SHOW_MODULES and REMOVE_MODULE entries
+           were stale (REMOVE_MODULE didn't even mention the docked
+           requirement at all, and both referenced a nonexistent
+           SHIPUPGRADES see-also) - both rewritten to match
+           INSTALL_MODULE's updated wording. MODULES overview also
+           updated to mention the two-path behavior at a glance.
+  v1.32 - Frigates, supercapital ships, and burn - unblocked.
+           BURN: audit only, no changes needed. do_burn was already a
+             complete, correct implementation (mirrors do_overdrive's
+             mutual-exclusivity pattern, proper energy cost, folds into
+             speedbonus()), properly registered in commands.dat and
+             skills.dat, with an existing help entry. This item is
+             just done - removing it from the backlog.
+           REAL BUG FOUND AND FIXED: do_land's "too big to land" check
+             only named CAPITAL_SHIP. Frigates and supercapitals - both
+             bigger or comparably sized - were falling straight through
+             and could land normally, contradicting do_launch's own
+             per-class piloting gates (gsn_frigates/gsn_capitalships/
+             gsn_supercapitalships all exist and clearly treat these as
+             a large-hull tier). Extended the check to all three
+             classes with one shared message. Per Mark: these ships
+             stay in space permanently once launched - board them via
+             a shuttle or fighter docking instead.
+           MINOR GAP FIXED: do_launch's rental base-price table had no
+             entry for FRIGATE_SHIP or SUPERCAPITAL_SHIP at all - a
+             rented frigate/supercapital was computing a base price of
+             0. Added 200 (frigate) and 1000 (supercapital), continuing
+             the existing fighter(20)/midship(50)/capital(500)
+             escalation - local numbers, adjust if you want.
+           BUILT: two real ships to actually exercise the above, since
+             neither class had ever had a live instance to test with.
+             New area/fleet_drydock (rooms 800-818, registered in
+             area.lst) - a drydock berth, airlock, corridor, bridge,
+             both turrets, gunnery station, and engine room per ship.
+             Full save files (space/vigilant_stand, space/
+             sovereigns_reach, registered in space/ship.lst), stats set
+             to the class caps established for these two classes:
+               Frigate "the Vigilant Stand": speed 75, hyperspeed 75,
+                 manuever 75, lasers 10/dmg 15, ions 5, armor 25,
+                 shield 2500, hull 10000, energy 25000, sensor 150,
+                 chaff 25, missiles 32, torpedos 24, rockets 9,
+                 tractorbeam 25, maxmodules 50
+               Supercapital "the Sovereign's Reach": speed 15,
+                 hyperspeed 50, manuever 15, lasers 25/dmg 25, ions 15,
+                 armor 75, shield 7500, hull 25000, energy 32000,
+                 sensor 200, chaff 50, missiles 128, torpedos 96,
+                 rockets 81, tractorbeam 150, maxmodules 99
+             Zero modules installed on either - full setship stats
+             apply directly per the module system's own semantics.
+             Both start Owner "public", docked at their own drydock
+             berth, ready to launch and test in-game for real.
+           NOTE: every ship (any class) resets to SHIP_DOCKED at its
+             shipyard on every server reboot (resetship()) regardless
+             of what state it was in when the server went down - this
+             is pre-existing, class-agnostic behavior, separate from
+             and unrelated to today's "can't land while flying" fix.
+             A launched frigate/supercapital stays in space for the
+             live session; the next reboot returns it to drydock same
+             as any other ship, and needs relaunching.
+  v1.31 - Spray (Mark's request) reconnected + a real loading bug fixed.
+           BACKGROUND: do_spray and do_haymaker were both already fully
+             implemented in swskills.c (complete, well-built - sustained
+             automatic fire with direction-blind and direct-target
+             modes, dual-wield support, per-round degrading hit chance,
+             ammo depletion) and registered in skills.dat as trainable
+             skills - but this never got a version.txt entry, and
+             critically:
+           REAL BUG FOUND AND FIXED: both commands.dat entries were
+             missing their required "End" terminator line. fread_command
+             needs an explicit End to close a block; without one it
+             keeps reading fields into the NEXT block's own #COMMAND
+             tag, which doesn't match anything it recognizes ("BUG:
+             fread_command: no match: #COMMAND" x2 in the boot log -
+             559 #COMMAND blocks, only 557 End lines before this fix).
+             Net effect: neither spray nor haymaker has actually been
+             loadable/usable in-game this whole time, despite being
+             fully coded and skills.dat-registered. Added the missing
+             End line to both blocks - both commands load clean now.
+           SUBCLASS HOOKUP RECONNECTED: Mercenary's spray adept 150
+             bonus (skills.c) had been sitting as a deferred comment
+             ("until the spray combat skill is ported") since the
+             subclass audit - spray now existing meant this could
+             finally be wired in for real, following the exact pattern
+             already used for Sith Hunter's own adept overrides.
+           help.are: added a SPRAY entry (there wasn't one) covering
+             both fire modes, the per-round chance decay, dual-wield
+             ammo splitting, and the Mercenary training bonus.
+           Mercenary's other still-pending SWGD effect (two-handed
+             weapons counting as dual-wield) remains blocked - no
+             two-handed weapon flags exist anywhere in this codebase,
+             unrelated to today's fix.
+  v1.30 - Ambassador ported as a CLASS (not subclass), plus 5 other
+           missing SWGD classes: Chemist, Scoundrel, Scout, Snitch,
+           Commando. Espionage excluded per Mark - SWGD's own source
+           notes it as unfinished ("levels are always 0").
+           BACKGROUND: SWGD has two layers - MAX_ABILITY (10 real skill
+             trees) and a separate, larger CLASS_MAX (16) chargen-choice
+             layer, where several classes are flavor/hybrid variants
+             riding an existing ability's skill tree with a different
+             bonus profile. Our codebase had collapsed these into one
+             layer (chargen picks directly from the 9 abilities) - this
+             is exactly why Ambassador couldn't work as a subclass: in
+             SWGD it's a chargen-time class with its own starting-stat
+             kicker, not a level-99 grant.
+           mud.h/const.c: added CLASS_CHEMIST/SCOUNDREL/AMBASSADOR/
+             SCOUT/SNITCH/COMMANDO (9-14) and CLASS_MAX (15), plus a
+             class_name[CLASS_MAX] display table (first 9 entries
+             mirror ability_name exactly; 6 new flavor names appended).
+           comm.c (chargen): class-selection listing/parsing loops
+             switched from MAX_ABILITY/ability_name to CLASS_MAX/
+             class_name (3 loops + the chosen-class print line) - the
+             per-ability theoretical-max preview loop itself is
+             untouched, it still iterates the 9 real abilities only.
+           update.c max_level(): added each new class's SWGD-sourced
+             cross-ability bonus into the relevant existing ability
+             block - Commando 100 combat, Scoundrel/Scout 75 combat,
+             Chemist 75 engineering, Snitch treated as full 100 hunting
+             (matching SWGD's own +105-on-a-0-base sizing) with Scout
+             at 50, Scoundrel 75 smuggling with Snitch 50, Ambassador
+             60 diplomacy, Chemist 75 medical.
+           REAL BUG FOUND: MEDICAL_ABILITY had no dedicated cap block
+             in max_level() at all - a Medical-class character's own
+             medical skill cap was falling through to the function's
+             level=0 default (floored to 1). Added the missing block
+             (own-class 100, matching every other ability's pattern)
+             since Chemist's new bonus needed somewhere to attach to
+             anyway - flagging this clearly as a pre-existing gap this
+             session incidentally fixed, not something separately
+             requested.
+           Ambassador's starting Force stat: SWGD hardcodes a flat
+             perm_frc 10 / max_mana 600, bypassing our chargen's force
+             roll entirely. Rather than break the roll-based max_mana
+             derivation (100 + frc*3400/150) with a hardcoded mana
+             value, Ambassador instead gets the same guaranteed-
+             minimum-force treatment already used for Force-sensitive
+             races/classes, floored at 22 - the frc value that lands
+             closest to SWGD's 600 mana (~598) under our own formula.
+           swskills.c: fixed a real out-of-bounds read this change
+             would otherwise have caused - the score/stat display did
+             ability_name[victim->main_ability], which only has 9
+             slots; switched to the new 15-slot class_name[].
+           help.are: CLASS/CLASSES entry was a one-line stub ("the old
+             classes have been removed") - rewritten to actually list
+             all 9 base + 6 hybrid classes and what each rides.
+           Verified: no skill-training or command gate anywhere in the
+             codebase checks ch->main_ability equality for access
+             control (only max_level and the two chargen force-roll
+             spots do) - confirmed by direct grep - so none of the new
+             classes are functionally locked out of anything.
+  v1.29 - Four items from Remi's feedback:
+           (1) SIMULATOR HELP FILES: TOGGLESIMULATOR refreshed with
+             accurate requirements (must be docked, Shipsystems check,
+             public craft excluded); new ENDSIMULATOR entry documents
+             that it does NOT turn simulation mode off by itself; new
+             SIMULATOR overview ties the whole system together.
+           (2) CALCULATE LEAKED THE REAL STARMAP FROM INSIDE A
+             SIMULATOR: do_plot already refused to work in simulation
+             mode ("There are no starsystems that need plotting from
+             here"); do_calculate never got the matching guard, so a
+             trainee could see - and jump-plot toward - every real
+             starsystem in the game from a simulated flight. Ported
+             the same refusal into do_calculate. Also hid the
+             "Simulator" system itself from a real ship's own listing.
+           (3) MODULE VENDOR SPLIT PER SHIP CLASS: Menari Spaceport's
+             single universal droid (room 227) replaced with a
+             directory foyer (receptionist droid, no shop of its own)
+             plus five new bays, one per hull class, each with its own
+             droid selling only that class's parts:
+               452 Starfighter Components Bay  (mob 363) - north
+               453 Midship Components Bay      (mob 364) - south
+               454 Frigate Components Bay      (mob 365) - east
+               455 Capital Ship Components Bay (mob 366) - up
+               456 Supercapital Components Bay (mob 367) - down
+             All 88 module objects re-homed to the matching bay by
+             Type (18/17/18/17/18, verified against source). Original
+             west exit to room 212 unchanged.
+           (4) MODULE HELP FILE + AUDIT FOR MISSING VALUES: new HELP
+             MODULE TYPES lists what every component name actually
+             does (hyperdrive assembly -> jump speed, engine ->
+             realspace speed, etc). MODULES overview updated to
+             mention the five bays.
+             AUDIT FOUND A REAL BUG: the cloaking device module
+             (supercapital, 150k credits) was completely non-
+             functional. module_type_install() correctly gated it as
+             one-per-ship, update_ship_modules() correctly zeroed
+             ship->cloak on every rebuild, but the rebuild loop never
+             had a case for APPLY_CLOAK to set it back - so an
+             installed cloak module silently did nothing, ever.
+             Fixed by adding the missing case (mirrors how overdrive
+             is already handled). Audited every other module's Affect
+             line against the APPLY enum: no other silent mismatches
+             found - all other component types map correctly.
+  v1.28 - resetmaxshipmodules: per-class default slot counts
+           (Mark's request, local design - SWGD has no class defaults
+           of its own): fighter 15, midsize 30, frigate 50, capital 75,
+           supercapital 99 (other classes fall back to the 10 floor).
+           These now apply whenever the command is run WITHOUT an
+           explicit value; passing an explicit value still stamps
+           every affected ship to that single number as before.
+           New default_maxmodules() helper holds the table. Help entry
+           and usage line updated to match.
+  v1.27a - Menari Spaceport module shop fix (list showed nothing):
+           ROOT CAUSE: every module object had Stats "1 0 0 0 0" - in
+             FUSS format the second Stats field is COST, and the shop
+             code (shops.c get_cost) only lists/sells items with
+             cost > 0, so the droid's entire stock was invisible.
+           All 88 module objects (vnums 227-362) priced per hull class
+             (local design; SWGD module areas remain lost):
+             fightercomp 5000, midcomp 12500, frigatecomp 30000,
+             capitalcomp 75000, scapitalcomp 150000. Shop profit is
+             120%%, so players pay 1.2x these. Tune per item if wanted.
+           Verified NOT the problem: room 227's resets are correct
+             (Reset M 0 227 first, all 88 Reset G lines bind to the
+             droid), mob 227's ShopData is correct (buy types 98-102).
+           Other shopkeepers in the file: mob 201 "a shopkeeper droid"
+             and mob 202 "a retail droid" (generic shops, no buy
+             types set).
+  v1.27 - Ship module slot limits corrected to SWGD (answers "why does
+           my starfighter only allow 2 modules?"):
+           AUDIT FINDING: SWGD has NO per-class module limits at all.
+             maxmodules is a per-ship, admin-set, persisted field:
+             setship <ship> maxmodules <n>, URANGE floor 10, ceiling
+             MAX_MODULES (99). New/untouched ships default to 0 slots
+             (unmodularized) until an imm opts them in. The class-based
+             defaults (fighter 2, midsize 4, frigate 6, capital 8,
+             scap 10) were invented by the original port - removed.
+           mud.h: MAX_SHIP_MODULES 10 -> 99 (matches SWGD MAX_MODULES;
+             module_vnum array grows accordingly)
+           do_setship: maxmodules field added (SWGD-verbatim guard:
+             "Please remove some modules first" if lowering below the
+             installed count; deviation noted: SWGD's branch neither
+             confirmed nor saved - Done./save_ship added per house
+             convention for every other setship field)
+           do_copyship: invented class switch replaced with SWGD's
+             per-ship copy (new hull inherits the original's slot
+             count; installed modules still start at 0 since module
+             components are physical items here)
+           do_resetmaxshipmodules reworked: [all] [value 10-99] forms;
+             default backfills only maxmodules==0 ships to 10; "all"
+             stamps every ship (skipping any whose installed count
+             exceeds the new value). Use this or setship to fix ships
+             already saved with the old invented 2/4/6/8 defaults.
+  v1.26 - Subclass audit vs SWGD + gap port:
+           AUDIT FINDING: SWGD's true subclass enum has 27 entries
+             ("by Raijen / Arcturus"); the original port used a stale
+             24-entry revision, silently dropping four subclasses.
+             ADVBLAST(5)/ADVARMOR(6) turned out to be ALIASES of
+             Weaponsmith/Tailor (same enum values in SWGD) - not
+             missing. Our numbering is a local remix (we have MEDIC 14,
+             SWGD doesn't), so new subclasses are APPENDED 24-27,
+             never renumbered - pfile-safe.
+           NEW SUBCLASSES (grant messages SWGD-verbatim):
+             Survivor (24): lvl100 + medical 25; +20 hp regen, +20
+               move regen, +5 on all five saving throws
+             Jury Rigger (25): lvl100 + bounty hunting 100 (adapted
+               from SWGD's ESPIONAGE per established mapping); exempt
+               from ALL crafting location gates - 25 ROOM_FACTORY
+               gates across the do_make* family + gemcutting/
+               concentrate/mix, 1 in skills.c, and both ROOM_SILENCE
+               lightsaber gates
+             Certified Genius (26): lvl100 + medical 25 + eng 25;
+               trains engineering/medical 25 past normal max (closes
+               the certified_genius backlog item)
+             Mercenary (27): lvl100 + combat 100; SWGD effects both
+               await unported infrastructure - spray adept 150 needs
+               the spray skill (combat maneuvers backlog), two-handed
+               dual-wield needs two-handed weapon flags which don't
+               exist in our codebase; documented in code
+           PARITY FIXES to existing subclasses (SWGD effects the
+             original port never wired):
+             - Force Sensitive: +5 on all five saving throws (had
+               ZERO effect wiring outside the grant)
+             - Jedi & Sith Hunter: mana regen x4
+             - Prodigy: mana regen x10
+             - Thief (Sneak): steal credits 5-15%% of victim's gold
+               instead of 1-10%%, capped at what they carry
+             - Martial Artist: gouge damage x2
+             - Certified Genius case added to the max-skill-level
+               switch alongside the verified-matching JACKOFTRADES/
+               SOLDIER/MECHANIC/SITH_HUNTER cases
+           do_subclasses listing updated (Survivor + Genius under
+             General, Mercenary under Combat, Jury Rigger under
+             Bounty Hunting); 4 help entries added
+  v1.25 - torpedostate/rocketstate port (closes the v1.24 audit finding):
+           SHIP_DATA gains separate torpedo/rocket launcher state
+             machines per SWGD, replacing the SWL-lineage shared
+             missilestate; persisted via Torpedostate/Rocketstate keys,
+             reset-unless-DAMAGED at load End (mirroring missilestate)
+           Update loop: independent 3-stage reload cycles per launcher
+             type (FIRED -> RELOAD -> RELOAD_2 -> READY) with their own
+             "reloaded" gunseat echoes
+           do_fire: torpedo and rocket branches now gate/fail/reload on
+             their own states (5 state refs retargeted in each branch)
+           De-flattening of the original port's squashed fields:
+             - prepship's duplicated statet2/missilestate lines were
+               SWGD's ionstate/torpedostate/rocketstate slots - restored
+             - prepcost's triple missilestate 100/200/300 checks were
+               SWGD's per-type prices; duplicate statet2 check was
+               ionstate - restored
+             - check_sabotage: SABOTAGEDIONS now hits ionstate (was
+               statet2!), T/R-LAUNCHERS hit torpedostate/rocketstate
+               (were missilestate)
+           damage_ship (both variants): independent 5%% disable rolls
+             per launcher type; iondamage_ship_ch: the combined
+             "Ordnance Systems" disable split into three per-type
+             branches per SWGD structure
+           resetship / load / endsimulator-adjacent reset blocks and
+             both weapons displays extended to per-type states;
+             repairship tlauncher/rlauncher now SWGD-verbatim
+           NOTE: sabotaged-ions previously damaged turret 2's laser
+             instead of the ion cannons - real pre-existing bug fixed
+             by the check_sabotage retargeting
+  v1.24 - Final v1.23-vs-SWGD space audit + gap ports:
+           AUTOCANNON system ported (was entirely absent): SHIP_DATA
+             fields (autocannon/autodamage/autoammo/autoammomax),
+             save/load keys + End defaults, prepship ammo refill,
+             prepcost repricing (500/round), setship autocannon/
+             autodamage/autoammo (head-imm gated per SWGD), do_fire
+             "autocannon" gunseat branch (streak-based autohits loop,
+             1500 range, forward-arc for class < 2, WFOCUS bonus)
+           do_status: SWGD full readout restored (autocannon/interdict/
+             simulator/cloak banners, Armor (cur/max), Max Chaff,
+             Maximum Cargo)
+           do_repairship SWGD parity: added missing ions/tlauncher/
+             rlauncher branches; ALL branches now clear their matching
+             sabotage flag on repair ("Sabotage detected, removed") -
+             load-bearing since v1.22 made sabotage persist through
+             prepship, leaving repair as the only cure; Mechanic 2x
+             hull-repair bonus; drive repair no longer yanks ships out
+             of hyperspace
+           Audit findings documented (not ported, by design):
+             - torpedostate/rocketstate: SWGD tracks separate launcher
+               state machines; ours shares missilestate (SWL lineage).
+               Repair branches adapted to shared state. Full port would
+               touch fire timers, update loop, and disable rolls.
+             - plain iondamage_ship()/attacker-param variants: SWGD's
+               damage fns take SHIP_DATA *attacker for "Sensors report"
+               feedback + NPC-attacker paths; our ported combat only
+               uses the _ch variants. Nothing calls the plain ion form.
+             - set_trajectory/initialize_ship_matrix/xyz_matrix: ours
+               computes inline in do_trajectory (prior audit: equivalent)
+             - do_bombard exists here as do_bomb; do_capture lives in
+               clans.c (planet capture) - both accounted for
+             - APPLY_SALVO: vestigial in SWGD (enum + name only)
+             - fire-chance formula: our house convention is
+               perm_dex*2 + learned/3 vs SWGD's dex + skill/4; the new
+               autocannon branch follows the house convention to match
+               the existing laser/ion branches
+  v1.23 - SWGD-verbatim module system conversion (reverses the v1.19
+           additive-bonus deviation at user direction):
+           update_ship_modules() is now SWGD's reset-and-rebuild verbatim:
+             a modularized ship's flight stats (speed, shields, lasers,
+             launchers, sensor, armor, cargo, etc.) come entirely from its
+             installed component modules; ships with ZERO modules never
+             trigger the rebuild and keep their setship stats (fleet has
+             zero modularized ships, so nothing changes on boot)
+           apply_module_stat_bonus() deleted; install/remove/dupe_mods/
+             prepship/resetship/fread aligned to SWGD call patterns
+             (v1.20 prepship refresh and v1.22b dupe_mods delta fix are
+             obsolete under rebuild semantics and removed)
+           Module items re-statted as COMPONENTS (76 of 88): each item's
+             stat = its class's SWGD setship cap (mil-spec standard),
+             replacing v1.19-era small bonuses; fixes armor plating being
+             10x SWGD scale (50-700 vs 5-75) and launcher ammo exceeding
+             class caps; comm/astro arrays and overdrive/cloak markers
+             unchanged; component VALUES are local choices (SWGD's module
+             area files are lost) anchored to SWGD-verified caps
+  v1.22 - Space audit continuation (SWGD parity pass):
+           rem_extshipflags() ported; wired into prepship (replacing the
+             blanket flags=0, fixing simulator-flag loss on endsimulator
+             and sabotage being cleared by prep) and into resetship
+           SUPERCAPITAL_SHIP class inserted after CAPITAL_SHIP (SWGD enum
+             order); one-time save migration via new SVers key in ship
+             files (old files: Class >= 4 shifted +1 on load)
+           gsn_frigates / gsn_supercapitalships pilot skills added and
+             wired into all 18 pilot dispatch chains (fixes frigates
+             rolling checks against uninitialized schance - real UB bug)
+           do_burn (afterburner) + gsn_burn ported; commands.dat entry
+             placed before break to preserve bare-'b' prefix resolution
+           do_setship: SWGD per-class limit chains ported verbatim for
+             manuever/lasers/laserdamage/ions/armor/speed/hyperspeed/
+             tractorbeam/shield/hull/energy/sensor/chaff/missiles/
+             torpedos/rockets (replacing flat limits); laserdamage/ions/
+             armor are new setship fields; OCEAN/WHEELED/CRAWLER classes
+             deliberately have no branches (absent in SWGD, unused here)
+           shipskill() helper ported; setship class cap fixed (was 9,
+             locking out WALKER=10, now WALKER=11)
+           get_ship_value: frigate was falling to the 2000-credit
+             fallback, now 100000 per SWGD; supercapital 1000000,
+             platform 500000; prepcost supercapital 5000 (SWGD-verified)
+           Supercapital touchpoints: maxmodules 10, scapitalcomp install
+             gate (v1.16 workaround removed), class name displays (which
+             also lacked Frigate), boot-load stay-in-space list, resetship
+             relaunch list
+           skills.dat: frigates (ML60), supercapital ships (ML120), burn
+             (ML40) - levels are local choices, adjustable via sset
+           help.are: BURN, FRIGATES, SUPERCAPITAL SHIPS entries (original)
+           Deviation from SWGD (flagged): SABOTAGEDLAUNCHERS added to
+             rem_extshipflags immune list (SWGD preserves every other
+             sabotage flag; omission looks like an upstream oversight)
+           Ship armor (SWGD): flat per-hit absorption after shields in
+             both damage_ship variants (ion damage ignores armor, per
+             SWGD); armor*50 + maxarmor*70 in get_ship_value
+           do_dupe_mods fix (v1.20 bug): module stat deltas are
+             install/remove-driven, so raw loadout copies left the
+             duplicate with stale old deltas and no new ones; now backs
+             out old deltas and applies the copied set
+           Fleet data: 11 mis-classed craft (speeders stored as old
+             class 6 = OCEAN, orphaned by a historical enum change)
+             patched to Class 8 (LAND_SPEEDER) + SVers 2; includes
+             x-56ty7 Ore Carrier (stat-less prop, reclass if desired)
+  v1.21 - Ion cannons and a correction to the previous audit's findings.
+          Important discovery: this uploaded copy already had two of the
+           three things flagged as "missing" in the prior audit pass -
+           ship_flags[]/get_shipflag() (name-based ship flag lookup) and
+           do_setship's "flags" field handler were both already present
+           and fully working, and iondamage_ship_ch (the ion-specific
+           damage function, shields absorb at 1.3x, disables one
+           subsystem instead of touching hull) already existed too, just
+           without a do_fire branch to ever call it. This means the
+           prior audit's "missing" conclusions for those two items were
+           stale relative to this specific uploaded copy - likely
+           reflecting work done independently between that audit and
+           this upload. Caught via two compile-time redefinition errors
+           when porting duplicates of both; removed mine, kept the
+           existing (near-identical) versions in both cases.
+          The one genuine gap confirmed and fixed: no do_fire branch
+           existed to actually fire ion cannons, despite ship->ions,
+           ship->ionstate, SHIPFLAG_DUALION/TRIION/QUADION, and
+           iondamage_ship_ch all already being in place. Added the
+           "ions" branch to do_fire, modeled on the existing main-laser
+           branch for consistency with this file's simplified local
+           style (no evasion roll or sabotage check in the firing path,
+           matching lasers/missiles/torpedos/rockets - not something
+           newly introduced, just consistent with what's already there).
+           Handles linkshot from the dual/tri/quad-ion flags, range/
+           facing/recharge checks, and calls the pre-existing
+           iondamage_ship_ch on a hit.
+          Boot-tested clean throughout, including catching and fixing
+           the two redefinition conflicts before they ever reached a
+           boot test.
+  v1.20 - Space systems audit (modules/simulator/commands, scoped to
+           space only per request - schematics and the generic craft
+           menu system explicitly excluded) plus three real ports:
+           do_endsimulator, do_dupe_mods, and the full cargo economy
+           system.
+          do_endsimulator - critical fix, found during the audit. Last
+           session's launchship() fix correctly sends simulator-mode
+           ships to the dedicated Simulator starsystem, but there was no
+           way back out - do_plot blocks jump-plotting entirely while
+           SHIPFLAG_SIMULATOR is set, and the Simulator zone has no real
+           docks to land at normally. Ported from SWGD (written by
+           Ackbar, added by Arcturus): extracts the ship from the
+           simulator, returns it to its last real dock, fully repairs/
+           refuels/rearms it via prepship(), opens the hatch.
+          do_dupe_mods - admin utility to copy a module loadout from one
+           ship to another, ported from SWGD. Registered at the same
+           immortal level as copyship, which it's explicitly modeled on
+           in the original source comment.
+          Cargo economy system - a genuine planetary trade economy, not
+           just the maxcargo capacity number added during the earlier
+           ship-modules audit (that was capacity only, no actual
+           load/unload/trade mechanic - source of the "didn't we do this
+           already" mixup). Added: MAX_CARGO/CARGO_NONE/AVG_PLANET_VALUE
+           constants, CARGO_DATA struct, ship->cargotype field (cargo/
+           maxcargo already existed), and extended PLANET_DATA with
+           resource/consumes/produces/rcost[MAX_CARGO] arrays. Full
+           function set ported to space.c: load_cargo/save_cargo/
+           fread_cargo (new system/cargo.dat, seeded with 5 starter
+           goods so the system is immediately testable), get_cargo/
+           get_cargo_num/get_cargo_name lookups, update_cargo_costs
+           (SWGD's real supply/demand/tax/popular-support pricing
+           formula, ported verbatim). Six commands: makecargo, setcargo,
+           cargo, load_cargo, unload_cargo, reset_cargo, show_cargo,
+           imports. Extended the already-existing do_setplanet with new
+           resource/produces/consumes subfields, and save_planet/
+           fread_planet with a Resource persistence line. Wired
+           load_cargo() into the boot sequence.
+          Scope call made and flagged clearly: SWGD gates cargo rooms on
+           ROOM_IMPORT || ROOM_SPACECRAFT, but this codebase's room_flags
+           is a plain 32-bit int with all bits already in use (confirmed
+           via full enum check) - no free bit for ROOM_IMPORT without
+           reclaiming an existing flag, which wasn't done unaudited.
+           Used ROOM_SPACECRAFT alone as the gate instead - functionally
+           fine for any room flagged for cargo handling, just no
+           separate flag for "cargo trading but not general spacecraft
+           room" if that distinction ends up mattering.
+          Other audit findings, not ported (out of scope per request):
+           cargo/schematics/generic-craft-menu were the three fully
+           missing subsystems found; schematics and craft-menu
+           deliberately left out this pass since only cargo was in
+           scope. Smaller misses noted but not ported: do_slot_skills/
+           do_fix_skills/do_slot_lookup (skill-table admin utilities),
+           do_repair_droid.
+          Boot-tested clean throughout, including a full fresh boot with
+           the new system/cargo.dat loading with zero bugs.
+          Second space-code audit pass (v1.20 vs SWGD, requested again
+           for thoroughness). Confirmed everything from the previous
+           pass still present and correct: all 6 module subsets,
+           togglesimulator/endsimulator, the full cargo system,
+           dupe_mods. Cross-checked core combat helper functions
+           (damage_ship/damage_ship_ch, check_sabotage, evaded,
+           rotate_ship all present, though damage_ship/_ch here are an
+           already-simplified local design predating this session -
+           no attacker-ship parameter or per-turret damage targeting
+           like SWGD's version, just a more compact all-in-one; not
+           something introduced this pass, flagging as a known
+           divergence rather than a regression).
+          Found and fixed a real bug: prepship() does a blanket
+           ship->flags = 0 reset but never called update_ship_modules()
+           afterward - silently wiping any flag a currently-installed
+           module is responsible for (SHIPFLAG_OVERDRIVENODE/CLOAKED/
+           SIMULATOR) on every call, even though the module itself is
+           still physically installed. Affected both do_prepship (prep
+           for launch) and do_endsimulator (added this session) equally.
+           Fixed by re-running update_ship_modules() right after the
+           flags reset.
+          Genuine gaps found, not fixed this pass (flagging for a
+           decision rather than guessing at scope): ion cannons have a
+           ship->ions stat (added during the original ship-modules
+           audit) but no way to actually fire them - do_fire only
+           branches on lasers/missiles/torpedos/rockets, and SWGD's
+           iondamage_ship/iondamage_ship_ch functions don't exist here
+           at all. Also missing: get_shipflag()/ship_flags[] (no name-
+           based ship flag lookup - confirmed do_setship has no "flags"
+           field support at all) and rem_extshipflags() (SWGD's more
+           careful selective flag-clear that preserves sabotage/
+           simulator state - this codebase's prepship uses a blunter
+           full reset instead, which is fine for the two call sites that
+           exist today but would need reconciling if a future caller
+           needed to clear combat-link flags without wiping module
+           state). set_trajectory/initialize_ship_matrix also don't
+           exist as separate functions, but confirmed this is a non-issue
+           - do_trajectory computes heading inline instead (ship->hx =
+           vx - ship->vx etc), functionally equivalent, just structured
+           differently.
+  v1.19 - Continued working through Remi's in-game idea list, plus a real
+           pre-existing bug found and fixed in the v1.16 Ship Modules
+           system.
+          Ship module vendor — found room vnum 212 ("Spaceport Store")
+           in menari_spaceport (an extensionless area file - not part of
+           the earlier *.are-only search, corrected after being pointed
+           at the full area/ subdirectory tree). Added room 227 east of
+           it ("Spaceport Ship Upgrade Store") with a vendor droid and 5
+           real module items (fighter/midship/frigate/capital/
+           supercapital class), each with a real Affect line wired to
+           the actual APPLY_OVERDRIVE/APPLY_HASSEMBLY/APPLY_TRACTORBEAM/
+           APPLY_LASERBATTERY/APPLY_CLOAK locations module_type_install
+           and update_ship_modules (space.c) already read. Shop
+           configured via a ShopData line on the mob itself, matching
+           this codebase's real convention (no #SHOPS section format is
+           used anywhere in any area file - confirmed by checking all 32
+           area files directly, both *.are and the extensionless ones).
+          Found and fixed a real, pre-existing bug while building the
+           module items: create_object()'s switch on obj->item_type
+           never had a case for ITEM_FIGHTERCOMP/MIDCOMP/FRIGATECOMP/
+           CAPITALCOMP/SCAPITALCOMP at all - every one hit the "bad
+           type" default branch. This has been broken since the module
+           system was built in v1.16; it never surfaced because zero
+           module items existed anywhere in the game world until now.
+           Fixed by adding them as no-op cases, matching the pattern
+           already used for other static/raw-material item types - no
+           special per-creation logic needed since module behavior comes
+           entirely from the Affect list, same mechanism as makeblade's
+           backstab bonus.
+          Also hit and fixed a file-ordering bug of my own while building
+           the above: this engine processes room resets inline as the
+           area file is read (not a deferred second pass), so mobile and
+           object definitions must appear before any room whose resets
+           reference them. First pass had room 227 before its own mob/
+           object definitions - caught immediately by boot-testing
+           ("mobile 227 doesn't exist" / "bad vnum 227" errors) and
+           fixed by reordering.
+          itemknowledge (engineering skill, confirmed real via SWGD help
+           text) - could not find its source function after 6 separate
+           search attempts across project knowledge and a direct grep of
+           the uploaded SWL source. Logged to IDEAS.md rather than
+           guessed at.
+          Boot-tested clean throughout: no bugs, no missing-vnum errors,
+           no duplicate-keyword errors on full server boot.
+          sellhome — found already prototyped in mud.h (do_sell_home)
+           but never implemented, and never registered as a command.
+           Ported from SWGD misc.c do_sellhome, but adapted: this
+           codebase's do_buyhome already uses a much simpler single-room
+           model (just flips ROOM_EMPTY_HOME/ROOM_PLR_HOME on
+           ch->plr_home directly and persists via fold_area()) rather
+           than SWGD's full HOME_DATA linked-list/per-home save-file
+           system, so none of that heavier infrastructure needed
+           porting - do_sell_home is a straight symmetric mirror of the
+           buyhome logic already here. Refund is 50000 credits (half the
+           100000 buy price), matching SWGD's stated ratio exactly.
+           Registered as a command and given a help entry.
+          shopvalues help entry was badly out of date - it even had a
+           self-admitted disclaimer ("THE LAST OF THESE ARE WRONG...ADD 1
+           TO FIX...YOU HAVE TO PLAY WITH IT") and a duplicate "64 -
+           battery" line. Rebuilt the entire numbered item-type list
+           (0-105) directly from this codebase's real item_types enum in
+           mud.h, cross-checked against the o_types display-name array
+           in build.c. The old list was accurate through 63 (crystal)
+           but off-by-one for everything from 64 onward, and stopped
+           entirely at 79 - missing 26 real item types (spacecraft
+           through jetpack) that didn't exist at all in the help file.
+           Also found and documented that shopset accepts item type
+           names directly, not just numbers (get_otype() in build.c) -
+           e.g. "shopset 227 buy0 durasteel" works the same as "shopset
+           227 buy0 67" - and fixed shopset's own field table, which
+           said "buy#" rather than the real buy0-buy4 field names.
+          Ship modules audit and rebuild, done in specific subsets per
+           request rather than all at once. Confirmed SWGD's real module
+           system drives ~28 distinct ship stats (hyperspeed, realspeed,
+           lasers, maxshield, maxenergy, maxmissiles/rockets/torpedos,
+           comm, sensor, astro_array, chaff, manuever, laserdamage, ions,
+           armor, cargo, plus the 11 this codebase already had), and that
+           update_ship_modules() only ever wired up 6 of them (overdrive,
+           cloak, simulator, and the 3 launcher counts) - hassembly/
+           engine/generator/tractorbeam/laserbattery existed only as
+           slot-uniqueness markers with zero mechanical effect. Added the
+           missing 17 APPLY_* enum entries (mud.h) and display names
+           (build.c a_types), appended at the end so no existing index
+           shifted.
+          Found a real conflict before wiring anything: shipset already
+           lets admins set ship->hyperspeed/realspeed/lasers/maxshield/
+           maxmissiles/maxtorpedos/maxrockets directly as base stats. A
+           SWGD-style full reset-and-rebuild in update_ship_modules would
+           silently wipe those out on every install/remove. Built
+           apply_module_stat_bonus() instead - modules layer an additive
+           bonus on top of the admin base, applied once at install and
+           reversed once at remove, called from do_install_module/
+           do_remove_module. Launcher counts (mlauncher/tlauncher/
+           rlauncher) needed no new wiring - no shipset field exists for
+           them, so the existing reset-and-rebuild logic in
+           update_ship_modules was already safe and correct.
+          Subset 1 (hyperdrive/engine): 10 items across all 5 ship
+           classes, wired to APPLY_HYPERSPEED/APPLY_REALSPEED.
+          Subset 2 (shield generator/laser battery): 10 items across all
+           5 classes, wired to APPLY_MAXSHIELD/APPLY_LASERS.
+          Subset 3 (fuel cells, missile/torpedo/rocket launchers): 20
+           items across all 5 classes, wired to APPLY_MAXENERGY and the
+           combined launcher-count + ammo-capacity affects.
+          Critical bug found and fixed while building subset 3: the
+           Affect line field order in every module item this session was
+           backwards. Confirmed via fread_fuss_affect (db.c, the real
+           parser for #FUSSAREA-format files like menari_spaceport) that
+           the true format is "Affect <type> <duration> <MODIFIER>
+           <LOCATION> <bitvector>" - location and modifier were swapped
+           in every Affect line written this session. This stayed
+           silent through two full subsets (wrong-but-harmless location
+           values) until subset 3's maxmissiles item happened to produce
+           a location value matching APPLY_WEAPONSPELL, which routes the
+           modifier through slot_lookup() and threw a real boot error
+           ("slot_lookup: bad slot 83") - that's what surfaced it.
+           Fixed all 78 affected Affect lines across every module item
+           in all 3 subsets with a single corrective pass, boot-verified
+           clean afterward. Scope confirmed contained to this session's
+           module items only - no other item created this session (or
+           any pre-existing item) uses this same text-based Affect
+           pattern; everything else with item-affect bonuses (makeblade,
+           makeforcepike, etc) constructs them directly in C code, a
+           different path unaffected by this bug.
+          Vendor at room 227 now stocks all 44 module items across the
+           three completed subsets. Remaining subsets from the full
+           SWGD stat list (comm/sensor/astro_array/chaff/manuever/
+           laserdamage/ions/armor/cargo) not yet built - continuing by
+           request.
+          Subset 4 (sensor suite - comm/sensor/astrogation arrays): 15
+           items across all 5 classes, wired to APPLY_COMM/APPLY_SENSOR/
+           APPLY_ASTRO_ARRAY. SWGD uses best-of (MAX) logic for these
+           three rather than additive, but that can't cleanly reverse on
+           module removal without a full recompute across every other
+           installed module, and these also have shipset bases to
+           preserve - kept the same additive-bonus pattern as everything
+           else for consistency and safe removal instead. 59 module
+           items total now, all stocked at the room 227 vendor.
+          Subset 5 (evasion - chaff/manuever): 10 items across all 5
+           classes, wired to APPLY_CHAFF (adds to maxchaff capacity) and
+           APPLY_MANUEVER. Both additive in SWGD's own real logic too, so
+           a true port with no adaptation needed here - unlike subset 4.
+           Chaff capacity scales up with ship size, maneuverability
+           scales down, matching that bigger ships are less nimble but
+           carry more countermeasures. 69 module items total now.
+          Subset 6 (final) - laserdamage/ions/armor/cargo. Unlike every
+           other stat in this whole audit, armor/cargo/laserdamage had
+           no SHIP_DATA fields at all before this pass - added
+           ship->armor/maxarmor/cargo/maxcargo/laserdamage. ions already
+           existed as a field (used in an ion-sabotage eligibility check)
+           but was never saved or loaded at all - would have silently
+           reset to 0 on every reboot regardless of installed modules.
+           Fixed both gaps: added the missing struct fields, added their
+           save_ship fprintf lines and matching KEY() load parsing
+           (correctly placed by first-letter case - caught and fixed my
+           own mistake mid-edit where Maxarmor/Maxcargo were initially
+           added under the wrong case blocks, since the switch dispatches
+           on the field name's own first letter, not the stat family).
+           20 items across all 5 classes.
+          Full ship modules audit now complete: all ~28 of SWGD's real
+           module-driven ship stats are wired (17 added this session, 11
+           already existed but only 6 were actually connected to
+           anything before this work started). 89 module items total,
+           all stocked at the room 227 vendor (Spaceport Ship Upgrade
+           Store, menari_spaceport). Went subset by subset per request
+           rather than all at once specifically so each piece could be
+           verified against real shipset conflicts and boot-tested
+           individually - this caught two real bugs along the way (the
+           swapped Affect field order affecting 78 lines across subsets
+           1-3, and the Maxarmor/Maxcargo case-block mistake in this
+           final subset) that a single big-bang implementation likely
+           would have shipped silently broken.
+          Space simulator audit and fix. Found the system was ~90%
+           already ported: do_togglesimulator (full command, matches
+           SWGD almost exactly), do_plot's three separate Simulator-zone
+           exclusions (destination list, distance calc, blocked while
+           inside), prepship/do_prepship, and all the piloting skill
+           checks were already correct and working. The one real gap:
+           launchship() never checked SHIPFLAG_SIMULATOR at all -
+           toggling simulator mode changed the flag and gave feedback
+           messages, but launching always sent the ship to real space
+           regardless, since the actual redirect line was missing.
+           Fixed to match SWGD: simulator-mode ships now redirect to a
+           dedicated "Simulator" starsystem on launch, with a graceful
+           abort (not a crash) if that starsystem doesn't exist.
+          Created that starsystem: space/Simulator.system, registered in
+           space/space.lst. Deliberately empty of planets/docks/stars
+           since it's a pure practice zone ships only enter via the
+           simulator redirect, not real navigation - matches do_plot's
+           existing logic which already excludes any starsystem named
+           "Simulator" from jump-plot destinations and distance
+           calculations. Boot-tested clean, confirmed loading via the
+           "Done starsystems" log line with no parse errors.
+          Also confirmed along the way: APPLY_SIMULATOR (the ship-module
+           type from the ship modules audit) was already correctly wired
+           to force-set SHIPFLAG_SIMULATOR when installed - that
+           connection was built without realizing its full role in this
+           system at the time. No item currently grants it, but the
+           toggle command is the primary access path anyway, so this is
+           a minor optional gap, not a blocker.
+  v1.18 - Large SWGD skill-porting batch: silvertongue, diplomatic_immunity,
+           regeneration, duck, deflect, deadeye, fourth/fifth attack,
+           maskaura, improved_concentration, battlecry, gemcutting (real
+           implementation replacing a stub), and five new crafting recipes
+           (makeaxe/makewhip/makebowcaster/makeforcepike/makedrinkcon).
+           Full subclass help file merge from the uploaded SWGD help file,
+           plus corrected a keyword collision on "senator".
+          diplomatic_immunity — confirmed against real SWGD source (not
+           assumed): prevents becoming "wanted" for killing VIP-flagged
+           NPCs, via check_killer(). Auto-granted permanently on Senator
+           subclass selection, matching that it's passive/not practiced.
+          deadeye — confirmed exact SWGD formula, universal throw damage
+           multiplier (dam *= 1 + deadeye_bonus/100), wired into do_throw
+           alongside the existing weapon-mastery bonus.
+          battlecry — confirmed group-wide from source (not solo as
+           initially built): buffs hitroll/damroll for everyone sharing
+           your group in the room, stripped when combat ends via the
+           existing free_fight() hook that was already checking for it.
+          deflect — corrected after checking source: chains off a
+           successful ranged parry rather than being an independent check
+           (check_parry now takes dam and calls check_deflect internally),
+           and reflects reduced damage (60%) rather than full damage,
+           matching "the bolt loses some energy in the transformation."
+           Lightsaber-only; vibro-sword parries of blaster fire still just
+           block, matching check_parry's existing broader weapon gate.
+          regeneration — corrected multiplier to the confirmed 4x (was
+           built as 3x), and added to move_gain() as well as hit_gain()
+           since SWGD's text explicitly covers hp/mv both.
+          makedrinkcon — corrected ingredients after checking source: uses
+           fabric/thread ("a needle to sew it together"), not durasteel/
+           battery/oven like a weapon recipe as originally built.
+          gemcutting — real implementation ported from confirmed SWGD
+           source, replacing a "not finished yet" stub. Doubles a cut
+           gem's value, gated on toolkit/oven/crystal, cap and chance both
+           boosted by improved_concentration.
+          duck — full port from SWGD (smuggling-guild evasion, costs
+           stamina even on success), hooked into live combat dispatch
+           alongside check_parry/check_dodge.
+          vibro-axe proficiency wired into weapon_prof_bonus_check's
+           previously-empty case 1 slot (this was already flagged fixed in
+           v1.17's throwing patch; the axe/whip crafting recipes this
+           patch build on top of it).
+          attune matter — confirmed to already exist under the name
+           "aqua breath" (same gsn_aqua_breath, same underwater-breathing
+           effect); not a real gap, no new work needed.
+          do_makeblade and do_makeflamethrower confirmed to have no
+           commands.dat entry at all (pre-existing, unrelated to this
+           patch) - left uninvokable per direction, with clarifying code
+           comments rather than a risky literal comment-out. The five new
+           v1.18 crafting recipes and gemcutting DO have command entries.
+          Durasteel-quality-based damage scaling - confirmed against the
+           uploaded SWL predecessor source (engineering.c) and SWGD's own
+           ARCCHANGES help-file patch notes ("Durasteel quality given a
+           purpose, it affects engineering blades, swords, bludgeons, and
+           now force pikes"). Applied across the board: makeblade,
+           makeaxe, makebowcaster, makeforcepike, makewhip now all scale
+           min/max damage off the consumed durasteel's own value[0]/
+           value[1] quality rating (clamped by level-based floor/ceiling,
+           1.1x Weaponsmith bonus), not crafter level alone. makebludgeon
+           already had this correctly; used its formula as the local
+           template. makevibrosword already inherited quality via its
+           blade-component chain, so fixing makeblade improves it too
+           with no separate change needed.
+          Also found and fixed real discrepancies against confirmed SWL
+           source while auditing item-affect bonuses: makeblade's hitroll
+           affect was a -2 penalty instead of the source's level/33+1
+           bonus, and was missing a level/33 damroll bonus entirely -
+           fixed to match. makevibrosword was missing a parry bonus
+           (level/10) entirely and had hitroll/damroll both set to
+           level/4 instead of the source's level/10 hitroll / level/20
+           damroll - fixed to match, which is a real nerf from what
+           shipped before; flagging clearly in case that was intentional
+           tuning rather than an incomplete port.
+          makeforcepike also gained the disarm/hitroll/damroll item
+           affects confirmed from SWL source (disarm level/2, hitroll and
+           damroll level/25+1 each) - these scale with crafter level, not
+           durasteel quality, so they're a separate bonus from the
+           damage-scaling fix above.
+          Added 5 quality-tiered durasteel items to limbo.are (vnum
+           71-75: refined/hardened/reinforced/military/aurodium-laced,
+           quality 10/25/45/70/100) since the only durasteel item that
+           existed anywhere in the game world before this had 0 quality -
+           the new scaling code was otherwise correct but functionally
+           inert with nothing but scrap-grade material to craft with.
+          frigates, supercapital_ships, and burn logged to
+           system/IDEAS.md rather than ported - all need further space-
+           system work first (see that file for details).
+          Boot-tested clean throughout: no ASSIGN_GSN failures, no
+           compile warnings, no bugs on full server boot.
+          Follow-up same version: worked through Remi's in-game idea
+           list. Real bugs found and fixed: throw had a literal %p typo
+           instead of the $p act-token (the garbled "You throw %p at a
+           remote" report); the telekinetic pull-back resolution in
+           do_throw was firing before the hit/damage resolution, so the
+           "flies back into your hand" message appeared before the hit
+           message - reordered so damage resolves first. Duplicate peek
+           skill removed (a dead level-20 entry with Code spell_null next
+           to the real level-10 do_peek one). slice confirmed to already
+           block non-Swordsmen at execution but was still listed as
+           learnable for everyone in practice - hidden from the listing
+           unless subclass is Blademaster. reserved confirmed load-
+           bearing (a [Spells] section-divider in do_practice for
+           immortals, left alone) vs unknown confirmed genuinely dead
+           (no code references anywhere) and removed. cheap confirmed
+           against real SWGD source to already be the correct registered
+           name (not cheap_attack) - added a display-only override so
+           slist and practice show "Cheap Attack" without touching the
+           underlying skill name. maskaura confirmed via source to mask
+           both detect_force and detect_darkness (SWGD's real names for
+           detect_magic/detect_evil) - already covered by the existing
+           show_visible_affects_to_char fix. elite_patrol's summon system
+           (add_patrol/elite_patrol/special_forces/elite_guard) confirmed
+           already fully working - only do_dismiss itself was missing;
+           ported from SWGD leadership.c, adapted to this codebase's
+           simpler clan-membership gate since nothing else here checks
+           clan rank authority. flexible_arms/talonous_arms renamed to
+           whips/claws (skills.dat, ASSIGN_GSN, and wearoff messages kept
+           in sync). saber_throwing moved to Force guild, entangling_throw
+           moved to Bounty Hunter guild. Help files: possess now
+           documents return (the "player could get stuck" concern) and a
+           standalone return entry was added; prompt and "bounty hunter"
+           merged with real SWGD content rather than blindly overwritten,
+           checked against this codebase's actual comm.c token
+           implementation first since the token sets genuinely differ
+           (this codebase has %m/%M mana tokens SWGD doesn't, and lacks
+           several SWGD tokens like %t/%A/%Y/%z/%d/%f/%c) - two
+           duplicate-keyword boot bugs (PROMPT, MAKEBLASTER) and one
+           orphaned-text parse error introduced while merging were caught
+           by boot-testing and fixed before landing. makeblade and the
+           five new v1.18 crafting recipes given accurate dedicated help
+           entries listing real ingredients (toolkit/durasteel/battery/
+           oven per skill), replacing a vague "craft_weapon command"
+           entry that didn't actually match how any of these are invoked
+           on this server; makeblaster's old help entry was also flagged
+           and removed for claiming durasteel when the code confirms
+           duraplast.
+  v1.17 - Flamethrower canister rebalance, SWGD skill/spell comparison audit,
+           and the full throwing skill group ported from SWGD.
+          Flamethrower rebalance — canister damage formula (make_flamethrower)
+           raised so tier-5 (unstable military) canisters hit ~400 max damage
+           at level 150 (was 54), with linear per-tier scaling underneath it;
+           burn DoT raised from 15% to 25% of hit damage so a max-roll tier-5
+           hit burns for 100 over 2-4 rounds (was ~6-8).
+          SWGD skill/spell comparison — cross-referenced all 250 skills in
+           SWGD's real ASSIGN_GSN() name table (db.c) against skills.dat;
+           149 present, 8 present-but-renamed (e.g. shyriiwook->wookiee,
+           inner-vision->true sight, makesword->makevibrosword), 93
+           genuinely missing, catalogued by category for future porting.
+           Also catalogued the ~76 skills original to this codebase with no
+           SWGD equivalent (Force power list, Hunter patch queue, etc.).
+          Throwing skill group ported — saber_throwing, dagger_throwing,
+           axe_throwing, spear_throwing, entangling_throw, and
+           telekinetic_throwing, plus vibro-axes (weapon type slot 1 in
+           weapon_prof_bonus_check had no gsn wired at all - real bug fix,
+           not just an addition). flamethrowers (the SWGD weapon-type
+           proficiency) intentionally NOT ported - left commented out in
+           source with a note, since this codebase already has its own
+           make_flamethrower system that isn't the same concept.
+           Adapted rather than ported verbatim: SWGD's throwing mechanics
+           key off a weapons_table[] struct (per-weapon flags, multi-throw,
+           poisonable-weapon gating) that does not exist anywhere in this
+           codebase (confirmed via full-source grep; even an old comment in
+           act_obj.c acknowledges the gap). Rebuilt do_throw's mastery/
+           telekinetic logic against the existing value[3] weapon-type
+           system instead. WEAPON_DOUBLE_THROW/WEAPON_TRIPLE_THROW and
+           poisonable-weapon throw gating intentionally NOT ported - no
+           underlying infrastructure to hook into; stubbed rather than
+           broken-ported, consistent with prior sessions' rule for
+           GD-specific systems with no codebase equivalent.
+           do_throw changes: weapon-type/mastery-skill detection on pickup
+           of the thrown item; mastery skill now reduces wear (damage_obj)
+           chance on impact and adds a hit-chance bonus (weapon_bonus/5) on
+           top of the base throw skill; new telekinetic_throwing branch
+           (melee weapons only, never grenades) spends mana for a skill-
+           percent roll to pull the weapon back to your hand instead of it
+           landing in the room, with full success/failure messaging.
+           Help entries merged from the uploaded SWGD help file for
+           saber/dagger/axe/spear throwing, entangling_throw, and
+           telekinetic_throwing; one original entry written for vibro-axes
+           (no SWGD source entry existed for it).
+           Boot-tested clean: all 7 new skills resolve via ASSIGN_GSN with
+           no lookup failures, no compile warnings.
+          Follow-up same session: ported entangling_throw's actual encumber
+           effect faithfully from SWGD's damage()-level dt-dispatch (the
+           block your damage() already has for poison-on-hit was the exact
+           pattern to extend) - a -6 DEX affect for 8 rounds plus an
+           immediate movement drain via the existing encumbrance() helper,
+           both gated on dt == gsn_entangling_throw && dam. do_throw now
+           passes that dt specifically when a whip is thrown so the effect
+           actually fires. Also clarified confirmed via full-source grep
+           that "poisonable-weapon gating" was a non-issue: your existing
+           do_poison_weapon never used SWGD's weapons_table-based gate to
+           begin with - it just checks item_type == ITEM_WEAPON.
+           Created two new limbo.are test items (vnum 68 vibro-axe, vnum 69
+           whip) since neither weapon type had a single item in the entire
+           game world - both the new vibro-axes proficiency fix and
+           entangling_throw were otherwise inert with nothing to wield.
+           Updated the entangling_throw help entry to specify it requires
+           wielding a whip-type weapon specifically.
+  v1.16 - Bug and skill fixes.  Ship Modules ported.
+          Ship systems — transfership (built, then corrected to use the real planet-registered dock-vnum system instead
+          of an unused room flag), closebay/openbay/refuel/tractorbeam (ported from SWGD or simplified where your
+          engine lacks the underlying infrastructure), bomb (an original planet-support-damaging design, since the real 
+          SWGD bombard turned out to be an unrelated ground weapon you didn't want), and reload/scribe (fully removed — 
+          confirmed dead-end/misplaced content, not real features).
+          Help system — full commands.dat vs help.are gap audit, 63 entries merged from your uploaded SWGD help file 
+          (with cleanup of scraping artifacts and two factual corrections), plus 55 original entries written from 
+          actual source code, not guesses.
+          affected_by flag audit and cleanup — full 32-bit audit; reclaimed AFF_SCRYING/AFF_FIRESHIELD/AFF_ICESHIELD/AFF_FAERIE_FIRE/AFF_CURSE safely (all fully dead, verified against C code, skills.dat, objects, and the race table); AFF_FLYING fully removed at your request after Duinuogwuin was switched to AFF_FLOATING; AFF_FLAMING renamed to AFF_TRACING (matching the real SWGD name).
+Full Hunter/Force patch queue completed — force_stun, dark_frenzy, wrist-flamethrower + make_flamethrower (with genuine crafting-quality scaling via new ITEM_FUEL_CANISTER tiers), jetpack + make_jetpack + jetpack_dodge (hooked into the real check_dodge() combat pipeline), and concussion_rocket.
+Bug hunting round — fixed do_propeganda's inverted +=/-= bug (confirmed against real SWGD source), diagnosed capture/Gamorr as working-as-designed rather than broken, fixed Korriban/Tython's permanent-clan settings and populated real VIPFlags content across both, fixed a genuine Dammsg corruption I introduced and caught mid-edit, fixed the flamethrower/dark_frenzy DoT ticks living in the wrong update function entirely.
+          Fixed misplaced #END markers in skills.dat and commands.dat that
+           were silently truncating loading (many skills/commands were
+           never reaching the game); fixed 19+ functions across swskills.c,
+           space.c, act_obj.c, and act_wiz.c missing the const qualifier
+           required for correct symbol linkage (deleteship, alias, break,
+           and others); restored the leadership reinforcement/patrol/guard
+           skill family (add_patrol, special_forces, elite_guard,
+           elite_patrol) with elite-tier stat scaling and distinct patrol
+           mob types; added the Ship Modules system (install/remove/show,
+           class-restricted, 5 new item types); guild reassignments for
+           several misclassified skills (aid, first aid, besiege, cheap,
+           blackjack, bludgeons, talonous arms, flexible arms, stun);
+           Force stat system rebalanced from a x5 to a 1:1 perm_frc-to-level
+           ratio with a raised ceiling of 150 (previously 20), with
+           proportional rescaling across chargen, Force Awakening, the
+           Force Sensitive/Jedi subclasses, and the QP-store Force
+           purchase; slist now accepts an optional class name to filter
+           results; wizhelp/commands column formatting fixed for long
+           command names; built out Tython, all nine Je'daii Temples
+           (72 rooms) plus planet registration
+  v1.15 - Prodigy check_skill() fix, Force Awakening system (chargen Hunter
+           exclusion, check_force_awakening per-level-up roll, setforceroll
+           command), chargen race-caps preview screen, spell_black_lightning
+           rework (harder save, lightsaber reflect), possess death-safety
+           fix in raw_kill()
+  v1.14 - Mass GD command port (63 commands across 9 source files):
+           Combat/Skills: alias, flushpoison, haymaker, trace_comlink, trap,
+             besiege, palm, peek, seal, slide, tuck, rembounty, researchtarget,
+             negotiate, embed_comlink, repairitem, salvage, revive, dieroll,
+             elite_patrol, disabled
+           Space: break, chandelle, cloak, deleteship, detach, docking,
+             freeships, interdict, overdrive, plot, prepship, redirect,
+             remoteclosebay, remoteopenbay, sabotage, selfdestruct,
+             togglesimulator, transship
+           Admin: antirestore, smite, toggleut, togglenh, toggleimm,
+             showweather, fix_skills, reset_all_ships, swap_abilities,
+             exitflags, keytypes, triggers, trigtypes, reset_all_homes
+           Objects: connect, draw, holster, frequency, transmit, tune, ultalk
+           Player: subclasses, reset_age
+           Infrastructure: SHIPFLAG_* system, ship_data extended fields,
+             ALIAS_DATA, ITEM_TRAP_KIT, TRAP_MECHANISM_* enum,
+             makehelp.c web help export, greeting.txt and version.txt
+             moved to system/ folder, immpromote/immdemote wizlist fix
+  v1.13 - Clan rank/roster system, immpromote/immdemote, wizlist fix
+  v1.12 - Clan commands (myclan, overthrow, abdicate, clansellship)
+  v1.11 - Situational awareness, blackjack, cheap, bind/unbind, makebludgeon
+  v1.10 - QP economy, birthday/age system, medical suite, subclass combat wiring
+  v1.09 - Sniper/MA fight.c bonuses, Weapon Focus space bonuses, evade system
+  v1.08 - Score display, damage messages, slist fix, admin commands
+  v1.07 - Parry system, slice command, subclass expansion to 24
+  v1.06 - Weapon systems (vibrosword, doublelightsaber)

@@ -1,0 +1,2855 @@
+#FUSSAREA
+#AREADATA
+Version      1
+Name         Korriban~
+Author       SWR FUSS~
+Ranges       100 107 100 107
+Economy      0 0
+ResetMsg     The tombs of Korriban groan and the dark side surges through the valley like a tide.~
+ResetFreq    8
+Flags        ~
+#ENDAREADATA
+
+#MOBILE
+Vnum       33000
+Keywords   sith lord tomb ancient dark~
+Short      an entombed Sith Lord~
+Long       The spirit of an entombed Sith Lord rises here, its hatred still burning.
+~
+Desc       Death has not diminished this being. Once a great lord of the Sith,
+it has existed in the dark side for millennia, its consciousness
+sustained by the sheer intensity of its hatred and ambition. Its
+form flickers between solid and spectral and the air around it
+drops several degrees. Its eyes are points of cold red light and
+it regards you with the absolute contempt of something that
+considers all living things beneath it.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     neuter~
+Actflags   npc aggressive sentinel~
+Affected   detect_invis detect_hidden sanctuary truesight pass_door~
+Stats1     3000 107 0 98 100 0
+Stats2     60 60 3000
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    22 22 22 22 22 22 0 100
+Saves      -25 -25 -25 -25 -25
+Speaks     common ancient~
+Speaking   ancient~
+VIPFlags   korriban~
+Immune     sleep charm~
+#ENDMOBILE
+
+#MOBILE
+Vnum       33001
+Keywords   sith acolyte dark side student~
+Short      a Sith Academy acolyte~
+Long       A Sith Academy acolyte moves with aggressive purpose through the corridor.
+~
+Desc       Young, ambitious, and already corrupted by the dark side, this
+acolyte has survived the brutal selection process of the Korriban
+Academy. Their eyes carry the amber tint of dark side immersion
+and their bearing is one of coiled aggression barely held in check.
+They size you up with the calculating look of someone who sees
+every other being as either a resource or an obstacle.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     neuter~
+Actflags   npc aggressive~
+Affected   detect_invis detect_hidden~
+Stats1     800 102 0 90 95 0
+Stats2     40 40 800
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    18 18 18 18 18 18 0 85
+Saves      -18 -18 -18 -18 -18
+Speaks     common~
+Speaking   common~
+VIPFlags   korriban~
+#ENDMOBILE
+
+#MOBILE
+Vnum       33002
+Keywords   sith overseer instructor academy~
+Short      a Sith Overseer~
+Long       A Sith Overseer patrols here, watching the acolytes with cold assessment.
+~
+Desc       The Overseers of the Sith Academy are among the most dangerous
+beings on Korriban. They have survived everything the planet and
+the Order has thrown at them over long years of service and they
+have the scars and the power to prove it. This one watches you
+with the particular attention of someone who is already calculating
+how useful you might be and what it would take to break you.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     neuter~
+Actflags   npc aggressive sentinel~
+Affected   detect_invis detect_hidden sanctuary~
+Stats1     1500 105 0 95 98 0
+Stats2     50 50 1500
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    20 20 20 20 20 20 0 95
+Saves      -22 -22 -22 -22 -22
+Speaks     common ancient~
+Speaking   common~
+VIPFlags   korriban~
+Immune     sleep charm~
+#ENDMOBILE
+
+#MOBILE
+Vnum       33003
+Keywords   tuk'ata hound tomb beast dark~
+Short      a tuk'ata tomb guardian~
+Long       A massive tuk'ata stalks here, its dark-side corrupted eyes fixed on you.
+~
+Desc       The tuk'ata are the legendary tomb guardians of Korriban — massive
+predators that have been exposed to Sith alchemy and dark side energy
+for so long that they have become something beyond natural. This one
+is enormous, its shoulders at chest height, its hide thick with
+bone-like protrusions. It does not make a sound as it moves toward
+you. The silence is worse than any growl would be.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     neuter~
+Actflags   npc aggressive~
+Affected   detect_invis detect_hidden~
+Stats1     1200 103 0 95 97 0
+Stats2     55 55 1200
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    25 20 22 14 14 14 0 80
+Saves      -20 -20 -20 -20 -20
+Speaks     common~
+Speaking   common~
+VIPFlags   korriban~
+#ENDMOBILE
+
+#MOBILE
+Vnum       33004
+Keywords   shyrack flying cave beast dark~
+Short      a shyrack~
+Long       A shyrack swoops through the cave, its screeching cutting the darkness.
+~
+Desc       The shyrack is a flying cave-dweller native to Korriban, its body
+like a ray compressed into something reptilian and wrong. In the
+dark side environment of Korriban they have grown larger and more
+aggressive than their counterparts elsewhere. They hunt in groups
+and are relentless once they have fixed on prey.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     neuter~
+Actflags   npc aggressive~
+Affected   detect_invis~
+Stats1     600 100 0 88 92 0
+Stats2     30 30 600
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    16 22 14 10 10 10 0 60
+Saves      -16 -16 -16 -16 -16
+Speaks     common~
+Speaking   common~
+VIPFlags   korriban~
+#ENDMOBILE
+
+#MOBILE
+Vnum       33005
+Keywords   sith lord darth naga sadow~
+Short      the spirit of Naga Sadow~
+Long       The spirit of Dark Lord Naga Sadow stands here, ancient power radiating from his form.
+~
+Desc       One of the greatest Dark Lords of the old Sith Empire, Naga Sadow
+fought and lost a war against the Republic thousands of years ago
+but his power has never diminished. His spirit has been bound to
+Korriban since his death and he is stronger here than most living
+Sith will ever be. He regards you with the vast contempt of someone
+who has outlasted every enemy he has ever had and expects to outlast
+you as well.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     male~
+Actflags   npc aggressive sentinel~
+Affected   detect_invis detect_hidden sanctuary truesight pass_door~
+Stats1     5000 107 0 100 100 0
+Stats2     80 80 5000
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    25 25 25 25 25 25 0 100
+Saves      -30 -30 -30 -30 -30
+Speaks     ancient common~
+Speaking   ancient~
+VIPFlags   korriban~
+Immune     sleep charm nonmagic magic~
+#ENDMOBILE
+
+#MOBILE
+Vnum       33006
+Keywords   sith lord tulak hord~
+Short      the spirit of Tulak Hord~
+Long       The spirit of Tulak Hord looms here, his form crackling with dark side lightning.
+~
+Desc       Known in life as the Lord of Hate, Tulak Hord was considered the
+greatest lightsaber duelist of his era. In death his spirit retains
+everything that made him lethal. He is enormous even as a spirit,
+his presence filling the chamber like smoke, and the dark lightning
+that plays across his form leaves scorch marks on the stone. He
+has been waiting in his tomb for a very long time and does not
+appear pleased by the interruption.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     male~
+Actflags   npc aggressive sentinel~
+Affected   detect_invis detect_hidden sanctuary truesight pass_door~
+Stats1     5500 107 0 100 100 0
+Stats2     85 85 5500
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    25 25 25 25 25 25 0 100
+Saves      -30 -30 -30 -30 -30
+Speaks     ancient common~
+Speaking   ancient~
+VIPFlags   korriban~
+Immune     sleep charm nonmagic magic~
+#ENDMOBILE
+
+#MOBILE
+Vnum       33007
+Keywords   sith warrior guard tomb~
+Short      a Sith tomb warrior~
+Long       A Sith tomb warrior stands guard here, animated by the dark side.
+~
+Desc       Not quite a spirit and not quite a corpse, the tomb warriors of
+Korriban exist in a state maintained entirely by the dark side energy
+that saturates the valley. They were warriors in life and they remain
+warriors in death, their technique undimmed by the millennia. They
+do not speak and they do not negotiate.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     neuter~
+Actflags   npc aggressive sentinel~
+Affected   detect_invis detect_hidden~
+Stats1     2000 106 0 96 99 0
+Stats2     65 65 2000
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    22 20 22 18 18 18 0 90
+Saves      -23 -23 -23 -23 -23
+Speaks     ancient~
+Speaking   ancient~
+VIPFlags   korriban~
+Immune     sleep charm~
+#ENDMOBILE
+
+#MOBILE
+Vnum       33008
+Keywords   sith headmaster darth academy~
+Short      the Academy Headmaster~
+Long       The Academy Headmaster stands here, his authority absolute and his patience nonexistent.
+~
+Desc       The Headmaster of the Korriban Sith Academy holds a position that
+has been filled by some of the most powerful Sith in history. This
+one has held it long enough to have buried three predecessors and
+seven would-be replacements. Their power is self-evident and their
+expectation that you will either serve or die is communicated
+entirely by their expression.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     neuter~
+Actflags   npc aggressive sentinel~
+Affected   detect_invis detect_hidden sanctuary truesight~
+Stats1     2500 107 0 97 100 0
+Stats2     70 70 2500
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    22 22 22 22 22 22 0 98
+Saves      -26 -26 -26 -26 -26
+Speaks     common ancient~
+Speaking   common~
+VIPFlags   korriban~
+Immune     sleep charm~
+#ENDMOBILE
+
+#MOBILE
+Vnum       33009
+Keywords   sith hound beast wasteland~
+Short      a Korriban hound~
+Long       A lean and vicious Korriban hound prowls here, its eyes burning red.
+~
+Desc       The surface hounds of Korriban are smaller than the tomb-dwelling
+tuk'ata but no less dangerous in the open wastelands. Dark side
+exposure over generations has made them something the galaxy would
+not recognise as a natural animal. They hunt in packs, they do not
+tire, and the wounds they leave resist conventional healing.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     neuter~
+Actflags   npc aggressive~
+Stats1     500 100 0 90 93 0
+Stats2     28 28 500
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    20 22 16 10 10 10 0 70
+Saves      -16 -16 -16 -16 -16
+Speaks     common~
+Speaking   common~
+VIPFlags   korriban~
+#ENDMOBILE
+
+#OBJECT
+Vnum       33000
+Keywords   sith holocron dark ancient~
+Short      an ancient Sith holocron~
+Long       An ancient Sith holocron pulses with cold dark energy here.~
+Type       armor~
+Flags      magic glow~
+WFlags     take hold~
+Values     0 15 0 0 0 0
+Stats      10 25000 2500 0 0
+Affect         -1 -1 10 13 0
+Affect         -1 -1 10 14 0
+Affect         -1 -1 8 3 0
+#EXDESC
+ExDescKey  holocron sith dark ancient~
+ExDesc     A pyramidal Sith holocron from the era of the old Sith Empire,
+its surface covered in ancient script and cold to the touch. The
+gatekeeper within is ancient and hostile, imparting knowledge
+with the contempt of something that views the recipient as
+unworthy but unavoidably necessary. What it teaches is
+extraordinarily powerful and profoundly dangerous.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       33001
+Keywords   sith sword ancient dark corroded~
+Short      an ancient Sith war sword~
+Long       An ancient Sith war sword lies here, its metal dark and humming.~
+Type       weapon~
+Flags      magic~
+WFlags     take wield~
+Values     5 40 80 2 0 8000
+Stats      10 30000 3000 0 0
+Affect         -1 -1 15 13 0
+Affect         -1 -1 15 14 0
+#EXDESC
+ExDescKey  sword sith war ancient dark~
+ExDesc     A Sith war sword from the era of the old Sith Empire, its metal
+worked using Sith alchemy to a hardness beyond ordinary steel.
+The blade vibrates at a frequency audible only as a vague unease
+and it draws the eye in a way that is not entirely natural. It
+has cut through things for thousands of years and shows no sign
+of wear. The dark side energy bound into it is significant.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       33002
+Keywords   sith armor dark lord ancient~
+Short      ancient Sith battle armour~
+Long       A set of ancient Sith battle armour rests here on a collapsed stand.~
+Type       armor~
+Flags      magic~
+WFlags     take body~
+Values     80 80 0 0 0 0
+Stats      10 28000 2800 0 0
+Affect         -1 -1 -35 12 0
+Affect         -1 -1 6 5 0
+Affect         -1 -1 5 1 0
+#EXDESC
+ExDescKey  armour sith battle ancient dark lord~
+ExDesc     Sith battle armour worked with alchemy to be harder than durasteel
+at a fraction of the weight. The surface is covered in runes of
+protection and power and the metal has absorbed thousands of years
+of dark side energy. Wearing it creates a subtle but persistent
+sense of invulnerability that is, according to available evidence,
+not entirely unjustified.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       33003
+Keywords   sith amulet power dark lord~
+Short      a Sith Lord's power amulet~
+Long       A Sith Lord's power amulet lies here, radiating cold dark energy.~
+Type       armor~
+Flags      magic glow~
+WFlags     take neck~
+Values     10 10 0 0 0 0
+Stats      10 22000 2200 0 0
+Affect         -1 -1 8 1 0
+Affect         -1 -1 8 5 0
+Affect         -1 -1 6 4 0
+#EXDESC
+ExDescKey  amulet sith power dark lord~
+ExDesc     An amulet worn by a Sith Lord of the old Empire, its setting
+carved from bone-white stone found only in the deepest tombs.
+The dark side energy bound into it is palpable — wearing it
+creates a pressure at the temples and a clarity that is not
+entirely comfortable. The power it imparts is real and so is
+the sense that something imparted it deliberately, and for a price.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       33004
+Keywords   sith gauntlets dark power ancient~
+Short      Sith alchemical gauntlets~
+Long       A pair of Sith alchemical gauntlets rests here.~
+Type       armor~
+Flags      magic~
+WFlags     take hands~
+Values     50 50 0 0 0 0
+Stats      10 20000 2000 0 0
+Affect         -1 -1 10 14 0
+Affect         -1 -1 8 13 0
+Affect         -1 -1 5 1 0
+#EXDESC
+ExDescKey  gauntlets sith alchemical dark~
+ExDesc     Gauntlets worked with Sith alchemy, their metal fused with
+dark side energy at the molecular level by a process no longer
+understood. The fingers end in reinforced tips that can punch
+through light armour. The dark side enhancement to combat
+capability they provide is measurable and substantial.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       33005
+Keywords   sith tome tome ancient dark knowledge~
+Short      an ancient Sith tome~
+Long       An ancient Sith tome lies open here, its pages covered in dark script.~
+Type       armor~
+Flags      magic~
+WFlags     take hold~
+Values     12 12 0 0 0 0
+Stats      10 18000 1800 0 0
+Affect         -1 -1 10 3 0
+Affect         -1 -1 8 4 0
+#EXDESC
+ExDescKey  tome sith ancient dark knowledge~
+ExDesc     A Sith tome from the height of the old Empire, its pages made
+from a material that has survived millennia without deterioration.
+The knowledge within covers dark side techniques, Sith alchemy,
+and the theory of power in a depth that is genuinely dangerous.
+Reading it improves certain capabilities substantially and
+makes sleep considerably more difficult.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       33006
+Keywords   sith helm mask dark lord ancient~
+Short      a Sith Lord's battle helm~
+Long       A Sith Lord's battle helm rests here, its visor dark as the void.~
+Type       armor~
+Flags      magic~
+WFlags     take head~
+Values     60 60 0 0 0 0
+Stats      10 24000 2400 0 0
+Affect         -1 -1 -25 12 0
+Affect         -1 -1 8 13 0
+Affect         -1 -1 6 5 0
+#EXDESC
+ExDescKey  helm mask sith lord battle dark~
+ExDesc     The battle helm of a Sith Lord, its faceplate fashioned into an
+expression of absolute authority. The visor enhances vision across
+all spectra and a voice modulator built into the vocaliser gives
+the wearer's speech a resonance that is not entirely natural in
+origin. Donning it creates an immediate and not unpleasant sense
+of dominance.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum       33007
+Keywords   sith ring dark power bone~
+Short      a Sith bone ring~
+Long       A ring carved from bone and set with a dark crystal lies here.~
+Type       armor~
+Flags      magic glow~
+WFlags     take finger~
+Values     8 8 0 0 0 0
+Stats      10 15000 1500 0 0
+Affect         -1 -1 5 3 0
+Affect         -1 -1 5 4 0
+Affect         -1 -1 5 14 0
+#EXDESC
+ExDescKey  ring sith bone dark crystal power~
+ExDesc     A ring carved from bone — not animal bone — set with a faceted
+dark crystal that absorbs light rather than reflecting it. The dark
+side energy in the crystal enhances mental focus and power of will
+in ways that are difficult to describe and easy to become dependent
+on. It fits perfectly regardless of finger size.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#ROOM
+Vnum     33000
+Name     Korriban Spaceport — Landing Platform~
+Sector   inside~
+Flags    indoors can_land~
+Desc     The landing platform of Korriban's single functional spaceport is bare
+durasteel swept by a constant hot wind carrying red dust from the
+valley beyond. The port operates with minimal staff — few ships come
+to Korriban willingly and the ones that do are not interested in
+customer service. The air tastes of iron and something older. The
+spaceport terminal lies to the north and the road toward the valley
+begins to the east.
+~
+#EXIT
+Direction north~
+ToRoom    33001
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33002
+#ENDEXIT
+
+Reset M 0 33001 1 33000
+#ENDROOM
+
+#ROOM
+Vnum     33001
+Name     Korriban Spaceport — Terminal~
+Sector   inside~
+Flags    indoors~
+Desc     The spaceport terminal is a study in deliberate intimidation. Dark stone
+walls, minimal lighting, and the symbol of the Sith Empire carved above
+every doorway make the message clear: this is not a welcoming place.
+A single customs station processes arrivals with the thoroughness of
+those who expect to find contraband because they usually do. The landing
+platform lies to the south and the main exit leads east toward the town.
+~
+#EXIT
+Direction south~
+ToRoom    33000
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33003
+#ENDEXIT
+
+Reset M 0 33001 1 33001
+#ENDROOM
+
+#ROOM
+Vnum     33002
+Name     The Spaceport Road~
+Sector   field~
+Flags    ~
+Desc     A road of dark compacted stone leads east from the spaceport toward
+the valley settlements. Red dust drifts across the road in the hot
+wind and the sky above is a deep burnt orange. In the distance the
+silhouette of the Sith Academy is visible against the cliffs. The
+landscape is harsh and stripped of all softness — Korriban offers
+nothing that is not earned.
+~
+#EXIT
+Direction west~
+ToRoom    33000
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33004
+#ENDEXIT
+
+Reset M 0 33009 2 33002
+#ENDROOM
+
+#ROOM
+Vnum     33003
+Name     Dreshdae Settlement — Main Street~
+Sector   city~
+Flags    ~
+Desc     Dreshdae is the only settlement on Korriban worth the name, a collection
+of utilitarian structures built for function and nothing else. The main
+street runs between supply depots, a cantina, and the various operations
+that support the Academy above. The inhabitants are Sith acolytes on
+leave, merchants with no choice but to be here, and the occasional
+traveller who has made a significant navigational error. The spaceport
+is to the west and the valley road begins to the north.
+~
+#EXIT
+Direction west~
+ToRoom    33001
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33005
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33006
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    33007
+#ENDEXIT
+
+Reset M 0 33001 3 33003
+#ENDROOM
+
+#ROOM
+Vnum     33004
+Name     The Wasteland Road~
+Sector   field~
+Flags    ~
+Desc     The road from the spaceport meets the main valley road here in a wide
+junction marked by a carved stone pillar bearing Sith script. The
+translation is approximately: strength through victory, victory through
+power. The surrounding landscape is red rock and dust as far as the
+horizon in every direction. Nothing grows here. Nothing has grown
+here for a very long time.
+~
+#EXIT
+Direction west~
+ToRoom    33002
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33008
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33009
+#ENDEXIT
+
+Reset M 0 33009 2 33004
+#ENDROOM
+
+#ROOM
+Vnum     33005
+Name     The Valley Road — Southern Approach~
+Sector   field~
+Flags    ~
+Desc     The road north from Dreshdae enters the approach to the Valley of the
+Dark Lords. The cliff faces begin to rise on either side, their red
+stone carved with the tombs of the ancient Sith. Even on the road the
+dark side presence is palpable — a pressure against the mind that
+increases with every step north. The settlement lies to the south.
+~
+#EXIT
+Direction south~
+ToRoom    33003
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33010
+#ENDEXIT
+
+Reset M 0 33009 2 33005
+#ENDROOM
+
+#ROOM
+Vnum     33006
+Name     Dreshdae Cantina~
+Sector   inside~
+Flags    indoors~
+Desc     The Dreshdae cantina is the only establishment on Korriban that could
+be described as social. It achieves this distinction by maintaining
+an unspoken rule that violence stays outside. The staff enforce this
+with the particular authority of those who know exactly how much
+the clientele needs this one neutral space. The drinks are strong,
+the lighting is poor, and the conversations are not meant to be
+overheard.
+~
+#EXIT
+Direction west~
+ToRoom    33003
+#ENDEXIT
+
+Reset M 0 33001 2 33006
+#ENDROOM
+
+#ROOM
+Vnum     33007
+Name     Dreshdae Supply Depot~
+Sector   inside~
+Flags    indoors~
+Desc     A supply depot stocking the basics required by the Academy and its
+students — ration packs, equipment components, medical supplies, and
+the various tools needed to survive on Korriban. The prices reflect
+the planet's remoteness and the captive nature of the market. The
+operator conducts business with the weary efficiency of someone who
+has been doing it a long time and has no expectations of improvement.
+~
+#EXIT
+Direction north~
+ToRoom    33003
+#ENDEXIT
+
+Reset M 0 33001 1 33007
+#ENDROOM
+
+#ROOM
+Vnum     33008
+Name     The Northern Wastes — Western~
+Sector   field~
+Flags    ~
+Desc     The northern wastes stretch away from the road in every direction,
+their red stone broken by ancient impact craters and the occasional
+collapsed structure that predates even the Sith. The wind is stronger
+here, carrying the sound of something that is not quite howling. The
+sky is clear but the light feels filtered through something that
+does not scatter it quite correctly.
+~
+#EXIT
+Direction south~
+ToRoom    33004
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33011
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33009
+#ENDEXIT
+
+Reset M 0 33009 3 33008
+Reset M 0 33004 2 33008
+#ENDROOM
+
+#ROOM
+Vnum     33009
+Name     The Northern Wastes — Eastern~
+Sector   field~
+Flags    ~
+Desc     The eastern reaches of the northern wastes are marked by a field of
+ancient weapon impacts — craters of varying sizes suggesting a battle
+fought here in the distant past. Fragments of armour and weapons
+still protrude from the ground, too corroded to identify but clearly
+old beyond reckoning. The dark side saturates the site.
+~
+#EXIT
+Direction west~
+ToRoom    33008
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33010
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    33004
+#ENDEXIT
+
+Reset M 0 33009 3 33009
+Reset M 0 33003 2 33009
+#ENDROOM
+
+#ROOM
+Vnum     33010
+Name     The Valley of the Dark Lords — Entrance~
+Sector   field~
+Flags    ~
+Desc     The entrance to the Valley of the Dark Lords is marked by two massive
+carved pillars of dark stone, each bearing the faces of ancient Sith
+Lords in high relief. The valley cuts between sheer red cliffs ahead,
+its floor worn smooth by millennia of passage. The dark side energy
+here is overwhelming — not just a pressure but a presence, as though
+the valley itself is aware of arrivals and is forming opinions about
+them. This is the resting place of the greatest Sith who ever lived.
+~
+#EXIT
+Direction south~
+ToRoom    33005
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33009
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33012
+#ENDEXIT
+
+Reset M 0 33007 2 33010
+Reset M 0 33003 1 33010
+#ENDROOM
+
+#ROOM
+Vnum     33011
+Name     The Northern Wastes — Deep~
+Sector   field~
+Flags    ~
+Desc     The deep northern wastes are among the most inhospitable terrain on
+a planet not renowned for hospitality. Rocky outcroppings provide
+the only cover and the wind here has an edge that suggests the
+planet itself is trying to remove unwanted visitors. The dark side
+is present even here, far from the tombs — Korriban has been
+saturated for so long it has nowhere left to go.
+~
+#EXIT
+Direction south~
+ToRoom    33008
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33012
+#ENDEXIT
+
+Reset M 0 33009 3 33011
+Reset M 0 33004 2 33011
+#ENDROOM
+
+#ROOM
+Vnum     33012
+Name     The Valley of the Dark Lords — The Long Walk~
+Sector   field~
+Flags    ~
+Desc     The valley floor stretches north between its cliff walls, the tombs
+of the ancient Sith carved into both faces. Names that shaped the
+history of the galaxy — Marka Ragnos, Naga Sadow, Tulak Hord,
+Ajunta Pall — each have their entrances here. The stone of the
+valley floor is worn smooth and stained dark by millennia of dark
+side energy seeping from the tombs. Walking this path is walking
+through the concentrated history of the Sith Order.
+~
+#EXIT
+Direction south~
+ToRoom    33010
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33015
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33013
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    33014
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    33011
+#ENDEXIT
+
+Reset M 0 33007 2 33012
+Reset M 0 33003 1 33012
+#ENDROOM
+
+#ROOM
+Vnum     33013
+Name     The Tomb of Ajunta Pall — Entrance~
+Sector   inside~
+Flags    indoors~
+Desc     The entrance to the tomb of Ajunta Pall, the first Dark Lord of the
+Sith, is cut directly into the cliff face. The doorway is framed
+by carvings depicting his conquest and his fall — a Jedi who turned
+to the dark side and in doing so created the Sith as a tradition.
+The carvings are remarkably detailed and have been maintained by
+the dark side energy itself. A long corridor descends into darkness.
+~
+#EXIT
+Direction west~
+ToRoom    33012
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33016
+#ENDEXIT
+
+Reset M 0 33007 2 33013
+Reset M 0 33003 1 33013
+#ENDROOM
+
+#ROOM
+Vnum     33014
+Name     The Tomb of Marka Ragnos — Entrance~
+Sector   inside~
+Flags    indoors~
+Desc     The grandest tomb entrance in the valley, befitting Marka Ragnos who
+ruled the Sith Empire for a century and died only of age — a feat no
+other Dark Lord has matched. The entrance is twice the height of any
+other and the carvings are of extraordinary quality. His name above
+the door is carved in letters a metre tall. Inside, the corridor
+descends into the cliff with the confidence of something built to
+outlast civilisation.
+~
+#EXIT
+Direction east~
+ToRoom    33012
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33017
+#ENDEXIT
+
+Reset M 0 33007 2 33014
+Reset M 0 33003 1 33014
+#ENDROOM
+
+#ROOM
+Vnum     33015
+Name     The Valley of the Dark Lords — Deep~
+Sector   field~
+Flags    ~
+Desc     The deepest accessible section of the valley floor. The cliff faces
+here are almost vertical and the sky above is reduced to a narrow
+strip of burnt orange. The tombs in this section belong to the most
+ancient Sith and their dark side presence is the most intense in the
+valley. The air is noticeably cooler here despite the planet's heat.
+Breathing takes slightly more effort. Concentration takes considerably
+more.
+~
+#EXIT
+Direction south~
+ToRoom    33012
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33018
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    33019
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33020
+#ENDEXIT
+
+Reset M 0 33007 2 33015
+Reset M 0 33000 2 33015
+#ENDROOM
+
+#ROOM
+Vnum     33016
+Name     The Tomb of Ajunta Pall — Antechamber~
+Sector   inside~
+Flags    indoors dark~
+Desc     The antechamber of Ajunta Pall's tomb is a broad vaulted space whose
+walls depict the story of the Hundred Year Darkness — the war that
+drove the first Sith from the Republic and created the Sith Empire.
+The perspective of the carvings is clearly that of the defeated
+exiles and the bitterness in the imagery is still palpable thousands
+of years later. Three corridors lead deeper into the tomb.
+~
+#EXIT
+Direction south~
+ToRoom    33013
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33021
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33022
+#ENDEXIT
+
+Reset M 0 33003 2 33016
+Reset M 0 33007 1 33016
+#ENDROOM
+
+#ROOM
+Vnum     33017
+Name     The Tomb of Marka Ragnos — Antechamber~
+Sector   inside~
+Flags    indoors dark~
+Desc     The antechamber of Marka Ragnos's tomb is proportioned for a ruler —
+vast, high-ceilinged, and decorated with the accumulated tribute of
+a century of absolute power. Relief sculptures of conquered worlds
+and subjugated peoples line the walls. The tomb has been sealed
+for so long that the air has taken on a quality that is not quite
+breathable and not quite not breathable.
+~
+#EXIT
+Direction south~
+ToRoom    33014
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33023
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    33024
+#ENDEXIT
+
+Reset M 0 33003 2 33017
+Reset M 0 33007 2 33017
+#ENDROOM
+
+#ROOM
+Vnum     33018
+Name     The Tomb of Tulak Hord — Entrance~
+Sector   inside~
+Flags    indoors~
+Desc     The entrance to the tomb of Tulak Hord carries a different energy
+than the others in the valley — more aggressive, more immediate.
+Where other tombs feel ancient and patient, this one feels like
+something coiled and ready. The doorframe is carved with dueling
+figures — thousands of them, all ending the same way — and the
+floor of the entrance corridor is darker than the stone around
+it, stained by something that time has not removed.
+~
+#EXIT
+Direction west~
+ToRoom    33015
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33025
+#ENDEXIT
+
+Reset M 0 33007 2 33018
+Reset M 0 33003 1 33018
+#ENDROOM
+
+#ROOM
+Vnum     33019
+Name     The Tomb of Naga Sadow — Entrance~
+Sector   inside~
+Flags    indoors~
+Desc     The tomb of Naga Sadow is cut deeper into the cliff than any other
+in the valley, as though the Dark Lord wanted maximum distance from
+the surface. The entrance corridor slopes downward at a steep angle
+and the air that rises from below is noticeably colder than the
+valley outside. The carvings here depict space battles — the great
+hyperspace war that Naga Sadow fought and lost — with extraordinary
+astronomical accuracy.
+~
+#EXIT
+Direction east~
+ToRoom    33015
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33026
+#ENDEXIT
+
+Reset M 0 33007 2 33019
+Reset M 0 33003 1 33019
+#ENDROOM
+
+#ROOM
+Vnum     33020
+Name     The Valley — The Ancient Obelisk~
+Sector   field~
+Flags    ~
+Desc     At the northernmost accessible point of the valley floor stands a
+single black obelisk of unknown origin. It predates the Sith, the
+Republic, and every record that exists. Its surface carries markings
+that no scholar has ever translated and its presence in the Force
+is unlike anything else on a planet not short of unusual Force
+phenomena. The dark side energy of the entire valley seems to
+converge on this point.
+~
+#EXIT
+Direction south~
+ToRoom    33015
+#ENDEXIT
+
+Reset M 0 33000 3 33020
+Reset M 0 33007 2 33020
+#ENDROOM
+
+#ROOM
+Vnum     33021
+Name     The Tomb of Ajunta Pall — Inner Corridor~
+Sector   inside~
+Flags    indoors dark~
+Desc     A long corridor running deep into the cliff, its walls carved with
+scenes from the life of the first Dark Lord. The corridor is cold
+and the sound of footsteps echoes in a way that suggests the space
+is larger than it appears. Tuk'ata markings on the floor indicate
+these creatures consider the corridor their territory. The
+antechamber lies to the south and the burial hall is ahead.
+~
+#EXIT
+Direction south~
+ToRoom    33016
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33027
+#ENDEXIT
+
+Reset M 0 33003 1 33021
+Reset M 0 33004 2 33021
+#ENDROOM
+
+#ROOM
+Vnum     33022
+Name     The Tomb of Ajunta Pall — Side Passage~
+Sector   inside~
+Flags    indoors dark~
+Desc     A side passage off the antechamber leads to a chamber that was clearly
+used for rituals rather than interment. The floor is carved with
+complex geometric patterns and the walls show scenes of Force
+manipulation in techniques that are no longer practised. Sith relics
+may still be found here by those willing to deal with the current
+occupants.
+~
+#EXIT
+Direction west~
+ToRoom    33016
+#ENDEXIT
+
+Reset M 0 33007 2 33022
+Reset O 0 33005 1 33022
+Reset O 0 33007 1 33022
+#ENDROOM
+
+#ROOM
+Vnum     33023
+Name     The Tomb of Marka Ragnos — Inner Hall~
+Sector   inside~
+Flags    indoors dark~
+Desc     The inner hall of Marka Ragnos's tomb is proportioned on the same
+scale as his antechamber — designed to remind visitors that he was
+the most powerful Sith of his era. Trophy cases line the walls,
+their contents long since removed by tomb raiders over the centuries,
+though the cases themselves are sealed with wards that destroyed
+those who opened them without the appropriate knowledge.
+~
+#EXIT
+Direction south~
+ToRoom    33017
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33028
+#ENDEXIT
+
+Reset M 0 33007 2 33023
+Reset M 0 33000 1 33023
+#ENDROOM
+
+#ROOM
+Vnum     33024
+Name     The Tomb of Marka Ragnos — The Records Chamber~
+Sector   inside~
+Flags    indoors dark~
+Desc     A chamber containing the official record of Marka Ragnos's reign —
+not a celebration but an account, maintained with the precision of
+absolute power comfortable enough in itself not to need flattery.
+The records cover a century of Sith history in extraordinary detail.
+The chamber connects to the antechamber.
+~
+#EXIT
+Direction east~
+ToRoom    33017
+#ENDEXIT
+
+Reset M 0 33003 1 33024
+Reset O 0 33005 1 33024
+#ENDROOM
+
+#ROOM
+Vnum     33025
+Name     The Tomb of Tulak Hord — Combat Hall~
+Sector   inside~
+Flags    indoors dark~
+Desc     The primary hall of Tulak Hord's tomb is unlike any other in the
+valley — it is not a burial space, it is a combat arena. A circular
+fighting space occupies the centre of the hall, its floor worn smooth
+and dark. The spirit of Tulak Hord himself challenges any who enter
+this space worthy of his attention, and his definition of worthy
+begins at an extraordinarily high bar.
+~
+#EXIT
+Direction south~
+ToRoom    33018
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33029
+#ENDEXIT
+
+Reset M 0 33006 1 33025
+Reset M 0 33007 2 33025
+#ENDROOM
+
+#ROOM
+Vnum     33026
+Name     The Tomb of Naga Sadow — The Deep Chamber~
+Sector   inside~
+Flags    indoors dark~
+Desc     The primary chamber of Naga Sadow's tomb is dominated by a massive
+star map carved into the domed ceiling — a map of his hyperspace
+war displayed with the perspective of someone who nearly won it.
+The dark side presence here is enormous. Naga Sadow's spirit does
+not simply haunt this tomb; it saturates it. The air tastes of
+something ancient and the Force feels like walking into deep water.
+~
+#EXIT
+Direction south~
+ToRoom    33019
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33030
+#ENDEXIT
+
+Reset M 0 33005 1 33026
+Reset M 0 33007 2 33026
+#ENDROOM
+
+#ROOM
+Vnum     33027
+Name     The Tomb of Ajunta Pall — The Burial Hall~
+Sector   inside~
+Flags    indoors dark~
+Desc     The burial hall of Ajunta Pall. His sarcophagus stands at the centre
+of the room, still sealed, still warded with protections that have
+functioned for millennia. The room is cold enough to see your breath
+and the dark side presence is the most intense in the tomb. His spirit
+is present here and aware. Being in this room is not unlike being
+studied by something vast and interested.
+~
+#EXIT
+Direction south~
+ToRoom    33021
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33031
+#ENDEXIT
+
+Reset M 0 33000 1 33027
+Reset O 0 33000 1 33027
+Reset O 0 33003 1 33027
+#ENDROOM
+
+#ROOM
+Vnum     33028
+Name     The Tomb of Marka Ragnos — The Sarcophagus Chamber~
+Sector   inside~
+Flags    indoors dark~
+Desc     The sarcophagus chamber of Marka Ragnos. His sarcophagus is enormous
+and carved with scenes from every significant event of his reign in
+miniature detail. The room is maintained by dark side energy that
+has kept it in perfect condition since his interment. The presence
+of Marka Ragnos himself is not spectral here but structural — he
+is part of the room the way a foundation is part of a building.
+~
+#EXIT
+Direction south~
+ToRoom    33023
+#ENDEXIT
+
+Reset M 0 33000 1 33028
+Reset O 0 33000 1 33028
+Reset O 0 33002 1 33028
+Reset O 0 33006 1 33028
+#ENDROOM
+
+#ROOM
+Vnum     33029
+Name     The Tomb of Tulak Hord — The Sarcophagus Chamber~
+Sector   inside~
+Flags    indoors dark~
+Desc     Tulak Hord's sarcophagus is smaller than expected for one of his
+reputation — he had no interest in displaying power through scale.
+What surrounds it instead are weapons, hundreds of them, all taken
+from opponents he defeated in single combat over his career. The
+collection represents some of the most skilled fighters who ever
+lived, all of whom lost to Tulak Hord. The spirit here is
+aggressive, watchful, and never fully at rest.
+~
+#EXIT
+Direction south~
+ToRoom    33025
+#ENDEXIT
+
+Reset M 0 33006 1 33029
+Reset O 0 33001 1 33029
+Reset O 0 33004 1 33029
+#ENDROOM
+
+#ROOM
+Vnum     33030
+Name     The Tomb of Naga Sadow — The Weapon Vault~
+Sector   inside~
+Flags    indoors dark~
+Desc     A vault off the deep chamber containing the weapons and personal
+effects of Naga Sadow. Unlike the main tomb the vault has been
+raided, its contents partially removed over the centuries by those
+bold or foolish enough to enter. What remains is still significant.
+The spirit of Naga Sadow permits the vault to be viewed but
+not without cost.
+~
+#EXIT
+Direction west~
+ToRoom    33026
+#ENDEXIT
+
+Reset M 0 33005 1 33030
+Reset O 0 33001 1 33030
+Reset O 0 33003 1 33030
+Reset O 0 33000 1 33030
+#ENDROOM
+
+#ROOM
+Vnum     33031
+Name     The Tomb of Ajunta Pall — The Secret Chamber~
+Sector   inside~
+Flags    indoors dark~
+Desc     A hidden chamber beyond the burial hall, not marked on any map that
+has left Korriban. Ajunta Pall concealed his most personal and most
+dangerous knowledge here — the techniques he developed during the
+Hundred Year Darkness that the Republic found so threatening they
+exiled an entire generation of Force users to prevent their spread.
+The knowledge is still here. The question is whether you can take it.
+~
+#EXIT
+Direction west~
+ToRoom    33027
+#ENDEXIT
+
+Reset M 0 33000 2 33031
+Reset O 0 33000 1 33031
+Reset O 0 33005 1 33031
+Reset O 0 33007 1 33031
+#ENDROOM
+
+#ROOM
+Vnum     33032
+Name     The Sith Academy — Main Gate~
+Sector   field~
+Flags    ~
+Desc     The main gate of the Korriban Sith Academy is built into the cliff face,
+its archway carved with the history of the institution in compressed
+relief. Above the gate the academy's motto is inscribed in ancient
+Sith: Peace is a lie. There is only passion. The gate is open but
+the acolytes flanking it make the implicit cost of entry clear.
+The valley road is to the south and the academy grounds lie north.
+~
+#EXIT
+Direction south~
+ToRoom    33010
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33033
+#ENDEXIT
+
+Reset M 0 33001 2 33032
+Reset M 0 33002 1 33032
+#ENDROOM
+
+#ROOM
+Vnum     33033
+Name     The Sith Academy — Entrance Courtyard~
+Sector   field~
+Flags    ~
+Desc     The entrance courtyard of the Sith Academy is a place of constant
+evaluation. Acolytes train here under the observation of Overseers
+who assess everything — strength, technique, aggression, intelligence,
+and the particular quality the Sith value most: the willingness to
+do whatever is necessary. Those who fail the assessment do not get
+a second chance. The main gate is to the south and the academy
+buildings lie ahead.
+~
+#EXIT
+Direction south~
+ToRoom    33032
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33034
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33035
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    33036
+#ENDEXIT
+
+Reset M 0 33001 4 33033
+Reset M 0 33002 2 33033
+#ENDROOM
+
+#ROOM
+Vnum     33034
+Name     The Sith Academy — Main Hall~
+Sector   inside~
+Flags    indoors~
+Desc     The main hall of the Sith Academy is a cathedral-scale space built to
+impress upon arriving students the nature of what they are entering.
+The Sith Code is inscribed above the entrance in letters that require
+looking up to read — a deliberate design choice. Portraits of past
+Headmasters and celebrated graduates line the walls. The current
+Headmaster's portrait conspicuously has no name below it.
+~
+#EXIT
+Direction south~
+ToRoom    33033
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33037
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33038
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    33039
+#ENDEXIT
+
+Reset M 0 33001 3 33034
+Reset M 0 33002 2 33034
+Reset M 0 33008 1 33034
+#ENDROOM
+
+#ROOM
+Vnum     33035
+Name     The Sith Academy — Training Yard East~
+Sector   field~
+Flags    ~
+Desc     The eastern training yard is used for combat training — bladed and
+blaster disciplines both, with an emphasis on the former. The ground
+is scarred from thousands of training sessions and the occasional
+session that stopped being training partway through. The
+Overseers who supervise training here do not intervene in
+disputes between acolytes. Competition is the point.
+~
+#EXIT
+Direction west~
+ToRoom    33033
+#ENDEXIT
+
+Reset M 0 33001 4 33035
+Reset M 0 33002 1 33035
+#ENDROOM
+
+#ROOM
+Vnum     33036
+Name     The Sith Academy — Training Yard West~
+Sector   field~
+Flags    ~
+Desc     The western training yard focuses on Force training — the application
+of dark side power in practical situations. Targets of various kinds
+are set up at intervals and acolytes practice Force techniques under
+the cold observation of instructors who know exactly what they are
+looking for and are not easily impressed. Exhaustion is not accepted
+as an excuse to stop.
+~
+#EXIT
+Direction east~
+ToRoom    33033
+#ENDEXIT
+
+Reset M 0 33001 4 33036
+Reset M 0 33002 1 33036
+#ENDROOM
+
+#ROOM
+Vnum     33037
+Name     The Sith Academy — The Archive~
+Sector   inside~
+Flags    indoors~
+Desc     The Sith Academy archive is a smaller and considerably more aggressive
+collection than the Jedi Archives on Coruscant. Where the Jedi collect
+broadly the Sith collect specifically — techniques, weapons research,
+historical intelligence on enemies, and the accumulated knowledge of
+every Sith who has contributed to the collection. Access is by merit
+and merit is assessed by the archive master with a subjectivity that
+serves as its own filter.
+~
+#EXIT
+Direction south~
+ToRoom    33034
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33040
+#ENDEXIT
+
+Reset M 0 33002 1 33037
+Reset O 0 33005 1 33037
+Reset O 0 33000 1 33037
+#ENDROOM
+
+#ROOM
+Vnum     33038
+Name     The Sith Academy — The Proving Grounds~
+Sector   inside~
+Flags    indoors~
+Desc     The Proving Grounds are where acolytes undergo their formal trials —
+challenges set by the Overseers that test every quality the Sith
+consider essential. The room is unremarkable in its appointments.
+What happens in it is not. The record of each trial is carved into
+the wall beside the entrance — name, date, and outcome. The list
+of those who failed is significantly longer than the list of those
+who succeeded.
+~
+#EXIT
+Direction west~
+ToRoom    33034
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33041
+#ENDEXIT
+
+Reset M 0 33002 2 33038
+Reset M 0 33001 2 33038
+#ENDROOM
+
+#ROOM
+Vnum     33039
+Name     The Sith Academy — The Headmaster's Office~
+Sector   inside~
+Flags    indoors~
+Desc     The Headmaster's office is exactly what one would expect — austere,
+functional, and arranged to give the occupant a comprehensive
+positional advantage over anyone entering. The desk is large and
+positioned with the wall behind it and clear sight lines to both
+the door and the window. On it sits a single datapad, one personal
+effect, and nothing else. The Headmaster values economy.
+~
+#EXIT
+Direction east~
+ToRoom    33034
+#ENDEXIT
+
+Reset M 0 33008 1 33039
+#ENDROOM
+
+#ROOM
+Vnum     33040
+Name     The Sith Academy — Restricted Archive~
+Sector   inside~
+Flags    indoors~
+Desc     The restricted section of the Academy archive contains material that
+even by Sith standards requires controlled access — techniques too
+dangerous to teach in a classroom environment, intelligence too
+sensitive for general circulation, and the personal records of Sith
+Lords who made contributions they did not want widely attributed.
+Access here is granted by the Headmaster directly and only to
+those with a demonstrated need.
+~
+#EXIT
+Direction west~
+ToRoom    33037
+#ENDEXIT
+
+Reset M 0 33008 1 33040
+Reset O 0 33000 1 33040
+Reset O 0 33005 1 33040
+#ENDROOM
+
+#ROOM
+Vnum     33041
+Name     The Sith Academy — The Dueling Hall~
+Sector   inside~
+Flags    indoors~
+Desc     The dueling hall is the most used space in the Academy. Formal duels,
+instructed sparring, and the informal violence that the Academy
+permits between acolytes as a matter of policy all occur here.
+The floor is dark stone that shows its history and the walls are
+high enough to give aerial techniques room to develop. The Overseers
+watch from elevated positions and their assessments of what they
+observe carry significant consequences.
+~
+#EXIT
+Direction south~
+ToRoom    33038
+#ENDEXIT
+
+Reset M 0 33001 4 33041
+Reset M 0 33002 2 33041
+#ENDROOM
+
+#ROOM
+Vnum     33042
+Name     The Academy Dormitories — Entrance~
+Sector   inside~
+Flags    indoors~
+Desc     The entrance to the acolyte dormitories. If the rest of the Academy
+is Spartan, the dormitories take that aesthetic to its logical extreme.
+Bare stone, minimal lighting, and the constant awareness that the
+person sleeping in the next bunk may consider you competition. Some
+acolytes consider this the most challenging aspect of Academy life.
+They are probably right.
+~
+#EXIT
+Direction west~
+ToRoom    33034
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33043
+#ENDEXIT
+
+Reset M 0 33001 3 33042
+#ENDROOM
+
+#ROOM
+Vnum     33043
+Name     The Academy Dormitories — Main Block~
+Sector   inside~
+Flags    indoors~
+Desc     The main dormitory block houses the majority of the Academy's acolyte
+population in rows of simple bunks. Personal possessions are limited
+to what fits in a sealed container under the bunk. The social dynamics
+here are complex, brutal, and educational in ways not covered by the
+formal curriculum. Alliances form and dissolve quickly in this space.
+~
+#EXIT
+Direction south~
+ToRoom    33042
+#ENDEXIT
+
+Reset M 0 33001 4 33043
+#ENDROOM
+
+#ROOM
+Vnum     33044
+Name     The Cave System — Upper Entrance~
+Sector   inside~
+Flags    indoors dark~
+Desc     A cave entrance in the cliff face below the Academy leads into an
+extensive natural cave system that runs beneath the valley. The
+Academy uses the upper sections for certain training exercises
+that benefit from complete darkness and enclosed space. Beyond
+the upper sections the caves become unmapped and increasingly
+occupied by shyrack colonies. The academy grounds lie south.
+~
+#EXIT
+Direction south~
+ToRoom    33033
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33045
+#ENDEXIT
+
+Reset M 0 33004 3 33044
+#ENDROOM
+
+#ROOM
+Vnum     33045
+Name     The Cave System — Upper Passages~
+Sector   inside~
+Flags    indoors dark~
+Desc     The upper passages of the cave system are wide enough to move through
+comfortably, though the floor is uneven and the ceiling height varies.
+Bioluminescent organisms provide faint blue-green light at intervals.
+The shyrack nesting areas begin further in and their sounds carry
+through the rock. The entrance lies to the south.
+~
+#EXIT
+Direction south~
+ToRoom    33044
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33046
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33047
+#ENDEXIT
+
+Reset M 0 33004 4 33045
+#ENDROOM
+
+#ROOM
+Vnum     33046
+Name     The Cave System — The Shyrack Nest~
+Sector   inside~
+Flags    indoors dark~
+Desc     The primary shyrack nesting area. Hundreds of the creatures occupy
+the ceiling of this large cavern, their collective sound a constant
+shrill background noise. They react to light sources, sound, and
+movement with immediate and coordinated aggression. The floor is
+covered in generations of nesting material that makes footing
+uncertain and the smell extraordinary. The passage out lies south.
+~
+#EXIT
+Direction south~
+ToRoom    33045
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33048
+#ENDEXIT
+
+Reset M 0 33004 6 33046
+#ENDROOM
+
+#ROOM
+Vnum     33047
+Name     The Cave System — The Crystal Vein~
+Sector   inside~
+Flags    indoors dark~
+Desc     A side passage that opens into a natural formation of dark crystals
+running through the cave wall. These are not kyber crystals but
+something related — dark-side saturated mineral formations that have
+grown in the tomb valley environment over millennia. They glow very
+faintly red in complete darkness and the Force presence around them
+is cold and specific.
+~
+#EXIT
+Direction west~
+ToRoom    33045
+#ENDEXIT
+
+Reset O 0 33007 2 33047
+#ENDROOM
+
+#ROOM
+Vnum     33048
+Name     The Cave System — The Deep Cave~
+Sector   inside~
+Flags    indoors dark~
+Desc     The deepest accessible section of the cave system, a large natural
+chamber where the dark side energy of Korriban's tombs has accumulated
+over millennia. The shyrack presence here is at its most intense and
+something else is also present — a dark side entity that has existed
+in the cave since before the Sith built their tombs above. It is not
+a spirit or a ghost. It is something that was here first.
+~
+#EXIT
+Direction south~
+ToRoom    33046
+#ENDEXIT
+
+Reset M 0 33000 2 33048
+Reset M 0 33004 4 33048
+Reset O 0 33000 1 33048
+#ENDROOM
+
+#ROOM
+Vnum     33049
+Name     The Valley Outlook~
+Sector   field~
+Flags    ~
+Desc     A natural plateau above the valley floor, accessible by a steep path
+cut into the cliff face. From here the entire Valley of the Dark Lords
+is visible — the tomb entrances carved into both cliff faces, the worn
+valley floor below, the black obelisk at the northern end, and the
+Academy built into the cliff to the east. The scale of what the Sith
+built here over millennia is staggering from this vantage point.
+~
+#EXIT
+Direction down~
+ToRoom    33015
+#ENDEXIT
+
+Reset M 0 33009 2 33049
+#ENDROOM
+
+#ROOM
+Vnum     33050
+Name     The Wasteland — The Crash Site~
+Sector   field~
+Flags    ~
+Desc     A ship came down here a very long time ago. The wreckage is barely
+recognisable as having ever been a vessel — decades of Korriban's
+environment have corroded and half-buried most of it. From the
+fragments that remain visible it appears to have been a Republic
+era cruiser, its markings long since scoured by red sand. What
+brought it down and what happened to the crew are questions
+with no living witnesses.
+~
+#EXIT
+Direction east~
+ToRoom    33008
+#ENDEXIT
+
+Reset M 0 33009 2 33050
+Reset O 0 33005 1 33050
+#ENDROOM
+
+#ROOM
+Vnum     33051
+Name     The Wasteland — The Ancient Battlefield~
+Sector   field~
+Flags    ~
+Desc     Beneath the red dust of this section of wasteland lies an ancient
+battlefield where a significant engagement was fought in the era
+of the Great Hyperspace War. Weapons, armour fragments, and the
+occasional skeletal remain protrude from the ground after particularly
+strong winds. The scale of what is buried here is visible only from
+altitude. The dark side energy of thousands of violent deaths is
+still present in the ground.
+~
+#EXIT
+Direction west~
+ToRoom    33009
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33052
+#ENDEXIT
+
+Reset M 0 33009 3 33051
+Reset M 0 33003 1 33051
+#ENDROOM
+
+#ROOM
+Vnum     33052
+Name     The Wasteland — Northern Reaches~
+Sector   field~
+Flags    ~
+Desc     The northern reaches of the Korriban wastelands, as far from the
+valley and the academy as it is practical to travel on foot and
+still be able to return. The landscape here is unchanged from
+its natural state — raw red rock and dust under a hot orange sky.
+The dark side is present even here, ambient and deep, the
+accumulated energy of thousands of years of Sith activity that
+has saturated the planet itself.
+~
+#EXIT
+Direction south~
+ToRoom    33051
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33053
+#ENDEXIT
+
+Reset M 0 33009 3 33052
+#ENDROOM
+
+#ROOM
+Vnum     33053
+Name     The Wasteland — The Bone Field~
+Sector   field~
+Flags    ~
+Desc     A field of bones covers this section of wasteland — not a deliberate
+arrangement but an accumulation. Things die here in numbers. The
+bones are of many different species and many different eras. Some
+are very old and some are recent. The tuk'ata use this area as a
+hunting ground and the evidence of that is comprehensive.
+~
+#EXIT
+Direction west~
+ToRoom    33052
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    33009
+#ENDEXIT
+
+Reset M 0 33003 3 33053
+Reset M 0 33009 3 33053
+#ENDROOM
+
+#ROOM
+Vnum     33054
+Name     The Wasteland — The Dark Side Vergence~
+Sector   field~
+Flags    ~
+Desc     A point in the open wasteland where the dark side energy of Korriban
+converges with unusual intensity — a vergence visible to Force
+sensitives as a distortion in the air above the spot. The Sith have
+known about this location for millennia and have used it for purposes
+that are now only partially documented. Standing on it is an
+experience that those who have survived it tend not to describe in
+detail.
+~
+#EXIT
+Direction north~
+ToRoom    33052
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    33004
+#ENDEXIT
+
+Reset M 0 33000 2 33054
+Reset O 0 33003 1 33054
+#ENDROOM
+
+#ROOM
+Vnum     33055
+Name     The Korriban Wastes — The Red Canyon~
+Sector   field~
+Flags    ~
+Desc     A canyon of deep red stone cuts through the wasteland, its walls
+rising twenty metres on each side. The floor is firm and the passage
+through it provides some shelter from the constant hot wind. Sith
+script is carved into the canyon walls at intervals — old enough
+to predate the Academy, suggesting the canyon was known and used
+long before the institution was built.
+~
+#EXIT
+Direction north~
+ToRoom    33008
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    33056
+#ENDEXIT
+
+Reset M 0 33009 2 33055
+Reset M 0 33003 1 33055
+#ENDROOM
+
+#ROOM
+Vnum     33056
+Name     The Red Canyon — Southern End~
+Sector   field~
+Flags    ~
+Desc     The southern end of the red canyon opens back onto the main wasteland.
+A carved stone marker at the canyon mouth was once an important
+navigational reference — the carved symbols indicate directions and
+distances to locations now buried or destroyed. One direction marker
+still legible points toward what the ancient inscription calls
+the place of first binding.
+~
+#EXIT
+Direction north~
+ToRoom    33055
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33004
+#ENDEXIT
+
+Reset M 0 33009 2 33056
+#ENDROOM
+
+#ROOM
+Vnum     33057
+Name     The Valley — The Tomb of an Unknown Lord~
+Sector   inside~
+Flags    indoors dark~
+Desc     A tomb entrance without a name above the door. The carvings that
+once identified this Sith Lord have been deliberately removed —
+not by time but by another hand. Whatever was done here to earn
+that erasure from the record must have been extraordinary even by
+Sith standards. The tomb itself is intact and the dark side presence
+within is substantial. Whoever this was, they were powerful.
+~
+#EXIT
+Direction east~
+ToRoom    33015
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33058
+#ENDEXIT
+
+Reset M 0 33007 2 33057
+Reset M 0 33000 1 33057
+#ENDROOM
+
+#ROOM
+Vnum     33058
+Name     The Unknown Tomb — Inner Chamber~
+Sector   inside~
+Flags    indoors dark~
+Desc     The inner chamber of the nameless tomb is the most unsettling space
+in the valley. The carvings here have also been removed but less
+completely — fragments remain that suggest the kind of power this
+Sith wielded and why it was considered necessary to remove their name
+from history. The sarcophagus is intact. The spirit within it is aware
+of your presence and has been waiting for someone worth speaking to.
+~
+#EXIT
+Direction south~
+ToRoom    33057
+#ENDEXIT
+
+Reset M 0 33000 2 33058
+Reset O 0 33000 1 33058
+Reset O 0 33003 1 33058
+Reset O 0 33005 1 33058
+#ENDROOM
+
+#ROOM
+Vnum     33059
+Name     The Academy — The Meditation Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     A chamber within the Academy used for dark side meditation — the
+drawing in of dark side power through focused emotional states.
+Unlike Jedi meditation which seeks stillness, Sith meditation seeks
+amplification. The Academy's meditation chamber is designed to
+facilitate that — its construction channels the dark side energy
+of the valley directly into the space.
+~
+#EXIT
+Direction south~
+ToRoom    33034
+#ENDEXIT
+
+Reset M 0 33002 1 33059
+Reset M 0 33001 2 33059
+#ENDROOM
+
+#ROOM
+Vnum     33060
+Name     The Academy — The Armoury~
+Sector   inside~
+Flags    indoors~
+Desc     The Academy armoury maintains weapons for student use during training.
+Everything here is functional and nothing is ornamental — the Sith
+have no time for decorative weapons. The armoury also contains
+confiscated items taken from those who arrived on Korriban with
+equipment deemed too valuable to leave in their possession.
+~
+#EXIT
+Direction north~
+ToRoom    33034
+#ENDEXIT
+
+Reset M 0 33002 1 33060
+Reset O 0 33001 1 33060
+Reset O 0 33004 1 33060
+Reset O 0 33006 1 33060
+#ENDROOM
+
+
+#ROOM
+Vnum     33061
+Name     The Valley — The Sith Warrior Barracks (Ruins)~
+Sector   inside~
+Flags    indoors dark~
+Desc     The ruined remains of barracks that once housed the Sith warriors who
+guarded the valley. The structures collapsed centuries ago but the
+walls still stand to waist height in places. The dark side energy
+that preserved the warriors themselves has not extended to their
+living quarters. The ruins connect to the valley floor.
+~
+#EXIT
+Direction east~
+ToRoom    33012
+#ENDEXIT
+
+Reset M 0 33007 3 33061
+#ENDROOM
+
+#ROOM
+Vnum     33062
+Name     The Valley — The Offering Pit~
+Sector   field~
+Flags    ~
+Desc     A circular pit cut into the valley floor, its purpose documented
+in the Academy archive as a site of ritual offering. The depth
+is difficult to determine in the darkness below. Items dropped into
+it do not make a sound on landing. The dark side energy around
+the pit has a specific quality — acquisitive, attentive, hungry.
+~
+#EXIT
+Direction north~
+ToRoom    33012
+#ENDEXIT
+
+Reset M 0 33000 2 33062
+#ENDROOM
+
+#ROOM
+Vnum     33063
+Name     The Tomb of Ajunta Pall — The Lower Passage~
+Sector   inside~
+Flags    indoors dark~
+Desc     A lower passage within the tomb, accessed through a concealed door
+in the burial hall. The air here is notably colder than elsewhere
+in the tomb and the dark side presence has a specific texture —
+personal, watchful, old. The stone is carved with scenes from the
+Jedi Order that Ajunta Pall left behind, rendered with the
+ambivalence of someone who never entirely resolved his feelings
+about his origins.
+~
+#EXIT
+Direction up~
+ToRoom    33027
+#ENDEXIT
+
+Reset M 0 33000 1 33063
+Reset O 0 33000 1 33063
+Reset O 0 33007 1 33063
+#ENDROOM
+
+#ROOM
+Vnum     33064
+Name     The Valley — The Dark Side Spring~
+Sector   field~
+Flags    ~
+Desc     A natural spring emerges from the cliff face here, its water dark
+and still. The water is not toxic but it is not natural either —
+it has absorbed too much dark side energy over too many centuries
+to be classified as simply water. It is drunk by the tuk'ata
+and no other living thing on Korriban. Sith alchemists have
+studied it and found properties they declined to publish widely.
+~
+#EXIT
+Direction west~
+ToRoom    33015
+#ENDEXIT
+
+Reset M 0 33003 2 33064
+#ENDROOM
+
+#ROOM
+Vnum     33065
+Name     The Academy — The Alchemy Laboratory~
+Sector   inside~
+Flags    indoors~
+Desc     A specialised laboratory within the Academy where Sith alchemy is
+taught and practised. The equipment here handles materials that
+require dark side energy to work with safely and the safety
+protocols are enforced with the seriousness of those who have
+seen what happens when they are not followed. The results
+of successful alchemy work are among the most powerful items
+on Korriban.
+~
+#EXIT
+Direction east~
+ToRoom    33037
+#ENDEXIT
+
+Reset M 0 33002 1 33065
+Reset O 0 33004 1 33065
+#ENDROOM
+
+#ROOM
+Vnum     33066
+Name     The Wasteland — The Standing Stones~
+Sector   field~
+Flags    ~
+Desc     A circle of standing stones in the open wasteland, their arrangement
+clearly deliberate and their age clearly immense. The stones are of
+a type not found in the surrounding geology, suggesting they were
+brought here from elsewhere. Each stone is carved on its inner face
+with a single Sith rune. The circle produces a mild Force effect
+when stood within — a slight enhancement of dark side connection
+that is persistent while inside it.
+~
+#EXIT
+Direction south~
+ToRoom    33004
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    33008
+#ENDEXIT
+
+Reset M 0 33000 2 33066
+#ENDROOM
+
+#ROOM
+Vnum     33067
+Name     The Valley — The Sith Altar~
+Sector   field~
+Flags    ~
+Desc     A massive stone altar stands in an alcove carved into the valley wall
+between tomb entrances. The altar is not associated with any specific
+Sith Lord — it predates all of them. Dark stains on the stone's surface
+and in the channels carved around its base tell a history of use that
+stretches back further than the written Sith record. The dark side
+around it is thick and specific.
+~
+#EXIT
+Direction east~
+ToRoom    33015
+#ENDEXIT
+
+Reset M 0 33000 2 33067
+Reset M 0 33007 1 33067
+#ENDROOM
+
+#ROOM
+Vnum     33068
+Name     The Academy — The War Room~
+Sector   inside~
+Flags    indoors~
+Desc     A strategic planning room within the Academy where military doctrine
+and tactical planning are taught. Holographic maps cover the walls
+and a central table displays a tactical assessment of the current
+political and military situation in the galaxy. The Sith view
+strategic knowledge as inseparable from personal power.
+~
+#EXIT
+Direction west~
+ToRoom    33034
+#ENDEXIT
+
+Reset M 0 33002 1 33068
+Reset M 0 33008 1 33068
+#ENDROOM
+
+#ROOM
+Vnum     33069
+Name     The Tomb of Marka Ragnos — The Throne Room~
+Sector   inside~
+Flags    indoors dark~
+Desc     Marka Ragnos had a throne room built within his tomb where his spirit
+could hold court. The throne of dark stone is intact and his spirit
+does occasionally choose to occupy it. Being in the presence of the
+spirit of the most successful ruler the Sith Empire ever produced
+requires considerable preparation.
+~
+#EXIT
+Direction west~
+ToRoom    33028
+#ENDEXIT
+
+Reset M 0 33000 1 33069
+Reset O 0 33002 1 33069
+Reset O 0 33006 1 33069
+#ENDROOM
+
+#ROOM
+Vnum     33070
+Name     The Academy — The Indoctrination Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     The first room every new acolyte is brought to upon arrival. The
+indoctrination delivered here establishes the fundamental framework
+of Sith philosophy that everything subsequent builds on. The room
+is designed to be disorienting — unusual geometry, lighting that
+creates false shadows, and acoustics that make the instructor's
+voice seem to come from everywhere simultaneously.
+~
+#EXIT
+Direction north~
+ToRoom    33033
+#ENDEXIT
+
+Reset M 0 33002 1 33070
+Reset M 0 33001 2 33070
+#ENDROOM
+
+#ROOM
+Vnum     33071
+Name     The Valley — Between the Tombs~
+Sector   field~
+Flags    ~
+Desc     A narrow passage between two tomb entrances in the valley wall,
+too small to be a designated route but worn smooth by use. The tomb
+walls on each side are close enough to touch simultaneously. The dark
+side energy of two great Sith Lords presses in from both sides and
+the combined effect in this narrow space is significant.
+~
+#EXIT
+Direction north~
+ToRoom    33015
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    33012
+#ENDEXIT
+
+Reset M 0 33007 2 33071
+#ENDROOM
+
+#ROOM
+Vnum     33072
+Name     The Wasteland — The Toxic Flats~
+Sector   field~
+Flags    ~
+Desc     A flat expanse of pale ground where chemical runoff from ancient
+Sith experiments has created a terrain hostile to most organic life.
+The ground is crusted and unstable in places and the fumes that rise
+from cracks in the surface are best not breathed for extended periods.
+The Korriban hounds avoid this area, which says something.
+~
+#EXIT
+Direction east~
+ToRoom    33004
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33052
+#ENDEXIT
+
+Reset M 0 33009 1 33072
+#ENDROOM
+
+#ROOM
+Vnum     33073
+Name     The Academy — The Punishment Block~
+Sector   inside~
+Flags    indoors dark~
+Desc     The Academy calls it the correction block. It is where acolytes who
+have demonstrated insufficient progress or obedience are sent. The
+environment is designed to be educational through discomfort. Very
+few acolytes are sent here twice and the ones that are tend to be
+notably more capable than their peers afterward.
+~
+#EXIT
+Direction north~
+ToRoom    33043
+#ENDEXIT
+
+Reset M 0 33002 1 33073
+Reset M 0 33001 1 33073
+#ENDROOM
+
+#ROOM
+Vnum     33074
+Name     The Cave System — The Bone Chamber~
+Sector   inside~
+Flags    indoors dark~
+Desc     A large natural chamber where generations of shyrack activity have
+accumulated an extraordinary quantity of remains. The floor is
+covered in bones to a depth that makes movement difficult and the
+shyrack presence above is constant. Dark side entities from the
+deeper cave are also attracted to this chamber and their influence
+is palpable here.
+~
+#EXIT
+Direction south~
+ToRoom    33046
+#ENDEXIT
+
+Reset M 0 33004 5 33074
+Reset M 0 33000 1 33074
+#ENDROOM
+
+#ROOM
+Vnum     33075
+Name     The Valley — The Meditation Alcoves~
+Sector   inside~
+Flags    indoors~
+Desc     A row of small alcoves carved into the valley wall between the major
+tomb entrances, sized for a single individual. These were used by
+Sith who came to the valley to draw on its dark side energy for
+meditation and power. The dark side energy in each alcove is focused
+and intense.
+~
+#EXIT
+Direction west~
+ToRoom    33015
+#ENDEXIT
+
+Reset M 0 33001 2 33075
+#ENDROOM
+
+#ROOM
+Vnum     33076
+Name     The Academy — The Research Wing~
+Sector   inside~
+Flags    indoors~
+Desc     A wing of the Academy dedicated to active research — the development
+of new dark side techniques, the study of Force phenomena, and the
+ongoing refinement of Sith alchemy. The research conducted here has
+contributed significantly to the Academy's reputation and its graduates
+are among the most innovative Force users in the galaxy.
+~
+#EXIT
+Direction south~
+ToRoom    33037
+#ENDEXIT
+
+Reset M 0 33002 1 33076
+Reset O 0 33005 1 33076
+#ENDROOM
+
+#ROOM
+Vnum     33077
+Name     The Wasteland — The Sith Marker Trail~
+Sector   field~
+Flags    ~
+Desc     A series of carved stone markers leads across the wasteland on a
+route the current maps no longer show. The markers are ancient Sith
+and the inscriptions give directions in a dialect requiring specialist
+knowledge to translate. Following the trail leads toward something
+that the maps have forgotten, which on Korriban is either significant
+or simply a place that killed everyone who went there.
+~
+#EXIT
+Direction north~
+ToRoom    33054
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    33056
+#ENDEXIT
+
+Reset M 0 33009 2 33077
+#ENDROOM
+
+#ROOM
+Vnum     33078
+Name     The Valley — The Tomb Robber's Camp~
+Sector   field~
+Flags    ~
+Desc     The remains of a camp set up by tomb robbers seeking the artefacts
+of the ancient Sith. They clearly had some success before their work
+came to an abrupt end — tools, containers, and partially filled packs
+are scattered around the site. The details of what ended the operation
+are not recoverable from what remains, which is itself informative.
+~
+#EXIT
+Direction south~
+ToRoom    33012
+#ENDEXIT
+
+Reset O 0 33005 1 33078
+#ENDROOM
+
+#ROOM
+Vnum     33079
+Name     The Academy — The Outer Wall Walk~
+Sector   field~
+Flags    ~
+Desc     The walkway along the top of the Academy's outer wall, used for
+perimeter patrol and for the panoramic view it provides of the valley
+and wastelands. From here the entirety of the Valley of the Dark Lords
+is visible. Academy guards patrol this walk with the alertness of
+personal survival instinct rather than institutional expectation.
+~
+#EXIT
+Direction south~
+ToRoom    33033
+#ENDEXIT
+
+Reset M 0 33001 2 33079
+#ENDROOM
+
+#ROOM
+Vnum     33080
+Name     The Valley — The Hall of Waiting~
+Sector   inside~
+Flags    indoors dark~
+Desc     A long hall carved into the valley wall between the major tombs, once
+used by those awaiting audience with a Sith Lord's spirit. The practice
+of petitioning tomb-bound spirits was common in the old Empire. The
+hall has not been used for that purpose in centuries but the waiting
+quality of the space remains.
+~
+#EXIT
+Direction north~
+ToRoom    33015
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    33012
+#ENDEXIT
+
+Reset M 0 33007 2 33080
+Reset M 0 33000 1 33080
+#ENDROOM
+
+#ROOM
+Vnum     33081
+Name     The Wasteland — The Western Reaches~
+Sector   field~
+Flags    ~
+Desc     The western edge of the Korriban wasteland where the flat terrain
+breaks into a series of low rocky ridges. The ridges provide reasonable
+concealment and have been used for that purpose by beings on Korriban
+for very different reasons over the centuries.
+~
+#EXIT
+Direction east~
+ToRoom    33008
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    33082
+#ENDEXIT
+
+Reset M 0 33009 3 33081
+#ENDROOM
+
+#ROOM
+Vnum     33082
+Name     The Wasteland — The Western Reaches Deep~
+Sector   field~
+Flags    ~
+Desc     Deep in the western reaches the rocky ridges become higher and the
+passages between them narrower. The dark side is present but thinner
+than in the valley — here it feels more like weather than presence.
+It is as close to a neutral space as Korriban offers.
+~
+#EXIT
+Direction north~
+ToRoom    33081
+#ENDEXIT
+
+Reset M 0 33009 2 33082
+#ENDROOM
+
+#ROOM
+Vnum     33083
+Name     The Cave System — The Collapsed Passage~
+Sector   inside~
+Flags    indoors dark~
+Desc     A passage in the cave system that has partially collapsed, reducing
+the available width to a gap that requires careful movement to navigate.
+Beyond the collapse the cave continues and the sounds from deeper suggest
+significant shyrack activity. The collapse looks recent by cave
+standards — within the last century or two — and something caused it
+that was not geological.
+~
+#EXIT
+Direction south~
+ToRoom    33045
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33046
+#ENDEXIT
+
+Reset M 0 33004 3 33083
+#ENDROOM
+
+#ROOM
+Vnum     33084
+Name     The Academy — The Senior Acolyte Quarters~
+Sector   inside~
+Flags    indoors~
+Desc     Senior acolytes — those who have survived long enough to be considered
+for elevation — are housed in slightly less Spartan conditions than
+their juniors. Individual rooms rather than open dormitories. The
+improvement is modest by any external standard and significant by
+Academy standards.
+~
+#EXIT
+Direction south~
+ToRoom    33043
+#ENDEXIT
+
+Reset M 0 33001 3 33084
+#ENDROOM
+
+#ROOM
+Vnum     33085
+Name     The Valley — The Eastern Path~
+Sector   field~
+Flags    ~
+Desc     A path along the eastern cliff face of the valley giving access to
+tomb entrances set higher in the cliff. The path is narrow in places
+and the drop to the valley floor below is significant. The tombs
+accessible from this path are among the oldest in the valley and
+some have not been entered in recorded history.
+~
+#EXIT
+Direction south~
+ToRoom    33012
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    33086
+#ENDEXIT
+
+Reset M 0 33007 2 33085
+#ENDROOM
+
+#ROOM
+Vnum     33086
+Name     The Valley — The Upper Tomb Tier~
+Sector   inside~
+Flags    indoors dark~
+Desc     The upper tier of tombs in the eastern cliff face, their entrances
+smaller and less grand than those below but their dark side presence
+no less significant. These are the tombs of Sith whose names have
+been lost to time. What they contain has not been catalogued.
+~
+#EXIT
+Direction south~
+ToRoom    33085
+#ENDEXIT
+
+Reset M 0 33000 2 33086
+Reset M 0 33007 2 33086
+Reset O 0 33005 1 33086
+Reset O 0 33007 1 33086
+#ENDROOM
+
+#ROOM
+Vnum     33087
+Name     The Academy — The Trophy Hall~
+Sector   inside~
+Flags    indoors~
+Desc     A hall displaying items taken from defeated enemies over the
+institution's history. The collection begins with items from the
+Great Hyperspace War and continues to the present day. The display
+philosophy is Sith — these are demonstrations of capability, not
+celebrations of history.
+~
+#EXIT
+Direction north~
+ToRoom    33034
+#ENDEXIT
+
+Reset O 0 33000 1 33087
+Reset O 0 33005 1 33087
+#ENDROOM
+
+#ROOM
+Vnum     33088
+Name     The Valley — The Bone Road~
+Sector   field~
+Flags    ~
+Desc     A section of the valley floor where the dark side has preserved the
+remains of those who entered the valley and did not leave, arranging
+them in a line that parallels the main path. Whether this arrangement
+is deliberate or an incidental product of the dark side energy is a
+question the Academy teaches acolytes to stop asking.
+~
+#EXIT
+Direction north~
+ToRoom    33015
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    33012
+#ENDEXIT
+
+Reset M 0 33007 2 33088
+#ENDROOM
+
+#ROOM
+Vnum     33089
+Name     The Cave System — The Echo Chamber~
+Sector   inside~
+Flags    indoors dark~
+Desc     A natural chamber with extraordinary acoustic properties — sounds made
+here are amplified and returned in sequences that do not match the
+geometry of the space. The Sith have used this property for specific
+rituals involving sound as a medium for dark side power.
+~
+#EXIT
+Direction west~
+ToRoom    33047
+#ENDEXIT
+
+Reset M 0 33004 2 33089
+#ENDROOM
+
+#ROOM
+Vnum     33090
+Name     The Wasteland — The Impact Crater~
+Sector   field~
+Flags    ~
+Desc     A large impact crater in the wasteland, its origin unclear. Too large
+for a meteorite, too precisely circular for geology. The Academy archive
+contains a single notation: source unknown, date unknown, avoid. The
+dark side energy at the crater's centre is stronger than anywhere else
+in the wasteland outside the valley.
+~
+#EXIT
+Direction west~
+ToRoom    33054
+#ENDEXIT
+
+Reset M 0 33000 2 33090
+Reset M 0 33009 2 33090
+#ENDROOM
+
+#ROOM
+Vnum     33091
+Name     The Valley — The Inscription Wall~
+Sector   field~
+Flags    ~
+Desc     A flat section of valley wall used as a writing surface by Sith over
+thousands of years. The inscriptions overlap in layers that a
+specialist could read as a chronological history of everyone who
+passed through the valley and felt moved to leave a record of it.
+~
+#EXIT
+Direction east~
+ToRoom    33012
+#ENDEXIT
+
+Reset M 0 33001 1 33091
+#ENDROOM
+
+#ROOM
+Vnum     33092
+Name     The Academy — The Comms Room~
+Sector   inside~
+Flags    indoors~
+Desc     The Academy's communications room handles contact with Sith operatives
+across the galaxy, coordinates with other Sith institutions, and
+monitors Republic and other communications of intelligence value.
+What passes through this room shapes what the Sith do next in ways
+that are rarely visible until afterward.
+~
+#EXIT
+Direction west~
+ToRoom    33039
+#ENDEXIT
+
+Reset M 0 33002 1 33092
+#ENDROOM
+
+#ROOM
+Vnum     33093
+Name     The Valley — The Dark Side Pool~
+Sector   inside~
+Flags    indoors dark~
+Desc     A natural pool of dark liquid in a chamber carved into the valley wall,
+accessible only through a narrow entrance. The dark side energy
+concentrated in the liquid is the most intense in the valley outside
+the individual tombs. Sith who have used it for ritual purposes
+describe the experience as definitive. Very few of them describe it twice.
+~
+#EXIT
+Direction east~
+ToRoom    33015
+#ENDEXIT
+
+Reset M 0 33000 2 33093
+Reset O 0 33003 1 33093
+#ENDROOM
+
+#ROOM
+Vnum     33094
+Name     The Wasteland — The Sith Outpost (Ruins)~
+Sector   field~
+Flags    ~
+Desc     The ruins of a Sith outpost that once served as a waystation between
+the valley and the spaceport. The walls are down to foundation level
+and most contents are unidentifiable. The foundations are Sith-worked
+stone, still solid, still resonant with a residual energy that has
+not dispersed in centuries.
+~
+#EXIT
+Direction north~
+ToRoom    33004
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    33002
+#ENDEXIT
+
+Reset M 0 33009 2 33094
+Reset O 0 33005 1 33094
+#ENDROOM
+
+#ROOM
+Vnum     33095
+Name     The Academy — The Garden of Thorns~
+Sector   field~
+Flags    ~
+Desc     The Academy has a garden. It grows plants used in alchemy and ritual,
+several of which are hazardous to handle without appropriate knowledge.
+The plants are cultivated with the same precision applied to everything
+else at the Academy and the Overseer responsible is regarded with a
+specific wariness by their colleagues.
+~
+#EXIT
+Direction north~
+ToRoom    33033
+#ENDEXIT
+
+Reset M 0 33002 1 33095
+#ENDROOM
+
+#ROOM
+Vnum     33096
+Name     The Valley — The Ritual Circle~
+Sector   field~
+Flags    ~
+Desc     A circle of dark stone set into the valley floor, its surface covered
+in carved runes of power and binding. This circle has been in continuous
+ritual use for longer than any other site in the valley outside the
+tombs. The dark side energy accumulated through use is staggering —
+standing within it requires considerable Force sensitivity to survive
+comfortably.
+~
+#EXIT
+Direction north~
+ToRoom    33020
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    33015
+#ENDEXIT
+
+Reset M 0 33000 3 33096
+#ENDROOM
+
+#ROOM
+Vnum     33097
+Name     The Academy — The Observation Tower~
+Sector   inside~
+Flags    indoors~
+Desc     A tower above the Academy main building giving a comprehensive view
+of the valley, the wastelands, and the spaceport approach. Used for
+security observation, astronomical study relevant to Sith ritual
+timing, and watching what happens in the valley below — which on
+any given day includes things worth monitoring.
+~
+#EXIT
+Direction down~
+ToRoom    33034
+#ENDEXIT
+
+Reset M 0 33002 1 33097
+#ENDROOM
+
+#ROOM
+Vnum     33098
+Name     The Korriban Wastes — The Southern Flats~
+Sector   field~
+Flags    ~
+Desc     The flat southern reaches of the Korriban wastelands, between the
+spaceport road and the more broken terrain further out. The dark side
+is present at its lowest ambient level here — a background condition
+rather than a force.
+~
+#EXIT
+Direction north~
+ToRoom    33004
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    33002
+#ENDEXIT
+
+Reset M 0 33009 2 33098
+#ENDROOM
+
+#ROOM
+Vnum     33099
+Name     The Valley — The Viewpoint~
+Sector   field~
+Flags    ~
+Desc     A natural rocky platform at the valley entrance providing a view back
+toward the spaceport and Dreshdae. From here the contrast between the
+mundane infrastructure of the occupied planet and the ancient weight
+of the valley behind you is most clearly felt. The dark side at your
+back and the functioning present ahead. Korriban in summary.
+~
+#EXIT
+Direction north~
+ToRoom    33010
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    33005
+#ENDEXIT
+
+Reset M 0 33009 1 33099
+#ENDROOM
+
+#ENDAREA

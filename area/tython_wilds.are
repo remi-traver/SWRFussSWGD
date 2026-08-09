@@ -1,0 +1,1796 @@
+#FUSSAREA
+#AREADATA
+Version      1
+Name         The Tython Wilds~
+Author       SWR FUSS~
+Ranges       5 95 5 95
+Economy      0 0
+ResetMsg     Wind moves across the highland grass, and the trails are empty again.~
+ResetFreq    15
+Flags        ~
+#ENDAREADATA
+
+#MOBILE
+Vnum       40900
+Keywords   screech lizard lizard~
+Short      a screech lizard~
+Long       A mottled lizard the length of a forearm freezes on a rock, watching you sideways.
+~
+Desc       Screech lizards take their name from the extraordinary volume they
+produce when alarmed, which is out of all proportion to their size and
+is generally the first warning a traveller gets that anything else is
+nearby.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     neuter~
+Actflags   npc~
+Affected   ~
+Stats1     0 8 -2 -4 0 384
+Stats2     2 8 20
+Stats3     1 4 2
+Stats4     61 124 1 4 4
+Attribs    11 3 3 11 11 3 10 5
+Saves      -2 -2 -2 -2 -2
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40901
+Keywords   ak forager forager je'daii~
+Short      an ak-wood forager~
+Long       A forager works along the treeline, cutting straight poles from the coppiced stools.
+~
+Desc       One of the lay workers who keep the Temples supplied, this forager
+knows the central highlands better than most Je'daii Masters and is
+entirely unimpressed by robes.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     female~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 12 -4 -6 0 864
+Stats2     3 8 40
+Stats3     1 6 3
+Stats4     61 136 1 6 6
+Attribs    10 12 12 11 11 12 13 12
+Saves      -4 -4 -4 -4 -4
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40902
+Keywords   pilgrim wandering traveller~
+Short      a wandering pilgrim~
+Long       A pilgrim sits at the roadside, boots off, considering the distance still to go.
+~
+Desc       Pilgrims walk between all nine Temples on foot as a matter of
+discipline. This one has been walking for some months and has the
+calm, slightly vacant look of someone a long way into the practice.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     male~
+Actflags   npc~
+Affected   ~
+Stats1     0 15 -5 -7 0 1350
+Stats2     4 8 50
+Stats3     1 6 4
+Stats4     61 145 1 7 7
+Attribs    10 12 12 11 11 12 13 12
+Saves      -5 -5 -5 -5 -5
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40903
+Keywords   guid guids hoofed~
+Short      a guid~
+Long       A heavy hoofed quadruped crops the grass here, one eye always on you.
+~
+Desc       Guids graze the meadows around Kaleth in loose herds. They are not
+aggressive by nature, but a cornered guid will use its forelegs and
+its jaws with alarming commitment.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     neuter~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 22 -7 -11 0 2904
+Stats2     6 8 120
+Stats3     2 6 8
+Stats4     62 166 1 11 11
+Attribs    13 3 3 13 13 3 10 5
+Saves      -7 -7 -7 -7 -7
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40904
+Keywords   gelfish gel fish tentacled~
+Short      a gelfish~
+Long       A translucent, tentacled shape hauls itself up the pier stones, dripping.
+~
+Desc       Gelfish of the Moon Channel drift in flocks and climb whatever they
+touch. The tentacles carry a contact poison that raises welts within
+seconds.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     neuter~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     -300 30 -10 -15 0 5400
+Stats2     8 8 160
+Stats3     2 8 10
+Stats4     63 190 2 15 15
+Attribs    15 3 3 15 15 3 10 5
+Saves      -10 -10 -10 -10 -10
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40905
+Keywords   acid spider spider~
+Short      an acid spider~
+Long       An acid spider hangs motionless in a web strung between two dead trunks.
+~
+Desc       The spider's abdomen is swollen with a clear fluid that pits stone
+where it falls. It waits with the total patience of something that has
+never needed to hurry.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     neuter~
+Actflags   npc sentinel aggressive~
+Affected   ~
+Stats1     -500 35 -11 -17 0 7350
+Stats2     10 8 200
+Stats3     3 6 12
+Stats4     64 205 2 17 17
+Attribs    15 3 3 15 15 3 10 5
+Saves      -11 -11 -11 -11 -11
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40906
+Keywords   blood spite spites bat~
+Short      a blood spite~
+Long       A leathery, bat-winged thing drops out of the shadows and circles.
+~
+Desc       The Je'daii of the Red Desert insist blood spites are a story told to
+keep initiates in at night. The initiates who have been bitten
+disagree.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     neuter~
+Actflags   npc aggressive~
+Affected   ~
+Stats1     -600 40 -13 -20 0 9600
+Stats2     11 8 230
+Stats3     3 6 14
+Stats4     65 220 2 20 20
+Attribs    16 4 4 16 16 3 10 5
+Saves      -13 -13 -13 -13 -13
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40907
+Keywords   je'daii journeyman jedaii~
+Short      a Je'daii journeyman~
+Long       A journeyman in dust-grey robes walks the trail, staff in hand.
+~
+Desc       Journeymen are sent out from the Temples to walk Tython alone for a
+year. This one has the weathered, self-contained look of someone most
+of the way through that year.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     female~
+Actflags   npc~
+Affected   ~
+Stats1     0 40 -13 -20 0 9600
+Stats2     11 8 240
+Stats3     3 6 14
+Stats4     65 220 2 20 20
+Attribs    13 15 15 14 14 14 13 12
+Saves      -13 -13 -13 -13 -13
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40908
+Keywords   hook hawk hawk~
+Short      a hook hawk~
+Long       A hook hawk turns overhead, singing a low three-note phrase.
+~
+Desc       Hook hawks hunt by song, holding their prey in a kind of listening
+stillness until the talons arrive. Travellers are advised to keep
+talking.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     neuter~
+Actflags   npc aggressive~
+Affected   ~
+Stats1     -400 45 -15 -22 0 12150
+Stats2     12 8 270
+Stats3     3 8 16
+Stats4     65 235 2 22 22
+Attribs    17 4 4 17 17 3 10 5
+Saves      -15 -15 -15 -15 -15
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40909
+Keywords   uxibeast uxi beast~
+Short      an uxibeast~
+Long       A shaggy uxibeast blocks the trace, chewing, and does not intend to move.
+~
+Desc       Uxibeasts are herbivores, ill-tempered, and considerably faster over
+short distances than their bulk suggests. Herds of them have reshaped
+the highland trails simply by preferring different ones.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     male~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     -200 50 -16 -25 0 15000
+Stats2     14 8 320
+Stats3     4 6 18
+Stats4     66 250 2 25 25
+Attribs    18 4 4 18 18 3 10 5
+Saves      -16 -16 -16 -16 -16
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40910
+Keywords   manka cat cat feline~
+Short      a manka cat~
+Long       A manka cat watches from the long grass, only the ears showing.
+~
+Desc       Brought to Tython from Alderaan generations ago and thriving since,
+manka cats have found the highland grassland entirely to their liking
+and the local prey insufficiently cautious.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     female~
+Actflags   npc aggressive~
+Affected   ~
+Stats1     -500 55 -18 -27 0 18150
+Stats2     15 8 350
+Stats3     4 6 20
+Stats4     66 265 2 27 27
+Attribs    19 4 4 19 19 3 10 5
+Saves      -18 -18 -18 -18 -18
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40911
+Keywords   je'daii ranger ranger jedaii~
+Short      a Je'daii ranger~
+Long       A ranger stands at the trailside, bow unstrung, watching the treeline.
+~
+Desc       The rangers keep the trails between Temples passable and the more
+enthusiastic wildlife away from them. They are not Masters and do not
+want to be.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     male~
+Actflags   npc sentinel~
+Affected   ~
+Stats1     0 60 -20 -30 0 21600
+Stats2     16 8 400
+Stats3     4 8 22
+Stats4     67 280 2 30 30
+Attribs    15 17 17 16 16 16 13 12
+Saves      -20 -20 -20 -20 -20
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40912
+Keywords   horranth reptilian predator~
+Short      a horranth~
+Long       A horranth crouches low, and three more move in the grass behind it.
+~
+Desc       Horranth hunt in family groups and breed faster than the food supply
+can usually support, which makes them both numerous and permanently
+hungry.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     neuter~
+Actflags   npc aggressive~
+Affected   ~
+Stats1     -700 62 -20 -31 0 23064
+Stats2     17 8 430
+Stats3     5 6 24
+Stats4     67 286 2 31 31
+Attribs    20 5 5 20 20 4 10 5
+Saves      -20 -20 -20 -20 -20
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40913
+Keywords   horranth broodmother brood mother~
+Short      a horranth broodmother~
+Long       An enormous horranth rises from a nest of packed grass, jaws already open.
+~
+Desc       The broodmother does not hunt. She waits at the centre of the family's
+range and deals with whatever the others drive toward her.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     female~
+Actflags   npc sentinel aggressive~
+Affected   ~
+Stats1     -900 70 -23 -35 0 29400
+Stats2     19 8 520
+Stats3     5 8 28
+Stats4     68 310 3 35 35
+Attribs    21 5 5 21 21 4 10 5
+Saves      -23 -23 -23 -23 -23
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40914
+Keywords   silik lizard silicon~
+Short      a silik lizard~
+Long       A spined lizard the size of a man rears onto its hind legs, sand streaming off it.
+~
+Desc       Silik lizards are silicon-based and draw their energy directly out of
+hot sand. Six-limbed, heavily spiked, and inclined to charge, they are
+the reason the Silent Desert is crossed at night.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     neuter~
+Actflags   npc sentinel aggressive~
+Affected   ~
+Stats1     -800 75 -25 -37 0 33750
+Stats2     21 8 600
+Stats3     6 6 32
+Stats4     69 325 3 37 37
+Attribs    22 5 5 22 22 4 10 5
+Saves      -25 -25 -25 -25 -25
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40915
+Keywords   flame tygah tygah reptilian~
+Short      a flame tygah~
+Long       A flame tygah pads out of the ash, fire dripping steadily from its claws.
+~
+Desc       Twice the size of a man and eight-limbed, the tygah leaves burning
+prints across the Strafe Plains. Its mouth blazes when it opens, which
+it does shortly before it is close enough to matter.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     neuter~
+Actflags   npc sentinel aggressive~
+Affected   ~
+Stats1     -1000 85 -28 -42 0 43350
+Stats2     24 8 720
+Stats3     7 6 38
+Stats4     70 355 3 42 42
+Attribs    24 6 6 24 24 4 10 5
+Saves      -28 -28 -28 -28 -28
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40916
+Keywords   serpent sea moon channel~
+Short      a Moon Channel serpent~
+Long       A head the size of a man's torso breaks the flat water and turns toward the pier.
+~
+Desc       The serpents of the Moon Channel are rarely seen and never twice by
+the same person, according to a Je'daii saying that is only partly a
+joke. The teeth secrete a poison that does not need the bite to be
+deep.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     neuter~
+Actflags   npc sentinel aggressive~
+Affected   ~
+Stats1     -1000 90 -30 -45 0 48600
+Stats2     26 8 820
+Stats3     7 8 42
+Stats4     71 370 3 45 45
+Attribs    25 6 6 25 25 5 10 5
+Saves      -30 -30 -30 -30 -30
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#MOBILE
+Vnum       40917
+Keywords   saarl worm purple~
+Short      a saarl~
+Long       The ground splits and a vast purple worm rises, its maw opening in three petals.
+~
+Desc       Saarl come up out of the Rift. The mouth opens like a flower and
+closes like a trap, and nothing recorded in the Temple archives has
+ever survived being inside it when it did.
+~
+Race       Human~
+Position   standing~
+DefPos     standing~
+Gender     neuter~
+Actflags   npc sentinel aggressive~
+Affected   ~
+Stats1     -1000 95 -31 -47 0 54150
+Stats2     28 8 950
+Stats3     8 8 48
+Stats4     71 385 3 47 47
+Attribs    25 6 6 25 25 5 10 5
+Saves      -31 -31 -31 -31 -31
+Speaks     common~
+Speaking   common~
+VIPFlags   tython~
+Immune     ~
+#ENDMOBILE
+
+#OBJECT
+Vnum       40900
+Keywords   hide lizard screech~
+Type       trash~
+Short      a screech lizard hide~
+Long       A mottled lizard hide has been left drying on a stone here.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 3 0 0 0
+#ENDOBJECT
+
+#OBJECT
+Vnum       40901
+Keywords   branch ak wood~
+Type       trash~
+Short      a length of ak wood~
+Long       A straight pale length of ak wood lies at the trailside.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      2 6 0 0 0
+#ENDOBJECT
+
+#OBJECT
+Vnum       40902
+Keywords   talon hook hawk~
+Type       trash~
+Short      a hook hawk talon~
+Long       A curved black talon as long as a finger lies in the grass.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 1 0 0 0
+#ENDOBJECT
+
+#OBJECT
+Vnum       40903
+Keywords   sac venom acid spider~
+Type       trash~
+Short      an acid spider's venom sac~
+Long       A translucent sac of clear fluid pits the stone slowly beneath it.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 2 0 0 0
+#ENDOBJECT
+
+#OBJECT
+Vnum       40904
+Keywords   spine silik lizard~
+Type       trash~
+Short      a silik spine~
+Long       A glassy spine, still faintly warm, is half buried in the sand.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 2 0 0 0
+#ENDOBJECT
+
+#OBJECT
+Vnum       40905
+Keywords   rations bundle ranger~
+Type       trash~
+Short      a bundle of ranger's rations~
+Long       A tied bundle of dried rations has been cached here.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      2 4 0 0 0
+#ENDOBJECT
+
+#OBJECT
+Vnum       40906
+Keywords   stone wayfinder je'daii marker~
+Type       trash~
+Short      a Je'daii wayfinder stone~
+Long       A palm-sized stone carved with a directional glyph rests on the cairn.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 2 0 0 0
+#ENDOBJECT
+
+#OBJECT
+Vnum       40907
+Keywords   horn uxibeast~
+Type       trash~
+Short      a shed uxibeast horn~
+Long       A heavy shed horn lies where the herd passed.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      3 12 0 0 0
+#ENDOBJECT
+
+#OBJECT
+Vnum       40908
+Keywords   pelt manka cat~
+Type       trash~
+Short      a manka cat pelt~
+Long       A spotted pelt has been pegged out to cure here.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      2 8 0 0 0
+#ENDOBJECT
+
+#OBJECT
+Vnum       40909
+Keywords   claw flame tygah~
+Type       trash~
+Short      a flame tygah's claw~
+Long       A blackened claw sits in a ring of fused sand.~
+Flags      ~
+WFlags     take~
+Values     0 0 0 0 0
+Stats      1 3 0 0 0
+#ENDOBJECT
+
+#ROOM
+Vnum     40900
+Name     Tythos Ridge Crossroads~
+Sector   field~
+Flags    ~
+Desc     Nine trails meet on this broad, grassy saddle between two low hills,
+worn into the turf by centuries of Je'daii feet and never once paved.
+From here the whole of the central highlands opens out: pale grassland
+running north toward the ruins, dark ak forest crowding the east, and
+the ground falling away south into haze. A weathered marker stone
+leans at the centre, its carved directions long since softened past
+reading.
+~
+#EXIT
+Direction north~
+ToRoom    40902
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40905
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40907
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40904
+#ENDEXIT
+#EXIT
+Direction northeast~
+ToRoom    40903
+#ENDEXIT
+#EXIT
+Direction northwest~
+ToRoom    40901
+#ENDEXIT
+#EXIT
+Direction southeast~
+ToRoom    40908
+#ENDEXIT
+#EXIT
+Direction southwest~
+ToRoom    40906
+#ENDEXIT
+
+Reset M 0 40902 2 40900
+Reset O 0 40906 1 40900
+#ENDROOM
+
+#ROOM
+Vnum     40901
+Name     Windflower Rise~
+Sector   field~
+Flags    ~
+Desc     The grass thins on this rise to let bare rock show through, streaked
+with the small white flowers that open only in Tython's short
+mornings. The wind comes hard and constant off the northwestern peaks,
+carrying the cold of snowfields that never quite melt.
+~
+#EXIT
+Direction east~
+ToRoom    40902
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40904
+#ENDEXIT
+#EXIT
+Direction northwest~
+ToRoom    40913
+#ENDEXIT
+#EXIT
+Direction southeast~
+ToRoom    40900
+#ENDEXIT
+
+Reset M 0 40911 2 40901
+#ENDROOM
+
+#ROOM
+Vnum     40902
+Name     The Long Approach~
+Sector   field~
+Flags    ~
+Desc     The grassland runs level and unbroken here, deep enough in places to
+hide a crouching figure and loud with insects. Far to the north, low
+shapes on the horizon resolve slowly into walls that were old before
+the Temples were raised.
+~
+#EXIT
+Direction north~
+ToRoom    40910
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40903
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40900
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40901
+#ENDEXIT
+
+Reset M 0 40903 3 40902
+#ENDROOM
+
+#ROOM
+Vnum     40903
+Name     Terrace Foot~
+Sector   hills~
+Flags    ~
+Desc     The land begins to step upward here in long shallow terraces, each one
+banked with stone so weathered it might be natural. Whoever cut them
+is not recorded; the Je'daii simply inherited them and planted grain.
+~
+#EXIT
+Direction south~
+ToRoom    40905
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40902
+#ENDEXIT
+#EXIT
+Direction northeast~
+ToRoom    40942
+#ENDEXIT
+#EXIT
+Direction southwest~
+ToRoom    40900
+#ENDEXIT
+
+Reset O 0 40900 1 40903
+#ENDROOM
+
+#ROOM
+Vnum     40904
+Name     Sunward Grass~
+Sector   field~
+Flags    ~
+Desc     Warm, open, and gently sloping, this stretch of grassland catches the
+light for most of the day. Wildflowers grow thick between the
+tussocks, and the air smells of dry seed heads and crushed stems.
+~
+#EXIT
+Direction north~
+ToRoom    40901
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40900
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40906
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40917
+#ENDEXIT
+
+Reset M 0 40909 3 40904
+#ENDROOM
+
+#ROOM
+Vnum     40905
+Name     Ak Grove Verge~
+Sector   forest~
+Flags    ~
+Desc     The grassland ends abruptly at a wall of ak trees, their trunks pale
+as bone and their crowns so dense the shade beneath is almost blue. A
+footpath slips between two of the larger trunks and disappears.
+~
+#EXIT
+Direction north~
+ToRoom    40903
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40937
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40908
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40900
+#ENDEXIT
+
+Reset M 0 40908 3 40905
+Reset O 0 40901 1 40905
+#ENDROOM
+
+#ROOM
+Vnum     40906
+Name     Cairnfield~
+Sector   field~
+Flags    ~
+Desc     Hundreds of small stone cairns stand in the grass here, none higher
+than a knee, arranged in no pattern that reveals itself from ground
+level. Je'daii passing through have added to them for so long that the
+practice has outlived its explanation.
+~
+#EXIT
+Direction north~
+ToRoom    40904
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40907
+#ENDEXIT
+#EXIT
+Direction northeast~
+ToRoom    40900
+#ENDEXIT
+#EXIT
+Direction southwest~
+ToRoom    40922
+#ENDEXIT
+
+Reset M 0 40910 2 40906
+Reset O 0 40906 1 40906
+#ENDROOM
+
+#ROOM
+Vnum     40907
+Name     The Sunken Road~
+Sector   field~
+Flags    ~
+Desc     Long use has worn this stretch of trail a full pace below the
+surrounding grassland, so that the turf stands at shoulder height on
+either side and the sky narrows to a strip. It is cool down here, and
+very quiet.
+~
+#EXIT
+Direction north~
+ToRoom    40900
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40908
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40909
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40906
+#ENDEXIT
+
+Reset M 0 40907 2 40907
+#ENDROOM
+
+#ROOM
+Vnum     40908
+Name     Thornbrake~
+Sector   forest~
+Flags    ~
+Desc     Low thorn scrub chokes the ground between widely spaced ak trees,
+forcing the path into a winding, grudging line. The thorns catch at
+cloth with a persistence that feels close to deliberate.
+~
+#EXIT
+Direction north~
+ToRoom    40905
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40907
+#ENDEXIT
+#EXIT
+Direction northwest~
+ToRoom    40900
+#ENDEXIT
+#EXIT
+Direction southeast~
+ToRoom    40932
+#ENDEXIT
+
+Reset M 0 40908 3 40908
+Reset O 0 40902 1 40908
+#ENDROOM
+
+#ROOM
+Vnum     40909
+Name     Grey Heath~
+Sector   field~
+Flags    ~
+Desc     The grass gives way to a low grey-green heather that crunches
+underfoot and releases a sharp resinous smell. The ground ahead falls
+steadily southward toward a line of broken cloud that never seems to
+move.
+~
+#EXIT
+Direction north~
+ToRoom    40907
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40927
+#ENDEXIT
+
+Reset M 0 40910 2 40909
+#ENDROOM
+
+#ROOM
+Vnum     40910
+Name     Threshing Meadow~
+Sector   field~
+Flags    ~
+Desc     Someone still farms here. The grass is cut in long regular swathes and
+stacked into drying stooks, though no farmhouse stands within sight
+and no one is ever working when a traveller passes.
+~
+#EXIT
+Direction north~
+ToRoom    40911
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40902
+#ENDEXIT
+
+Reset M 0 40901 2 40910
+Reset M 0 40903 3 40910
+#ENDROOM
+
+#ROOM
+Vnum     40911
+Name     The Fallen Avenue~
+Sector   field~
+Flags    ~
+Desc     Two rows of toppled pillars run north through the grass, spaced as
+regularly as trees along a boulevard. Grass has grown over most of
+them; only the shoulders of the stones still break the surface.
+~
+#EXIT
+Direction north~
+ToRoom    40912
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40910
+#ENDEXIT
+
+Reset M 0 40903 3 40911
+#ENDROOM
+
+#ROOM
+Vnum     40912
+Name     The Broken Ringwall~
+Sector   hills~
+Flags    ~
+Desc     A curtain wall of dressed grey stone curves away east and west from
+this gap, standing three times the height of a man where it survives
+and reduced to a grassy bank where it does not. Beyond it, the ruined
+spires of Kaleth rise against the northern sky.
+~
+#EXIT
+Direction north~
+ToRoom    40301
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40911
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40913
+Name     Uxi Trace~
+Sector   field~
+Flags    ~
+Desc     A broad trampled corridor runs through the grass here, churned to mud
+in the low places by something heavy and hooved travelling in numbers.
+The verges are stripped bare to the root.
+~
+#EXIT
+Direction north~
+ToRoom    40914
+#ENDEXIT
+#EXIT
+Direction southeast~
+ToRoom    40901
+#ENDEXIT
+
+Reset M 0 40903 3 40913
+Reset M 0 40909 3 40913
+Reset O 0 40907 1 40913
+#ENDROOM
+
+#ROOM
+Vnum     40914
+Name     Boulder Field~
+Sector   hills~
+Flags    ~
+Desc     Ice-split boulders lie scattered across the slope, some the size of
+small buildings, and the path threads between them without any
+pretence of directness. Wind moans in the gaps.
+~
+#EXIT
+Direction north~
+ToRoom    40915
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40913
+#ENDEXIT
+
+Reset M 0 40909 3 40914
+#ENDROOM
+
+#ROOM
+Vnum     40915
+Name     The Cold Stair~
+Sector   mountain~
+Flags    ~
+Desc     The trail becomes a stair here, cut into the mountainside in shallow
+risers worn concave by generations of climbing initiates. Frost
+survives in the shadow of every step, even at midday.
+~
+#EXIT
+Direction north~
+ToRoom    40916
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40914
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40916
+Name     Trialsgate Shelf~
+Sector   mountain~
+Flags    ~
+Desc     The stair opens onto a narrow shelf of rock with a very long drop on
+one side and the sheer face of the mountain on the other. Above and
+north, the walls of Padawan Kesh grow straight out of the cliff as
+though the two were never separate.
+~
+#EXIT
+Direction north~
+ToRoom    40001
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40915
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40917
+Name     Westering Track~
+Sector   field~
+Flags    ~
+Desc     The trail runs dead straight west across open grassland, raised
+slightly on a causeway of packed earth. It is the fastest walking on
+Tython and the most exposed.
+~
+#EXIT
+Direction east~
+ToRoom    40904
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40918
+#ENDEXIT
+
+Reset M 0 40902 2 40917
+Reset O 0 40905 1 40917
+#ENDROOM
+
+#ROOM
+Vnum     40918
+Name     Ak Coppice~
+Sector   forest~
+Flags    ~
+Desc     A stand of young ak trees has been coppiced here, cut back repeatedly
+to the stool so that each stump throws up a crown of straight pale
+poles. The Je'daii take staves from this wood.
+~
+#EXIT
+Direction east~
+ToRoom    40917
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40919
+#ENDEXIT
+
+Reset M 0 40901 2 40918
+Reset O 0 40901 1 40918
+#ENDROOM
+
+#ROOM
+Vnum     40919
+Name     Frost Meadow~
+Sector   field~
+Flags    ~
+Desc     The grass here holds frost until well after noon, silvering the whole
+meadow in a way that looks like standing water from a distance. Breath
+fogs even in summer.
+~
+#EXIT
+Direction east~
+ToRoom    40918
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40920
+#ENDEXIT
+
+Reset M 0 40910 2 40919
+#ENDROOM
+
+#ROOM
+Vnum     40920
+Name     Cloudburst Foot~
+Sector   hills~
+Flags    ~
+Desc     The Cloudburst Mountains begin without warning, the grassland simply
+running up against a rampart of grey rock and stopping. A single
+switchback path climbs northward into the cloud that gives the range
+its name.
+~
+#EXIT
+Direction north~
+ToRoom    40921
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40919
+#ENDEXIT
+
+Reset M 0 40911 2 40920
+Reset O 0 40908 1 40920
+#ENDROOM
+
+#ROOM
+Vnum     40921
+Name     The White Corridor~
+Sector   mountain~
+Flags    ~
+Desc     Snow lies packed hard between two walls of rock here, blue in the
+depths of the drifts and blinding where the sun reaches it. Somewhere
+north and above, bells are ringing in the cold.
+~
+#EXIT
+Direction north~
+ToRoom    40501
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40920
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40922
+Name     Ashfall Grass~
+Sector   field~
+Flags    ~
+Desc     Fine grey ash has settled over the grassland here, dulling every
+colour and lifting in slow clouds at each footfall. It tastes faintly
+of metal.
+~
+#EXIT
+Direction south~
+ToRoom    40923
+#ENDEXIT
+#EXIT
+Direction northeast~
+ToRoom    40906
+#ENDEXIT
+
+Reset M 0 40915 2 40922
+#ENDROOM
+
+#ROOM
+Vnum     40923
+Name     The Dead Wood~
+Sector   forest~
+Flags    ~
+Desc     The ak trees here are long dead, standing bark-stripped and grey with
+their branches still reaching. Nothing has fallen; there is not enough
+rot in this air to bring anything down.
+~
+#EXIT
+Direction north~
+ToRoom    40922
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40924
+#ENDEXIT
+
+Reset M 0 40905 2 40923
+Reset O 0 40903 1 40923
+#ENDROOM
+
+#ROOM
+Vnum     40924
+Name     Cinder Flats~
+Sector   field~
+Flags    ~
+Desc     Black volcanic grit covers the ground in place of soil, crunching and
+shifting underfoot. Heat comes up through the soles of the boots,
+steady and patient.
+~
+#EXIT
+Direction north~
+ToRoom    40923
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40925
+#ENDEXIT
+
+Reset M 0 40915 2 40924
+Reset O 0 40909 1 40924
+#ENDROOM
+
+#ROOM
+Vnum     40925
+Name     The Slag Road~
+Sector   hills~
+Flags    ~
+Desc     A road of poured and cooled slag runs west along the valley floor,
+glassy black and treacherously smooth. It was built for hauling ore,
+and the ruts of the sledges are still visible.
+~
+#EXIT
+Direction east~
+ToRoom    40924
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40926
+#ENDEXIT
+
+Reset M 0 40915 2 40925
+#ENDROOM
+
+#ROOM
+Vnum     40926
+Name     Forgemouth~
+Sector   hills~
+Flags    ~
+Desc     The air shimmers. North of here the ground opens into the caldera that
+houses Vur Tepe, and the hammering carries up out of it in a slow,
+unhurried rhythm that never entirely stops.
+~
+#EXIT
+Direction north~
+ToRoom    40101
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40925
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40927
+Name     The Bending Grass~
+Sector   field~
+Flags    ~
+Desc     The grass here grows in a permanent southward lean, as though
+something beyond the horizon has been pulling at it for a very long
+time. Straightened by hand, a stem will bend back within the hour.
+~
+#EXIT
+Direction north~
+ToRoom    40909
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40928
+#ENDEXIT
+
+Reset M 0 40907 2 40927
+#ENDROOM
+
+#ROOM
+Vnum     40928
+Name     Silent Wood~
+Sector   forest~
+Flags    ~
+Desc     Ak trees crowd close on both sides of the path, and there is no
+birdsong at all. The silence is not empty; it has the quality of a
+held breath.
+~
+#EXIT
+Direction north~
+ToRoom    40927
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40929
+#ENDEXIT
+
+Reset M 0 40905 2 40928
+Reset M 0 40912 4 40928
+#ENDROOM
+
+#ROOM
+Vnum     40929
+Name     The Leaning Stones~
+Sector   forest~
+Flags    ~
+Desc     A dozen standing stones tilt at increasing angles the further south
+they stand, the last of them almost flat. Whatever foundation they
+were set in has been drawn slowly out from under them.
+~
+#EXIT
+Direction north~
+ToRoom    40928
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40930
+#ENDEXIT
+
+Reset M 0 40906 2 40929
+#ENDROOM
+
+#ROOM
+Vnum     40930
+Name     Chasm Verge~
+Sector   hills~
+Flags    ~
+Desc     The forest stops at a raw edge of rock. Beyond it the ground is simply
+absent, and the far side of the Chasm is a pale line so distant it
+might be weather. Warm air rises steadily out of the gap.
+~
+#EXIT
+Direction east~
+ToRoom    40929
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40931
+#ENDEXIT
+
+Reset M 0 40906 2 40930
+Reset M 0 40917 1 40930
+#ENDROOM
+
+#ROOM
+Vnum     40931
+Name     The Span Anchor~
+Sector   hills~
+Flags    ~
+Desc     Great cables of dark alloy rise out of the bedrock here and stretch
+north across the Chasm toward the impossible silhouette of Anil Kesh,
+which hangs over the drop supported by nothing that can be seen from
+this side.
+~
+#EXIT
+Direction north~
+ToRoom    40201
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40930
+#ENDEXIT
+
+Reset M 0 40917 1 40931
+#ENDROOM
+
+#ROOM
+Vnum     40932
+Name     Sparse Wood~
+Sector   forest~
+Flags    ~
+Desc     The ak trees thin and shrink as the path runs southeast, their crowns
+ragged and their roots increasingly exposed above the drifting soil.
+~
+#EXIT
+Direction south~
+ToRoom    40933
+#ENDEXIT
+#EXIT
+Direction northwest~
+ToRoom    40908
+#ENDEXIT
+
+Reset M 0 40905 2 40932
+#ENDROOM
+
+#ROOM
+Vnum     40933
+Name     The Grass Edge~
+Sector   field~
+Flags    ~
+Desc     This is the last of the grassland. It survives in coarse tufts
+anchored in sand, each one holding a small mound of soil against the
+wind that is patiently removing everything else.
+~
+#EXIT
+Direction north~
+ToRoom    40932
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40934
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40934
+Name     Rippled Sand~
+Sector   desert~
+Flags    ~
+Desc     Wind-carved ridges of red sand run in long parallel lines to the
+horizon, each crest sharp enough to cast a shadow. Walking across them
+is far harder than walking along them.
+~
+#EXIT
+Direction north~
+ToRoom    40933
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    40935
+#ENDEXIT
+
+Reset M 0 40906 2 40934
+Reset M 0 40914 2 40934
+#ENDROOM
+
+#ROOM
+Vnum     40935
+Name     The Singing Dunes~
+Sector   desert~
+Flags    ~
+Desc     Sand slides constantly down the lee faces of these dunes, and the
+friction of it produces a low sustained note that rises and falls
+without ever stopping. Qigong Kesh is said to have been sited here for
+the sound.
+~
+#EXIT
+Direction east~
+ToRoom    40936
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40934
+#ENDEXIT
+
+Reset M 0 40914 2 40935
+#ENDROOM
+
+#ROOM
+Vnum     40936
+Name     Windward Pan~
+Sector   desert~
+Flags    ~
+Desc     A flat pan of hard-baked clay stretches out below the dunes, swept
+clean by the wind and marked only by the landing scars of small craft.
+The Temple's walls stand north across the pan.
+~
+#EXIT
+Direction north~
+ToRoom    40401
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40935
+#ENDEXIT
+
+Reset M 0 40914 2 40936
+Reset O 0 40904 1 40936
+#ENDROOM
+
+#ROOM
+Vnum     40937
+Name     The Green Tunnel~
+Sector   forest~
+Flags    ~
+Desc     The ak canopy closes completely overhead, and the path runs east
+through a long green tunnel of leaves where the light arrives already
+coloured. Sound does not carry far in here.
+~
+#EXIT
+Direction east~
+ToRoom    40938
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40905
+#ENDEXIT
+
+Reset M 0 40902 2 40937
+Reset M 0 40908 3 40937
+#ENDROOM
+
+#ROOM
+Vnum     40938
+Name     Fern Hollow~
+Sector   forest~
+Flags    ~
+Desc     The ground dips into a bowl filled shoulder-high with ferns, which
+have to be waded rather than walked. Somewhere underneath them, water
+is running.
+~
+#EXIT
+Direction east~
+ToRoom    40939
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40937
+#ENDEXIT
+
+Reset M 0 40912 4 40938
+#ENDROOM
+
+#ROOM
+Vnum     40939
+Name     The Watersmeet~
+Sector   forest~
+Flags    ~
+Desc     Two streams join here under the trees, and a footbridge of a single
+squared ak trunk crosses the combined flow. A path branches away
+northeast along the water's edge.
+~
+#EXIT
+Direction east~
+ToRoom    40940
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40938
+#ENDEXIT
+#EXIT
+Direction northeast~
+ToRoom    40946
+#ENDEXIT
+
+Reset M 0 40912 4 40939
+#ENDROOM
+
+#ROOM
+Vnum     40940
+Name     Salt Wind Wood~
+Sector   forest~
+Flags    ~
+Desc     The trees lean away from the east, all of them, permanently. The wind
+that shaped them carries the smell of the sea, and the leaves have the
+tough waxy look of coastal growth.
+~
+#EXIT
+Direction east~
+ToRoom    40941
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40939
+#ENDEXIT
+
+Reset M 0 40908 3 40940
+Reset M 0 40913 1 40940
+#ENDROOM
+
+#ROOM
+Vnum     40941
+Name     Masara Headland~
+Sector   field~
+Flags    ~
+Desc     The wood ends on open clifftop grass above a long grey beach, with the
+sea running out flat to the horizon. Bodhi's painted roofs are visible
+to the north, bright against all that grey.
+~
+#EXIT
+Direction north~
+ToRoom    40601
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40940
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40942
+Name     The Ordered Grove~
+Sector   forest~
+Flags    ~
+Desc     Ak trees stand here in exact ranks, planted rather than grown wild,
+each one the same distance from its neighbours as from the path. The
+regularity is restful for a while and then is not.
+~
+#EXIT
+Direction north~
+ToRoom    40943
+#ENDEXIT
+#EXIT
+Direction southwest~
+ToRoom    40903
+#ENDEXIT
+
+Reset M 0 40907 2 40942
+#ENDROOM
+
+#ROOM
+Vnum     40943
+Name     Balance Steps~
+Sector   hills~
+Flags    ~
+Desc     Flat stones are set into the hillside in a long ascending line, each
+one placed so that a walker's weight falls at its exact centre.
+Stepping carelessly here is noticeably harder than stepping well.
+~
+#EXIT
+Direction north~
+ToRoom    40944
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40942
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40944
+Name     The Levelled Ground~
+Sector   hills~
+Flags    ~
+Desc     An artificially flat shelf has been cut into the hilltop, wide enough
+to drill a hundred initiates and empty of everything but short grass.
+The view runs unobstructed in all directions.
+~
+#EXIT
+Direction east~
+ToRoom    40945
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    40943
+#ENDEXIT
+
+Reset M 0 40911 2 40944
+Reset O 0 40905 1 40944
+#ENDROOM
+
+#ROOM
+Vnum     40945
+Name     Plateau Rim~
+Sector   mountain~
+Flags    ~
+Desc     The path ends at the rim of the high plateau, and Akar Kesh stands on
+it — a single fortress of pale stone squared against the sky, with
+the whole of Tython visible behind it.
+~
+#EXIT
+Direction north~
+ToRoom    40801
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40944
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     40946
+Name     Streamside Path~
+Sector   forest~
+Flags    ~
+Desc     The path follows the stream northeast under overhanging trees,
+crossing and recrossing it on stepping stones. The water is very clear
+and very cold.
+~
+#EXIT
+Direction east~
+ToRoom    40947
+#ENDEXIT
+#EXIT
+Direction southwest~
+ToRoom    40939
+#ENDEXIT
+
+Reset M 0 40912 4 40946
+#ENDROOM
+
+#ROOM
+Vnum     40947
+Name     The Reedbeds~
+Sector   field~
+Flags    ~
+Desc     The trees fall away and the stream spreads into a broad shallow marsh
+of reeds taller than a standing man. The path becomes a causeway of
+laid logs, slick and shifting.
+~
+#EXIT
+Direction east~
+ToRoom    40948
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40946
+#ENDEXIT
+
+Reset M 0 40904 3 40947
+#ENDROOM
+
+#ROOM
+Vnum     40948
+Name     Deep Lake Shore~
+Sector   field~
+Flags    ~
+Desc     The reeds end at open water. The lake stretches east further than the
+eye follows, grey and utterly still, and the far shore is a rumour
+rather than a sight.
+~
+#EXIT
+Direction east~
+ToRoom    40949
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40947
+#ENDEXIT
+
+Reset M 0 40904 3 40948
+#ENDROOM
+
+#ROOM
+Vnum     40949
+Name     The Descent Pier~
+Sector   field~
+Flags    ~
+Desc     A pier of black stone runs out over the water and stops. Beneath it,
+faintly visible through the depth, lights burn in the drowned halls of
+Mahara Kesh, and a platform waits at the pier's end to carry visitors
+down.
+~
+#EXIT
+Direction north~
+ToRoom    40701
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    40948
+#ENDEXIT
+
+Reset M 0 40904 3 40949
+Reset M 0 40916 1 40949
+#ENDROOM
+
+#ENDAREA

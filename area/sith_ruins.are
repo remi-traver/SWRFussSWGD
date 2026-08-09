@@ -1,0 +1,2800 @@
+#FUSSAREA
+#AREADATA
+Version      1
+Name         Ruins of Kar'ethis~
+Author       SWR FUSS~
+Ranges       61 100 61 100
+Economy      0 0
+ResetMsg     A cold wind rises from deep within the ruins, carrying whispers of the ancient dead.~
+ResetFreq    6
+Flags        ~
+#ENDAREADATA
+
+
+#MOBILE
+Vnum       15000
+Keywords   sith spirit ancient~
+Short      an ancient Sith spirit~
+Long       The translucent form of an ancient Sith spirit drifts here, radiating malice.
+~
+Desc       This spirit has lingered for millennia, bound to the ruins by hatred and
+unfinished dark purpose. Its eyes burn with cold fire and its form ripples
+like smoke in a wind only it can feel. It regards you with contempt.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     neuter~
+ActFlags   npc aggressive sentinel~
+Affected   detect_invis detect_hidden infrared~
+Stats1     500 75 0 80 85 0
+Stats2     35 35 500
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    18 18 18 18 18 18 0 80
+Saves      -10 -10 -10 -10 -10
+Speaks     common ancient~
+Speaking   common ancient~
+#ENDMOBILE
+
+#MOBILE
+Vnum       15001
+Keywords   sith acolyte dark~
+Short      a Sith acolyte~
+Long       A Sith acolyte crouches here, practicing dark side techniques.
+~
+Desc       Clad in tattered black robes, this acolyte has given everything to the
+pursuit of dark side power. Ritual scars cover exposed skin and their eyes
+have taken on the amber hue of deep dark side corruption.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     neuter~
+ActFlags   npc aggressive~
+Affected   detect_invis detect_hidden~
+Stats1     350 70 0 75 80 0
+Stats2     25 25 350
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    16 16 16 16 16 16 0 70
+Saves      -8 -8 -8 -8 -8
+Speaks     common ancient~
+Speaking   common~
+#ENDMOBILE
+
+#MOBILE
+Vnum       15002
+Keywords   sith guardian warrior~
+Short      a Sith guardian~
+Long       A towering Sith guardian stands here, blocking the way forward.
+~
+Desc       This massive warrior serves even in death, bound to protect the inner
+sanctum from all who would intrude. Ancient armor fused with dark side
+energy covers its form and a corrupted vibroblade crackles in its grip.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     male~
+ActFlags   npc aggressive sentinel~
+Affected   detect_invis detect_hidden~
+Stats1     700 80 0 85 90 0
+Stats2     45 45 700
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    20 18 20 16 16 16 0 85
+Saves      -12 -12 -12 -12 -12
+Speaks     common ancient~
+Speaking   common~
+#ENDMOBILE
+
+#MOBILE
+Vnum       15003
+Keywords   sith overseer master~
+Short      a Sith Overseer~
+Long       A Sith Overseer paces here, directing the acolytes with cold authority.
+~
+Desc       The Overseer carries the weight of centuries of dark knowledge. Once a
+brilliant scholar of the Force, they turned fully to the dark side and have
+not looked back since. Their presence alone causes the air to feel heavier.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     neuter~
+ActFlags   npc aggressive~
+Affected   detect_invis detect_hidden sanctuary~
+Stats1     600 78 0 82 88 0
+Stats2     40 40 600
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    18 18 18 18 18 18 0 90
+Saves      -11 -11 -11 -11 -11
+Speaks     common ancient~
+Speaking   common ancient~
+#ENDMOBILE
+
+#MOBILE
+Vnum       15004
+Keywords   sith hound beast~
+Short      a Sith hound~
+Long       A vicious Sith hound prowls here, its eyes glowing red.
+~
+Desc       Corrupted by years of exposure to dark side energies, this creature is
+barely recognisable as natural. Its hide has thickened to near-armour and
+its claws can tear through durasteel. It regards you as prey.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     neuter~
+ActFlags   npc aggressive~
+Affected   detect_invis~
+Stats1     400 68 0 78 82 0
+Stats2     20 20 400
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    20 20 14 10 10 10 0 60
+Saves      -7 -7 -7 -7 -7
+Speaks     common~
+Speaking   common~
+#ENDMOBILE
+
+#MOBILE
+Vnum       15005
+Keywords   wraith dark sith~
+Short      a dark wraith~
+Long       A dark wraith phases in and out of visibility here.
+~
+Desc       The wraith is all that remains of a Sith who pushed too far into dark side
+experimentation. It exists in a state between life and death, capable of
+touching the physical world only to destroy. Its touch is said to drain
+the life force directly.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     neuter~
+ActFlags   npc aggressive~
+Affected   detect_invis detect_hidden pass_door~
+Stats1     450 72 0 78 84 0
+Stats2     30 30 450
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    16 20 16 18 18 16 0 75
+Saves      -9 -9 -9 -9 -9
+Speaks     common ancient~
+Speaking   common~
+#ENDMOBILE
+
+#MOBILE
+Vnum       15006
+Keywords   sith lord darth ruins~
+Short      the Lord of Kar'ethis~
+Long       The Lord of Kar'ethis stands here, an immovable presence of absolute darkness.
+~
+Desc       This is no mere spirit or guardian. The Lord of Kar'ethis was once among the
+greatest of all Sith lords, and even death has not diminished that power. Dark
+lightning crackles along its fingertips and the very stone of the ruins bends
+slightly toward it, as though even the physical world acknowledges its mastery.
+Its eyes lock onto yours and you feel the cold certainty that it intends to
+destroy you utterly.
+~
+Race       Human~
+Position   aggressive~
+DefPos     aggressive~
+Gender     neuter~
+ActFlags   npc aggressive sentinel~
+Affected   detect_invis detect_hidden sanctuary truesight~
+Stats1     2000 100 0 95 100 0
+Stats2     75 75 2000
+Stats3     0 0 0
+Stats4     0 0 0 0 0
+Attribs    25 25 25 25 25 25 0 100
+Saves      -20 -20 -20 -20 -20
+Speaks     common ancient~
+Speaking   common ancient~
+Immune     sleep charm~
+#ENDMOBILE
+
+
+#OBJECT
+Vnum     15000
+Keywords sith holocron dark~
+Type     armor~
+Short    a Sith holocron~
+Long     A small pyramid-shaped Sith holocron pulses with dark energy here.~
+Flags    magic~
+WFlags   take hold~
+Values   0 15 0 0 0 0
+Stats    8 8000 800 0 0
+Affect       -1 -1 8 13 0
+Affect       -1 -1 8 14 0
+#EXDESC
+ExDescKey    holocron sith pyramid~
+ExDesc       This ancient Sith holocron contains centuries of dark side knowledge. It
+pulses with a malevolent energy in your grip, and you can hear faint whispers
+at the edge of your hearing when you hold it. The power it offers is
+undeniable, but so is the sense that it is slowly studying you in return.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum     15001
+Keywords sith blade dark corrupted~
+Type     weapon~
+Short    a corrupted Sith blade~
+Long     A corrupted Sith blade lies here, vibrating faintly.~
+Flags    magic~
+WFlags   take wield~
+Values   5 30 60 2 0 5000
+Stats    8 12000 1200 0 0
+Affect       -1 -1 10 13 0
+Affect       -1 -1 10 14 0
+#EXDESC
+ExDescKey    blade sith corrupted~
+ExDesc       The metal of this blade has been saturated with dark side energy over
+centuries. It hums faintly in your grip and feels almost eager to be used.
+The edge is impossibly sharp and leaves a faint dark trail in the air.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum     15002
+Keywords sith robes dark ancient~
+Type     armor~
+Short    ancient Sith robes~
+Long     A set of ancient Sith robes lies here in a crumpled heap.~
+Flags    magic~
+WFlags   take body~
+Values   50 50 0 0 0 0
+Stats    8 9000 900 0 0
+Affect       -1 -1 -20 12 0
+Affect       -1 -1 3 4 0
+#EXDESC
+ExDescKey    robes sith ancient~
+ExDesc       These robes have been imbued with protective dark side energy over
+generations of use by powerful Sith. They are surprisingly light and move
+almost like liquid. Strange runes are stitched into the lining in thread
+that seems to absorb light rather than reflect it.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum     15003
+Keywords sith amulet dark power~
+Type     armor~
+Short    a Sith power amulet~
+Long     A Sith power amulet rests here, radiating cold dark energy.~
+Flags    magic~
+WFlags   take neck~
+Values   5 5 0 0 0 0
+Stats    8 10000 1000 0 0
+Affect       -1 -1 4 1 0
+Affect       -1 -1 4 5 0
+Affect       -1 -1 5 13 0
+#EXDESC
+ExDescKey    amulet sith power~
+ExDesc       Carved from a black stone found only deep in Sith tombs, this amulet
+channels dark side energy directly into the wearer. It grows warm against
+the skin and you feel subtly stronger while wearing it, though the dreams
+it brings are deeply unsettling.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum     15004
+Keywords sith tome grimoire ancient~
+Type     armor~
+Short    an ancient Sith grimoire~
+Long     An ancient Sith grimoire lies open here, its pages filled with dark script.~
+Flags    magic~
+WFlags   take hold~
+Values   10 10 0 0 0 0
+Stats    8 7000 700 0 0
+Affect       -1 -1 5 3 0
+Affect       -1 -1 3 4 0
+#EXDESC
+ExDescKey    grimoire tome sith~
+ExDesc       The pages of this grimoire are made from a material that is decidedly not
+paper. The script shifts slightly when you are not looking directly at it.
+Reading it imparts a deep sense of forbidden knowledge along with a faint
+but persistent headache.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum     15005
+Keywords sith gauntlets dark~
+Type     armor~
+Short    Sith battle gauntlets~
+Long     A pair of Sith battle gauntlets lies here.~
+Flags    magic~
+WFlags   take hands~
+Values   35 35 0 0 0 0
+Stats    8 8500 850 0 0
+Affect       -1 -1 6 14 0
+Affect       -1 -1 3 1 0
+#EXDESC
+ExDescKey    gauntlets sith battle~
+ExDesc       These heavy gauntlets are covered in angular dark script and reinforced
+with a metal that seems to drink in light. They fit perfectly regardless
+of hand size, as though made specifically for whoever picks them up.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum     15006
+Keywords sith helm helmet dark~
+Type     armor~
+Short    a Sith warrior helm~
+Long     A Sith warrior helm rests here, its visor dark as the void.~
+Flags    magic~
+WFlags   take head~
+Values   40 40 0 0 0 0
+Stats    8 9500 950 0 0
+Affect       -1 -1 -15 12 0
+Affect       -1 -1 5 13 0
+Affect       -1 -1 3 5 0
+#EXDESC
+ExDescKey    helm helmet sith warrior~
+ExDesc       The helm of a Sith warrior, shaped to appear as a stylised death mask.
+The visor provides perfect vision in all light conditions. Donning it
+imparts an unsettling calm and a strange sense of detachment from fear.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+#OBJECT
+Vnum     15007
+Keywords key sith stone~
+Type     key~
+Short    a carved Sith key-stone~
+Long     A carved Sith key-stone lies here.~
+WFlags   take hold~
+Values   0 0 0 0 0 0
+Stats    1 0 0 0 0
+#EXDESC
+ExDescKey    key stone sith carved~
+ExDesc       A flat rectangular stone covered in Sith runes. It vibrates faintly when
+held near certain doors within the ruins.
+~
+#ENDEXDESC
+#ENDOBJECT
+
+
+
+
+
+#ROOM
+Vnum     15000
+Name     The Shattered Road~
+Sector   field~
+Flags    ~
+Desc     What was once a grand processional road leading to the ruins of Kar'ethis
+has been reclaimed by a dead landscape. Cracked black stone paving leads
+north toward a silhouette of crumbled spires against a darkened sky. The
+air here tastes of ozone and something older...something wrong. The ruins
+loom ahead with a gravity that seems to tug at you even from this distance.
+~
+#EXIT
+Direction north~
+ToRoom    15001
+#ENDEXIT
+#ENDROOM
+
+#ROOM
+Vnum     15001
+Name     The Broken Gate~
+Sector   field~
+Flags    ~
+Desc     The outer gate of Kar'ethis has long since collapsed, its massive stone
+pillars toppled to either side of the road. Ancient Sith script runs along
+the fallen stones, warning in no uncertain terms that death awaits all who
+enter without the blessing of the dark side. The ruins proper begin to the
+north and the approach road leads south.
+~
+#EXIT
+Direction north~
+ToRoom    15002
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    15000
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15003
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    15004
+#ENDEXIT
+
+Reset M 0 15001 2 15001
+#ENDROOM
+
+#ROOM
+Vnum     15002
+Name     The Road of Subjugation~
+Sector   field~
+Flags    ~
+Desc     The road widens here into what was once a ceremonial approach. Stone statues
+of robed Sith line the path to the north, many broken but some still standing
+in eerie silence. Their carved faces all share the same expression: absolute
+contempt. The outer courtyard lies ahead and the broken gate is to the south.
+~
+#EXIT
+Direction north~
+ToRoom    15010
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    15001
+#ENDEXIT
+
+Reset M 0 15001 2 15002
+#ENDROOM
+
+#ROOM
+Vnum     15003
+Name     The Eastern Watch Post~
+Sector   field~
+Flags    ~
+Desc     A crumbled guardhouse sits to the east of the broken gate. The roof has
+long since caved in but the thick walls still stand. Old weapon racks line
+one wall, empty now, and a narrow arrow slit still provides a view of the
+approach road. A faded sigil on the floor marks this as a place where dark
+side warriors once stood sentinel.
+~
+#EXIT
+Direction west~
+ToRoom    15001
+#ENDEXIT
+
+Reset M 0 15004 1 15003
+#ENDROOM
+
+#ROOM
+Vnum     15004
+Name     The Western Watch Post~
+Sector   field~
+Flags    ~
+Desc     A mirror to the eastern watch post, this crumbled structure sits west of the
+gate. Unlike its counterpart it has not fully collapsed — a partial upper
+floor remains accessible by a crumbling stone stair. From the upper position
+the full sweep of the approach road is visible. The gate lies to the east.
+~
+#EXIT
+Direction east~
+ToRoom    15001
+#ENDEXIT
+
+Reset M 0 15004 1 15004
+#ENDROOM
+
+#ROOM
+Vnum     15005
+Name     The Waystone~
+Sector   field~
+Flags    ~
+Desc     An ancient waystone stands at a fork in the road leading to the ruins.
+Carved from the same black stone as the ruins themselves it predates them
+by an unknown margin. Sith script has been added to the original carvings
+at a later date — warnings layered on top of older warnings. The road to
+the ruins continues north and the approach road lies south.
+~
+#EXIT
+Direction north~
+ToRoom    15001
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    15006
+#ENDEXIT
+
+Reset M 0 15001 1 15005
+#ENDROOM
+
+#ROOM
+Vnum     15006
+Name     The Dead Plains~
+Sector   field~
+Flags    ~
+Desc     A broad flat expanse of dead grey earth stretching south of the waystone.
+Nothing grows here and nothing moves. The soil has been corrupted by dark
+side energy seeping outward from the ruins over centuries. Even the wind
+seems reluctant to cross this ground. The waystone is visible to the north.
+~
+#EXIT
+Direction north~
+ToRoom    15005
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15007
+#ENDEXIT
+
+Reset M 0 15001 1 15006
+#ENDROOM
+
+#ROOM
+Vnum     15007
+Name     The Ossuary Field~
+Sector   field~
+Flags    ~
+Desc     Bones protrude from the dead earth here in scattered clusters — the remains
+of those who came to the ruins and did not leave. Some appear to have simply
+fallen where they stood, as though struck down at a distance. The density
+of remains increases toward the ruins. The dead plains lie to the west.
+~
+#EXIT
+Direction west~
+ToRoom    15006
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15003
+#ENDEXIT
+
+Reset M 0 15001 2 15007
+#ENDROOM
+
+#ROOM
+Vnum     15008
+Name     The Forgotten Camp~
+Sector   field~
+Flags    ~
+Desc     The remains of an old camp sit here on the western approach to the ruins.
+Whoever set this up planned to stay for some time — the site is organised
+and well-positioned. Whatever happened to the occupants is unclear. Their
+equipment remains but they do not. The camp connects back toward the ruins
+approach to the east.
+~
+#EXIT
+Direction east~
+ToRoom    15004
+#ENDEXIT
+
+Reset M 0 15001 1 15008
+#ENDROOM
+
+#ROOM
+Vnum     15009
+Name     The Scorched Ground~
+Sector   field~
+Flags    ~
+Desc     A section of the approach ground that has been scorched black by some
+ancient event. The scorch pattern radiates outward from a central point
+in a way that suggests a single catastrophic release of energy. Whatever
+caused this left no other trace. The approach road continues north toward
+the broken gate and the dead plains lie to the south.
+~
+#EXIT
+Direction north~
+ToRoom    15001
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    15006
+#ENDEXIT
+
+Reset M 0 15000 1 15009
+#ENDROOM
+
+
+#ROOM
+Vnum     15010
+Name     The Outer Courtyard~
+Sector   field~
+Flags    ~
+Desc     The outer courtyard of Kar'ethis stretches across a broad expanse of
+dead stone. What was once an assembly ground for Sith rituals is now a
+field of broken pillars and scattered debris. Dark stains mark the stone
+in patterns that suggest the courtyard has witnessed unspeakable things.
+Paths lead in all directions through the ruins and the approach road lies
+to the south.
+~
+#EXIT
+Direction south~
+ToRoom    15002
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15011
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15013
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    15015
+#ENDEXIT
+
+Reset M 0 15001 2 15010
+Reset M 0 15004 1 15010
+#ENDROOM
+
+#ROOM
+Vnum     15011
+Name     The Altar of Binding~
+Sector   inside~
+Flags    indoors~
+Desc     A massive stone altar dominates this section of the courtyard, partially
+sheltered by a remaining section of roof. Dark runes cover every surface of
+the altar and the stone around it is permanently stained. Chains of black
+metal hang from the altar corners. Whatever happened here was done many times
+over many years. The courtyard lies to the south and a corridor leads north
+into deeper ruins.
+~
+#EXIT
+Direction south~
+ToRoom    15010
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15012
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15014
+#ENDEXIT
+
+Reset M 0 15001 3 15011
+Reset M 0 15002 1 15011
+#ENDROOM
+
+#ROOM
+Vnum     15012
+Name     The Hall of Proclamations~
+Sector   inside~
+Flags    indoors~
+Desc     A long hall lined with carved stone tablets stands here, each engraved with
+Sith proclamations in the ancient tongue. The tablets tell of conquests,
+subjugations, and the names of enemies destroyed. The language is lost to
+most but the tone of absolute dominance is unmistakeable even in ignorance.
+The altar chamber is to the south and corridors branch east and west.
+~
+#EXIT
+Direction south~
+ToRoom    15011
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15025
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15016
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    15017
+#ENDEXIT
+
+Reset M 0 15001 2 15012
+Reset M 0 15003 1 15012
+#ENDROOM
+
+#ROOM
+Vnum     15013
+Name     The Eastern Courtyard~
+Sector   field~
+Flags    ~
+Desc     The eastern wing of the outer courtyard holds the ruins of what appears to
+have been barracks or training grounds. Stone rings marked with combat sigils
+are set into the ground, and the walls bear the scars of a thousand weapon
+impacts. The main courtyard is to the west.
+~
+#EXIT
+Direction west~
+ToRoom    15010
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15014
+#ENDEXIT
+
+Reset M 0 15004 2 15013
+#ENDROOM
+
+#ROOM
+Vnum     15014
+Name     The Eastern Passage~
+Sector   inside~
+Flags    indoors~
+Desc     A narrow passage runs between two intact sections of outer wall, connecting
+the eastern courtyard to the inner halls. The walls here are covered entirely
+in handwritten Sith script, layer upon layer, as though generations of
+acolytes practiced their runes here. The south leads to the training grounds
+and the west connects to the hall of proclamations.
+~
+#EXIT
+Direction south~
+ToRoom    15013
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    15011
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15018
+#ENDEXIT
+
+Reset M 0 15005 1 15014
+#ENDROOM
+
+#ROOM
+Vnum     15015
+Name     The Western Courtyard~
+Sector   field~
+Flags    ~
+Desc     The western wing of the courtyard was once a garden of some kind. Dead trees
+of twisted black wood still stand at intervals, their trunks carved with Sith
+runes from root to branch. The soil beneath them has turned to something more
+like ash. Whatever lived here before the dark side took hold is long gone.
+The main courtyard lies to the east.
+~
+#EXIT
+Direction east~
+ToRoom    15010
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15017
+#ENDEXIT
+
+Reset M 0 15000 2 15015
+Reset M 0 15004 1 15015
+#ENDROOM
+
+#ROOM
+Vnum     15016
+Name     The Repository of Names~
+Sector   inside~
+Flags    indoors~
+Desc     This small chamber holds thousands of names carved into the stone walls from
+floor to ceiling. These are not the names of the Sith themselves but of their
+victims — enemies, rivals, and slaves. The sheer number is staggering. A faint
+sense of residual suffering clings to the air here. The hall of proclamations
+is to the west.
+~
+#EXIT
+Direction west~
+ToRoom    15012
+#ENDEXIT
+
+Reset M 0 15005 2 15016
+#ENDROOM
+
+#ROOM
+Vnum     15017
+Name     The Western Passage~
+Sector   inside~
+Flags    indoors~
+Desc     A vaulted passage leads between the outer courts and the inner halls to the
+north. Cracked mosaic tiles on the floor depict scenes of conquest. Most are
+too damaged to make out clearly but enough remain to paint a picture of
+absolute cruelty carried out with artistic pride. The dead garden lies to the
+south and the hall of proclamations is to the east.
+~
+#EXIT
+Direction south~
+ToRoom    15015
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15012
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15019
+#ENDEXIT
+
+Reset M 0 15001 1 15017
+Reset M 0 15003 1 15017
+#ENDROOM
+
+#ROOM
+Vnum     15018
+Name     The Guard Station~
+Sector   inside~
+Flags    indoors~
+Desc     A fortified guard station controls access to the inner sanctum from the
+eastern approach. Murder holes in the ceiling and heavy iron brackets for
+barricades suggest this was a serious defensive position. A heavy door to
+the north is sealed with Sith rune-locks. The passage behind leads south.
+~
+#EXIT
+Direction south~
+ToRoom    15014
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15026
+Flags     isdoor closed~
+Keywords  door iron~
+#ENDEXIT
+
+Reset M 0 15002 2 15018
+Reset D 0 15018 0 1
+#ENDROOM
+
+#ROOM
+Vnum     15019
+Name     The Western Guard Station~
+Sector   inside~
+Flags    indoors~
+Desc     The western approach to the inner sanctum is controlled here. Unlike the
+eastern station this one has partially collapsed, leaving a gap in the
+ceiling through which pale light filters. The defensive works are still
+mostly intact however and the passage north is sealed with a rune-locked
+door. The western passage is to the south.
+~
+#EXIT
+Direction south~
+ToRoom    15017
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15027
+Flags     isdoor closed~
+Keywords  door stone~
+#ENDEXIT
+
+Reset M 0 15002 2 15019
+Reset D 0 15019 0 1
+#ENDROOM
+
+#ROOM
+Vnum     15020
+Name     The Courtyard Shrine~
+Sector   field~
+Flags    ~
+Desc     A small shrine stands in a sheltered corner of the outer courtyard. A carved
+stone face — some Sith deity or deified lord — stares from a niche in the
+wall. Offerings of corroded metal and crumbled bone have been placed before
+it. The area around the shrine is conspicuously clear of debris as though
+something tends to it still. The main courtyard is accessible to the west.
+~
+#EXIT
+Direction west~
+ToRoom    15010
+#ENDEXIT
+
+Reset M 0 15000 3 15020
+#ENDROOM
+
+#ROOM
+Vnum     15021
+Name     The Collapsed Barracks~
+Sector   inside~
+Flags    indoors~
+Desc     The roof of these barracks has partially caved in, admitting grey light and
+a cold draft. Stone bunk frames line the walls, long since stripped of
+anything useful. A collapsed section of floor near the north wall leads down
+to a darkness that smells of age and sealed air — the catacombs are
+accessible below though the drop is steep.
+~
+#EXIT
+Direction east~
+ToRoom    15013
+#ENDEXIT
+
+Reset M 0 15004 2 15021
+#ENDROOM
+
+#ROOM
+Vnum     15022
+Name     The Weapons Cache~
+Sector   inside~
+Flags    indoors~
+Desc     A hidden alcove behind a false wall in the eastern courtyard area, this cache
+was sealed for a very long time. The mechanism that opened it is now jammed
+permanently in the open position. Rusted weapon racks and empty containers
+fill the space. Most of the contents have long since crumbled to nothing but
+a few items appear to have survived through some dark side preservation.
+~
+#EXIT
+Direction west~
+ToRoom    15013
+#ENDEXIT
+
+Reset O 0 15001 1 15022
+Reset O 0 15005 1 15022
+#ENDROOM
+
+#ROOM
+Vnum     15023
+Name     The Meditation Circle~
+Sector   field~
+Flags    ~
+Desc     A perfect circle of black stone set into the courtyard floor, ringed with
+faded runes of focus and amplification. Standing within it one can feel the
+dark side energy of the ruins converging toward this point. The intent was
+for Sith to meditate here and draw on the accumulated power of the place.
+The feeling of being watched is overwhelming. The courtyard lies to the north.
+~
+#EXIT
+Direction north~
+ToRoom    15010
+#ENDEXIT
+
+Reset M 0 15003 1 15023
+Reset M 0 15000 2 15023
+#ENDROOM
+
+#ROOM
+Vnum     15024
+Name     The Outer Vault~
+Sector   inside~
+Flags    indoors~
+Desc     A heavy-walled chamber at the edge of the outer courtyard, sealed with
+multiple layers of rune-locks that have since been broken from the outside.
+The vault has been ransacked at some point in the distant past — drawers
+hang open and stone cases are shattered. Whatever was stored here was taken
+long ago. The courtyard lies to the north.
+~
+#EXIT
+Direction north~
+ToRoom    15010
+#ENDEXIT
+
+Reset M 0 15005 1 15024
+Reset O 0 15004 1 15024
+#ENDROOM
+
+
+#ROOM
+Vnum     15025
+Name     The Sanctum Threshold~
+Sector   inside~
+Flags    indoors~
+Desc     The boundary between the outer ruins and the inner sanctum is marked by a
+massive carved arch, still intact. Sith faces carved into the keystone seem
+to track movement with their stone eyes. Passing through it you feel a
+palpable increase in the density of dark side energy — heavier, more
+purposeful. The outer halls lie to the south and corridors branch north.
+~
+#EXIT
+Direction south~
+ToRoom    15012
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15028
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15026
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    15027
+#ENDEXIT
+
+Reset M 0 15002 2 15025
+Reset M 0 15003 1 15025
+#ENDROOM
+
+#ROOM
+Vnum     15026
+Name     The Hall of the Eastern Rite~
+Sector   inside~
+Flags    indoors~
+Desc     The eastern hall of the inner sanctum was dedicated to a specific Sith
+ritual whose purpose has been lost. The floor is divided into sections by
+carved channels, as though to direct the flow of something. Alcoves line
+the walls at regular intervals, each containing the remnants of ceremonial
+objects reduced to dust and corroded metal. A sealed door leads south.
+~
+#EXIT
+Direction west~
+ToRoom    15025
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15029
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    15018
+Flags     isdoor closed~
+Keywords  door iron~
+#ENDEXIT
+
+Reset M 0 15003 2 15026
+#ENDROOM
+
+#ROOM
+Vnum     15027
+Name     The Hall of the Western Rite~
+Sector   inside~
+Flags    indoors~
+Desc     A counterpart to the eastern ritual hall, this chamber served the opposing
+half of an ancient ceremony. The geometry of the carvings here is subtly
+different — more aggressive, more direct. Where the eastern hall speaks of
+preparation this one speaks of execution. A sealed door leads south.
+~
+#EXIT
+Direction east~
+ToRoom    15025
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15030
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    15019
+Flags     isdoor closed~
+Keywords  door stone~
+#ENDEXIT
+
+Reset M 0 15003 2 15027
+#ENDROOM
+
+#ROOM
+Vnum     15028
+Name     The Chamber of Reflection~
+Sector   inside~
+Flags    indoors~
+Desc     A perfectly square chamber lined with polished black stone that acts as
+mirror. Every surface reflects and the effect of infinite reflections
+retreating in all directions is deeply unsettling. The Sith used this
+chamber for confronting the self and discarding weakness. The threshold is
+to the south and corridors branch east, west, and north.
+~
+#EXIT
+Direction south~
+ToRoom    15025
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15031
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15029
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    15030
+#ENDEXIT
+
+Reset M 0 15005 2 15028
+Reset M 0 15003 1 15028
+#ENDROOM
+
+#ROOM
+Vnum     15029
+Name     The Eastern Inner Corridor~
+Sector   inside~
+Flags    indoors~
+Desc     A long corridor running the eastern length of the inner sanctum. The walls
+here have been carved with detailed scenes of Sith history in what must have
+been a monumental undertaking. Battle scenes, ritual scenes, and portraits of
+Sith lords long forgotten march along the walls in bas-relief. The carving
+quality is extraordinarily high.
+~
+#EXIT
+Direction west~
+ToRoom    15028
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    15026
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15032
+#ENDEXIT
+
+Reset M 0 15002 2 15029
+Reset M 0 15005 1 15029
+#ENDROOM
+
+#ROOM
+Vnum     15030
+Name     The Western Inner Corridor~
+Sector   inside~
+Flags    indoors~
+Desc     A long corridor running the western length of the inner sanctum. Less
+well-preserved than its eastern counterpart, large sections of the carved
+walls have collapsed. What remains shows scenes of subjugation and control —
+Sith lords directing vast armies of slaves and lesser beings like pieces
+on a game board.
+~
+#EXIT
+Direction east~
+ToRoom    15028
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    15027
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15033
+#ENDEXIT
+
+Reset M 0 15002 2 15030
+Reset M 0 15005 1 15030
+#ENDROOM
+
+#ROOM
+Vnum     15031
+Name     The Hall of Dominion~
+Sector   inside~
+Flags    indoors~
+Desc     The largest room in the inner sanctum, once used for major assemblies and
+declarations of Sith supremacy. A raised dais at the northern end still holds
+the shattered remains of a great throne. The floor is inlaid with dark
+crystal in a star pattern and the ceiling, miraculously intact, soars far
+overhead. The chamber still carries the resonance of a thousand declarations
+of absolute power.
+~
+#EXIT
+Direction south~
+ToRoom    15028
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15034
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15032
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    15033
+#ENDEXIT
+
+Reset M 0 15002 3 15031
+Reset M 0 15003 2 15031
+#ENDROOM
+
+#ROOM
+Vnum     15032
+Name     The Scriptorium~
+Sector   inside~
+Flags    indoors~
+Desc     Row upon row of stone shelving lines this chamber, each once holding Sith
+texts. Most have crumbled to nothing but a few stone tablets survive. The
+script on them is the ancient Sith tongue but even without translation the
+diagrams that accompany the text make their subject matter clear: weapons,
+poisons, and methods of control. The corridor is to the south.
+~
+#EXIT
+Direction south~
+ToRoom    15029
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    15031
+#ENDEXIT
+
+Reset M 0 15005 2 15032
+Reset O 0 15004 1 15032
+#ENDROOM
+
+#ROOM
+Vnum     15033
+Name     The Alchemy Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     This chamber was used for Sith alchemy — the dark side art of corrupting
+and reshaping living things and materials. Stone tables with corroded metal
+fittings fill the room and arcane distillation equipment lies shattered on
+the floor. Faint discolouration on the walls and ceiling suggests that things
+have happened here that cannot be easily described.
+~
+#EXIT
+Direction south~
+ToRoom    15030
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15031
+#ENDEXIT
+
+Reset M 0 15003 2 15033
+Reset O 0 15003 1 15033
+#ENDROOM
+
+#ROOM
+Vnum     15034
+Name     The Approach to the Deep Sanctum~
+Sector   inside~
+Flags    indoors~
+Desc     The northern end of the inner sanctum narrows to a single grand corridor
+that leads toward the deep sanctum. The architecture here becomes more
+extreme — the walls lean slightly inward, the ceiling lowers, and the carvings
+become more intense and urgent. Whatever the Sith considered most sacred lay
+ahead and they designed the approach to convey that. The hall of dominion
+is to the south.
+~
+#EXIT
+Direction south~
+ToRoom    15031
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15035
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15036
+#ENDEXIT
+
+Reset M 0 15002 2 15034
+Reset M 0 15003 1 15034
+#ENDROOM
+
+#ROOM
+Vnum     15035
+Name     The Gate of Inner Darkness~
+Sector   inside~
+Flags    indoors~
+Desc     A pair of massive stone doors stands here, each carved with the face of a
+different Sith entity. The doors are sealed with a Sith lock that requires
+specific knowledge to bypass. The ancient mechanisms still function though
+they have clearly been forced open and re-sealed multiple times over the
+centuries. Beyond lies the deep sanctum. The approach corridor lies south.
+~
+#EXIT
+Direction south~
+ToRoom    15034
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15050
+Flags     isdoor closed~
+Keywords  door stone rune~
+#ENDEXIT
+
+Reset M 0 15002 3 15035
+Reset D 0 15035 0 1
+#ENDROOM
+
+#ROOM
+Vnum     15036
+Name     The Inner Archive~
+Sector   inside~
+Flags    indoors~
+Desc     A side chamber off the main approach, this archive contains records carved
+into the walls themselves — an encyclopedia of Sith knowledge that spans
+the full height of the room. Most of the content is beyond interpretation
+without a deep knowledge of the ancient language but a few sections contain
+diagrams clear enough to understand. The approach corridor is to the west.
+~
+#EXIT
+Direction west~
+ToRoom    15034
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15037
+#ENDEXIT
+
+Reset M 0 15005 3 15036
+Reset O 0 15004 1 15036
+#ENDROOM
+
+#ROOM
+Vnum     15037
+Name     The Relic Chamber~
+Sector   inside~
+Flags    indoors~
+Desc     A small heavily protected chamber that once held important Sith relics.
+Most of its contents have been taken or destroyed over the centuries but
+the protective wards that remain are still active — you feel them probing
+at your presence as you enter. A few items may still be found here if one
+searches carefully. The archive is to the south.
+~
+#EXIT
+Direction south~
+ToRoom    15036
+#ENDEXIT
+
+Reset M 0 15003 2 15037
+Reset O 0 15000 1 15037
+Reset O 0 15006 1 15037
+#ENDROOM
+
+#ROOM
+Vnum     15038
+Name     The Corridor of Penitence~
+Sector   inside~
+Flags    indoors~
+Desc     A long narrow corridor whose walls are lined with iron fixtures that once
+held restraints. This was the path taken by those who had displeased the
+ruling Sith and were being brought to judgment. The floor is worn smooth
+by countless feet. The meaning of the carvings above the restraint fixtures
+is mercifully unclear. The sanctum threshold area connects to the south.
+~
+#EXIT
+Direction south~
+ToRoom    15025
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15039
+#ENDEXIT
+
+Reset M 0 15002 2 15038
+#ENDROOM
+
+#ROOM
+Vnum     15039
+Name     The Judgment Hall~
+Sector   inside~
+Flags    indoors~
+Desc     A high-ceilinged chamber with a single elevated seat at the far end. This
+was where Sith lords passed judgment on those brought through the corridor of
+penitence. The stone floor below the seat is deeply stained and the drainage
+channels carved into it tell a grim story. The corridor of penitence leads
+south and stairs descend to the east.
+~
+#EXIT
+Direction south~
+ToRoom    15038
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15040
+#ENDEXIT
+
+Reset M 0 15002 2 15039
+Reset M 0 15003 1 15039
+#ENDROOM
+
+#ROOM
+Vnum     15040
+Name     The Descent to the Catacombs~
+Sector   inside~
+Flags    indoors~
+Desc     A broad staircase carved directly into the bedrock descends from the inner
+sanctum into the catacombs below. Cold air rises from below carrying the
+smell of stone dust and something organic and old. Wall torches that once
+lined the stair have long since burned out. The judgment hall is to the west
+and the catacombs lie below to the north.
+~
+#EXIT
+Direction west~
+ToRoom    15039
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15050
+#ENDEXIT
+
+Reset M 0 15005 1 15040
+#ENDROOM
+
+
+#ROOM
+Vnum     15041
+Name     The Chamber of Whispers~
+Sector   inside~
+Flags    indoors~
+Desc     A domed chamber with unusual acoustics — sound behaves strangely here,
+voices doubling and tripling unexpectedly. The Sith used this chamber for
+interrogation, as the disorienting acoustics could reduce subjects to
+confession within minutes. The chamber connects east to the inner halls.
+~
+#EXIT
+Direction east~
+ToRoom    15031
+#ENDEXIT
+
+Reset M 0 15000 3 15041
+#ENDROOM
+
+#ROOM
+Vnum     15042
+Name     The Antechamber of the Throne~
+Sector   inside~
+Flags    indoors~
+Desc     Directly before the shattered throne room, this antechamber served as a
+waiting area for those granted an audience. The stone benches are worn smooth
+with use. The carvings here depict the rewards of loyalty in considerable
+detail — power, wealth, and the subjugation of enemies. The hall of dominion
+lies to the south and the throne approach is north.
+~
+#EXIT
+Direction south~
+ToRoom    15031
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15043
+#ENDEXIT
+
+Reset M 0 15002 2 15042
+#ENDROOM
+
+#ROOM
+Vnum     15043
+Name     The Shattered Throne Room~
+Sector   inside~
+Flags    indoors~
+Desc     The throne itself is broken, split down the middle by some ancient and
+powerful impact. The chamber around it shows signs of a tremendous battle —
+scorch marks on the walls, deep gouges in the stone, entire sections of
+carved relief blasted away. Whatever conflict ended the power of Kar'ethis
+reached its climax here. Shards of the black throne litter the floor. The
+antechamber lies south and hidden passages may yet exist.
+~
+#EXIT
+Direction south~
+ToRoom    15042
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15044
+#ENDEXIT
+
+Reset M 0 15002 2 15043
+Reset M 0 15003 2 15043
+#ENDROOM
+
+#ROOM
+Vnum     15044
+Name     The Private Vault~
+Sector   inside~
+Flags    indoors~
+Desc     A concealed vault directly adjacent to the throne room, accessible through
+a hidden door that has long since been found. This was where the ruling Sith
+lord kept personal treasures and items too dangerous to store elsewhere.
+The vault has been picked over many times but its warding enchantments may
+have preserved some items against those who lacked the knowledge to safely
+remove them. The throne room is to the west.
+~
+#EXIT
+Direction west~
+ToRoom    15043
+#ENDEXIT
+
+Reset M 0 15003 1 15044
+Reset O 0 15000 1 15044
+Reset O 0 15002 1 15044
+Reset O 0 15003 1 15044
+#ENDROOM
+
+#ROOM
+Vnum     15045
+Name     The Armoury of the Guard~
+Sector   inside~
+Flags    indoors~
+Desc     The personal armoury of the Sith lord's guard detachment lies here, its
+heavy door still hanging on intact hinges. The weapon racks and armour
+stands are largely empty but some pieces survived the intervening centuries
+through dark side preservation. The chamber connects to the inner halls.
+~
+#EXIT
+Direction east~
+ToRoom    15031
+#ENDEXIT
+
+Reset M 0 15002 2 15045
+Reset O 0 15001 1 15045
+Reset O 0 15005 1 15045
+Reset O 0 15006 1 15045
+#ENDROOM
+
+#ROOM
+Vnum     15046
+Name     The Garden of Death~
+Sector   field~
+Flags    ~
+Desc     An internal courtyard open to the dead sky above, this was the Sith lord's
+private garden. Every plant that once grew here has long since died and
+turned to dust and black residue. The garden paths are still clearly marked
+by their edging stones. At the centre is a dry fountain carved in the shape
+of a coiled serpentine creature. Passages lead in multiple directions.
+~
+#EXIT
+Direction north~
+ToRoom    15031
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15045
+#ENDEXIT
+
+Reset M 0 15004 3 15046
+#ENDROOM
+
+#ROOM
+Vnum     15047
+Name     The Observatory~
+Sector   inside~
+Flags    indoors~
+Desc     A tall tower chamber with a domed ceiling that has collapsed inward, opening
+to the sky. Elaborate astronomical instruments of corroded metal fill the room.
+The Sith used celestial observation to time their rituals. Markings on the
+floor show complex alignment calculations. From here the full sweep of the
+ruins is visible when looking up through the collapsed dome.
+~
+#EXIT
+Direction south~
+ToRoom    15034
+#ENDEXIT
+
+Reset M 0 15000 2 15047
+#ENDROOM
+
+#ROOM
+Vnum     15048
+Name     The Laboratory of Dark Experiments~
+Sector   inside~
+Flags    indoors~
+Desc     A chamber that defies easy description. The equipment here served purposes
+that the casual observer cannot easily categorise. Stone tables with complex
+restraint mechanisms. Glass vessels of unusual shapes. Channels cut into
+the floors at precise angles. Whatever research was conducted here pushed
+far beyond conventional bounds. The smell that clings to the walls is
+organic and wrong. The deep sanctum approach lies north.
+~
+#EXIT
+Direction north~
+ToRoom    15035
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    15033
+#ENDEXIT
+
+Reset M 0 15005 2 15048
+Reset M 0 15003 1 15048
+#ENDROOM
+
+#ROOM
+Vnum     15049
+Name     The Corridor of the Fallen~
+Sector   inside~
+Flags    indoors~
+Desc     A corridor lined with niches, each containing the standing remains of a
+Sith warrior in full armour. Whether these are ceremonially interred dead or
+simply empty suits of armour placed here as honour guard it is impossible to
+tell. The armour is extraordinary — ancient Sith battle plate of a design
+not seen for millennia. All of it is corroded beyond use. The corridor
+connects the inner sanctum areas.
+~
+#EXIT
+Direction east~
+ToRoom    15031
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    15035
+#ENDEXIT
+
+Reset M 0 15002 2 15049
+#ENDROOM
+
+
+#ROOM
+Vnum     15050
+Name     The Upper Catacombs~
+Sector   inside~
+Flags    indoors dark~
+Desc     You descend into the catacombs of Kar'ethis. The air is cold, dry, and
+completely still. Niches carved into the walls hold the remains of those
+who served the Sith in life and were interred here in death. The scale is
+immense — the catacombs extend far deeper than the ruins above would suggest.
+The gate of inner darkness is above to the south and the staircase descent
+is also accessible. Passages branch deeper.
+~
+#EXIT
+Direction south~
+ToRoom    15035
+Flags     isdoor closed~
+Keywords  door stone rune~
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15051
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15052
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    15053
+#ENDEXIT
+#EXIT
+Direction up~
+ToRoom    15040
+#ENDEXIT
+
+Reset M 0 15005 3 15050
+Reset M 0 15000 2 15050
+#ENDROOM
+
+#ROOM
+Vnum     15051
+Name     The Hall of the Interred~
+Sector   inside~
+Flags    indoors dark~
+Desc     The primary hall of the upper catacombs extends north in a long straight
+line. The density of interred remains increases here — three rows of niches
+on each side, floor to ceiling. Thousands of individuals are buried here,
+each with a small carved tablet bearing their name and their service record.
+The dark side energy is palpable and oppressive.
+~
+#EXIT
+Direction south~
+ToRoom    15050
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15054
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15055
+#ENDEXIT
+
+Reset M 0 15000 3 15051
+Reset M 0 15005 2 15051
+#ENDROOM
+
+#ROOM
+Vnum     15052
+Name     The Eastern Catacomb Branch~
+Sector   inside~
+Flags    indoors dark~
+Desc     The eastern branch of the upper catacombs is older than the main hall —
+the carving style is different and the niches are arranged differently.
+This section predates the main Kar'ethis settlement and may have been an
+existing structure that the later Sith incorporated into their complex.
+The main entrance is to the west.
+~
+#EXIT
+Direction west~
+ToRoom    15050
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15056
+#ENDEXIT
+
+Reset M 0 15005 2 15052
+#ENDROOM
+
+#ROOM
+Vnum     15053
+Name     The Western Catacomb Branch~
+Sector   inside~
+Flags    indoors dark~
+Desc     The western branch contains the most recent interments in the catacombs.
+Unlike the orderly niches of the main hall these have been carved with
+less care and the tablets are cruder. The wraiths that drift through
+this section seem more agitated than elsewhere, as though the more
+recent dead have not fully accepted their situation. The entrance is east.
+~
+#EXIT
+Direction east~
+ToRoom    15050
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15057
+#ENDEXIT
+
+Reset M 0 15005 3 15053
+Reset M 0 15000 2 15053
+#ENDROOM
+
+#ROOM
+Vnum     15054
+Name     The Ritual Burial Chamber~
+Sector   inside~
+Flags    indoors dark~
+Desc     A large chamber devoted to the burial rites of high-ranking Sith. The
+preparations for interment were elaborate and the equipment used is still
+present — stone implements for preservation, frames for positioning the
+remains, and tables covered in ritual tools. The carvings here depict
+the Sith afterlife concept in considerable detail. A dark and determined
+view of what follows death.
+~
+#EXIT
+Direction south~
+ToRoom    15051
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15058
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    15057
+#ENDEXIT
+
+Reset M 0 15000 3 15054
+Reset M 0 15005 2 15054
+#ENDROOM
+
+#ROOM
+Vnum     15055
+Name     The Chamber of Preserved Lords~
+Sector   inside~
+Flags    indoors dark~
+Desc     A sealed inner chamber that once required specific ritual knowledge to
+enter. The seals have been broken at some point. Inside are the preserved
+remains of what appear to be high-ranking Sith lords, each in an elaborate
+stone sarcophagus carved in their likeness. The preservation is unsettlingly
+effective — the remains appear almost alive in the low dark side light.
+The hall of the interred is to the west.
+~
+#EXIT
+Direction west~
+ToRoom    15051
+#ENDEXIT
+
+Reset M 0 15005 3 15055
+Reset M 0 15000 2 15055
+Reset O 0 15000 1 15055
+#ENDROOM
+
+#ROOM
+Vnum     15056
+Name     The Ancient Catacombs~
+Sector   inside~
+Flags    indoors dark~
+Desc     The oldest section of the Kar'ethis catacombs, predating the Sith by a
+significant margin. Whoever built this section used a different style and
+a different purpose. The niches here are empty but the carvings are neither
+Sith nor any recognisable tradition. Geometric patterns and unidentified
+symbols. The eastern branch of newer catacombs is to the south.
+~
+#EXIT
+Direction south~
+ToRoom    15052
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15059
+#ENDEXIT
+
+Reset M 0 15005 2 15056
+#ENDROOM
+
+#ROOM
+Vnum     15057
+Name     The Flooded Passage~
+Sector   inside~
+Flags    indoors dark~
+Desc     This passage has been partially flooded by water seeping through the bedrock
+over centuries. Black water — unnaturally still — covers the floor to knee
+depth. Narrow ledges along the walls allow passage without wading but they
+are uneven. The water is cold beyond reason and something moves in it that
+is better not examined closely. Passages connect south and east.
+~
+#EXIT
+Direction south~
+ToRoom    15053
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15054
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15060
+#ENDEXIT
+
+Reset M 0 15005 2 15057
+#ENDROOM
+
+#ROOM
+Vnum     15058
+Name     The Deep Ritual Chamber~
+Sector   inside~
+Flags    indoors dark~
+Desc     Below the ritual burial chamber lies this deeper space used for ceremonies
+that the Sith preferred to conduct in absolute darkness and isolation.
+The walls are covered in densely layered runes of a complexity that suggests
+years of continuous addition. The dark side energy here is intense enough
+to cause a slight physical pressure. The burial chamber is to the south.
+~
+#EXIT
+Direction south~
+ToRoom    15054
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15061
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15062
+#ENDEXIT
+
+Reset M 0 15000 3 15058
+Reset M 0 15005 2 15058
+Reset M 0 15003 1 15058
+#ENDROOM
+
+#ROOM
+Vnum     15059
+Name     The Void Chamber~
+Sector   inside~
+Flags    indoors dark~
+Desc     The ancient builders constructed this chamber for a purpose unknown. A
+perfectly spherical room with smooth walls, a flat floor, and no visible
+means of support for the ceiling. No carvings. No niches. No purpose that
+can be determined by observation. The Sith left it exactly as they found
+it, which says something. The ancient catacombs lie to the south.
+~
+#EXIT
+Direction south~
+ToRoom    15056
+#ENDEXIT
+
+Reset M 0 15005 1 15059
+#ENDROOM
+
+#ROOM
+Vnum     15060
+Name     The Drowned Gallery~
+Sector   inside~
+Flags    indoors dark~
+Desc     The flooding here is more severe than in the passage below. Carved panels
+that once depicted significant events in Sith history are submerged to
+their upper thirds, the images preserved below the waterline in perfect
+detail. What can be seen above the black water tells a story of rise to
+power that remains compelling even now. Passages lead south and east.
+~
+#EXIT
+Direction south~
+ToRoom    15057
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15061
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15063
+#ENDEXIT
+
+Reset M 0 15005 2 15060
+#ENDROOM
+
+#ROOM
+Vnum     15061
+Name     The Chamber of the Marked~
+Sector   inside~
+Flags    indoors dark~
+Desc     This chamber held Sith who had been marked for eventual execution — kept
+alive for purposes of information or forced service before their inevitable
+end. Heavy iron fixtures remain in the walls and the stone is worn in
+patterns that suggest long-term occupation under restraint. The dark side
+energy here has a specific flavour — resignation layered over hatred.
+Passages lead west, south, and north.
+~
+#EXIT
+Direction west~
+ToRoom    15060
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    15058
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15064
+#ENDEXIT
+
+Reset M 0 15000 3 15061
+Reset M 0 15005 2 15061
+#ENDROOM
+
+#ROOM
+Vnum     15062
+Name     The Repository of Curses~
+Sector   inside~
+Flags    indoors dark~
+Desc     A chamber sealed with seventeen layers of warding when it was first built.
+Fifteen of those wards remain active. The two that failed did so within the
+first century. The repository holds inscribed tablets bearing Sith curses of
+the highest order — compendiums of dark knowledge meant to empower the
+curses laid upon enemies. The content is genuinely dangerous even to read.
+The deep ritual chamber lies to the west.
+~
+#EXIT
+Direction west~
+ToRoom    15058
+#ENDEXIT
+
+Reset M 0 15005 3 15062
+Reset O 0 15004 1 15062
+#ENDROOM
+
+#ROOM
+Vnum     15063
+Name     The Underground Reservoir~
+Sector   inside~
+Flags    indoors dark~
+Desc     An underground reservoir fed by natural springs, the water here is the
+source of the flooding in the catacombs below. The Sith used this water
+in rituals — it has absorbed centuries of dark side energy and has
+properties that cannot be described as entirely natural. The reservoir is
+ringed by a stone walkway and descends to a depth not easily determined.
+The drowned gallery is to the south.
+~
+#EXIT
+Direction south~
+ToRoom    15060
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15064
+#ENDEXIT
+
+Reset M 0 15005 2 15063
+#ENDROOM
+
+#ROOM
+Vnum     15064
+Name     The Descent to the Throne Catacombs~
+Sector   inside~
+Flags    indoors dark~
+Desc     The deepest accessible point of the catacombs opens onto a stairway leading
+further down toward the areas beneath the throne chamber. The construction
+here is the most deliberate of any in the catacombs — every stone placed
+with specific intent. Whatever lies below was meant to be permanent and
+meant to be found only by those with the knowledge and strength to reach it.
+Passages lead north, west, and south.
+~
+#EXIT
+Direction west~
+ToRoom    15063
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    15061
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15075
+#ENDEXIT
+
+Reset M 0 15002 2 15064
+Reset M 0 15005 1 15064
+#ENDROOM
+
+
+#ROOM
+Vnum     15065
+Name     The Gallery of Faces~
+Sector   inside~
+Flags    indoors dark~
+Desc     One thousand carved faces line this narrow gallery, each distinct. These
+are death masks — the faces of Sith recorded at the moment of their death.
+The expressions range across a spectrum from absolute fury to something
+approaching transcendence. The gallery connects the western catacombs.
+~
+#EXIT
+Direction east~
+ToRoom    15053
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    15066
+#ENDEXIT
+
+Reset M 0 15000 2 15065
+#ENDROOM
+
+#ROOM
+Vnum     15066
+Name     The Chamber of Silence~
+Sector   inside~
+Flags    indoors dark silence~
+Desc     A chamber in which no sound functions — not speech, not footsteps, nothing.
+The silence here is not natural but enforced by Sith sorcery that persists
+millennia after its creators died. Communication here requires other means.
+The isolation is deeply uncomfortable. The gallery of faces lies to the east.
+~
+#EXIT
+Direction east~
+ToRoom    15065
+#ENDEXIT
+
+Reset M 0 15005 2 15066
+#ENDROOM
+
+#ROOM
+Vnum     15067
+Name     The Lower Archive~
+Sector   inside~
+Flags    indoors dark~
+Desc     A secondary archive in the catacombs holds records of the dead — not just
+names but detailed accounts of service, failure, and the punishments meted
+out for that failure. The Sith kept exceptionally detailed records. The
+lower archive connects to the hall of the interred above.
+~
+#EXIT
+Direction up~
+ToRoom    15051
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15068
+#ENDEXIT
+
+Reset M 0 15005 2 15067
+Reset O 0 15004 1 15067
+#ENDROOM
+
+#ROOM
+Vnum     15068
+Name     The Sarcophagus Hall~
+Sector   inside~
+Flags    indoors dark~
+Desc     A hall of ornate sarcophagi, each sealed with heavy stone lids carved in
+elaborate detail. The sarcophagi are arranged in a formal pattern that
+mirrors the constellation charts found in the observatory above. The dark
+side energy here has a focused quality, directed inward toward each
+sarcophagus as though something within each one is still active.
+~
+#EXIT
+Direction west~
+ToRoom    15067
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    15054
+#ENDEXIT
+
+Reset M 0 15000 3 15068
+Reset M 0 15005 2 15068
+#ENDROOM
+
+#ROOM
+Vnum     15069
+Name     The Black Pool~
+Sector   inside~
+Flags    indoors dark~
+Desc     A perfectly still pool of black liquid that predates the Sith occupation
+of these ruins. The Sith built around it and incorporated it into their
+rituals without fully understanding what it was. The surface of the pool
+reflects nothing. Objects lowered into it vanish. The pool connects to the
+deeper catacombs.
+~
+#EXIT
+Direction north~
+ToRoom    15054
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15070
+#ENDEXIT
+
+Reset M 0 15005 3 15069
+#ENDROOM
+
+#ROOM
+Vnum     15070
+Name     The Stone Forest~
+Sector   inside~
+Flags    indoors dark~
+Desc     Hundreds of stone pillars of varying heights fill this chamber in a pattern
+that suggests a forest. Moving through them requires care. The pillars are
+carved to appear as twisted trees and the effect in darkness is deeply
+unsettling. The dark side has given some of the carved branches an
+appearance of movement. The black pool is to the west.
+~
+#EXIT
+Direction west~
+ToRoom    15069
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    15058
+#ENDEXIT
+
+Reset M 0 15000 4 15070
+Reset M 0 15005 3 15070
+#ENDROOM
+
+#ROOM
+Vnum     15071
+Name     The Passage of Last Rites~
+Sector   inside~
+Flags    indoors dark~
+Desc     The formal processional route used when interring high-ranking Sith. The
+floor is polished black stone, still maintained by something — the dust that
+fills every other corridor of the catacombs does not accumulate here.
+The passage connects the ritual areas to the deeper sections.
+~
+#EXIT
+Direction north~
+ToRoom    15054
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    15072
+#ENDEXIT
+
+Reset M 0 15000 2 15071
+#ENDROOM
+
+#ROOM
+Vnum     15072
+Name     The Hall of Echoes~
+Sector   inside~
+Flags    indoors dark~
+Desc     This chamber has unusual properties — sounds made here are recorded and
+played back at irregular intervals. Voices speaking in the ancient tongue,
+rhythmic chanting, and occasionally what sounds like screaming in multiple
+registers have been heard here. The Sith found this useful. The passage
+of last rites leads north and the catacombs extend east.
+~
+#EXIT
+Direction north~
+ToRoom    15071
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15073
+#ENDEXIT
+
+Reset M 0 15005 2 15072
+Reset M 0 15000 2 15072
+#ENDROOM
+
+#ROOM
+Vnum     15073
+Name     The Convergence Point~
+Sector   inside~
+Flags    indoors dark~
+Desc     Dark side energy lines running through the bedrock of the ruins converge
+here at a point marked by a single carved pillar of black stone. Standing
+near it, the dark side pressure is stronger than anywhere else in the
+catacombs. Force users feel it as a constant pull. The hall of echoes is
+to the west and the deeper catacombs extend north.
+~
+#EXIT
+Direction west~
+ToRoom    15072
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15063
+#ENDEXIT
+
+Reset M 0 15000 3 15073
+Reset M 0 15005 2 15073
+#ENDROOM
+
+#ROOM
+Vnum     15074
+Name     The Hidden Passage~
+Sector   inside~
+Flags    indoors dark~
+Desc     A concealed passage that bypasses the more heavily trafficked catacomb
+routes. It is narrow, requiring movement in single file, and runs in a
+diagonal that connects two distant parts of the catacomb system. The walls
+here are uncarved — this was a functional route, not a ceremonial one.
+~
+#EXIT
+Direction north~
+ToRoom    15064
+#ENDEXIT
+#EXIT
+Direction south~
+ToRoom    15058
+#ENDEXIT
+
+Reset M 0 15005 1 15074
+#ENDROOM
+
+
+#ROOM
+Vnum     15075
+Name     The Antechamber of Power~
+Sector   inside~
+Flags    indoors dark~
+Desc     The deepest level of the ruins opens into an antechamber of extraordinary
+construction. Every surface has been worked with a precision that surpasses
+anything above. The stone itself seems different — darker, denser, as though
+it was sourced from somewhere other than the local bedrock. The dark side
+energy here is almost physically tangible. Stairs lead back up to the
+catacombs to the south. The way forward leads north toward the heart of
+Kar'ethis.
+~
+#EXIT
+Direction south~
+ToRoom    15064
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15076
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15077
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    15078
+#ENDEXIT
+
+Reset M 0 15002 3 15075
+Reset M 0 15003 2 15075
+#ENDROOM
+
+#ROOM
+Vnum     15076
+Name     The Gallery of the Fallen Lords~
+Sector   inside~
+Flags    indoors dark~
+Desc     Massive stone portraits — each several metres tall — line this gallery,
+depicting the lords of Kar'ethis in order of succession. Their expressions
+convey absolute certainty in their own power and absolute contempt for
+everything else. The final portrait in the sequence has been deliberately
+defaced, the face gouged away by something with considerable force. The
+antechamber is to the south and the path continues north.
+~
+#EXIT
+Direction south~
+ToRoom    15075
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15079
+#ENDEXIT
+
+Reset M 0 15002 2 15076
+Reset M 0 15005 2 15076
+#ENDROOM
+
+#ROOM
+Vnum     15077
+Name     The Eastern Vault~
+Sector   inside~
+Flags    indoors dark~
+Desc     A vault sealed with the most complex rune-lock mechanisms in the entire
+ruins. The locks have been opened — whether by those with genuine knowledge
+or by brute force is unclear. The interior shows signs of both methodical
+removal and violent ransacking at different points in its history. Some
+items remain, preserved by wards that are still active. The antechamber
+lies to the west.
+~
+#EXIT
+Direction west~
+ToRoom    15075
+#ENDEXIT
+
+Reset M 0 15003 2 15077
+Reset O 0 15000 1 15077
+Reset O 0 15002 1 15077
+Reset O 0 15005 1 15077
+#ENDROOM
+
+#ROOM
+Vnum     15078
+Name     The Western Vault~
+Sector   inside~
+Flags    indoors dark~
+Desc     The western vault appears to have been sealed more recently than its eastern
+counterpart — the mechanisms are different and the rune-locks show a more
+advanced technique. The interior is less disturbed. Whatever was placed here
+was added after the main occupation of the ruins ended. The antechamber is
+to the east.
+~
+#EXIT
+Direction east~
+ToRoom    15075
+#ENDEXIT
+
+Reset M 0 15003 2 15078
+Reset O 0 15001 1 15078
+Reset O 0 15003 1 15078
+Reset O 0 15006 1 15078
+#ENDROOM
+
+#ROOM
+Vnum     15079
+Name     The Corridor of Final Warning~
+Sector   inside~
+Flags    indoors dark~
+Desc     The corridor before the throne chamber is the densest collection of warning
+inscriptions in the ruins. In the ancient Sith tongue, in several other dead
+languages, and — notably — in Basic, a single message is repeated hundreds
+of times in varying sizes: TURN BACK. The sheer repetition suggests that
+the Sith who placed this warning were themselves afraid of what lay beyond.
+The gallery is to the south and the throne chamber door lies north.
+~
+#EXIT
+Direction south~
+ToRoom    15076
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15080
+Flags     isdoor closed~
+Keywords  door obsidian seal~
+#ENDEXIT
+
+Reset M 0 15002 2 15079
+Reset M 0 15003 2 15079
+Reset D 0 15079 0 1
+#ENDROOM
+
+#ROOM
+Vnum     15080
+Name     The Throne Chamber of Kar'ethis~
+Sector   inside~
+Flags    indoors dark~
+Desc     The throne chamber is vast — far larger than the external dimensions of the
+ruins should permit. A ceiling that disappears into darkness. Walls carved
+with every significant event in the history of Kar'ethis in extraordinary
+detail. At the far end, on a raised dais of black stone that rises in seven
+steps, sits the Throne of Kar'ethis — intact, unlike the shattered one above.
+
+The dark side energy here is beyond description. It has weight, direction,
+and intent. It presses inward from all sides and from the floor beneath your
+feet and from the Throne itself, which radiates it in concentrated waves.
+
+And the Lord of Kar'ethis waits here. It has waited a very long time. It
+regards you with the cold certainty that you were always going to come here
+and that this was always going to end one way. The corridor of warning lies
+to the south and sealed passages branch east and west.
+~
+#EXIT
+Direction south~
+ToRoom    15079
+Flags     isdoor closed~
+Keywords  door obsidian seal~
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15081
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    15082
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15083
+#ENDEXIT
+
+Reset M 0 15006 1 15080
+Reset D 0 15080 2 1
+#ENDROOM
+
+#ROOM
+Vnum     15081
+Name     The Eastern Sanctum Vault~
+Sector   inside~
+Flags    indoors dark~
+Desc     Behind the throne, to the east, a vault of the most significant items
+the Lord of Kar'ethis possessed in life. The dark side energy preserves
+everything within perfectly. The items here are extraordinary by any
+measure — instruments of power accumulated over centuries of rule. The
+throne chamber lies to the west.
+~
+#EXIT
+Direction west~
+ToRoom    15080
+#ENDEXIT
+
+Reset O 0 15000 1 15081
+Reset O 0 15001 1 15081
+Reset O 0 15002 1 15081
+Reset O 0 15003 1 15081
+#ENDROOM
+
+#ROOM
+Vnum     15082
+Name     The Western Sanctum Vault~
+Sector   inside~
+Flags    indoors dark~
+Desc     The western vault behind the throne holds items of a different category —
+knowledge rather than power. Tablets, inscribed stones, and sealed containers
+whose contents defy easy categorisation. The Lord of Kar'ethis considered
+knowledge and power as equivalent things, and this collection reflects that
+philosophy. The throne chamber lies to the east.
+~
+#EXIT
+Direction east~
+ToRoom    15080
+#ENDEXIT
+
+Reset O 0 15004 1 15082
+Reset O 0 15000 1 15082
+Reset O 0 15006 1 15082
+#ENDROOM
+
+#ROOM
+Vnum     15083
+Name     The Chamber Behind the Throne~
+Sector   inside~
+Flags    indoors dark~
+Desc     The chamber directly behind the throne is the most private space in all of
+Kar'ethis. Only the Lord of Kar'ethis entered here. The contents are
+minimalist compared to the ostentatious display of power elsewhere — a single
+stone table, a stone chair, and walls covered in personal inscriptions written
+in a compressed private shorthand. Whatever the Lord of Kar'ethis was when
+alone, it was not the same as the mask worn in public. The throne chamber
+lies to the south.
+~
+#EXIT
+Direction south~
+ToRoom    15080
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15084
+#ENDEXIT
+
+Reset M 0 15000 2 15083
+#ENDROOM
+
+#ROOM
+Vnum     15084
+Name     The Memory Chamber~
+Sector   inside~
+Flags    indoors dark~
+Desc     The innermost accessible room of the ruins, a small chamber where the Lord
+of Kar'ethis stored items of personal significance. Unlike the vaults these
+were not catalogued or organised. The contents are scattered with what might
+be called personality — mementos, favoured objects, things kept for reasons
+known only to their owner. The dark side presence here is quieter than
+elsewhere. Almost contemplative. The private chamber is to the south.
+~
+#EXIT
+Direction south~
+ToRoom    15083
+#ENDEXIT
+
+Reset O 0 15004 1 15084
+Reset O 0 15000 1 15084
+#ENDROOM
+
+
+#ROOM
+Vnum     15085
+Name     The Hall of Tribute~
+Sector   inside~
+Flags    indoors dark~
+Desc     A formal hall where tribute from conquered worlds and subjugated peoples was
+brought and catalogued before being distributed. The records of tribute are
+inscribed on the walls in exhaustive detail — quantities, dates, the names
+of those who delivered it and the names of those who accepted on behalf of
+Kar'ethis. The scale of the operation documented here is staggering.
+~
+#EXIT
+Direction north~
+ToRoom    15076
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15077
+#ENDEXIT
+
+Reset M 0 15003 2 15085
+#ENDROOM
+
+#ROOM
+Vnum     15086
+Name     The Guard Barracks of the Deep~
+Sector   inside~
+Flags    indoors dark~
+Desc     The deepest barracks in the ruins, used by the Lord's personal guard who
+never left this level. The accommodations are Spartan but the guard served
+willingly — being this close to the seat of power was its own reward in
+Sith culture. The furnishings are long since rotted but the structure
+is perfectly intact. Corridors lead to the antechamber.
+~
+#EXIT
+Direction north~
+ToRoom    15075
+#ENDEXIT
+
+Reset M 0 15002 3 15086
+Reset O 0 15005 1 15086
+Reset O 0 15006 1 15086
+#ENDROOM
+
+#ROOM
+Vnum     15087
+Name     The Command Post~
+Sector   inside~
+Flags    indoors dark~
+Desc     A heavily reinforced command post from which the Lord of Kar'ethis could
+direct the defence of the ruins in the event of attack. Maps — carved stone
+relief maps of the surrounding region — still cover one entire wall. The
+tactical detail is extraordinary. Communication equipment of an archaic design
+lines another wall. The antechamber lies to the north.
+~
+#EXIT
+Direction north~
+ToRoom    15075
+#ENDEXIT
+
+Reset M 0 15003 2 15087
+Reset M 0 15002 2 15087
+#ENDROOM
+
+#ROOM
+Vnum     15088
+Name     The Trophy Hall~
+Sector   inside~
+Flags    indoors dark~
+Desc     The Lord of Kar'ethis kept trophies. The hall extends for a considerable
+distance and every available surface holds mounted items from conquered
+enemies and defeated rivals. Weapons, armour, insignia, and items of more
+personal significance are all represented. The collection covers centuries.
+Each trophy has a small inscription beneath it identifying the previous owner
+and noting the circumstances under which it was taken.
+~
+#EXIT
+Direction west~
+ToRoom    15080
+#ENDEXIT
+
+Reset M 0 15000 2 15088
+Reset O 0 15001 1 15088
+#ENDROOM
+
+#ROOM
+Vnum     15089
+Name     The Sanctum Passage North~
+Sector   inside~
+Flags    indoors dark~
+Desc     A straight corridor connecting the northernmost reaches of the deep sanctum
+to the throne chamber area. The walls here are plain — no carvings, no
+inscriptions, no decorative elements. This was a functional passage built for
+speed of movement rather than impression. The throne area lies to the south.
+~
+#EXIT
+Direction south~
+ToRoom    15080
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15090
+#ENDEXIT
+
+Reset M 0 15002 2 15089
+#ENDROOM
+
+#ROOM
+Vnum     15090
+Name     The Sealed Sanctum~
+Sector   inside~
+Flags    indoors dark~
+Desc     A sanctum that was sealed after the fall of Kar'ethis and remained
+sealed for millennia. The seals failed slowly over time. The interior is in
+extraordinary condition as a result of the prolonged sealing — dust, decay,
+and disturbance have all been held back. The contents are exactly as they
+were left. The corridor lies to the south.
+~
+#EXIT
+Direction south~
+ToRoom    15089
+#ENDEXIT
+
+Reset M 0 15005 3 15090
+Reset O 0 15000 1 15090
+Reset O 0 15002 1 15090
+Reset O 0 15004 1 15090
+#ENDROOM
+
+#ROOM
+Vnum     15091
+Name     The Lower Archives~
+Sector   inside~
+Flags    indoors dark~
+Desc     A final set of archives at the deepest level, holding the most sensitive
+and dangerous records of the Kar'ethis Sith. Access to these archives was
+restricted to the Lord and two designated archivists. The content covers
+topics that would be considered unacceptable in any other context. The
+antechamber area connects to the north.
+~
+#EXIT
+Direction north~
+ToRoom    15075
+#ENDEXIT
+#EXIT
+Direction east~
+ToRoom    15092
+#ENDEXIT
+
+Reset M 0 15005 2 15091
+Reset O 0 15004 1 15091
+#ENDROOM
+
+#ROOM
+Vnum     15092
+Name     The Laboratory of the Lord~
+Sector   inside~
+Flags    indoors dark~
+Desc     The private laboratory of the Lord of Kar'ethis, where personal research
+was conducted in absolute secrecy. The equipment here is of a significantly
+higher calibre than the alchemy chamber above. Whatever was studied here was
+done so with exceptional resources and exceptional expertise. The notes that
+remain are in the compressed private shorthand seen in the private chamber —
+without the key they are unreadable. The archives are to the west.
+~
+#EXIT
+Direction west~
+ToRoom    15091
+#ENDEXIT
+
+Reset M 0 15003 2 15092
+Reset O 0 15004 1 15092
+#ENDROOM
+
+#ROOM
+Vnum     15093
+Name     The Power Nexus~
+Sector   inside~
+Flags    indoors dark~
+Desc     At the geometric centre of the deep sanctum lies the power nexus — the
+point around which the entire structure of Kar'ethis was built. A column of
+black stone rises from floor to ceiling, its surface covered entirely in
+runes that pulse faintly with residual dark side energy. The nexus is the
+source and sustainer of everything that makes these ruins what they are.
+Passages connect to the throne area.
+~
+#EXIT
+Direction east~
+ToRoom    15075
+#ENDEXIT
+
+Reset M 0 15000 4 15093
+Reset M 0 15005 3 15093
+#ENDROOM
+
+#ROOM
+Vnum     15094
+Name     The Chamber of Legacies~
+Sector   inside~
+Flags    indoors dark~
+Desc     A chamber dedicated to recording and preserving the legacies of the lords
+of Kar'ethis for all time. Each lord has a dedicated alcove with a full
+accounting of their rule, achievements, and end. The most recent alcove —
+for the final lord — has only half its panels completed. The account ends
+abruptly mid-sentence, as though the archivist was interrupted and never
+returned. The throne chamber area connects to the south.
+~
+#EXIT
+Direction south~
+ToRoom    15076
+#ENDEXIT
+
+Reset M 0 15003 1 15094
+Reset M 0 15000 2 15094
+#ENDROOM
+
+#ROOM
+Vnum     15095
+Name     The Consecrated Ground~
+Sector   inside~
+Flags    indoors dark~
+Desc     A section of the deep sanctum that was consecrated to the dark side with
+a thoroughness beyond that of the rest of the ruins. Standing here, even
+those without Force sensitivity can feel something pressing at the edges of
+their perception. For those with Force ability, the experience is considerably
+more intense. The sanctum passages connect here.
+~
+#EXIT
+Direction west~
+ToRoom    15079
+#ENDEXIT
+#EXIT
+Direction north~
+ToRoom    15093
+#ENDEXIT
+
+Reset M 0 15000 3 15095
+Reset M 0 15005 2 15095
+#ENDROOM
+
+#ROOM
+Vnum     15096
+Name     The Circle of Binding~
+Sector   inside~
+Flags    indoors dark~
+Desc     A circular chamber whose floor is a single continuous binding rune of
+extraordinary complexity. The rune has been in continuous effect since it
+was first inscribed. Several entities have been bound here over the centuries.
+Some are still bound. The chamber connects to the deep sanctum.
+~
+#EXIT
+Direction south~
+ToRoom    15093
+#ENDEXIT
+
+Reset M 0 15005 4 15096
+Reset M 0 15000 3 15096
+#ENDROOM
+
+#ROOM
+Vnum     15097
+Name     The Passage of Absolute Dark~
+Sector   inside~
+Flags    indoors dark~
+Desc     A passage in which no light of any kind functions — not natural light, not
+technological light, and not the light produced by Force abilities. Navigation
+here is by memory and touch. The darkness is complete and the sounds within
+it are best not analysed too carefully. The passage connects deep areas.
+~
+#EXIT
+Direction east~
+ToRoom    15080
+#ENDEXIT
+#EXIT
+Direction west~
+ToRoom    15093
+#ENDEXIT
+
+Reset M 0 15005 2 15097
+#ENDROOM
+
+#ROOM
+Vnum     15098
+Name     The Terminus~
+Sector   inside~
+Flags    indoors dark~
+Desc     The furthest point of the accessible ruins — a chamber that appears to
+continue beyond its visible walls into darkness that swallows all illumination.
+The feeling here is of standing at an edge beyond which different rules apply.
+Whatever the Sith built beyond this point was either destroyed or remains
+inaccessible. The deep sanctum connects to the east.
+~
+#EXIT
+Direction east~
+ToRoom    15097
+#ENDEXIT
+
+Reset M 0 15000 2 15098
+Reset M 0 15005 2 15098
+#ENDROOM
+
+#ROOM
+Vnum     15099
+Name     The Outer Reliquary~
+Sector   inside~
+Flags    indoors dark~
+Desc     A reliquary positioned at the outer edge of the throne chamber complex,
+serving as a last repository of significant items before the sanctum proper.
+The reliquary is better preserved than the main vaults, its warding still
+substantially intact. The items within may be among the most significant
+remaining in the ruins. The throne chamber area connects to the west.
+~
+#EXIT
+Direction west~
+ToRoom    15080
+#ENDEXIT
+
+Reset M 0 15003 2 15099
+Reset O 0 15000 1 15099
+Reset O 0 15001 1 15099
+Reset O 0 15002 1 15099
+Reset O 0 15003 1 15099
+Reset O 0 15005 1 15099
+Reset O 0 15006 1 15099
+#ENDROOM
+
+#ENDAREA
